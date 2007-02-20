@@ -1,0 +1,727 @@
+# Frets On Fire
+# Copyright (C) 2006 Unreal Voodoo
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: FretsOnFire\n"
+"POT-Creation-Date: 2006-10-27 23:23+EEST\n"
+"PO-Revision-Date: 2006-10-30 15:02+0300\n"
+"Last-Translator: Clayman <dan.konovalov@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+"Language-Team: \n"
+
+#: Credits.py:110
+msgid "Unreal Voodoo"
+msgstr "Unreal Voodoo"
+
+#: Credits.py:111
+msgid "presents"
+msgstr "представляет"
+
+#: Credits.py:115
+msgid "Version %s"
+msgstr "Версия %s"
+
+#: Credits.py:117
+msgid "Game Design,"
+msgstr "Дизайн,"
+
+#: Credits.py:118
+msgid "Programming:"
+msgstr "Программирование:"
+
+#: Credits.py:121
+msgid "Music,"
+msgstr "Музыка:"
+
+#: Credits.py:122
+msgid "Sound Effects:"
+msgstr "Звук:"
+
+#: Credits.py:125
+msgid "Graphics:"
+msgstr "Графика:"
+
+#: Credits.py:128
+msgid "Introducing:"
+msgstr "В ролях:"
+
+#: Credits.py:130
+msgid "as Jurgen, Your New God"
+msgstr "в роли Вашего Нового Бога, Юрджина."
+
+#: Credits.py:133
+msgid "as Groupie"
+msgstr "в роли Группи."
+
+#: Credits.py:135
+msgid "Song Credits:"
+msgstr "Песни:"
+
+#: Credits.py:136
+msgid "Bang Bang, Mystery Man"
+msgstr "Bang Bang, Mystery Man"
+
+#: Credits.py:137
+msgid "music by Mary Jo and Tommi Inkila"
+msgstr "музыка написана Mary Jo и Tommy Inkila"
+
+#: Credits.py:138
+msgid "lyrics by Mary Jo"
+msgstr "текст Mary Jo."
+
+#: Credits.py:140
+msgid "Defy The Machine"
+msgstr "Defy The Machine"
+
+#: Credits.py:141
+msgid "music by Tommi Inkila"
+msgstr "музыка Tommy Inkila"
+
+#: Credits.py:143
+msgid "This Week I've Been"
+msgstr "This Week I`ve Been"
+
+#: Credits.py:144
+msgid "Mostly Playing Guitar"
+msgstr "Mostly Playing Guitar"
+
+#: Credits.py:145
+msgid "composed and performed by Tommi Inkila"
+msgstr "написана и сыграна Tommy Inkila"
+
+#: Credits.py:147
+msgid "Testing:"
+msgstr "Тестирование:"
+
+#: Credits.py:154
+msgid "Special thanks to:"
+msgstr "Особые благодарности:"
+
+#: Credits.py:157
+msgid "Made with:"
+msgstr "Сделано с помощью:"
+
+#: Credits.py:180
+msgid "Source Code available under the GNU General Public License"
+msgstr "Исходные тексты доступны под лицензией GNU General Public. "
+
+#: Credits.py:186
+msgid "Copyright 2006 by Unreal Voodoo"
+msgstr "Copyright 2006 by Unreal Voodoo"
+
+#: Dialogs.py:260
+msgid "<OK>"
+msgstr "<OK>"
+
+#: Dialogs.py:331
+msgid "Browsing Collection..."
+msgstr "Просмотр коллцекции..."
+
+#: Dialogs.py:550
+msgid "Loading Preview..."
+msgstr "Загрузка "
+
+#: Dialogs.py:610
+msgid "[Parent Folder]"
+msgstr "[Корневая папка]"
+
+#: Dialogs.py:612
+msgid "%s [Folder]"
+msgstr "%s [Папка]"
+
+#: Dialogs.py:818
+msgid "%.2f beats per minute"
+msgstr "%.2f битов в минту."
+
+#: Dialogs.py:882
+msgid "Pick!"
+msgstr "Звук!!"
+
+#: Dialogs.py:921
+msgid "Choose a Song"
+msgstr "Выбор песни"
+
+#: Dialogs.py:933
+msgid "Choose a File"
+msgstr "Выбор файла"
+
+#: Dialogs.py:959
+msgid "Play with the keys and press Escape when you're done."
+msgstr "Поиграйтесь с клавишами и нажмите Escape, когда закончите."
+
+#: Dialogs.py:969
+msgid "Loading..."
+msgstr "Загрузка..."
+
+#: Editor.py:65
+msgid "Save Song"
+msgstr "Сохранить песню"
+
+#: Editor.py:66
+msgid "Set Song Name"
+msgstr "Название песни"
+
+#: Editor.py:67
+msgid "Set Artist Name"
+msgstr "Название группы"
+
+#: Editor.py:68
+msgid "Set Beats per Minute"
+msgstr "Биты в минуту"
+
+#: Editor.py:69
+msgid "Estimate Beats per Minute"
+msgstr "Среднее число битов в минуту"
+
+#: Editor.py:70
+msgid "Set A/V delay"
+msgstr "A/V задержка"
+
+#: Editor.py:71
+msgid "Set Cassette Color"
+msgstr "Цвет кассеты."
+
+#: Editor.py:72
+msgid "Set Cassette Label"
+msgstr "Прилепить наклейку."
+
+#: Editor.py:73
+msgid "Editing Help"
+msgstr "Помощь"
+
+#: Editor.py:74
+#: GameResultsScene.py:59
+#: GuitarScene.py:83
+msgid "Quit to Main Menu"
+msgstr "Выйти в главное меню."
+
+#: Editor.py:80
+msgid "There are no changes to save."
+msgstr "Нужно внести какие-нибудь изменения, чтобы было что сохранять."
+
+#: Editor.py:88
+msgid "Saving..."
+msgstr "Сохранаю..."
+
+#: Editor.py:89
+msgid "'%s' saved."
+msgstr "Сохрани '%s' "
+
+#: Editor.py:92
+msgid "Editing keys: "
+msgstr "Изменение клавиш:"
+
+#: Editor.py:93
+msgid "Arrows - Move cursor, "
+msgstr "Стрелки - Движение курсора,"
+
+#: Editor.py:94
+msgid "Space - Play/pause song, "
+msgstr "Пробле - Играть/пауза"
+
+#: Editor.py:95
+msgid "Enter - Make note (hold and move for long notes), "
+msgstr "Enter - Создать ноту (чтобы риовать длинные ноты, зажимте кнопку и двигайте курсор)"
+
+#: Editor.py:96
+msgid "Delete - Delete note, "
+msgstr "Delete - удаление ноты,"
+
+#: Editor.py:97
+msgid "Page Up/Down - Change difficulty"
+msgstr "Page Up/Down - Смена уровня сложности"
+
+#: Editor.py:101
+msgid "Enter Song Name"
+msgstr "Введите название песни"
+
+#: Editor.py:107
+msgid "Enter Artist Name"
+msgstr "Введите название группы"
+
+#: Editor.py:113
+msgid "Enter A/V delay in milliseconds"
+msgstr "Введите A/V задержку в милискундах."
+
+#: Editor.py:119
+#: Editor.py:128
+msgid "That isn't a number."
+msgstr "Это не число."
+
+#: Editor.py:122
+msgid "Enter Beats per Minute Value"
+msgstr "Введите количество битов в минуту."
+
+#: Editor.py:131
+msgid "Tap the Space bar to the beat of the song. Press Enter when done or Escape to cancel."
+msgstr "Отсуткивайте ритм песни пробелом. Нажмите Enter, когда решите закончить, или Escape, чтобы выйти."
+
+#: Editor.py:141
+msgid "Enter cassette color in HTML (#RRGGBB) format."
+msgstr "Укажите цвте кассеты в формате HTML (#RRGGBB)."
+
+#: Editor.py:147
+msgid "That isn't a color."
+msgstr "Это не цвет."
+
+#: Editor.py:150
+msgid "Choose a 256x128 PNG format label image."
+msgstr "Выберете наклейку в формате 256x128 PNG."
+
+#: Editor.py:167
+msgid "Loading song..."
+msgstr "Загружаю песню..."
+
+#: Editor.py:333
+msgid "Playing"
+msgstr "Играю"
+
+#: Editor.py:335
+msgid "Stopped"
+msgstr "Остановлено"
+
+#: Editor.py:376
+msgid "Enter a name for the song."
+msgstr "Введите название песни."
+
+#: Editor.py:384
+msgid "That song already exists."
+msgstr "Такая песня уже существует."
+
+#: Editor.py:388
+msgid "Choose the Instrument Track (OGG format)."
+msgstr "Выберете  трэк с главным инструментов (в формате OGG)"
+
+#: Editor.py:394
+msgid "Choose the Background Track (OGG format) or press Escape to skip."
+msgstr "Выберете трэк сопровождения (в формате OGG) или пропустите операцию, нажав Escape."
+
+#: Editor.py:398
+msgid "Importing..."
+msgstr "Загружаю..."
+
+#: Editor.py:585
+msgid "Stage 1/8: Splitting VGS file"
+msgstr "Этап 1/8: разделение файла VGS."
+
+#: Editor.py:613
+msgid "Stage %d/8: Decoding channel %d into PCM"
+msgstr "Этап %d/8: декодировка канала %d в PCM."
+
+#: Editor.py:624
+msgid "Stage 6/8: Joining song stereo tracks"
+msgstr "Этап 6/8: объединение стерео трэков."
+
+#: Editor.py:628
+msgid "Stage 7/8: Joining guitar stereo tracks"
+msgstr "Этап 7/8: присоединение гитарных стерео трэков."
+
+#: Editor.py:634
+msgid "Stage 8/8: Compressing tracks"
+msgstr "Stage 8/8: компрессия трэков"
+
+#: Editor.py:664
+msgid "Reading the song list."
+msgstr "Читаю список песен."
+
+#: Editor.py:670
+msgid "Reading the archive index."
+msgstr "Читаю индекс архива."
+
+#: Editor.py:679
+msgid "Extracting %s by %s. %d of %d songs imported. Yeah, this is going to take forever."
+msgstr "Извлечение %s, исполненной %s. %d из %d песен уже импоритровано. Да, это надолго."
+
+#: Editor.py:720
+msgid "Ready"
+msgstr "Готово"
+
+#: Editor.py:735
+msgid "All done! %d songs imported. Have fun!"
+msgstr "Все сделано! Импорировано %d песен. Наслаждайтесь!"
+
+#: Editor.py:737
+msgid "No songs could be imported, sorry. Check the log files for more information."
+msgstr "Жаль, но ни одна песня не может быть импортирована. В log файлах содержится вся информация об ошибке."
+
+#: Editor.py:746
+msgid "Ogg Vorbis encoder (oggenc.exe) not found. Please install it to the game directory and try again."
+msgstr "Ogg Vorbis кодек (oggenc.exe) не найден. Поставьте его в папку с игрой и снова попробуйте."
+
+#: Editor.py:748
+msgid "Ogg Vorbis encoder (oggenc) not found. Please install it and try again."
+msgstr "Ogg Vorbis кодек (oggenc) не найден. Поставьте его и попробуйте опять."
+
+#: Editor.py:752
+msgid "Make sure you have at least 500 megabytes of free disk space before using this importer."
+msgstr "Удостоверьтесь, что у вас есть как минимум 500 мегабайт свободного места на диске, прежде чем импортировать песни."
+
+#: Editor.py:756
+msgid "Enter the path to the mounted Guitar Hero (tm) DVD"
+msgstr "Введите путь к DVD диску с Guitar Hero(tm)."
+
+#: Editor.py:765
+msgid "That's not it. Try again."
+msgstr "Это не он. Попробуйте еще раз."
+
+#: Editor.py:782
+msgid "Importing Songs"
+msgstr "Импортирую песни."
+
+#: GameEngine.py:49
+msgid "Upload Highscores"
+msgstr "Загружать результаты в таблицу рекордов."
+
+#: GameEngine.py:49
+#: GameEngine.py:51
+#: GameEngine.py:52
+msgid "No"
+msgstr "Нет"
+
+#: GameEngine.py:49
+#: GameEngine.py:51
+#: GameEngine.py:52
+msgid "Yes"
+msgstr "Да"
+
+#: GameEngine.py:51
+msgid "Lefty mode"
+msgstr "Режим левши"
+
+#: GameEngine.py:52
+msgid "Fullscreen Mode"
+msgstr "На полный экран"
+
+#: GameEngine.py:53
+msgid "2x"
+msgstr "2x"
+
+#: GameEngine.py:53
+msgid "4x"
+msgstr "4x"
+
+#: GameEngine.py:53
+msgid "6x"
+msgstr "6x"
+
+#: GameEngine.py:53
+msgid "8x"
+msgstr "8x"
+
+#: GameEngine.py:53
+msgid "Antialiasing Quality"
+msgstr "Качество сглаживания (AA)"
+
+#: GameEngine.py:53
+msgid "None"
+msgstr "Нет"
+
+#: GameEngine.py:55
+msgid "Frames per Second"
+msgstr "Кадров в секунду"
+
+#: GameEngine.py:56
+msgid "High"
+msgstr "Высокое"
+
+#: GameEngine.py:56
+msgid "Low"
+msgstr "Низкое"
+
+#: GameEngine.py:56
+msgid "Normal"
+msgstr "Нормальное"
+
+#: GameEngine.py:56
+msgid "SVG Quality"
+msgstr "Качество SVG графики"
+
+#: GameEngine.py:57
+msgid "Sample Frequency"
+msgstr "Частота дискретизации"
+
+#: GameEngine.py:58
+msgid "Sample Bits"
+msgstr "Sam"
+
+#: GameEngine.py:60
+msgid "Buffer Size"
+msgstr "Размер буфера"
+
+#: GameEngine.py:61
+msgid "A/V delay"
+msgstr "A/V задержка"
+
+#: GameEngine.py:62
+msgid "Loud"
+msgstr "Громкие"
+
+#: GameEngine.py:62
+msgid "Off"
+msgstr "Нет"
+
+#: GameEngine.py:62
+msgid "Painful"
+msgstr "Оглушающие"
+
+#: GameEngine.py:62
+msgid "Quiet"
+msgstr "Тихие"
+
+#: GameEngine.py:62
+msgid "Screw Up Sounds"
+msgstr "Пропущенные ноты"
+
+#: GameEngine.py:127
+msgid "Frets on Fire"
+msgstr "Frets on Fire"
+
+#: GameResultsScene.py:57
+msgid "Replay"
+msgstr "Заново"
+
+#: GameResultsScene.py:58
+#: GuitarScene.py:82
+msgid "Change Song"
+msgstr "Смена песни"
+
+#: GameResultsScene.py:65
+msgid "Chilling..."
+msgstr "Можно расслабиться..."
+
+#: GameResultsScene.py:75
+msgid "No highscores for cheaters!"
+msgstr "Никаких рекордов для читеров!"
+
+#: GameResultsScene.py:77
+msgid "%d points is a new high score! Please enter your name:"
+msgstr "%d очков - это новый рекорд! Введите свое имя:"
+
+#: GameResultsScene.py:177
+msgid "Highest Scores (%s)"
+msgstr "Больше всего очков (%s)"
+
+#: GameResultsScene.py:198
+msgid "Uploading Scores..."
+msgstr "Загружаю результаты..."
+
+#: GameResultsScene.py:202
+msgid "Song Finished!"
+msgstr "Песня сыграна!"
+
+#: GameResultsScene.py:220
+msgid "Accuracy: %d%%"
+msgstr "Точность: %d%%"
+
+#: GameResultsScene.py:223
+msgid "Longest note streak: %d"
+msgstr "Самая длинная нота: %d"
+
+#: GameTask.py:72
+msgid "Connection lost."
+msgstr "Связь прервана."
+
+#: GuitarScene.py:78
+msgid "Tuning Guitar..."
+msgstr "Настройка гитары..."
+
+#: GuitarScene.py:81
+msgid "Restart Song"
+msgstr "Начать сначала"
+
+#: GuitarScene.py:250
+msgid "Jurgen will show you how it is done."
+msgstr "Юрджин сейчас покажет, как это делается."
+
+#: GuitarScene.py:252
+msgid "Jurgen has left the building."
+msgstr "Юрджин покинул здание."
+
+#: GuitarScene.py:321
+msgid "Get Ready to Rock"
+msgstr "Приготовьтесь зажигать"
+
+#: Language.py:50
+msgid "English"
+msgstr "Английский"
+
+#: Language.py:53
+msgid "Language"
+msgstr "Язык"
+
+#: Lobby.py:51
+msgid "Player"
+msgstr "Игрок"
+
+#: Lobby.py:58
+msgid "Enter your name:"
+msgstr "Введите свое имя?"
+
+#: Lobby.py:58
+msgid "Player #%d"
+msgstr "Игрок #%d."
+
+#: Lobby.py:108
+msgid "Lobby (%d players)"
+msgstr "Лобби (%d игроков)"
+
+#: Lobby.py:137
+msgid "Press Enter to Start Game"
+msgstr "Чтобы начать игру, нажмите Enter."
+
+#: MainMenu.py:114
+msgid "Press a key for '%s' or Escape to cancel."
+msgstr "Нажмите кнопку '%s' или Escape для отмены."
+
+#: MainMenu.py:137
+msgid "Host Multiplayer Game"
+msgstr "Открыть игру в мультплеере."
+
+#: MainMenu.py:138
+msgid "Join Multiplayer Game"
+msgstr "Присоединиться к мультиплеерной игре."
+
+#: MainMenu.py:141
+msgid "Apply New Settings"
+msgstr "Применть новые настройки"
+
+#: MainMenu.py:150
+msgid "Test Keys"
+msgstr "Проверка клавиш"
+
+#: MainMenu.py:168
+msgid "Video Resolution"
+msgstr "Разрешение"
+
+#: MainMenu.py:189
+msgid "Game Settings"
+msgstr "Настройки"
+
+#: MainMenu.py:190
+msgid "Key Settings"
+msgstr "Настрйоки управления"
+
+#: MainMenu.py:191
+msgid "Video Settings"
+msgstr "Настрйоки видео"
+
+#: MainMenu.py:192
+msgid "Audio Settings"
+msgstr "Настройки звука"
+
+#: MainMenu.py:197
+msgid "Edit Existing Song"
+msgstr "Редактировать уже существующую песню"
+
+#: MainMenu.py:198
+msgid "Import New Song"
+msgstr "Импорировать новую песню"
+
+#: MainMenu.py:199
+msgid "Import Guitar Hero(tm) Songs"
+msgstr "Ипмортировать песни из Guitar Hero(TM)"
+
+#: MainMenu.py:203
+msgid "Play Game"
+msgstr "Играть"
+
+#: MainMenu.py:204
+msgid "Tutorial"
+msgstr "Обучение"
+
+#: MainMenu.py:205
+msgid "Song Editor"
+msgstr "Редактор песен"
+
+#: MainMenu.py:206
+msgid "Settings >"
+msgstr "Настройки >"
+
+#: MainMenu.py:207
+msgid "Credits"
+msgstr "Авторы"
+
+#: MainMenu.py:208
+msgid "Quit"
+msgstr "Выход"
+
+#: MainMenu.py:290
+msgid "Enter the server address:"
+msgstr "Введите адрес сервера:"
+
+#: MainMenu.py:297
+msgid "Connecting..."
+msgstr "Соединяюсь..."
+
+#: Player.py:44
+msgid "Move left"
+msgstr "Влево"
+
+#: Player.py:45
+msgid "Move right"
+msgstr "Вправо"
+
+#: Player.py:46
+msgid "Move up"
+msgstr "Вверх"
+
+#: Player.py:47
+msgid "Move down"
+msgstr "Вниз"
+
+#: Player.py:48
+msgid "Pick"
+msgstr "Медиатор"
+
+#: Player.py:49
+msgid "Secondary Pick"
+msgstr "Запасной медиатор"
+
+#: Player.py:50
+msgid "Fret #1"
+msgstr "Лад #1"
+
+#: Player.py:51
+msgid "Fret #2"
+msgstr "Лад #2"
+
+#: Player.py:52
+msgid "Fret #3"
+msgstr "Лад #4"
+
+#: Player.py:53
+msgid "Fret #4"
+msgstr "Лад #4"
+
+#: Player.py:54
+msgid "Fret #5"
+msgstr "Лад #5"
+
+#: Player.py:55
+msgid "Cancel"
+msgstr "Отмена"
+
+#: Song.py:56
+msgid "Supaeasy"
+msgstr "Проще некуда"
+
+#: Song.py:57
+msgid "Easy"
+msgstr "Просто"
+
+#: Song.py:58
+msgid "Medium"
+msgstr "Средне"
+
+#: Song.py:59
+msgid "Amazing"
+msgstr "Поразительно"
+
+#: SongChoosingScene.py:61
+msgid "Choose a difficulty:"
+msgstr "Выберете уровень сложности:"
+

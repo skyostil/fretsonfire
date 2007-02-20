@@ -1,0 +1,158 @@
+# Frets On Fire
+# Copyright (C) 2006 Unreal Voodoo
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: FretsOnFire\n"
+"POT-Creation-Date: 2006-10-27 23:23+EEST\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Sami Kyostila <skyostil@NOSPAM.kempele.fi>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+msgid "Ah yes, I know. I'm amazing."
+msgstr "Ah si, Ya lo se. Soy el mejor."
+
+msgid "Ah, that was cool."
+msgstr "Ah, esto mola mucho."
+
+msgid "Und hello everyone."
+msgstr "Hola a todos."
+
+msgid "My name is Jurgen"
+msgstr "Mi nombre es Jurgen"
+
+msgid "Guntherswarchzhaffenstrassen."
+msgstr "Guntherswarchzhaffenstrassen."
+
+msgid "Und today I will show you"
+msgstr "Te voy a demostrar hoy"
+
+msgid "how to play this game."
+msgstr "como jugar a este juego."
+
+msgid "Check this sh*t!"
+msgstr "Comprobar esto!"
+
+msgid "And now, pick up your keyboard"
+msgstr "Y ahora, coje tu teclado"
+
+msgid "like this."
+msgstr "asi."
+
+msgid "When I shred,"
+msgstr "Yo soy muy bueno,"
+
+msgid "I use the whole keyboard."
+msgstr "Y uso todo el teclado para tocar."
+
+msgid "But since you SUCK,"
+msgstr "Pero tu eres una MIERDA,"
+
+msgid "You will only need"
+msgstr "Tu solo necesitas"
+
+msgid "These five frets,"
+msgstr "cinco trastes,"
+
+msgid "Und zie Pick button."
+msgstr "este es el boton de seleccion."
+
+msgid "However, zie most important"
+msgstr "Sin embargo, el mas importante"
+
+msgid "is the Escape button."
+msgstr "es el boton de ESCAPE."
+
+msgid "You will need it,"
+msgstr "Lo necesitaras,"
+
+msgid "when you finally realize"
+msgstr "por que no acabaras las canciones"
+
+msgid "that you SUCK."
+msgstr "Por que eres una MIERDA."
+
+msgid "Bigtime."
+msgstr "Finalmente."
+
+msgid "To me, that is already obvious."
+msgstr "Para mi, eso ya es obvio."
+
+msgid "Ok, there comes your first note."
+msgstr "Muy bien, alli viene tu primera nota."
+
+msgid "You can already hold down the 1st fret"
+msgstr "Puedes mantener ya el primer traste"
+
+msgid "BUT DON'T PICK IT YET!"
+msgstr "PERO NO PULSES EL ACCIONADOR!"
+
+msgid "You missed it."
+msgstr "Fallaste..."
+
+msgid "Ok, let's try it again."
+msgstr "Vale, intentalo de nuevo."
+
+msgid "Ok, wait for it."
+msgstr "Vale, espera a la nota."
+
+msgid "Wait for it."
+msgstr "Esperala."
+
+msgid "No!"
+msgstr "No!"
+
+msgid "*Sigh*"
+msgstr "*Suspiro*"
+
+msgid "Now, hold down two frets."
+msgstr "Ahora, manten dos trastes."
+
+msgid "Ah, you missed it!"
+msgstr "Fallaste!"
+
+msgid "And now, try this super easy lick."
+msgstr "Y ahora, vuelve a intentarlo es muy facil!"
+
+msgid "Und up to my tempo."
+msgstr "Intenta seguirme."
+
+msgid "Don't try this,"
+msgstr "No intentes esto,"
+
+msgid "or you'll just hurt yourself."
+msgstr "o podrias hacerte mucho daño."
+
+msgid "Ok, that was about"
+msgstr "Aqui habian alrededor de"
+
+msgid "four billion notes per second."
+msgstr "cuatro billones de notas por segundo."
+
+msgid "If I play that any faster,"
+msgstr "Si juego mas rapidamente,"
+
+msgid "your minds would just blow up."
+msgstr "tu cabeza podria volverse loca."
+
+msgid "Ok, that is it for now."
+msgstr "Vale, esto es todo por ahora."
+
+msgid "You can now go and sell"
+msgstr "Corre y y ponte a vender"
+
+msgid "your keyboards on Ebay."
+msgstr "tus teclados por Ebay."
+
+msgid "Because you SUCK."
+msgstr "Por que eres una MIERDA."
+
+msgid "And remember one thing."
+msgstr "Y recuerda una cosa mas."
+
+msgid "I am your new god, little girls."
+msgstr "Yo soy tu nuevo dios, nenaza."
+

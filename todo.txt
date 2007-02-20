@@ -1,0 +1,95 @@
+Released in 1.0.192:
+
+ - fix the multisample error on startup (FIXED 186)
+ - fix the red screen error (FIXED 186)
+ - support for joysticks (FIXED 186)
+ - multiple keys for the same action (FIXED 187)
+ - make the songs report the available difficulties (FIXED 187)
+ - make the background flames fade out (FIXED 186)
+ - add the missing msvcp71.dll to the win32 distro (FIXED 192)
+
+Released in 1.0.220:
+
+ - fix the key release bug (FIXED 200)
+ - guitar hero song importer (FIXED 204)
+ - add license info to each file (FIXED 217)
+ - add support for joystick axes and hats (FIXED 216)
+ - add sdl_mixer and sdl_ttf binaries to the linux distro (FIXED 216)
+ - add custom color scheme support (FIXED 218)
+ - upload version info (FIXED 215)
+ - adjustable song delay (FIXED 211)
+ - remember last played song (FIXED 220)
+
+Released in 1.0.263:
+
+ - fix the double menu activation (FIXED 236)
+ - fix the memory leak (FIXED 257)
+ - add translation support (FIXED 235)
+ - editor ui improvements (FIXED 254)
+ - local settings directory (FIXED 231)
+ - non-writable data directory (FIXED 232)
+ - loosen up the fret-after-pick period (FIXED 260)
+ - lefty support (FIXED 250)
+ - make the screwup sounds quieter (FIXED 233)
+ - remove dependency on amanith (FIXED 236)
+ - delete gl objects in the main gl thread (FIXED 238)
+ - add support for cassette colors and labels (FIXED 241)
+ - add thanks to the yngwie video guy to the credits (FIXED 251)
+ - fix laggy song previews (FIXED 253)
+ - menu navigation with guitar controller (FIXED 252)
+ - fix game startup delay (FIXED 252)
+ - fix the editor scrolling (FIXED 254)
+ - fix muting long notes if released too early (FIXED 256)
+ - fix the ugly effect at song ending (FIXED 258)
+ - fix the end-game screen (FIXED 259)
+
+Released on 1.1.324:
+
+ - fix the key configuration bug (FIXED 291)
+ - don't reset the multiplier when a long note is released early (FIXED 292)
+ - merge tero's mac fixes (FIXED 293)
+ - fix the new song creation issue (FIXED 291)
+ - fix the widescreen aspect ratio issue (FIXED 287)
+ - add support for font scaling (FIXED 288)
+ - fix game keys conflicting with text dialog (FIXED 294)
+ - right-to-left language support (FIXED 297)
+ - nicer variable tempo support (FIXED 299)
+ - guitar hero 2 support (FIXED 315)
+ - don't allow zero fps (FIXED 303)
+ - proper mod support (FIXED 321)
+
+Todo:
+
+ - better documentation for the source
+ - add custom fretboard and background support
+ - abstract pygame mixer behind the Audio class (FIXED 320)
+ - support for freetar sng files
+ - support for gda files
+ - support for dtx files
+ - support for midi controllers
+ - song folder support (FIXED 327)
+ - apply alex's patches
+ - screw-up volume doesn't work?
+ - align notes to beat lines again
+ - fix missing encoding error on linux (FIXED 328)
+ - dual core perf improvements (FIXED 345)
+ - don't dump joystick names (FIXED 325)
+ - add a song testing mode to the editor
+ - fix backspace etc. on mac (FIXED 326)
+ - delete rhythm file after importing each song (FIXED 235)
+ - improve importer encoding quality (FIXED 235)
+ - make notes disappear when they are hit (FIXED 334)
+ - add tapping support
+ - fix volume saturation issue with GH2 tracks
+ - add rhythm guitar playing support
+ - fix performance issue with note effect (FIXED 334)
+ - move the multiplier text upwards (FIXED 330)
+ - pause the song while the menu is shown (FIXED 320)
+ - implement playing multiple streaming OGG files simultaneously (FIXED 323)
+ - fix the timer skew and add a high priority mode (FIXED 324)
+ - fix the priority of the loading screens to improve loading time (FIXED 333)
+ - make the fret color configurable with the theme (FIXED 334)
+ - hit counter (FIXED 335)
+ - type-ahead find for song chooser (FIXED 339)
+ - fix Numeric memory leak (FIXED 342)
+ - fix importing two missing songs on GH1 and GH2 disks (FIXED 345)

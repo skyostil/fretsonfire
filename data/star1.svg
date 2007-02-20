@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg4895"
+   sodipodi:version="0.32"
+   inkscape:version="0.42+0.43pre1"
+   sodipodi:docbase="c:\users\proj\keyboardhero\data"
+   sodipodi:docname="star1.svg">
+  <defs
+     id="defs4897">
+    <linearGradient
+       id="linearGradient4875">
+      <stop
+         style="stop-color:#d0d0d0;stop-opacity:1;"
+         offset="0"
+         id="stop4877" />
+      <stop
+         style="stop-color:#505050;stop-opacity:0.7368421;"
+         offset="1"
+         id="stop4879" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4875"
+       id="linearGradient4881"
+       x1="0.46915093"
+       y1="92.892616"
+       x2="0.46915093"
+       y2="-89.422569"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="85.617869"
+     inkscape:cy="1068.6991"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     inkscape:window-width="719"
+     inkscape:window-height="538"
+     inkscape:window-x="154"
+     inkscape:window-y="154" />
+  <metadata
+     id="metadata4900">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       sodipodi:type="star"
+       style="fill:url(#linearGradient4881);fill-opacity:1;stroke:#aeaeae;stroke-width:20;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.48876403"
+       id="path1307"
+       sodipodi:sides="5"
+       sodipodi:cx="0"
+       sodipodi:cy="2.3621821"
+       sodipodi:r1="41"
+       sodipodi:r2="100"
+       sodipodi:arg1="0.92729522"
+       sodipodi:arg2="1.5556137"
+       inkscape:flatsided="false"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="M 24.6,35.162182 L 1.5182044,102.35066 L -23.592836,35.89393 L -94.625539,34.704218 L -39.181174,-9.7140581 L -60.000004,-77.637815 L -0.6224617,-38.633092 L 57.543498,-79.422571 L 38.796472,-10.898051 L 95.563841,31.816422 L 24.6,35.162182 z "
+       transform="matrix(-0.151536,0.520434,0.520434,0.151536,-1.960254,-4.420852)"
+       inkscape:export-filename="c:\users\proj\keyboardhero\data\star1.png"
+       inkscape:export-xdpi="51.363052"
+       inkscape:export-ydpi="51.363052" />
+  </g>
+</svg>

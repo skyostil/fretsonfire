@@ -1,0 +1,155 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2006-11-03 08:24-0300\n"
+"Last-Translator: Davi Caseira <davi.caseira@ig.com.br>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Ah yes, I know. I'm amazing."
+msgstr "Ah sim, eu sei. Eu sou incrível."
+
+msgid "Ah, that was cool."
+msgstr "Ah, isso foi show."
+
+msgid "Und hello everyone."
+msgstr "Er.. olá todo mundo."
+
+msgid "My name is Jurgen"
+msgstr "Meu nome é Jurgen"
+
+msgid "Guntherswarchzhaffenstrassen."
+msgstr "Guntherswarchzhaffenstrassen."
+
+msgid "Und today I will show you"
+msgstr "E hoje vou mostrar pra você"
+
+msgid "how to play this game."
+msgstr "como se joga esse jogo."
+
+msgid "Check this sh*t!"
+msgstr "Dá uma sacada nessa mer*a!"
+
+msgid "And now, pick up your keyboard"
+msgstr "E agora, pegue seu teclado"
+
+msgid "like this."
+msgstr "dessa forma."
+
+msgid "When I shred,"
+msgstr "Quando eu destruo,"
+
+msgid "I use the whole keyboard."
+msgstr "Eu uso o teclado inteiro."
+
+msgid "But since you SUCK,"
+msgstr "Mas como você é RUIM,"
+
+msgid "You will only need"
+msgstr "Você só vai precisar"
+
+msgid "These five frets,"
+msgstr "Desses cinco trastos,"
+
+msgid "Und zie Pick button."
+msgstr "E do botão de tocar."
+
+msgid "However, zie most important"
+msgstr "Porém, a mais importante"
+
+msgid "is the Escape button."
+msgstr "é a botão Escape"
+
+msgid "You will need it,"
+msgstr "Você vai precisar,"
+
+msgid "when you finally realize"
+msgstr "quando finalmente notar"
+
+msgid "that you SUCK."
+msgstr "que você é RUIM."
+
+msgid "Bigtime."
+msgstr "Muito."
+
+msgid "To me, that is already obvious."
+msgstr "Pra mim, isso já é óbvio."
+
+msgid "Ok, there comes your first note."
+msgstr "Ok, lá vem sua primeira nota."
+
+msgid "You can already hold down the 1st fret"
+msgstr "Você já pode segurar o primeiro trasto."
+
+msgid "BUT DON'T PICK IT YET!"
+msgstr "MAS NÃO TOQUE AINDA!"
+
+msgid "You missed it."
+msgstr "Você errou."
+
+msgid "Ok, let's try it again."
+msgstr "Ok, vamos tentar de novo."
+
+msgid "Ok, wait for it."
+msgstr "Ok, espere por ela."
+
+msgid "Wait for it."
+msgstr "Espere por ela."
+
+msgid "No!"
+msgstr "Não!"
+
+msgid "*Sigh*"
+msgstr "*Suspiro*"
+
+msgid "Now, hold down two frets."
+msgstr "Agora, segure dois trastos."
+
+msgid "Ah, you missed it!"
+msgstr "Ah, você a perdeu."
+
+msgid "And now, try this super easy lick."
+msgstr "E agora, tente essa lambuja super fácil."
+
+msgid "Und up to my tempo."
+msgstr "E me acompanhe no tempo."
+
+msgid "Don't try this,"
+msgstr "Não tente isso,"
+
+msgid "or you'll just hurt yourself."
+msgstr "ou você vai se machucar."
+
+msgid "Ok, that was about"
+msgstr "Ok, isso foi cerca de"
+
+msgid "four billion notes per second."
+msgstr "quatro bilhões de notas por segundo"
+
+msgid "If I play that any faster,"
+msgstr "Se eu tocar mais rápido,"
+
+msgid "your minds would just blow up."
+msgstr "seus miolos explodiriam."
+
+msgid "Ok, that is it for now."
+msgstr "Ok, isso é tudo."
+
+msgid "You can now go and sell"
+msgstr "Você já pode ir e vender"
+
+msgid "your keyboards on Ebay."
+msgstr "seu teclado no Ebay."
+
+msgid "Because you SUCK."
+msgstr "Porque você é RUIM."
+
+msgid "And remember one thing."
+msgstr "E lembre-se de uma coisa."
+
+msgid "I am your new god, little girls."
+msgstr "Eu sou seu novo deus, menininhas."
+

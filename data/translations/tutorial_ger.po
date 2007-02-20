@@ -1,0 +1,155 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2006-10-30 14:24+0100\n"
+"Last-Translator: Jakob Hagauer <hagjac00@htl-kaindorf.ac.at>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Ah yes, I know. I'm amazing."
+msgstr "Jaja! Ich bin und bleibe der beste!"
+
+msgid "Ah, that was cool."
+msgstr "Yessss, das war geil!"
+
+msgid "Und hello everyone."
+msgstr "Ein Herzliche Hallo an alle!"
+
+msgid "My name is Jurgen"
+msgstr "Ich bin der Jürgen"
+
+msgid "Guntherswarchzhaffenstrassen."
+msgstr "Guntherswarchzhaffenstrassen."
+
+msgid "Und today I will show you"
+msgstr "Und heute zeige ich euch"
+
+msgid "how to play this game."
+msgstr "wie man dieses Spiel spielt"
+
+msgid "Check this sh*t!"
+msgstr "Zieh dir das rein!"
+
+msgid "And now, pick up your keyboard"
+msgstr "So jetzt greif dir dein keyboard"
+
+msgid "like this."
+msgstr "etwa so."
+
+msgid "When I shred,"
+msgstr "Wenn ich rocke,"
+
+msgid "I use the whole keyboard."
+msgstr "brauche ich das ganze Keyboard."
+
+msgid "But since you SUCK,"
+msgstr "Aber weil du SUCKST,"
+
+msgid "You will only need"
+msgstr "wirst du nur"
+
+msgid "These five frets,"
+msgstr "diese fünf Saiten,"
+
+msgid "Und zie Pick button."
+msgstr "und die Anschlag Taste brauchen."
+
+msgid "However, zie most important"
+msgstr "So, Das allerwichtigste ist"
+
+msgid "is the Escape button."
+msgstr "ist die Escape Taste."
+
+msgid "You will need it,"
+msgstr "Die wirst du brauchen,"
+
+msgid "when you finally realize"
+msgstr "wenn du endlich bemerkst"
+
+msgid "that you SUCK."
+msgstr "das du SUCKST."
+
+msgid "Bigtime."
+msgstr "Rulerzeit."
+
+msgid "To me, that is already obvious."
+msgstr "Natürlich nur für mich."
+
+msgid "Ok, there comes your first note."
+msgstr "Vorsicht da kommt deine erste Note!"
+
+msgid "You can already hold down the 1st fret"
+msgstr "Du kannst die erste Saite schonmal halten."
+
+msgid "BUT DON'T PICK IT YET!"
+msgstr "ABER NOCH NICHT ANSCHLAGEN!!"
+
+msgid "You missed it."
+msgstr "Verpasst."
+
+msgid "Ok, let's try it again."
+msgstr "Ok, Nochmal."
+
+msgid "Ok, wait for it."
+msgstr "Gut. Warte auf die Note."
+
+msgid "Wait for it."
+msgstr "Laaangsam..."
+
+msgid "No!"
+msgstr "Idiot!"
+
+msgid "*Sigh*"
+msgstr "*Pfffff*"
+
+msgid "Now, hold down two frets."
+msgstr "Jetzt drücke 2 Saiten."
+
+msgid "Ah, you missed it!"
+msgstr "Ah, versäumt!"
+
+msgid "And now, try this super easy lick."
+msgstr "So jetzt probier dieses Anfängersolo."
+
+msgid "Und up to my tempo."
+msgstr "Und jetzt rauf zu meinem Tempo."
+
+msgid "Don't try this,"
+msgstr "Probiers erst garnicht."
+
+msgid "or you'll just hurt yourself."
+msgstr "du tust dir nur weh."
+
+msgid "Ok, that was about"
+msgstr "Na gut das waren ca."
+
+msgid "four billion notes per second."
+msgstr "vier Milliarden Noten /Sekunde"
+
+msgid "If I play that any faster,"
+msgstr "Wenn ich das noch schneller spiele,"
+
+msgid "your minds would just blow up."
+msgstr "würde dein Kopf expodieren."
+
+msgid "Ok, that is it for now."
+msgstr "So das Wars dann."
+
+msgid "You can now go and sell"
+msgstr "Du bist jetzt bereit um"
+
+msgid "your keyboards on Ebay."
+msgstr "dein Keyboard auf Ebay zu verchecken."
+
+msgid "Because you SUCK."
+msgstr "Weil du bist Scheiße."
+
+msgid "And remember one thing."
+msgstr "Und merke dir eins."
+
+msgid "I am your new god, little girls."
+msgstr "Ich bin euer Gott, ihr Mädchen."
+

@@ -1,0 +1,160 @@
+# translation of tutorial.po to Français
+# Header entry was created by KBabel!
+#
+# Georges Dubus <georges.dubus@laposte.net>, 2006.
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Mime-Version: 1.0"
+"Last-Translator: Georges Dubus <georges.dubus@laposte.net>\n"
+"PO-Revision-Date: 2006-10-30 19:27+0100\n"
+"Project-Id-Version: tutorial\n"
+"Language-Team: Français <fr@li.org>\n"
+"X-Generator: KBabel 1.11.4\n"
+"MIME-Version: 1.0\n"
+
+msgid "Ah yes, I know. I'm amazing."
+msgstr "Je sais, je suis excellent."
+
+msgid "Ah, that was cool."
+msgstr "Ah, c'était bon"
+
+msgid "Und hello everyone."
+msgstr "Bonjour tout le monde."
+
+msgid "My name is Jurgen"
+msgstr "Mon nom est Jurgen"
+
+msgid "Guntherswarchzhaffenstrassen."
+msgstr "Guntherswarchzhaffenstrassen."
+
+msgid "Und today I will show you"
+msgstr "Et je vais vous montrer"
+
+msgid "how to play this game."
+msgstr "comment jouer à ce jeu."
+
+msgid "Check this sh*t!"
+msgstr "Écoute moi ça !"
+
+msgid "And now, pick up your keyboard"
+msgstr "Maintenant, prend ton clavier"
+
+msgid "like this."
+msgstr "comme ça."
+
+msgid "When I shred,"
+msgstr "Quand je joue,"
+
+msgid "I use the whole keyboard."
+msgstr "j'utilise tout le clavier."
+
+msgid "But since you SUCK,"
+msgstr "Mais comme t'es une MERDE,"
+
+msgid "You will only need"
+msgstr "tu va juste avoir besoin"
+
+msgid "These five frets,"
+msgstr "de ces cinq touchettes,"
+
+msgid "Und zie Pick button."
+msgstr "Et du bouton Mediator."
+
+msgid "However, zie most important"
+msgstr "Cependant, le plus important,"
+
+msgid "is the Escape button."
+msgstr "est le bouton Echap."
+
+msgid "You will need it,"
+msgstr "Tu en auras besoin,"
+
+msgid "when you finally realize"
+msgstr "quand tu te rendra compte,"
+
+msgid "that you SUCK."
+msgstr "que t'es une MERDE."
+
+msgid "Bigtime."
+msgstr "Un grand moment."
+
+msgid "To me, that is already obvious."
+msgstr "Pour moi, c'est déjà évident."
+
+msgid "Ok, there comes your first note."
+msgstr "Ok, voila la première note."
+
+msgid "You can already hold down the 1st fret"
+msgstr "Tu peux déjà appuyer sur la première touchette."
+
+msgid "BUT DON'T PICK IT YET!"
+msgstr "MAIS NE GRATTE PAR TOUT DE SUITE."
+
+msgid "You missed it."
+msgstr "Tu l'a raté."
+
+msgid "Ok, let's try it again."
+msgstr "D'accord, on va réessayer."
+
+msgid "Ok, wait for it."
+msgstr "Ok, attend."
+
+msgid "Wait for it."
+msgstr "Attend."
+
+msgid "No!"
+msgstr "Non !"
+
+msgid "*Sigh*"
+msgstr "*Soupir* "
+
+msgid "Now, hold down two frets."
+msgstr "Maintenant, appuie sur la première touchette."
+
+msgid "Ah, you missed it!"
+msgstr "Ah, tu l'a raté !"
+
+msgid "And now, try this super easy lick."
+msgstr "Et maintenant, essaye enchaînement super facile."
+
+msgid "Und up to my tempo."
+msgstr "Augmentons la vitesse."
+
+msgid "Don't try this,"
+msgstr "N'essaye pas ça,"
+
+msgid "or you'll just hurt yourself."
+msgstr "ou tu risque de te blesser."
+
+msgid "Ok, that was about"
+msgstr "Ok, ça allais à peu près"
+
+msgid "four billion notes per second."
+msgstr "à quatre millards de notes par seconde."
+
+msgid "If I play that any faster,"
+msgstr "Si je jouais plus vite,"
+
+msgid "your minds would just blow up."
+msgstr "Ton cerveau exploserai."
+
+msgid "Ok, that is it for now."
+msgstr "Ok, c'est tout pour l'instant."
+
+msgid "You can now go and sell"
+msgstr "Tu peux maintenant aller vendre"
+
+msgid "your keyboards on Ebay."
+msgstr "tes claviers sur Ebay."
+
+msgid "Because you SUCK."
+msgstr "Parce que t'es une MERDE."
+
+msgid "And remember one thing."
+msgstr "Et souviens toi d'une chose."
+
+msgid "I am your new god, little girls."
+msgstr "Je suis votre nouveau dieu, les filles."
+

@@ -1,0 +1,723 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2006-10-29 17:22+0200\n"
+"Last-Translator: Anton Tamminen <foo@freenerd.org>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: Credits.py:110
+msgid "Unreal Voodoo"
+msgstr "Unreal Voodoo"
+
+#: Credits.py:111
+msgid "presents"
+msgstr "presenterar"
+
+#: Credits.py:115
+msgid "Version %s"
+msgstr "Version %s"
+
+#: Credits.py:117
+msgid "Game Design,"
+msgstr "Speldesign,"
+
+#: Credits.py:118
+msgid "Programming:"
+msgstr "Programmering:"
+
+#: Credits.py:121
+msgid "Music,"
+msgstr "Musik,"
+
+#: Credits.py:122
+msgid "Sound Effects:"
+msgstr "Ljudffekter:"
+
+#: Credits.py:125
+msgid "Graphics:"
+msgstr "Grafik:"
+
+#: Credits.py:128
+msgid "Introducing:"
+msgstr "Introducerar:"
+
+#: Credits.py:130
+msgid "as Jurgen, Your New God"
+msgstr "som Jurgen, Din Nya Gud"
+
+#: Credits.py:133
+msgid "as Groupie"
+msgstr "som Groupie"
+
+#: Credits.py:135
+msgid "Song Credits:"
+msgstr "Musik:"
+
+#: Credits.py:136
+msgid "Bang Bang, Mystery Man"
+msgstr "Bang Band, Mystery Man"
+
+#: Credits.py:137
+msgid "music by Mary Jo and Tommi Inkila"
+msgstr "musik av Mary Jo och Tommy Inkila"
+
+#: Credits.py:138
+msgid "lyrics by Mary Jo"
+msgstr "lyrik av Mary Jo"
+
+#: Credits.py:140
+msgid "Defy The Machine"
+msgstr "Defy The Machine"
+
+#: Credits.py:141
+msgid "music by Tommi Inkila"
+msgstr "musik av Tommi Inkila"
+
+#: Credits.py:143
+msgid "This Week I've Been"
+msgstr "This Week I've Been"
+
+#: Credits.py:144
+msgid "Mostly Playing Guitar"
+msgstr "Mostly Playing Guitar"
+
+#: Credits.py:145
+msgid "composed and performed by Tommi Inkila"
+msgstr "komponerad och framförd av Tommi Inkila"
+
+#: Credits.py:147
+msgid "Testing:"
+msgstr "Testning:"
+
+#: Credits.py:154
+msgid "Special thanks to:"
+msgstr "Ett särskilt tack till:"
+
+#: Credits.py:157
+msgid "Made with:"
+msgstr "Gjord med:"
+
+#: Credits.py:180
+msgid "Source Code available under the GNU General Public License"
+msgstr "Källkoden tillgänglig under GNU General Public License"
+
+#: Credits.py:186
+msgid "Copyright 2006 by Unreal Voodoo"
+msgstr "Copyright 2006 by Unreal Voodoo"
+
+#: Dialogs.py:260
+msgid "<OK>"
+msgstr "<OK>"
+
+#: Dialogs.py:331
+msgid "Browsing Collection..."
+msgstr "Bläddrar i Samlingen..."
+
+#: Dialogs.py:550
+msgid "Loading Preview..."
+msgstr "Laddar Sampel"
+
+#: Dialogs.py:610
+msgid "[Parent Folder]"
+msgstr "[Huvudmapp]"
+
+#: Dialogs.py:612
+msgid "%s [Folder]"
+msgstr "%s [Mapp]"
+
+#: Dialogs.py:818
+msgid "%.2f beats per minute"
+msgstr "%.2f slag per minut"
+
+#: Dialogs.py:882
+msgid "Pick!"
+msgstr "Slå!"
+
+#: Dialogs.py:921
+msgid "Choose a Song"
+msgstr "Välj en Låt"
+
+#: Dialogs.py:933
+msgid "Choose a File"
+msgstr "Välj en Fil"
+
+#: Dialogs.py:959
+msgid "Play with the keys and press Escape when you're done."
+msgstr "Spela med tangenterna och tryck Escape när du är färdig."
+
+#: Dialogs.py:969
+msgid "Loading..."
+msgstr "Laddar..."
+
+#: Editor.py:65
+msgid "Save Song"
+msgstr "Spara Låt"
+
+#: Editor.py:66
+msgid "Set Song Name"
+msgstr "Ange Låtnamn"
+
+#: Editor.py:67
+msgid "Set Artist Name"
+msgstr "Ange in Artistnamn"
+
+#: Editor.py:68
+msgid "Set Beats per Minute"
+msgstr "Ange Slag per Minut"
+
+#: Editor.py:69
+msgid "Estimate Beats per Minute"
+msgstr "Uppskatta Slag per Minut"
+
+#: Editor.py:70
+msgid "Set A/V delay"
+msgstr "Ange A/V delay"
+
+#: Editor.py:71
+msgid "Set Cassette Color"
+msgstr "Ange kassettfärg"
+
+#: Editor.py:72
+msgid "Set Cassette Label"
+msgstr "Ange Kassettens Text"
+
+#: Editor.py:73
+msgid "Editing Help"
+msgstr "Hjälp Med Editering"
+
+#: Editor.py:74
+#: GameResultsScene.py:59
+#: GuitarScene.py:83
+msgid "Quit to Main Menu"
+msgstr "Avsluta och gå till huvudmeny"
+
+#: Editor.py:80
+msgid "There are no changes to save."
+msgstr "Inga förändringar att spara."
+
+#: Editor.py:88
+msgid "Saving..."
+msgstr "Sparar..."
+
+#: Editor.py:89
+msgid "'%s' saved."
+msgstr "'%s' sparad."
+
+#: Editor.py:92
+msgid "Editing keys: "
+msgstr "Editeringskontroller:"
+
+#: Editor.py:93
+msgid "Arrows - Move cursor, "
+msgstr "Pilar - Flytta på kursorn,"
+
+#: Editor.py:94
+msgid "Space - Play/pause song, "
+msgstr "Mellanslag - Spela/Pausa låt,"
+
+#: Editor.py:95
+msgid "Enter - Make note (hold and move for long notes), "
+msgstr "Enter - Skriv not (håll inne och flytta för långa noter),"
+
+#: Editor.py:96
+msgid "Delete - Delete note, "
+msgstr "Delete - Ta bort not,"
+
+#: Editor.py:97
+msgid "Page Up/Down - Change difficulty"
+msgstr "Page Up/Down - Ändra svårighetsgrad"
+
+#: Editor.py:101
+msgid "Enter Song Name"
+msgstr "Ändra Låtens Namn"
+
+#: Editor.py:107
+msgid "Enter Artist Name"
+msgstr "Ändra Artistnamn"
+
+#: Editor.py:113
+msgid "Enter A/V delay in milliseconds"
+msgstr "Ange A/V delay i millisekunder"
+
+#: Editor.py:119
+#: Editor.py:128
+msgid "That isn't a number."
+msgstr "Detta är inte ett nummer."
+
+#: Editor.py:122
+msgid "Enter Beats per Minute Value"
+msgstr "Ändra Slag per Minut -värdet"
+
+#: Editor.py:131
+msgid "Tap the Space bar to the beat of the song. Press Enter when done or Escape to cancel."
+msgstr "Knappa på Mellanslag i takt med låten. Tryck Enter när du är färdig eller Escape för att avsluta."
+
+#: Editor.py:141
+msgid "Enter cassette color in HTML (#RRGGBB) format."
+msgstr "Skriv in kassettens färg i HTML (#RRGGBB) -format."
+
+#: Editor.py:147
+msgid "That isn't a color."
+msgstr "Detta är inte en färg."
+
+#: Editor.py:150
+msgid "Choose a 256x128 PNG format label image."
+msgstr "Välj en 256x128 PNG-formats etikettbild."
+
+#: Editor.py:167
+msgid "Loading song..."
+msgstr "Laddar låt..."
+
+#: Editor.py:333
+msgid "Playing"
+msgstr "Spelar"
+
+#: Editor.py:335
+msgid "Stopped"
+msgstr "Stannad"
+
+#: Editor.py:376
+msgid "Enter a name for the song."
+msgstr "Skriv in ett namn för låten."
+
+#: Editor.py:384
+msgid "That song already exists."
+msgstr "Den sången existerar redan."
+
+#: Editor.py:388
+msgid "Choose the Instrument Track (OGG format)."
+msgstr "Välj ett instrumentspår (OGG-format)"
+
+#: Editor.py:394
+msgid "Choose the Background Track (OGG format) or press Escape to skip."
+msgstr "Välj ett bakgrundsspår (OGG-format) eller tryck Escape för att hoppa över."
+
+#: Editor.py:398
+msgid "Importing..."
+msgstr "Hämtar..."
+
+#: Editor.py:585
+msgid "Stage 1/8: Splitting VGS file"
+msgstr "Stadie 1/8: Delar VGS-fil"
+
+#: Editor.py:613
+msgid "Stage %d/8: Decoding channel %d into PCM"
+msgstr "Stadie %d/8: Avkodar kanal %d till PCM"
+
+#: Editor.py:624
+msgid "Stage 6/8: Joining song stereo tracks"
+msgstr "Stadie 6/8: Sammanfogar låtens stereospår"
+
+#: Editor.py:628
+msgid "Stage 7/8: Joining guitar stereo tracks"
+msgstr "Stadie 7/8: Sammanfogar gitarrens stereospår"
+
+#: Editor.py:634
+msgid "Stage 8/8: Compressing tracks"
+msgstr "Stadie 8/8: Packar spåren"
+
+#: Editor.py:664
+msgid "Reading the song list."
+msgstr "Läser lista på låtar."
+
+#: Editor.py:670
+msgid "Reading the archive index."
+msgstr "Läser arkivindexen."
+
+#: Editor.py:679
+msgid "Extracting %s by %s. %d of %d songs imported. Yeah, this is going to take forever."
+msgstr "Extraherar %s med %s. %d av %d låtar hämtade. Jo, detta kommer att ta en evighet."
+
+#: Editor.py:720
+msgid "Ready"
+msgstr "Färdig"
+
+#: Editor.py:735
+msgid "All done! %d songs imported. Have fun!"
+msgstr "Allt klart! %d låtar hämtade. Ha det så roligt!"
+
+#: Editor.py:737
+msgid "No songs could be imported, sorry. Check the log files for more information."
+msgstr "Inga låtar kunde hämtas, beklagar. Kolla loggfilerna för mera information."
+
+#: Editor.py:746
+msgid "Ogg Vorbis encoder (oggenc.exe) not found. Please install it to the game directory and try again."
+msgstr "Ogg Vorbis -kodaren (oggenc.exe) hittades inte. Var god och installera den till spelmappen och försök igen."
+
+#: Editor.py:748
+msgid "Ogg Vorbis encoder (oggenc) not found. Please install it and try again."
+msgstr "Ogg Vorbis -kodaren (oggenc) hittades inte. Var god och installera den och försök igen."
+
+#: Editor.py:752
+msgid "Make sure you have at least 500 megabytes of free disk space before using this importer."
+msgstr "Försäkra dig om att ha minst 500 megabytes ledigt hårdskivsutrymme före bruk av denna hämtarfunktion."
+
+#: Editor.py:756
+msgid "Enter the path to the mounted Guitar Hero (tm) DVD"
+msgstr "Skriv in sökvägen till den monterade Guitar Hero (tm) DVDn"
+
+#: Editor.py:765
+msgid "That's not it. Try again."
+msgstr "Stämmer inte. Försök igen."
+
+#: Editor.py:782
+msgid "Importing Songs"
+msgstr "Hämtning av Låtar"
+
+#: GameEngine.py:49
+msgid "Upload Highscores"
+msgstr "Uppladdning av Highscore"
+
+#: GameEngine.py:49
+#: GameEngine.py:51
+#: GameEngine.py:52
+msgid "No"
+msgstr "Nej"
+
+#: GameEngine.py:49
+#: GameEngine.py:51
+#: GameEngine.py:52
+msgid "Yes"
+msgstr "Jo"
+
+#: GameEngine.py:51
+msgid "Lefty mode"
+msgstr "Vänsterhänt"
+
+#: GameEngine.py:52
+msgid "Fullscreen Mode"
+msgstr "Helskärm"
+
+#: GameEngine.py:53
+msgid "2x"
+msgstr "2x"
+
+#: GameEngine.py:53
+msgid "4x"
+msgstr "4x"
+
+#: GameEngine.py:53
+msgid "6x"
+msgstr "6x"
+
+#: GameEngine.py:53
+msgid "8x"
+msgstr "8x"
+
+#: GameEngine.py:53
+msgid "Antialiasing Quality"
+msgstr "Kvalitet på Antaliasering"
+
+#: GameEngine.py:53
+msgid "None"
+msgstr "Inga"
+
+#: GameEngine.py:55
+msgid "Frames per Second"
+msgstr "Frames per Second"
+
+#: GameEngine.py:56
+msgid "High"
+msgstr "Hög"
+
+#: GameEngine.py:56
+msgid "Low"
+msgstr "Låg"
+
+#: GameEngine.py:56
+msgid "Normal"
+msgstr "Normal"
+
+#: GameEngine.py:56
+msgid "SVG Quality"
+msgstr "SVG-kvalitet"
+
+#: GameEngine.py:57
+msgid "Sample Frequency"
+msgstr "Sampelfrekvens"
+
+#: GameEngine.py:58
+msgid "Sample Bits"
+msgstr "Sampelbitar"
+
+#: GameEngine.py:60
+msgid "Buffer Size"
+msgstr "Storlek på Buffer"
+
+#: GameEngine.py:61
+msgid "A/V delay"
+msgstr "A/V delay"
+
+#: GameEngine.py:62
+msgid "Loud"
+msgstr "Hård"
+
+#: GameEngine.py:62
+msgid "Off"
+msgstr "Av"
+
+#: GameEngine.py:62
+msgid "Painful"
+msgstr "Smärtsam"
+
+#: GameEngine.py:62
+msgid "Quiet"
+msgstr "Tyst"
+
+#: GameEngine.py:62
+msgid "Screw Up Sounds"
+msgstr "Förvrängningsljud"
+
+#: GameEngine.py:127
+msgid "Frets on Fire"
+msgstr "Frets on Fire"
+
+#: GameResultsScene.py:57
+msgid "Replay"
+msgstr "Spela om"
+
+#: GameResultsScene.py:58
+#: GuitarScene.py:82
+msgid "Change Song"
+msgstr "Byt låt"
+
+#: GameResultsScene.py:65
+msgid "Chilling..."
+msgstr "Chillar..."
+
+#: GameResultsScene.py:75
+msgid "No highscores for cheaters!"
+msgstr "Inga poäng för fuskare!"
+
+#: GameResultsScene.py:77
+msgid "%d points is a new high score! Please enter your name:"
+msgstr "%d poäng är ett nytt rekord! Var vänlig och ange namn:"
+
+#: GameResultsScene.py:177
+msgid "Highest Scores (%s)"
+msgstr "Högsta Poäng (%s)"
+
+#: GameResultsScene.py:198
+msgid "Uploading Scores..."
+msgstr "Laddar Upp Poäng..."
+
+#: GameResultsScene.py:202
+msgid "Song Finished!"
+msgstr "Slut på Låten!"
+
+#: GameResultsScene.py:220
+msgid "Accuracy: %d%%"
+msgstr "Noggrannhet: %d%%"
+
+#: GameResultsScene.py:223
+msgid "Longest note streak: %d"
+msgstr "Längsta notsträcka: %d"
+
+#: GameTask.py:72
+msgid "Connection lost."
+msgstr "Tappade kontakt."
+
+#: GuitarScene.py:78
+msgid "Tuning Guitar..."
+msgstr "Stämmer Gitarren..."
+
+#: GuitarScene.py:81
+msgid "Restart Song"
+msgstr "Starta Om Låt"
+
+#: GuitarScene.py:250
+msgid "Jurgen will show you how it is done."
+msgstr "Jurgen visar er hur det ska göras!"
+
+#: GuitarScene.py:252
+msgid "Jurgen has left the building."
+msgstr "Jurgen has left the building."
+
+#: GuitarScene.py:321
+msgid "Get Ready to Rock"
+msgstr "Förbered er att Rocka"
+
+#: Language.py:50
+msgid "English"
+msgstr "Engelska"
+
+#: Language.py:53
+msgid "Language"
+msgstr "Språk"
+
+#: Lobby.py:51
+msgid "Player"
+msgstr "Spelare"
+
+#: Lobby.py:58
+msgid "Enter your name:"
+msgstr "Ange ditt namn:"
+
+#: Lobby.py:58
+msgid "Player #%d"
+msgstr "Spelare #%d"
+
+#: Lobby.py:108
+msgid "Lobby (%d players)"
+msgstr "Lobby (%d spelare)"
+
+#: Lobby.py:137
+msgid "Press Enter to Start Game"
+msgstr "Tryck Enter för att Starta Spelet"
+
+#: MainMenu.py:114
+msgid "Press a key for '%s' or Escape to cancel."
+msgstr "Tryck på en tangent för '%s' eller Escape för att avsluta."
+
+#: MainMenu.py:137
+msgid "Host Multiplayer Game"
+msgstr "Tillhandahåll spelserver"
+
+#: MainMenu.py:138
+msgid "Join Multiplayer Game"
+msgstr "Anslut till flerdeltagarspel"
+
+#: MainMenu.py:141
+msgid "Apply New Settings"
+msgstr "Ta i Bruk Nya Inställningar"
+
+#: MainMenu.py:150
+msgid "Test Keys"
+msgstr "Testa Kontroller"
+
+#: MainMenu.py:168
+msgid "Video Resolution"
+msgstr "Videoresolution"
+
+#: MainMenu.py:189
+msgid "Game Settings"
+msgstr "Spelinställningar"
+
+#: MainMenu.py:190
+msgid "Key Settings"
+msgstr "Kontroller"
+
+#: MainMenu.py:191
+msgid "Video Settings"
+msgstr "Videoinställningar"
+
+#: MainMenu.py:192
+msgid "Audio Settings"
+msgstr "Ljudinställningar"
+
+#: MainMenu.py:197
+msgid "Edit Existing Song"
+msgstr "Editera Befintliga Låtar"
+
+#: MainMenu.py:198
+msgid "Import New Song"
+msgstr "Hämta Ny Låt"
+
+#: MainMenu.py:199
+msgid "Import Guitar Hero(tm) Songs"
+msgstr "Hämta Guitar Hero(tm)-Låtar"
+
+#: MainMenu.py:203
+msgid "Play Game"
+msgstr "Spela"
+
+#: MainMenu.py:204
+msgid "Tutorial"
+msgstr "Introduktion"
+
+#: MainMenu.py:205
+msgid "Song Editor"
+msgstr "Låteditor"
+
+#: MainMenu.py:206
+msgid "Settings >"
+msgstr "Inställningar >"
+
+#: MainMenu.py:207
+msgid "Credits"
+msgstr "Credits"
+
+#: MainMenu.py:208
+msgid "Quit"
+msgstr "Avsluta"
+
+#: MainMenu.py:290
+msgid "Enter the server address:"
+msgstr "Ange serverns address:"
+
+#: MainMenu.py:297
+msgid "Connecting..."
+msgstr "Ansluter..."
+
+#: Player.py:44
+msgid "Move left"
+msgstr "Gå till vänster"
+
+#: Player.py:45
+msgid "Move right"
+msgstr "Gå till höger"
+
+#: Player.py:46
+msgid "Move up"
+msgstr "Gå upp"
+
+#: Player.py:47
+msgid "Move down"
+msgstr "Gå ner"
+
+#: Player.py:48
+msgid "Pick"
+msgstr "Slå"
+
+#: Player.py:49
+msgid "Secondary Pick"
+msgstr "Slå, alternativ"
+
+#: Player.py:50
+msgid "Fret #1"
+msgstr "Band #1"
+
+#: Player.py:51
+msgid "Fret #2"
+msgstr "Band #2"
+
+#: Player.py:52
+msgid "Fret #3"
+msgstr "Band #3"
+
+#: Player.py:53
+msgid "Fret #4"
+msgstr "Band #4"
+
+#: Player.py:54
+msgid "Fret #5"
+msgstr "Band #5"
+
+#: Player.py:55
+msgid "Cancel"
+msgstr "Ångra"
+
+#: Song.py:56
+msgid "Supaeasy"
+msgstr "Urlätt"
+
+#: Song.py:57
+msgid "Easy"
+msgstr "Lätt"
+
+#: Song.py:58
+msgid "Medium"
+msgstr "Mellansvår"
+
+#: Song.py:59
+msgid "Amazing"
+msgstr "Otrolig"
+
+#: SongChoosingScene.py:61
+msgid "Choose a difficulty:"
+msgstr "Välj en svårighetsgrad:"
+

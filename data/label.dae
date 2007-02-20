@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA version="1.4.0" xmlns="http://www.collada.org/2005/11/COLLADASchema">
+	<asset>
+		<contributor>
+			<author>Illusoft Collada 1.4.0 plugin for Blender - http://colladablender.illusoft.com</author>
+			<authoring_tool>Blender v:242 - Illusoft Collada Exporter v:0.2.65</authoring_tool>
+			<comments></comments>
+			<copyright></copyright>
+			<source_data>file:///home/skyostil/label.blend</source_data>
+		</contributor>
+		<created>2006-10-07T13:26:49.089101</created>
+		<modified>2006-10-07T13:26:49.089130</modified>
+		<unit meter="0.01" name="centimeter"/>
+		<up_axis>Z_UP</up_axis>
+	</asset>
+	<library_effects>
+		<effect id="Material-fx" name="Material-fx">
+			<profile_COMMON>
+				<technique sid="">
+					<phong>
+						<emission>
+							<color>0.0 0.0 0.0 1.0</color>
+						</emission>
+						<ambient>
+							<color>0.4 0.4 0.4 1.0</color>
+						</ambient>
+						<diffuse>
+							<color>0.8 0.8 0.8 1.0</color>
+						</diffuse>
+						<specular>
+							<color>0.5 0.5 0.5 1.0</color>
+						</specular>
+						<shininess>
+							<float>12.5</float>
+						</shininess>
+						<reflective>
+							<color>1.0 1.0 1.0 1.0</color>
+						</reflective>
+						<reflectivity>
+							<float>0.8</float>
+						</reflectivity>
+						<transparent>
+							<color>1 1 1 1</color>
+						</transparent>
+						<transparency>
+							<float>0.0</float>
+						</transparency>
+					</phong>
+				</technique>
+			</profile_COMMON>
+		</effect>
+	</library_effects>
+	<library_geometries>
+		<geometry id="Object02_0" name="Object02_0">
+			<mesh>
+				<source id="Object02_0-Position">
+					<float_array count="120" id="Object02_0-Position-array">6.001 -2.20791 5.4252 -5.999 -2.20791 5.4252 6.001 -2.20791 -1.4232 -5.999 -2.20791 -1.4232 -24.699 -2.20787 -6.699 -24.699 -2.20787 15.701 24.701 -2.20787 -6.699 24.701 -2.20787 15.701 -8.83542 -2.20789 0.6906 -9.5777 -2.20789 -0.4203 -10.6886 -2.20789 -1.16258 -11.999 -2.20789 -1.42323 -13.3094 -2.20789 -1.16258 -14.4203 -2.20789 -0.4203 -15.16258 -2.20789 0.6906 -15.42323 -2.20789 2.001 -15.16258 -2.20789 3.3114 -14.4203 -2.20789 4.4223 -13.3094 -2.20789 5.16458 -11.999 -2.20789 5.42523 -10.6886 -2.20789 5.16458 -9.5777 -2.20789 4.4223 -8.57477 -2.20789 2.001 -8.83542 -2.20789 3.3114 15.16458 -2.20789 0.6906 14.4223 -2.20789 -0.4203 13.3114 -2.20789 -1.16258 12.001 -2.20789 -1.42323 10.6906 -2.20789 -1.16258 9.5797 -2.20789 -0.4203 8.83742 -2.20789 0.6906 8.57677 -2.20789 2.001 8.83742 -2.20789 3.3114 9.5797 -2.20789 4.4223 10.6906 -2.20789 5.16458 12.001 -2.20789 5.42523 13.3114 -2.20789 5.16458 14.4223 -2.20789 4.4223 15.42523 -2.20789 2.001 15.16458 -2.20789 3.3114</float_array>
+					<technique_common>
+						<accessor count="40" source="#Object02_0-Position-array" stride="3">
+							<param name="X" type="float"/>
+							<param name="Y" type="float"/>
+							<param name="Z" type="float"/>
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="Object02_0-Normals">
+					<float_array count="120" id="Object02_0-Normals-array">0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0</float_array>
+					<technique_common>
+						<accessor count="40" source="#Object02_0-Normals-array" stride="3">
+							<param name="X" type="float"/>
+							<param name="Y" type="float"/>
+							<param name="Z" type="float"/>
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="Object02_0-UV">
+					<float_array count="252" id="Object02_0-UV-array">0.25709 0.53935 0.28363 0.52797 0.37852 0.54017 0.28363 0.52797 0.30616 0.49521 0.37852 0.54017 0.30616 0.49521 0.32125 0.44605 0.37852 0.54017 0.3266 0.38798 0.37894 0.23649 0.32125 0.44605 0.37852 0.54017 0.32125 0.44605 0.37894 0.23649 0.3266 0.38798 0.32141 0.32983 0.37894 0.23649 0.32141 0.32983 0.30646 0.28047 0.37894 0.23649 0.30646 0.28047 0.28402 0.24741 0.37894 0.23649 0.74322 0.23894 0.71668 0.25032 0.62179 0.23812 0.71668 0.25032 0.69415 0.28308 0.62179 0.23812 0.69415 0.28308 0.67906 0.33224 0.62179 0.23812 0.67371 0.39031 0.62137 0.5418 0.67906 0.33224 0.67906 0.33224 0.62137 0.5418 0.62179 0.23812 0.6789 0.44845 0.62137 0.5418 0.67371 0.39031 0.69385 0.49781 0.62137 0.5418 0.6789 0.44845 0.71629 0.53088 0.62137 0.5418 0.69385 0.49781 0.25752 0.23567 0.23098 0.24705 0.00083 0.0 0.23098 0.24705 0.20846 0.27981 0.00083 0.0 0.19336 0.32897 0.18801 0.38704 -0.00056 0.99328 0.18801 0.38704 0.1932 0.44519 -0.00056 0.99328 0.1932 0.44519 0.20815 0.49455 -0.00056 0.99328 0.20815 0.49455 0.23059 0.52761 -0.00056 0.99328 0.74279 0.54262 0.76933 0.53124 0.99917 1.0 0.76933 0.53124 0.79185 0.49847 0.99917 1.0 0.79185 0.49847 0.80695 0.44931 0.99917 1.0 0.8123 0.39124 1.00056 0.00672 0.80695 0.44931 0.99917 1.0 0.80695 0.44931 1.00056 0.00672 0.8123 0.39124 0.80711 0.3331 1.00056 0.00672 0.80711 0.3331 0.79216 0.28374 1.00056 0.00672 0.79216 0.28374 0.76972 0.25067 1.00056 0.00672 0.37894 0.23649 0.28402 0.24741 0.25752 0.23567 0.74279 0.54262 0.62137 0.5418 0.71629 0.53088 0.00083 0.0 0.37894 0.23649 0.25752 0.23567 1.00056 0.00672 0.37894 0.23649 0.00083 0.0 0.74322 0.23894 0.37894 0.23649 1.00056 0.00672 0.37852 0.54017 -0.00056 0.99328 0.25709 0.53935 0.62137 0.5418 -0.00056 0.99328 0.37852 0.54017 -0.00056 0.99328 0.62137 0.5418 0.74279 0.54262 0.99917 1.0 -0.00056 0.99328 0.74279 0.54262 -0.00056 0.99328 0.00083 0.0 0.20846 0.27981 -0.00056 0.99328 0.23059 0.52761 0.25709 0.53935 1.00056 0.00672 0.76972 0.25067 0.74322 0.23894</float_array>
+					<technique_common>
+						<accessor count="126" source="#Object02_0-UV-array" stride="2">
+							<param name="S" type="float"/>
+							<param name="T" type="float"/>
+						</accessor>
+					</technique_common>
+				</source>
+				<vertices id="Object02_0-Vertex">
+					<input semantic="POSITION" source="#Object02_0-Position"/>
+					<input semantic="NORMAL" source="#Object02_0-Normals"/>
+				</vertices>
+				<triangles count="42" material="Material">
+					<input offset="0" semantic="VERTEX" source="#Object02_0-Vertex"/>
+					<input offset="1" semantic="TEXCOORD" source="#Object02_0-UV"/>
+					<p>19 0 20 1 1 2 20 3 21 4 1 5 21 6 23 7 1 8 22 9 3 10 23 11 1 12 23 13 3 14 22 15 8 16 3 17 8 18 9 19 3 20 9 21 10 22 3 23 27 24 28 25 2 26 28 27 29 28 2 29 29 30 30 31 2 32 31 33 0 34 30 35 30 36 0 37 2 38 32 39 0 40 31 41 33 42 0 43 32 44 34 45 0 46 33 47 11 48 12 49 4 50 12 51 13 52 4 53 14 54 15 55 5 56 15 57 16 58 5 59 16 60 17 61 5 62 17 63 18 64 5 65 35 66 36 67 7 68 36 69 37 70 7 71 37 72 39 73 7 74 38 75 6 76 39 77 7 78 39 79 6 80 38 81 24 82 6 83 24 84 25 85 6 86 25 87 26 88 6 89 3 90 10 91 11 92 35 93 0 94 34 95 4 96 3 97 11 98 6 99 3 100 4 101 27 102 3 103 6 104 1 105 5 106 19 107 0 108 5 109 1 110 5 111 0 112 35 113 7 114 5 115 35 116 5 117 4 118 13 119 5 120 18 121 19 122 6 123 26 124 27 125</p>
+				</triangles>
+			</mesh>
+		</geometry>
+	</library_geometries>
+	<library_materials>
+		<material id="Material" name="Material">
+			<instance_effect url="#Material-fx"/>
+		</material>
+	</library_materials>
+	<library_visual_scenes>
+		<visual_scene id="Scene" name="Scene">
+			<node id="Mesh_001" name="Mesh_001">
+				<rotate>0.0 0.0 1.0 -179.99999</rotate>
+				<scale>0.1 0.1 0.1</scale>
+				<instance_geometry url="#Object02_0">
+					<bind_material>
+						<technique_common>
+							<instance_material symbol="Material" target="#Material"/>
+						</technique_common>
+					</bind_material>
+				</instance_geometry>
+			</node>
+		</visual_scene>
+	</library_visual_scenes>
+	<library_physics_materials>
+		<physics_material id="Mesh_001-PhysicsMaterial" name="Mesh_001-PhysicsMaterial">
+			<technique_common>
+				<dynamic_friction>0</dynamic_friction>
+				<restitution>0</restitution>
+				<static_friction>0</static_friction>
+			</technique_common>
+		</physics_material>
+	</library_physics_materials>
+	<library_physics_models>
+		<physics_model id="Mesh_001-PhysicsModel" name="Mesh_001-PhysicsModel">
+			<rigid_body name="Mesh_001-RigidBody" sid="Mesh_001-RigidBody">
+				<technique_common>
+					<instance_physics_material url="#Mesh_001-PhysicsMaterial"/>
+					<shape>
+						<box>
+							<half_extents>24.7 2e-05 11.2</half_extents>
+						</box>
+					</shape>
+					<dynamic>false</dynamic>
+					<mass>1.0</mass>
+				</technique_common>
+			</rigid_body>
+		</physics_model>
+	</library_physics_models>
+	<library_physics_scenes>
+		<physics_scene id="Scene-Physics" name="Scene-Physics">
+			<instance_physics_model url="#Mesh_001-PhysicsModel">
+				<instance_rigid_body body="Mesh_001-RigidBody" target="#Mesh_001"/>
+			</instance_physics_model>
+		</physics_scene>
+	</library_physics_scenes>
+	<scene>
+		<instance_visual_scene url="#Scene"/>
+		<instance_physics_scene url="#Scene-Physics"/>
+	</scene>
+</COLLADA>

@@ -1,0 +1,156 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2006-10-30 22:51+0200\n"
+"Last-Translator: Anton Tamminen <foo@freenerd.org>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Swedish\n"
+
+msgid "Ah yes, I know. I'm amazing."
+msgstr "Ah ja, jag vet. Ja 'e otrolig"
+
+msgid "Ah, that was cool."
+msgstr "Ah, de va coolt"
+
+msgid "Und hello everyone."
+msgstr "Und hej på alla"
+
+msgid "My name is Jurgen"
+msgstr "Mitt namn är Jurgen"
+
+msgid "Guntherswarchzhaffenstrassen."
+msgstr "Guntherswarchzhaffenstrassen."
+
+msgid "Und today I will show you"
+msgstr "Och idag, skall jag visa dig"
+
+msgid "how to play this game."
+msgstr "hur man spelar dethär spelet."
+
+msgid "Check this sh*t!"
+msgstr "Kolla dehär!"
+
+msgid "And now, pick up your keyboard"
+msgstr "Och nu, greppa ditt tangentbord"
+
+msgid "like this."
+msgstr "såhär."
+
+msgid "When I shred,"
+msgstr "När jag river,"
+
+msgid "I use the whole keyboard."
+msgstr "använder jag hela tangentbordet."
+
+msgid "But since you SUCK,"
+msgstr "Men eftersom du SUGER,"
+
+msgid "You will only need"
+msgstr "behöver du endast"
+
+msgid "These five frets,"
+msgstr "dessa fem greppband,"
+
+msgid "Und zie Pick button."
+msgstr "Och slagtangenten."
+
+msgid "However, zie most important"
+msgstr "Hursomhelst, den viktigaste"
+
+msgid "is the Escape button."
+msgstr "är Escape-tangenten."
+
+msgid "You will need it,"
+msgstr "Du kommer att behöva den,"
+
+msgid "when you finally realize"
+msgstr "när du äntligen fattar"
+
+msgid "that you SUCK."
+msgstr "att du SUGER."
+
+msgid "Bigtime."
+msgstr "Stort."
+
+msgid "To me, that is already obvious."
+msgstr "För mig, är det redan självklart."
+
+msgid "Ok, there comes your first note."
+msgstr "OK, här kommer din första not."
+
+msgid "You can already hold down the 1st fret"
+msgstr "Du kan redan hålla ner första bandet"
+
+msgid "BUT DON'T PICK IT YET!"
+msgstr "MEN SLÅ INTE ÄN!"
+
+msgid "You missed it."
+msgstr "Du missade."
+
+msgid "Ok, let's try it again."
+msgstr "Ok, vi provar igen."
+
+msgid "Ok, wait for it."
+msgstr "Ok, vänta på den."
+
+msgid "Wait for it."
+msgstr "Vänta..."
+
+msgid "No!"
+msgstr "Nej!"
+
+msgid "*Sigh*"
+msgstr "*Suck*"
+
+msgid "Now, hold down two frets."
+msgstr "Nu, håll de två första banden."
+
+msgid "Ah, you missed it!"
+msgstr "Äh, du missade!"
+
+msgid "And now, try this super easy lick."
+msgstr "Och nu, prova denna urlätta lick."
+
+msgid "Und up to my tempo."
+msgstr "Und nu upp till mitt tempo."
+
+msgid "Don't try this,"
+msgstr "Försök inte detta,"
+
+msgid "or you'll just hurt yourself."
+msgstr "du bara skadar dig själv."
+
+msgid "Ok, that was about"
+msgstr "Ok, det var ca."
+
+msgid "four billion notes per second."
+msgstr "fyra miljarder noter per sekund."
+
+msgid "If I play that any faster,"
+msgstr "Om jag skulle spela alls snabbare,"
+
+msgid "your minds would just blow up."
+msgstr "skulle era hjärnor grillas."
+
+msgid "Ok, that is it for now."
+msgstr "Ok, det var dagens lektion."
+
+msgid "You can now go and sell"
+msgstr "Du kan nu gå sälja"
+
+msgid "your keyboards on Ebay."
+msgstr "dina tangentbord på Ebay."
+
+msgid "Because you SUCK."
+msgstr "För du SUGER."
+
+msgid "And remember one thing."
+msgstr "Och kom ihåg en sak."
+
+msgid "I am your new god, little girls."
+msgstr "Jag är er nya gud, små flickor."
+

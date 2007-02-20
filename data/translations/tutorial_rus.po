@@ -1,0 +1,155 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2006-10-30 20:03+0300\n"
+"Last-Translator: Clayman <dan.konovalov@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Ah yes, I know. I'm amazing."
+msgstr "О да, я знаю. Это неописуемо."
+
+msgid "Ah, that was cool."
+msgstr "И это тоже ничего."
+
+msgid "Und hello everyone."
+msgstr "И привет всем."
+
+msgid "My name is Jurgen"
+msgstr "Меня зовут  Юрджин"
+
+msgid "Guntherswarchzhaffenstrassen."
+msgstr "Гюнтесватенхафэнстазен"
+
+msgid "Und today I will show you"
+msgstr "И сегодня я покажу тебе"
+
+msgid "how to play this game."
+msgstr "как в это вообще можно играть."
+
+msgid "Check this sh*t!"
+msgstr "Зацени-ка вот это!"
+
+msgid "And now, pick up your keyboard"
+msgstr "А теперь возьми свою клавиатуру"
+
+msgid "like this."
+msgstr "вот так."
+
+msgid "When I shred,"
+msgstr "Когда я запиливаю,"
+
+msgid "I use the whole keyboard."
+msgstr "я использую клавиатуру целиком."
+
+msgid "But since you SUCK,"
+msgstr "Но, если учесть, что ты СОСУНОК,"
+
+msgid "You will only need"
+msgstr "то тебе понадобятся только"
+
+msgid "These five frets,"
+msgstr "вот эти пять ладов"
+
+msgid "Und zie Pick button."
+msgstr "и медиатор."
+
+msgid "However, zie most important"
+msgstr "Тем не менее, самой важной для тебя станет"
+
+msgid "is the Escape button."
+msgstr "кнопка Esacpe."
+
+msgid "You will need it,"
+msgstr "Ты о ней вспомнишь,"
+
+msgid "when you finally realize"
+msgstr "как только поймешь,"
+
+msgid "that you SUCK."
+msgstr "что ты СОСУНОК."
+
+msgid "Bigtime."
+msgstr "Самый настоящий."
+
+msgid "To me, that is already obvious."
+msgstr "Я это поянл с самого начала."
+
+msgid "Ok, there comes your first note."
+msgstr "Ладно, вот приближается твоя первая нота."
+
+msgid "You can already hold down the 1st fret"
+msgstr "Ты уже можешь зажать струну на 1 ладу"
+
+msgid "BUT DON'T PICK IT YET!"
+msgstr "НО НЕ ДЕРГАЙ ЕЕ!"
+
+msgid "You missed it."
+msgstr "Не успел."
+
+msgid "Ok, let's try it again."
+msgstr "Ладно, давай попробуем еще раз."
+
+msgid "Ok, wait for it."
+msgstr "Так, жди."
+
+msgid "Wait for it."
+msgstr "Жди."
+
+msgid "No!"
+msgstr "Нет!"
+
+msgid "*Sigh*"
+msgstr "*Вздох*"
+
+msgid "Now, hold down two frets."
+msgstr "Теперь зажми струны на двух ладах."
+
+msgid "Ah, you missed it!"
+msgstr "О, ты снова проспал!"
+
+msgid "And now, try this super easy lick."
+msgstr "А теперь, попробуй этот простейщий кусок."
+
+msgid "Und up to my tempo."
+msgstr "А теперь кое-что для меня."
+
+msgid "Don't try this,"
+msgstr "Даже и не пробуй сыграть"
+
+msgid "or you'll just hurt yourself."
+msgstr "или просто себе навредишь."
+
+msgid "Ok, that was about"
+msgstr "Да, тут было примерно"
+
+msgid "four billion notes per second."
+msgstr "4 биллиона нот в секунду."
+
+msgid "If I play that any faster,"
+msgstr "Если бы я сыграл чуть быстрее,"
+
+msgid "your minds would just blow up."
+msgstr "твои мозги бы просто взоравлись."
+
+msgid "Ok, that is it for now."
+msgstr "Ладно, на этот раз все."
+
+msgid "You can now go and sell"
+msgstr "А теперь можешь пойти и продать"
+
+msgid "your keyboards on Ebay."
+msgstr "свою клавиатуру на Ebay."
+
+msgid "Because you SUCK."
+msgstr "Потому что ты СОСУНОК."
+
+msgid "And remember one thing."
+msgstr "И запомни одну вещь."
+
+msgid "I am your new god, little girls."
+msgstr "Маленькие девочки, я ваш новый бог."
+

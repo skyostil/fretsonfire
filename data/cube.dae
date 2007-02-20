@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA version="1.4.0" xmlns="http://www.collada.org/2005/11/COLLADASchema">
+	<asset>
+		<contributor>
+			<author>Illusoft Collada 1.4.0 plugin for Blender - http://colladablender.illusoft.com</author>
+			<authoring_tool>Blender v:241 - Illusoft Collada Exporter v:0.2.16</authoring_tool>
+			<comments></comments>
+			<copyright></copyright>
+			<source_data></source_data>
+		</contributor>
+		<created>2006-05-20T20:44:51.343000</created>
+		<modified>2006-05-20T20:44:51.343000</modified>
+		<unit meter="0.01" name="centimeter"/>
+		<up_axis>Z_UP</up_axis>
+	</asset>
+	<library_images>
+    		<image id="file1-image" name="file1">
+      		<init_from>textures\grid.jpg</init_from>
+    		</image>
+  	</library_images>
+	<library_effects>
+		<effect id="Material-fx" name="Material-fx">
+			<profile_COMMON>
+				<technique>
+					<phong>
+						<emission>
+							<color>0.0 0.0 0.0 1.0</color>
+						</emission>
+						<reflective>
+							<color>1.0 1.0 1.0 1.0</color>
+						</reflective>
+						<reflectivity>
+							<float>0.8</float>
+						</reflectivity>
+						<transparent>
+							<color>1 1 1 1</color>
+						</transparent>
+						<transparency>
+							<float>0.0</float>
+						</transparency>
+						<ambient>
+							<color>0.00317 0.31713 0.49693 1.0</color>
+						</ambient>
+						<diffuse>
+							<texture texture="file1-image" texcoord="UVSET0" />
+						</diffuse>
+						<specular>
+							<color>0.5 0.5 0.5 1.0</color>
+						</specular>
+						<shininess>
+							<float>12.5</float>
+						</shininess>
+					</phong>
+				</technique>
+			</profile_COMMON>
+		</effect>
+	</library_effects>
+	<library_geometries>
+		<geometry id="Cube" name="Cube">
+			<mesh>
+				<source id="Cube-Position">
+					<float_array count="24" id="Cube-Position-array">1.0 1.0 -1.0 1.0 -1.0 -1.0 -1.0 -1.0 -1.0 -1.0 1.0 -1.0 1.0 1.0 1.0 1.0 -1.0 1.0 -1.0 -1.0 1.0 -1.0 1.0 1.0</float_array>
+					<technique_common>
+						<accessor count="8" source="#Cube-Position-array" stride="3">
+							<param name="X" type="float"/>
+							<param name="Y" type="float"/>
+							<param name="Z" type="float"/>
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="Cube-Normals">
+					<float_array count="24" id="Cube-Normals-array">0.57735 0.57735 -0.57735 0.57735 -0.57735 -0.57735 -0.57735 -0.57735 -0.57735 -0.57735 0.57735 -0.57735 0.57735 0.57735 0.57735 0.57735 -0.57735 0.57735 -0.57735 -0.57735 0.57735 -0.57735 0.57735 0.57735</float_array>
+					<technique_common>
+						<accessor count="8" source="#Cube-Normals-array" stride="3">
+							<param name="X" type="float"/>
+							<param name="Y" type="float"/>
+							<param name="Z" type="float"/>
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="Cube-UV">
+					<float_array count="48" id="Cube-UV-array">0.28134 0.50067 0.51973 0.50052 0.51988 0.7389 0.28149 0.73906 0.28118 0.26228 0.28103 0.0239 0.51941 0.02374 0.51957 0.26213 0.28134 0.50067 0.28118 0.26228 0.51957 0.26213 0.51973 0.50052 0.51973 0.50052 0.75811 0.50036 0.75827 0.73875 0.51988 0.7389 0.51988 0.7389 0.52004 0.97729 0.28165 0.97745 0.28149 0.73906 0.04295 0.50083 0.28134 0.50067 0.28149 0.73906 0.04311 0.73921</float_array>
+					<technique_common>
+						<accessor count="24" source="#Cube-UV-array" stride="2">
+							<param name="S" type="float"/>
+							<param name="T" type="float"/>
+						</accessor>
+					</technique_common>
+				</source>
+				<vertices id="Cube-Vertex">
+					<input semantic="POSITION" source="#Cube-Position"/>
+					<input semantic="NORMAL" source="#Cube-Normals"/>
+				</vertices>
+				<polygons count="6" material="Material">
+					<input offset="0" semantic="VERTEX" source="#Cube-Vertex"/>
+					<input offset="1" semantic="TEXCOORD" source="#Cube-UV"/>
+					<p>0 0 1 1 2 2 3 3</p>
+					<p>4 4 7 5 6 6 5 7</p>
+					<p>0 8 4 9 5 10 1 11</p>
+					<p>1 12 5 13 6 14 2 15</p>
+					<p>2 16 6 17 7 18 3 19</p>
+					<p>4 20 0 21 3 22 7 23</p>
+				</polygons>
+			</mesh>
+		</geometry>
+	</library_geometries>
+	<library_materials>
+		<material id="Material" name="Material">
+			<instance_effect url="#Material-fx"/>
+		</material>
+	</library_materials>
+	<library_visual_scenes>
+		<visual_scene id="Scene" name="Scene">
+			<node id="Cube" name="Cube">
+				<instance_geometry url="#Cube">
+					<bind_material>
+						<technique_common>
+							<instance_material symbol="Material" target="#Material">
+								<bind semantic="UVSET0" target="#Cube-UV"/>
+							</instance_material>
+						</technique_common>
+					</bind_material>
+				</instance_geometry>
+			</node>
+		</visual_scene>
+	</library_visual_scenes>
+	<scene>
+		<instance_visual_scene url="#Scene"/>
+	</scene>
+</COLLADA>

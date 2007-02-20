@@ -1,0 +1,55 @@
+CXFREEZE=~/src/cx_Freeze-3.0.3/FreezePython
+PYTHON=python
+VERSION=test
+USE_AMANITH=1
+
+all:	dist
+
+dist:
+	@echo --- Building binary
+	$(CXFREEZE) --target-dir dist --include-modules encodings.string_escape,encodings.iso8859_1,SongChoosingScene,GuitarScene,GameResultsScene src/FretsOnFire.py
+
+	@echo --- Copying data
+	cd src; $(PYTHON) setup.py install_data --install-dir ../dist ; cd ..
+
+ifneq ($(USE_AMANITH), 1)
+	@echo --- Rendering SVG files to PNG images
+	cd dist; python ../src/svg2png.py; cd ..
+endif
+
+	@echo --- Fixing stuff
+ifeq ($(USE_AMANITH), 1)
+	strip dist/_amanith.so
+	cp /usr/local/lib/libamanith.so.1 dist
+else
+	rm dist/_amanith.so
+endif
+	cp /usr/lib/libpython2.4.so.1.0 /usr/lib/libSDL_ttf-2.0.so.0 /usr/lib/libSDL_mixer-1.2.so.0 dist
+	mv dist/FretsOnFire dist/FretsOnFire.bin
+	cp data/launcher.sh dist/FretsOnFire
+	chmod +x dist/FretsOnFire
+
+doc:
+	cd doc ; epydoc -n "Frets On Fire" ../src/*.py ; cd ..
+
+run:	dist
+	@cd dist ; ./FretsOnFire ; cd ..
+
+sdist:	doc
+	mkdir FretsOnFire-src-$(VERSION)
+	mkdir FretsOnFire-src-$(VERSION)/src
+	mkdir FretsOnFire-src-$(VERSION)/src/midi
+	mkdir FretsOnFire-src-$(VERSION)/doc
+	cp -rvp src/*.py      FretsOnFire-src-$(VERSION)/src
+	cp -rvp src/*.pot     FretsOnFire-src-$(VERSION)/src
+	cp -rvp src/midi/*.py FretsOnFire-src-$(VERSION)/src/midi
+	cp -rvp doc/html      FretsOnFire-src-$(VERSION)/doc
+	cp -rvp *.txt         FretsOnFire-src-$(VERSION)
+	cp -rvp Makefile*     FretsOnFire-src-$(VERSION)
+	tar cvzf FretsOnFire-src-$(VERSION).tar.gz FretsOnFire-src-$(VERSION)
+
+clean:
+	@rm -rf dist build doc/html
+
+.PHONY: dist doc sdist
+

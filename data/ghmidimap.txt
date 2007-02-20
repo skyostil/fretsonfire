@@ -1,0 +1,113 @@
+spanishcastlemagic;		Spanish Castle Magic;		Jimi Hendrix
+stellar;			Stellar;			Incubus
+storyofmylove;			The Story of my Love;		The Model Sons
+symphofdestruction;		Symphony of Destruction;	Megadeth
+takeitoff;			Take It Off;			The Donnas
+takemeout;			Take Me Out;			Franz Ferdinand
+texasflood;			Texas Flood;			Stevie Ray Vaughn
+thunderkiss65;			Thunderkiss 65;			White Zombie
+unsung;				Unsung;				Helmet
+yougotanotherthingcomin;	You Got Another Thing Comin;	Judas Priest
+ziggystardust;			Ziggy Stardust;			David Bowie
+aceofspades;			Ace of Spades;			Motorhead
+advharmony;			*Trippolette;			Andrew Buch
+allofthis;			All of This;			Shaimus
+barkatthemoon;			Bark at the Moon;		Ozzie Osbourne
+behindthemask;			Behind the Mask;		Anarchy Club
+breakingwheel;			The Breaking Wheel;		Artillery
+callout;			Call Out;			Acro-Brats
+cavemanrejoice;			Caveman Rejoice;		The Bags
+cheatonthechurch;		Cheat on the Church;		Graveyard BBQ
+cochise;			Cochise;			Audioslave
+cowboysfromhell;		Cowboys From Hell;		Pantera
+crossroads;			Crossroads;			Cream
+decontrol;			Decontrol;			Drist
+eureka;				Eureka! I Found Love;		The Upper Crust
+evenrats;			Even Rats;			The Slip
+farewellmyth;			Farewell Myth;			Made in Mexico
+fatlip;				Fat Lip;			Sum 41
+fireitup;			Fire It Up;			Black Label Society
+flyonthewall;			Fly on the Wall;		Din
+frankenstein;			Frankenstein;			Edgar Winter Group
+getready2rokk;			Get Ready 2 Rock;		Freezepop
+godzilla;			Godzilla;			Blue Oyster Cult
+graveyardshift;			Graveyard Shift;		Windtunnel Syndrome
+guitarhero;			Theme from Guitar Hero;		Monkey Steal the Peach
+heartfullofblack;		Heart Full of Black;		Burning Brides
+heyyou;				Hey You;			The Exies
+hey;                            Hey;                            Honest Bob and the Factory-to-Dealer Incentives
+higherground;			Higher Ground;			Red Hot Chili Peppers
+iloverockandroll;		I Love Rock and Roll;		Joann Jett
+infected;			Infected;			Black Sabbath
+ironman;			Iron Man;			Black Sabbath
+iwannabesedated;		I Wanna Be Sedated;		The Ramones
+killerqueen;			Killer Queen;			Queen
+morethanafeeling;		More Than A Feeling;		Boston
+nooneknows;			No One Knows;			Queens of the Stone Age
+sailyourshipby;			Sail Your Ship By;		CountZero
+sharpdressedman;		Sharp Dressed Man;		ZZ Top
+smokeonthewater;		Smoke on the Water;		Deep Purple
+searchanddestroy;		Search and Destroy;		Iggy Pop and The Stooges
+rockthistown;			Rock This Town;			Stray Cats
+fallofpangea;			Fall of Pangea;			Valient Thorr
+soybomb;			Soy Bomb;			Honest Bob and the Factory-to-Dealer Incentives
+onefortheroad;			One for the Road;		Breaking Wheel
+trippinonahole;			Trippin' On a Hole in a Paper Heart;	Stone Temple Pilots
+sweetchild;			Sweet Child O' Mine;		Guns N' Roses
+yyz;				YYZ;				Rush
+radiumeyes;			Radium Eyes;			Count Zero
+woman;				Woman;				Wolfmother
+elephantbones;			Elephant Bones;			That Handsome Devil
+girlfriend;			Girlfriend;			Matthew Sweet
+badreputation;			Bad Reputation;			Thin Lizzy
+youreallygotme;			You Really Got Me;		Van Halen
+hangar18;			Hangar 18;			Megadeth
+collide;			Collide;			Anarchy Club
+johnthefisherman;		John the Fisherman;		Primus
+shoutatthedevil;		Shout at the Devil;		Motley Crue
+surrender;			Surrender;			Cheap Trick
+arterialblack;			Arterial Black;			Drist
+six;				Six;				All That Remains
+monkeywrench;			Monkey Wrench;			Foo Fighters
+crazyonyou;			Crazy on You;			Heart
+tonightimgonna;			Tonight I'm Gonna Rock You Tonight;	Spinal Tap
+ladylightning;			Push Push (Lady Lightning);	Bang Camaro
+killinginthenameof;		Killing in the Name;		Rage Against the Machine
+ftk;				FTK;				Vagiant
+newblack;			The New Black;			Every Time I Die
+laughtrack;			Laughtrack;			The Acro-brats
+heartshapedbox;			Heart-Shaped Box;		Nirvana
+misirlou;			Misirlou;			Dick Dale
+tattooedloveboys;		Tattooed Love Boys;		The Pretenders
+institutionalized;		Institutionalized;		Suicidal Tendencies
+freebird;			Free Bird;			Lynyrd Skynyrd
+jessica;			Jessica;			The Allman Brothers Band
+cherrypie;			Cherry Pie;			Warrant
+mrfixit;			Mr. Fix-it;			The Amazing Royal Crowns
+stop;				Stop!;				Jane's Addiction
+carrymehome;			Carry Me Home;			The Living End
+madhouse;			Madhouse;			Anthrax
+whowasinmyroom;			Who Was in My Room Last Night?;	Butthole Surfers
+psychobilly;			Psychobilly Freakout;		The Reverend Horton Heat
+jordan;				Jordan;				Buckethead
+yeswecan;			Yes We Can;			Made in Mexico
+messageinabottle;		Message in a Bottle;		The Police
+thelightthatblinds;		The Light that Blinds;		Shadows Fall
+xstream;			The X-Stream;			Voivod
+redlottery;			Red Lottery;			Megasus
+lastchild;			Last Child;			Aerosmith
+trogdor;			Trogdor;			Strong Bad
+freya;				Freya;				The Sword
+cantyouhearme;			Can't You Hear Me Knocking;	The Rolling Stones
+laidtorest;			Laid to Rest;			Lamb of God
+rawdog;				Raw Dog;			The Last Vegas
+strutter;			Strutter;			KISS
+thembones;			Them Bones;			Alice in Chains
+parasite;			Parasite;			The Neighborhoods
+thunderhorse;			Thunderhorse;			Dethklok
+warpigs;			War Pigs;			Black Sabbath
+beastandtheharlot;		Beast and the Harlot;		Avenged Sevenfold
+mother;				Mother;				Danzig
+carryonwayward;			Carry On Wayward Son;		Kansas
+gemini;				Gemini;				Brian Kahanek
+lesstalkmorerokk;		Less Talk More Rokk;		Freezepop
