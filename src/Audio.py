@@ -222,15 +222,14 @@ if ogg:
 
       if not data:
         self.done = True
-        return
-      
-      data = struct.unpack("%dh" % (len(data) / 2), data)
-      samples = len(data) / 2
-      self.buffer[self.bufferPos:self.bufferPos + samples, 0] = data[0::2]
-      self.buffer[self.bufferPos:self.bufferPos + samples, 1] = data[1::2]
-      self.bufferPos += samples
+      else:
+        data = struct.unpack("%dh" % (len(data) / 2), data)
+        samples = len(data) / 2
+        self.buffer[self.bufferPos:self.bufferPos + samples, 0] = data[0::2]
+        self.buffer[self.bufferPos:self.bufferPos + samples, 1] = data[1::2]
+        self.bufferPos += samples
 
-      if self.bufferPos >= self.bufferSize:
+      if self.bufferPos >= self.bufferSize or (self.done and self.bufferPos):
         soundBuffer = pygame.sndarray.make_sound(self.buffer[0:self.bufferPos])
         self.bufferPos = 0
         return soundBuffer
