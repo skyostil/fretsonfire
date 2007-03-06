@@ -28,7 +28,7 @@ def appName():
   return "fretsonfire"
 
 def revision():
-  return int("$LastChangedRevision: 324 $".split(" ")[1])
+  return int("$LastChangedRevision: 359 $".split(" ")[1])
 
 def version():
   return "%s.%d" % (VERSION, revision())

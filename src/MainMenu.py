@@ -20,14 +20,12 @@
 # MA  02110-1301, USA.                                              #
 #####################################################################
 
-import pygame
-from pygame.mixer import Sound
 from OpenGL.GL import *
 import math
 import socket
 
 from View import BackgroundLayer
-from Menu import Menu, Choice
+from Menu import Menu
 from Editor import Editor, Importer, GHImporter
 from Credits import Credits
 from Lobby import Lobby
@@ -35,91 +33,8 @@ from Svg import SvgDrawing
 from Language import _
 import Dialogs
 import Config
-import Mod
-
-class ConfigChoice(Choice):
-  def __init__(self, config, section, option, autoApply = False):
-    self.config    = config
-    self.section   = section
-    self.option    = option
-    self.changed   = False
-    self.value     = None
-    self.autoApply = autoApply
-    o = config.prototype[section][option]
-    v = config.get(section, option)
-    if isinstance(o.options, dict):
-      values     = o.options.values()
-      values.sort()
-      try:
-        valueIndex = values.index(o.options[v])
-      except KeyError:
-        valueIndex = 0
-    elif isinstance(o.options, list):
-      values     = o.options
-      try:
-        valueIndex = values.index(v)
-      except ValueError:
-        valueIndex = 0
-    else:
-      raise RuntimeError("No usable options for %s.%s." % (section, option))
-    Choice.__init__(self, text = o.text, callback = self.change, values = values, valueIndex = valueIndex)
-    
-  def change(self, value):
-    o = self.config.prototype[self.section][self.option]
-    
-    if isinstance(o.options, dict):
-      for k, v in o.options.items():
-        if v == value:
-          value = k
-          break
-    
-    self.changed = True
-    self.value   = value
-    
-    if self.autoApply:
-      self.apply()
-
-  def apply(self):
-    if self.changed:
-      self.config.set(self.section, self.option, self.value)
-
-class KeyConfigChoice(Choice):
-  def __init__(self, engine, config, section, option):
-    self.engine  = engine
-    self.config  = config
-    self.section = section
-    self.option  = option
-    self.changed = False
-    self.value   = None
-    Choice.__init__(self, text = "", callback = self.change)
-
-  def getText(self, selected):
-    def keycode(k):
-      try:
-        return int(k)
-      except:
-        return getattr(pygame, k)
-    o = self.config.prototype[self.section][self.option]
-    v = self.config.get(self.section, self.option)
-    return "%s: %s" % (o.text, pygame.key.name(keycode(v)).capitalize())
-    
-  def change(self):
-    o = self.config.prototype[self.section][self.option]
-
-    if isinstance(o.options, dict):
-      for k, v in o.options.items():
-        if v == value:
-          value = k
-          break
-
-    key = Dialogs.getKey(self.engine, _("Press a key for '%s' or Escape to cancel.") % (o.text))
-
-    if key:
-      self.config.set(self.section, self.option, key)
-      self.engine.input.reloadControls()
-
-  def apply(self):
-    pass
+import Audio
+import Settings
 
 class MainMenu(BackgroundLayer):
   def __init__(self, engine):
@@ -131,7 +46,8 @@ class MainMenu(BackgroundLayer):
     self.engine.loadSvgDrawing(self, "background", "keyboard.svg")
     self.engine.loadSvgDrawing(self, "guy",        "pose.svg")
     self.engine.loadSvgDrawing(self, "logo",       "logo.svg")
-    self.song = Sound(self.engine.resource.fileName("menu.ogg"))
+    self.song = Audio.Sound(self.engine.resource.fileName("menu.ogg"))
+    self.song.setVolume(self.engine.config.get("audio", "songvol"))
     self.song.play(-1)
 
     newMultiplayerMenu = [
@@ -139,6 +55,7 @@ class MainMenu(BackgroundLayer):
       (_("Join Multiplayer Game"), self.joinMultiplayerGame),
     ]
 
+    """
     applyItem = [(_("Apply New Settings"), self.applySettings)]
 
     self.modSettings = [
@@ -184,12 +101,20 @@ class MainMenu(BackgroundLayer):
     ]
     videoSettingsMenu = Menu(self.engine, self.videoSettings + applyItem)
 
+    self.volumeSettings = [
+      ConfigChoice(self.engine.config, "audio",  "guitarvol"),
+      ConfigChoice(self.engine.config, "audio",  "songvol"),
+      ConfigChoice(self.engine.config, "audio",  "rhythmvol"),
+      ConfigChoice(self.engine.config, "audio",  "screwupvol"),
+    ]
+    volumeSettingsMenu = Menu(self.engine, self.volumeSettings + applyItem)
+
     self.audioSettings = [
+      (_("Volume Settings"), volumeSettingsMenu),
       ConfigChoice(self.engine.config, "audio",  "delay"),
       ConfigChoice(self.engine.config, "audio",  "frequency"),
       ConfigChoice(self.engine.config, "audio",  "bits"),
       ConfigChoice(self.engine.config, "audio",  "buffersize"),
-      ConfigChoice(self.engine.config, "audio",  "screwupvol"),
     ]
     audioSettingsMenu = Menu(self.engine, self.audioSettings + applyItem)
 
@@ -201,11 +126,15 @@ class MainMenu(BackgroundLayer):
     ]
     settingsMenu = Menu(self.engine, self.settings)
     
+    """
+
     editorMenu = Menu(self.engine, [
       (_("Edit Existing Song"),            self.startEditor),
       (_("Import New Song"),               self.startImporter),
       (_("Import Guitar Hero(tm) Songs"),  self.startGHImporter),
     ])
+    
+    settingsMenu = Settings.SettingsMenu(self.engine)
     
     mainMenu = [
       (_("Play Game"),   self.newSinglePlayerGame),
@@ -221,12 +150,6 @@ class MainMenu(BackgroundLayer):
     self.engine.view.pushLayer(self.menu)
     self.engine.stopServer()
     
-  def applySettings(self):
-    for option in self.settings + self.videoSettings + self.audioSettings + self.gameSettings + self.modSettings:
-      if isinstance(option, ConfigChoice):
-        option.apply()
-    self.engine.restart()
-
   def hidden(self):
     self.engine.view.popLayer(self.menu)
 

@@ -598,7 +598,7 @@ class SvgDrawing:
     glPopMatrix()
     glMatrixMode(GL_MODELVIEW)
 
-  def draw(self):
+  def draw(self, color = (1, 1, 1, 1)):
     glMatrixMode(GL_TEXTURE)
     glPushMatrix()
     glMatrixMode(GL_PROJECTION)
@@ -614,7 +614,7 @@ class SvgDrawing:
 
       glScalef(self.texture.pixelSize[0], self.texture.pixelSize[1], 1)
       glTranslatef(-.5, -.5, 0)
-      glColor4f(1, 1, 1, 1)
+      glColor4f(*color)
       
       self.texture.bind()
       glEnable(GL_TEXTURE_2D)

@@ -449,6 +449,9 @@ class Song(object):
     if self.rhythmTrack:
       self.rhythmTrack.setVolume(volume)
   
+  def setBackgroundVolume(self, volume):
+    self.music.setVolume(volume)
+  
   def stop(self):
     for track in self.tracks:
       track.reset()
