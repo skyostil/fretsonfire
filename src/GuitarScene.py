@@ -29,12 +29,15 @@ import Player
 import Dialogs
 import Data
 import Theme
+import View
+import Audio
+import Stage
+import Settings
 
 import math
 import pygame
 import random
 import os
-from pygame.mixer import Sound, Channel
 from OpenGL.GL import *
 
 class GuitarScene:
@@ -48,9 +51,6 @@ class GuitarSceneClient(GuitarScene, SceneClient):
     self.guitar           = Guitar(self.engine)
     self.visibility       = 0.0
     self.keyBurstTimeout  = None
-    self.delay            = self.engine.config.get("audio", "delay")
-    self.screwUpVolume    = self.engine.config.get("audio", "screwupvol")
-    self.guitar.leftyMode = self.engine.config.get("game", "leftymode")
     self.libraryName      = libraryName
     self.songName         = songName
     self.done             = False
@@ -61,34 +61,59 @@ class GuitarSceneClient(GuitarScene, SceneClient):
       ([102, 97, 115, 116, 102, 111, 114, 119, 97, 114, 100],   self.goToResults)
     ]
     self.enteredCode      = []
+    self.song             = None
     self.autoPlay         = False
     self.twangPos         = None
     self.lastPickPos      = None
     self.lastSongPos      = 0.0
-
+    self.camera.target    = (0, 0, 4)
+    self.camera.origin    = (0, 3, -3)
+    
+    self.loadSettings()
     self.engine.resource.load(self, "song",          lambda: loadSong(self.engine, songName, library = libraryName), onLoad = self.songLoaded)
-    self.engine.resource.load(self, "screwUpSounds", self.loadScrewUpSounds)
+    
+    self.stage            = Stage.Stage(self, self.engine.resource.fileName("stage.ini"))
+    
     self.engine.loadSvgDrawing(self, "fx2x",   "2x.svg", textureSize = (256, 256))
     self.engine.loadSvgDrawing(self, "fx3x",   "3x.svg", textureSize = (256, 256))
     self.engine.loadSvgDrawing(self, "fx4x",   "4x.svg", textureSize = (256, 256))
     self.engine.loadSvgDrawing(self, "flame1", "flame1.svg")
     self.engine.loadSvgDrawing(self, "flame2", "flame2.svg")
 
-    self.camera.target = (0, 0, 4)
-    self.camera.origin = (0, 3, -3)
-
     Dialogs.showLoadingScreen(self.engine, lambda: self.song, text = _("Tuning Guitar..."))
-    
+
+    settingsMenu = Settings.GameSettingsMenu(self.engine)
+    settingsMenu.fadeScreen = True
+
     self.menu = Menu(self.engine, [
       (_("Restart Song"),      self.restartSong),
       (_("Change Song"),       self.changeSong),
+      (_("Settings"),          settingsMenu),
       (_("Quit to Main Menu"), self.quit),
-    ], fadeScreen = True, onClose = lambda: self.song and self.song.unpause())
+    ], fadeScreen = True, onClose = self.resumeGame)
 
     self.restartSong()
 
-  def loadScrewUpSounds(self):
-    return [Sound(self.engine.resource.fileName("fiba%d.ogg" % i)) for i in range(1, 7)]
+  def pauseGame(self):
+    if self.song:
+      self.song.pause()
+
+  def resumeGame(self):
+    self.loadSettings()
+    if self.song:
+      self.song.unpause()
+
+  def loadSettings(self):
+    self.delay            = self.engine.config.get("audio", "delay")
+    self.screwUpVolume    = self.engine.config.get("audio", "screwupvol")
+    self.guitarVolume     = self.engine.config.get("audio", "guitarvol")
+    self.songVolume       = self.engine.config.get("audio", "songvol")
+    self.rhythmVolume     = self.engine.config.get("audio", "rhythmvol")
+    self.guitar.leftyMode = self.engine.config.get("game", "leftymode")
+
+    if self.song:
+      self.song.setBackgroundVolume(self.songVolume)
+      self.song.setRhythmVolume(self.rhythmVolume)
     
   def songLoaded(self, song):
     song.difficulty = self.player.difficulty
@@ -97,7 +122,7 @@ class GuitarSceneClient(GuitarScene, SceneClient):
   def quit(self):
     if self.song:
       self.song.stop()
-      self.song = None
+      self.song  = None
     self.done = True
     self.engine.view.popLayer(self.menu)
     self.session.world.finishGame()
@@ -105,7 +130,7 @@ class GuitarSceneClient(GuitarScene, SceneClient):
   def changeSong(self):
     if self.song:
       self.song.stop()
-      self.song = None
+      self.song  = None
     self.engine.view.popLayer(self.menu)
     self.session.world.deleteScene(self)
     self.session.world.createScene("SongChoosingScene")
@@ -114,27 +139,32 @@ class GuitarSceneClient(GuitarScene, SceneClient):
     self.engine.data.startSound.play()
     self.engine.view.popLayer(self.menu)
     self.player.reset()
+    self.stage.reset()
     self.enteredCode     = []
     self.autoPlay        = False
     
     if not self.song:
       return
       
-    self.countdown = 8.0
+    self.countdown    = 8.0
     self.guitar.endPick(0)
     self.song.stop()
 
   def run(self, ticks):
     SceneClient.run(self, ticks)
+    pos = self.getSongPosition()
 
     # update song
     if self.song:
+      # update stage
+      self.stage.run(pos, self.guitar.currentPeriod)
+
       if self.countdown <= 0 and not self.song.isPlaying() and not self.done:
         self.goToResults()
         return
         
       if self.autoPlay:
-        notes = self.guitar.getRequiredNotes(self.song, self.getSongPosition())
+        notes = self.guitar.getRequiredNotes(self.song, pos)
         notes = [note.number for time, note in notes]
         
         changed = False
@@ -156,11 +186,11 @@ class GuitarSceneClient(GuitarScene, SceneClient):
         self.guitar.setBPM(self.song.bpm)
         self.countdown = max(self.countdown - ticks / self.song.period, 0)
         if not self.countdown:
+          self.song.setBackgroundVolume(self.songVolume)
+          self.song.setRhythmVolume(self.rhythmVolume)
           self.song.play()
 
     # update board
-    pos = self.getSongPosition()
-    
     if not self.guitar.run(ticks, pos, self.controls):
       # done playing the current notes
       self.endPick()
@@ -182,7 +212,8 @@ class GuitarSceneClient(GuitarScene, SceneClient):
     self.player.addScore(score)
 
   def render3D(self):
-    if self.song:
+    self.stage.render(self.visibility)
+    """
       self.engine.view.setOrthogonalProjection(normalize = True)
       try:
         t = math.pi * self.song.period * self.time / 10000.0
@@ -208,7 +239,9 @@ class GuitarSceneClient(GuitarScene, SceneClient):
         self.flame2.draw()
       finally:
         self.engine.view.resetProjection()
-  
+    """
+    
+  def renderGuitar(self):
     self.guitar.render(self.visibility, self.song, self.getSongPosition(), self.controls)
 
   def getSongPosition(self):
@@ -221,8 +254,8 @@ class GuitarSceneClient(GuitarScene, SceneClient):
         return self.lastSongPos + 4.0 * (1 - self.visibility) * self.song.period - self.delay
     return 0.0
     
-  def doTwang(self):
-    self.twangPos = self.getSongPosition()
+  #def doTwang(self):
+  #  self.twangPos = self.getSongPosition()
 
   def doPick(self):
     if not self.song:
@@ -235,19 +268,20 @@ class GuitarSceneClient(GuitarScene, SceneClient):
     self.lastPickPos = pos
     
     if self.guitar.startPick(self.song, pos, self.controls):
-      self.song.setGuitarVolume(1.0)
+      self.song.setGuitarVolume(self.guitarVolume)
       self.player.streak += 1
       self.player.notesHit += len(self.guitar.playedNotes)
       self.player.addScore(len(self.guitar.playedNotes) * 50)
+      self.stage.triggerPick(pos, [n[1].number for n in self.guitar.playedNotes])
       if self.player.streak % 10 == 0:
         self.lastMultTime = pos
-        self.doTwang()
+        # XXX self.doTwang()
     else:
       self.song.setGuitarVolume(0.0)
       self.player.streak = 0
-      if self.screwUpSounds:
-        self.sfxChannel.play(random.choice(self.screwUpSounds))
-        self.sfxChannel.setVolume(self.screwUpVolume)
+      self.stage.triggerMiss(pos)
+      self.sfxChannel.play(self.engine.data.screwUpSound)
+      self.sfxChannel.setVolume(self.screwUpVolume)
         
   def toggleAutoPlay(self):
     self.autoPlay = not self.autoPlay
@@ -260,13 +294,16 @@ class GuitarSceneClient(GuitarScene, SceneClient):
   def goToResults(self):
     if self.song:
       self.song.stop()
-      self.song = None
-      self.done = True
+      self.song  = None
+      self.done  = True
       self.session.world.deleteScene(self)
       self.session.world.createScene("GameResultsScene", libraryName = self.libraryName, songName = self.songName)
 
   def keyPressed(self, key, unicode):
     control = self.controls.keyPressed(key)
+
+    if key == ord('r'):
+      self.stage = Stage.Stage(self, self.engine.resource.fileName("stage.ini"))
 
     if control in (Player.ACTION1, Player.ACTION2):
       for k in KEYS:
@@ -280,8 +317,7 @@ class GuitarSceneClient(GuitarScene, SceneClient):
     if control in (Player.ACTION1, Player.ACTION2) and self.song:
       self.doPick()
     elif control == Player.CANCEL:
-      if self.song:
-        self.song.pause()
+      self.pauseGame()
       self.engine.view.pushLayer(self.menu)
       return True
     elif key >= ord('a') and key <= ord('z'):
@@ -350,7 +386,7 @@ class GuitarSceneClient(GuitarScene, SceneClient):
       font.render("%dx" % self.player.getScoreMultiplier(), (.6, y + h))
 
       # show the streak counter and miss message
-      if self.player.streak > 0:
+      if self.player.streak > 0 and self.song:
         text = _("%d hit") % self.player.streak
         factor = 0.0
         if self.lastPickPos:
