@@ -249,7 +249,7 @@ class LoadingScreen(Layer, KeyListener):
       Theme.setBaseColor(1 - v)
       w, h = font.getStringSize(self.text)
       x = .5 - w / 2
-      y = .5 - h / 2 + v
+      y = .5 - h / 2
       
       font.render(self.text, (x, y))
       

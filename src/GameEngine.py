@@ -62,7 +62,10 @@ Config.define("audio",  "stereo",       bool,  True)
 Config.define("audio",  "buffersize",   int,   2048,  text = _("Buffer Size"), options = [256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536])
 Config.define("audio",  "delay",        int,   100,   text = _("A/V delay"), options = dict([(n, n) for n in range(0, 301)]))
 Config.define("audio",  "screwupvol", float,   0.25,  text = _("Screw Up Sounds"), options = {0.0: _("Off"), .25: _("Quiet"), .5: _("Loud"), 1.0: _("Painful")})
-Config.define("video",  "fontscale",  float,    1.0,  text = _("Text scale"), options = dict([(n / 100.0, "%d%%" % n) for n in range(50, 260, 10)]))
+Config.define("audio",  "guitarvol",  float,    1.0,  text = _("Guitar Volume"),   options = dict([(n / 100.0, "%3d%%" % n) for n in range(0, 110, 10)]))
+Config.define("audio",  "songvol",    float,    1.0,  text = _("Song Volume"),     options = dict([(n / 100.0, "%3d%%" % n) for n in range(0, 110, 10)]))
+Config.define("audio",  "rhythmvol",  float,    1.0,  text = _("Rhythm Volume"),   options = dict([(n / 100.0, "%3d%%" % n) for n in range(0, 110, 10)]))
+Config.define("video",  "fontscale",  float,    1.0,  text = _("Text scale"),      options = dict([(n / 100.0, "%3d%%" % n) for n in range(50, 260, 10)]))
 
 class FullScreenSwitcher(KeyListener):
   """

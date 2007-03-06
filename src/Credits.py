@@ -96,6 +96,7 @@ class Credits(Layer, KeyListener):
     self.engine.loadSvgDrawing(self, "background1", "editor.svg")
     self.engine.loadSvgDrawing(self, "background2", "keyboard.svg")
     self.engine.loadSvgDrawing(self, "background3", "cassette.svg")
+    self.engine.boostBackgroundThreads(True)
 
     nf = self.engine.data.font
     bf = self.engine.data.bigFont
@@ -151,6 +152,9 @@ class Credits(Layer, KeyListener):
       Text(nf, ns, c2, "right",  "Juho Jamsa"),
       Text(nf, ns, c2, "right",  "Olli Jakola"),
       space,
+      Text(nf, ns, c1, "left",   _("Mac OS X port:")),
+      Text(nf, ns, c2, "right",  "Tero Pihlajakoski"),
+      space,
       Text(nf, ns, c1, "left",   _("Special thanks to:")),
       Text(nf, ns, c2, "right",  "Tutorial inspired by adam02"),
       space,
@@ -183,10 +187,11 @@ class Credits(Layer, KeyListener):
       space,
       space,
       space,
-      Text(nf, bs, c1, "center", _("Copyright 2006 by Unreal Voodoo")),
+      Text(nf, bs, c1, "center", _("Copyright 2006, 2007 by Unreal Voodoo")),
     ]
 
   def songLoaded(self, song):
+    self.engine.boostBackgroundThreads(False)
     song.play()
 
   def shown(self):
@@ -212,7 +217,7 @@ class Credits(Layer, KeyListener):
     if self.song:
       self.offset -= ticks / 5000.0
 
-    if self.offset < -5.9:
+    if self.offset < -6.1:
       self.quit()
   
   def render(self, visibility, topMost):

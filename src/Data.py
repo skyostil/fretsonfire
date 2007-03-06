@@ -65,16 +65,28 @@ class Data(object):
       font    = \
       bigFont = resource.fileName("international.ttf")
 
+    # load fonts
     font1     = lambda: Font(font,    fontSize[0], scale = scale, reversed = reversed, systemFont = not asciiOnly)
     font2     = lambda: Font(bigFont, fontSize[1], scale = scale, reversed = reversed, systemFont = not asciiOnly)
     resource.load(self, "font",         font1, onLoad = self.customizeFont)
     resource.load(self, "bigFont",      font2, onLoad = self.customizeFont)
-    resource.load(self, "acceptSound",  lambda: Sound(resource.fileName("in.ogg")))
-    resource.load(self, "cancelSound",  lambda: Sound(resource.fileName("out.ogg")))
-    resource.load(self, "selectSound1", lambda: Sound(resource.fileName("crunch1.ogg")))
-    resource.load(self, "selectSound2", lambda: Sound(resource.fileName("crunch2.ogg")))
-    resource.load(self, "selectSound3", lambda: Sound(resource.fileName("crunch3.ogg")))
-    resource.load(self, "startSound",   lambda: Sound(resource.fileName("start.ogg")))
+
+    # load sounds
+    resource.load(self, "screwUpSounds", self.loadScrewUpSounds)
+    self.loadSoundEffect(self, "acceptSound",  "in.ogg")
+    self.loadSoundEffect(self, "cancelSound",  "out.ogg")
+    self.loadSoundEffect(self, "selectSound1", "crunch1.ogg")
+    self.loadSoundEffect(self, "selectSound2", "crunch2.ogg")
+    self.loadSoundEffect(self, "selectSound3", "crunch3.ogg")
+    self.loadSoundEffect(self, "startSound",   "start.ogg")
+
+  def loadSoundEffect(self, target, name, fileName):
+    volume   = Config.get("audio", "guitarvol")
+    fileName = self.resource.fileName(fileName)
+    self.resource.load(target, name, lambda: Sound(fileName), onLoad = lambda s: s.setVolume(volume))
+
+  def loadScrewUpSounds(self):
+    return [Sound(self.resource.fileName("fiba%d.ogg" % i)) for i in range(1, 7)]
     
   def loadSvgDrawing(self, target, name, fileName, textureSize = None):
     """
@@ -87,10 +99,11 @@ class Data(object):
                         be rendered to an x by y texture
     @return:            L{SvgDrawing} instance
     """
-    fileName   = self.resource.fileName(fileName)
-    self.resource.load(target, name, lambda: SvgDrawing(self.svg, fileName), synch = True)
+    fileName = self.resource.fileName(fileName)
+    drawing  = self.resource.load(target, name, lambda: SvgDrawing(self.svg, fileName), synch = True)
     if textureSize:
-      getattr(target, name).convertToTexture(textureSize[0], textureSize[1])
+      drawing.convertToTexture(textureSize[0], textureSize[1])
+    return drawing
       
       
   def customizeFont(self, font):
@@ -107,6 +120,12 @@ class Data(object):
     return random.choice([self.selectSound1, self.selectSound2, self.selectSound3])
 
   selectSound = property(getSelectSound)
+
+  def getScrewUpSound(self):
+    """@return: A randomly chosen screw-up sound."""
+    return random.choice(self.screwUpSounds)
+
+  screwUpSound = property(getScrewUpSound)
 
   def essentialResourcesLoaded(self):
     """return: True if essential resources such as the font have been loaded."""

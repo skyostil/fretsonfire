@@ -48,7 +48,7 @@ class Audio:
       pygame.mixer.init()
 
     Log.debug("Audio configuration: %s" % str(pygame.mixer.get_init()))
-    
+
     return True
 
   def getChannelCount(self):
@@ -106,7 +106,7 @@ class Channel(object):
     self.channel = pygame.mixer.Channel(id)
 
   def play(self, sound):
-    self.channel.play(sound)
+    self.channel.play(sound.sound)
 
   def stop(self):
     self.channel.stop()

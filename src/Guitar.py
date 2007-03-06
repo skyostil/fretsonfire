@@ -47,7 +47,9 @@ class Guitar:
     self.pickStartPos   = 0
     self.leftyMode      = False
     self.currentBpm     = 50.0
+    self.currentPeriod  = 60000.0 / self.currentBpm
     self.targetBpm      = self.currentBpm
+    self.lastBpmChange  = -1.0
     self.setBPM(self.currentBpm)
 
     engine.resource.load(self,  "noteMesh", lambda: Mesh(engine.resource.fileName("note.dae")))
@@ -74,11 +76,12 @@ class Guitar:
     if not song:
       return
     
-    v = visibility
-    w = self.boardWidth
-    l = self.boardLength
-    offset = pos / song.period
+    v            = visibility
+    w            = self.boardWidth
+    l            = self.boardLength
+    offset       = (pos - self.lastBpmChange) / self.currentPeriod
     beatsPerUnit = self.beatsPerBoard / self.boardLength
+    
     glEnable(GL_TEXTURE_2D)
     self.neckDrawing.texture.bind()
     
@@ -134,10 +137,10 @@ class Guitar:
       Theme.setBaseColor(0)
       glVertex3f((n - self.strings / 2) * w - sw, -v, -2)
       glVertex3f((n - self.strings / 2) * w + sw, -v, -2)
-      Theme.setBaseColor(visibility * .75)
+      Theme.setBaseColor((1.0 - v) * .75)
       glVertex3f((n - self.strings / 2) * w - sw, -v, -1)
       glVertex3f((n - self.strings / 2) * w + sw, -v, -1)
-      Theme.setBaseColor(visibility * .75)
+      Theme.setBaseColor((1.0 - v) * .75)
       glVertex3f((n - self.strings / 2) * w - sw, -v, self.boardLength * .7)
       glVertex3f((n - self.strings / 2) * w + sw, -v, self.boardLength * .7)
       Theme.setBaseColor(0)
@@ -151,14 +154,14 @@ class Guitar:
     if not song:
       return
     
-    w = self.boardWidth
-    v = 1.0 - visibility
-    sw = 0.02
+    w            = self.boardWidth
+    v            = 1.0 - visibility
+    sw           = 0.02
     beatsPerUnit = self.beatsPerBoard / self.boardLength
-    offset = pos / song.period * beatsPerUnit
-    
-    currentBeat = pos / song.period
-    beat = int(currentBeat)
+    pos         -= self.lastBpmChange
+    offset       = pos / self.currentPeriod * beatsPerUnit
+    currentBeat  = pos / self.currentPeriod
+    beat         = int(currentBeat)
 
     glEnable(GL_BLEND)
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA)
@@ -241,16 +244,21 @@ class Guitar:
       return
 
     # Scale the board according to the current tempo
-    if not self.editorMode:
-      self.beatsPerBoard = 5.0 * (self.bpm / self.currentBpm)
+    #if not self.editorMode:
+    #  self.beatsPerBoard = 5.0 * (self.bpm / self.currentBpm)
+
+    # Update dynamic period
+    self.currentPeriod = 60000.0 / self.currentBpm
 
     beatsPerUnit = self.beatsPerBoard / self.boardLength
     w = self.boardWidth / self.strings
     track = song.track
 
-    for time, event in track.getEvents(pos - song.period * 2, pos + song.period * self.beatsPerBoard):
+    for time, event in track.getEvents(pos - self.currentPeriod * 2, pos + self.currentPeriod * self.beatsPerBoard):
       if isinstance(event, Tempo):
-        self.targetBpm = event.bpm
+        if (pos - time > self.currentPeriod or self.lastBpmChange < 0) and time > self.lastBpmChange:
+          self.targetBpm     = event.bpm
+          self.lastBpmChange = time
         continue
       
       if not isinstance(event, Note):
@@ -259,8 +267,8 @@ class Guitar:
       c = self.fretColors[event.number]
 
       x  = (self.strings / 2 - event.number) * w
-      z  = ((time - pos) / song.period) / beatsPerUnit
-      z2 = ((time + event.length - pos) / song.period) / beatsPerUnit
+      z  = ((time - pos) / self.currentPeriod) / beatsPerUnit
+      z2 = ((time + event.length - pos) / self.currentPeriod) / beatsPerUnit
 
       if z > self.boardLength * .8:
         f = (self.boardLength - z) / (self.boardLength * .2)
@@ -270,7 +278,7 @@ class Guitar:
         f = 1.0
 
       color    = (.1 + .8 * c[0], .1 + .8 * c[1], .1 + .8 * c[2], 1 * visibility * f)
-      length   = event.length / song.period / beatsPerUnit
+      length   = event.length / self.currentPeriod / beatsPerUnit
       flat     = False
       tailOnly = False
       
@@ -295,11 +303,12 @@ class Guitar:
     # Draw a waveform shape over the currently playing notes
     glBlendFunc(GL_SRC_ALPHA, GL_ONE)
     for time, event in self.playedNotes:
-      step  = song.period / 16
+      step  = self.currentPeriod / 16
       t     = time + event.length
       x     = (self.strings / 2 - event.number) * w
       c     = self.fretColors[event.number]
-      proj  = 1.0 / song.period / beatsPerUnit
+      s     = t
+      proj  = 1.0 / self.currentPeriod / beatsPerUnit
       zStep = step * proj
 
       def waveForm(t):
@@ -310,8 +319,9 @@ class Guitar:
         z  = (t - pos) * proj
         if z < 0:
           break
-        a1 = waveForm(t)
-        a2 = waveForm(t - step)
+        f  = min(.25 * (s - t) / step + .25, 1.0)
+        a1 = waveForm(t) * f
+        a2 = waveForm(t - step) * f
         glColor4f(c[0], c[1], c[2], .5)
         glVertex3f(x - a1, 0, z)
         glVertex3f(x - a2, 0, z - zStep)
@@ -416,6 +426,7 @@ class Guitar:
     glEnable(GL_COLOR_MATERIAL)
     if self.leftyMode:
       glScale(-1, 1, 1)
+
     self.renderNeck(visibility, song, pos)
     self.renderTracks(visibility)
     self.renderBars(visibility, song, pos)
