@@ -96,12 +96,12 @@ class View(Task):
     Log.debug("View: Pop all")
     [self.popLayer(l) for l in list(self.layers)]
 
+  def isTransitionInProgress(self):
+    return self.incoming or self.outgoing
+  
   def run(self, ticks):
     if not self.layers:
       return
-
-    # don't jump when loading stuff
-    ticks = min(32, ticks)
 
     topLayer = self.topLayer()
     t = ticks / self.transitionTime
