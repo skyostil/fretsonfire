@@ -131,10 +131,11 @@ class GameEngine(Engine):
     
     pygame.init()
     
-    self.title            = _("Frets on Fire")
-    self.restartRequested = False
-    self.video            = Video(self.title)
-    self.audio            = Audio()
+    self.title             = _("Frets on Fire")
+    self.restartRequested  = False
+    self.handlingException = False
+    self.video             = Video(self.title)
+    self.audio             = Audio()
 
     Log.debug("Initializing audio.")
     frequency    = self.config.get("audio", "frequency")
@@ -142,11 +143,8 @@ class GameEngine(Engine):
     stereo       = self.config.get("audio", "stereo")
     bufferSize   = self.config.get("audio", "buffersize")
     
-    if sys.platform != 'darwin':
-      self.audio.open(frequency = frequency, bits = bits, stereo = stereo, bufferSize = bufferSize)
-    else:
-      self.audio.pre_open(frequency = frequency, bits = bits, stereo = stereo, bufferSize = bufferSize)
-      pygame.init()
+    self.audio.pre_open(frequency = frequency, bits = bits, stereo = stereo, bufferSize = bufferSize)
+    pygame.init()
 
     Log.debug("Initializing video.")
     width, height = [int(s) for s in self.config.get("video", "resolution").split("x")]
