@@ -132,8 +132,8 @@ class RotateOnMissEffect(Effect):
 class WiggleToBeatEffect(Effect):
   def __init__(self, layer, options):
     Effect.__init__(self, layer, options)
-    self.fadeTime = int(options.get("fade_time", 200))
-    self.delay    = int(options.get("delay", 0))
+    self.delay    = float(options.get("delay", 0.0))
+    self.period   = float(options.get("period", 1.0))
     self.freq     = float(options.get("frequency",  6))
     self.xmag     = float(options.get("xmagnitude", 0.1))
     self.ymag     = float(options.get("ymagnitude", 0.1))
@@ -142,14 +142,34 @@ class WiggleToBeatEffect(Effect):
     if not self.stage.lastBeatPos:
       return
     
-    t  = self.stage.pos - self.stage.lastBeatPos
-    t  = 1.0 - self.smoothstep(0, self.fadeTime, t)
+    f = self.period * self.stage.beatPeriod
+    t = self.stage.pos - self.stage.lastBeatPos - self.delay * f
+    t = 1.0 - self.smoothstep(0, f, t)
 
     if t:
       w, h, = self.stage.engine.view.geometry[2:4]
-      t **= 2
-      s, c = t * math.sin(t * self.freq), t * math.cos(t * self.freq)
+      p = t * self.freq * f / (2 * math.pi)
+      s, c = t * math.sin(p), t * math.cos(p)
       self.layer.drawing.transform.translate(self.xmag * w * s, self.ymag * h * c)
+
+class ScaleToBeatEffect(Effect):
+  def __init__(self, layer, options):
+    Effect.__init__(self, layer, options)
+    self.delay    = float(options.get("delay", 0.0))
+    self.period   = float(options.get("period", 1.0))
+    self.xmag     = float(options.get("xmagnitude", .1))
+    self.ymag     = float(options.get("ymagnitude", .1))
+
+  def apply(self):
+    if not self.stage.lastBeatPos:
+      return
+    
+    f = self.period * self.stage.beatPeriod
+    t = self.stage.pos - self.stage.lastBeatPos - self.delay * f
+    t = 1.0 - self.smoothstep(0, f, t)
+
+    if t:
+      self.layer.drawing.transform.scale(1.0 + self.xmag * t, 1.0 + self.ymag * t)
 
 class Stage(object):
   def __init__(self, guitarScene, configFileName):
@@ -196,6 +216,7 @@ class Stage(object):
           "light":          LightEffect,
           "rotate_on_miss": RotateOnMissEffect,
           "wiggle_to_beat": WiggleToBeatEffect,
+          "scale_to_beat":  ScaleToBeatEffect,
         }
         
         for j in range(32):
@@ -227,6 +248,7 @@ class Stage(object):
     self.pos                = 0.0
     self.playedNotes        = []
     self.averageNotes       = [0.0]
+    self.beatPeriod         = 0.0
 
   def triggerPick(self, pos, notes):
     self.lastPickPos      = pos
@@ -254,7 +276,8 @@ class Stage(object):
       self.engine.view.resetProjection()
 
   def run(self, pos, period):
-    self.pos    = pos
+    self.pos        = pos
+    self.beatPeriod = period
     quarterBeat = int(4 * pos / period)
 
     if quarterBeat > self.quarterBeat:
