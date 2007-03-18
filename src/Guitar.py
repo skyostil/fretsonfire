@@ -50,6 +50,7 @@ class Guitar:
     self.currentPeriod  = 60000.0 / self.currentBpm
     self.targetBpm      = self.currentBpm
     self.lastBpmChange  = -1.0
+    self.baseBeat       = 0.0
     self.setBPM(self.currentBpm)
 
     engine.resource.load(self,  "noteMesh", lambda: Mesh(engine.resource.fileName("note.dae")))
@@ -71,42 +72,46 @@ class Guitar:
     self.lateMargin        = 60000.0 / bpm / 3.5
     self.noteReleaseMargin = 60000.0 / bpm / 2
     self.bpm               = bpm
+    self.baseBeat          = 0.0
       
   def renderNeck(self, visibility, song, pos):
     if not song:
       return
-    
+
+    def project(beat):
+      return .5 * beat / beatsPerUnit
+
     v            = visibility
     w            = self.boardWidth
     l            = self.boardLength
-    offset       = (pos - self.lastBpmChange) / self.currentPeriod
     beatsPerUnit = self.beatsPerBoard / self.boardLength
-    
+    offset       = (pos - self.lastBpmChange) / self.currentPeriod + self.baseBeat
+
     glEnable(GL_TEXTURE_2D)
     self.neckDrawing.texture.bind()
     
     glBegin(GL_TRIANGLE_STRIP)
     glColor4f(1, 1, 1, 0)
-    glTexCoord2f(0.0, (offset - 2 * beatsPerUnit) / 2)
+    glTexCoord2f(0.0, project(offset - 2 * beatsPerUnit))
     glVertex3f(-w / 2, 0, -2)
-    glTexCoord2f(1.0, (offset - 2 * beatsPerUnit) / 2)
+    glTexCoord2f(1.0, project(offset - 2 * beatsPerUnit))
     glVertex3f( w / 2, 0, -2)
     
     glColor4f(1, 1, 1, v)
-    glTexCoord2f(0.0, (offset - 1 * beatsPerUnit) / 2)
+    glTexCoord2f(0.0, project(offset - 1 * beatsPerUnit))
     glVertex3f(-w / 2, 0, -1)
-    glTexCoord2f(1.0, (offset - 1 * beatsPerUnit) / 2)
+    glTexCoord2f(1.0, project(offset - 1 * beatsPerUnit))
     glVertex3f( w / 2, 0, -1)
     
-    glTexCoord2f(0.0, (offset + l * beatsPerUnit * .7) / 2)
+    glTexCoord2f(0.0, project(offset + l * beatsPerUnit * .7))
     glVertex3f(-w / 2, 0, l * .7)
-    glTexCoord2f(1.0, (offset + l * beatsPerUnit * .7) / 2)
+    glTexCoord2f(1.0, project(offset + l * beatsPerUnit * .7))
     glVertex3f( w / 2, 0, l * .7)
     
     glColor4f(1, 1, 1, 0)
-    glTexCoord2f(0.0, (offset + l * beatsPerUnit) / 2)
+    glTexCoord2f(0.0, project(offset + l * beatsPerUnit))
     glVertex3f(-w / 2, 0, l)
-    glTexCoord2f(1.0, (offset + l * beatsPerUnit) / 2)
+    glTexCoord2f(1.0, project(offset + l * beatsPerUnit))
     glVertex3f( w / 2, 0, l)
     glEnd()
     
@@ -243,12 +248,9 @@ class Guitar:
     if not song:
       return
 
-    # Scale the board according to the current tempo
-    #if not self.editorMode:
-    #  self.beatsPerBoard = 5.0 * (self.bpm / self.currentBpm)
-
     # Update dynamic period
     self.currentPeriod = 60000.0 / self.currentBpm
+    self.targetPeriod  = 60000.0 / self.targetBpm
 
     beatsPerUnit = self.beatsPerBoard / self.boardLength
     w = self.boardWidth / self.strings
@@ -257,8 +259,9 @@ class Guitar:
     for time, event in track.getEvents(pos - self.currentPeriod * 2, pos + self.currentPeriod * self.beatsPerBoard):
       if isinstance(event, Tempo):
         if (pos - time > self.currentPeriod or self.lastBpmChange < 0) and time > self.lastBpmChange:
-          self.targetBpm     = event.bpm
-          self.lastBpmChange = time
+          self.baseBeat         += (time - self.lastBpmChange) / self.currentPeriod
+          self.targetBpm         = event.bpm
+          self.lastBpmChange     = time
         continue
       
       if not isinstance(event, Note):
@@ -540,6 +543,6 @@ class Guitar:
 
     # update bpm
     diff = self.targetBpm - self.currentBpm
-    self.currentBpm += diff * .02
+    self.currentBpm += diff * .03
 
     return True
