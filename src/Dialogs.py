@@ -214,7 +214,6 @@ class LoadingScreen(Layer, KeyListener):
     self.ready        = False
     self.allowCancel  = allowCancel
     self.time         = 0.0
-    self.engine.boostBackgroundThreads(True)
 
   def shown(self):
     self.engine.input.addKeyListener(self, priority = True)
@@ -241,6 +240,11 @@ class LoadingScreen(Layer, KeyListener):
 
     if not font:
       return
+
+    if visibility > 0.9:
+      self.engine.boostBackgroundThreads(True)
+    else:
+      self.engine.boostBackgroundThreads(False)
     
     try:
       v = (1 - visibility) ** 2
@@ -249,7 +253,7 @@ class LoadingScreen(Layer, KeyListener):
       Theme.setBaseColor(1 - v)
       w, h = font.getStringSize(self.text)
       x = .5 - w / 2
-      y = .5 - h / 2
+      y = .5 - h / 2 + v
       
       font.render(self.text, (x, y))
       
