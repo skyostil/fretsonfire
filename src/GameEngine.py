@@ -324,6 +324,13 @@ class GameEngine(Engine):
 
   def main(self):
     """Main state loop."""
+
+    # Tune the scheduler priority so that transitions are as smooth as possible
+    if self.view.isTransitionInProgress():
+      self.boostBackgroundThreads(False)
+    else:
+      self.boostBackgroundThreads(True)
+    
     done = Engine.run(self)
     self.clearScreen()
     self.view.render()
@@ -340,8 +347,26 @@ class GameEngine(Engine):
     except SystemExit:
       sys.exit(0)
     except Exception, e:
+      def clearMatrixStack(stack):
+        try:
+          glMatrixMode(stack)
+          for i in range(16):
+            glPopMatrix()
+        except:
+          pass
+
+      if self.handlingException:
+        # A recursive exception is fatal as we can't reliably reset the GL state
+        sys.exit(1)
+
+      self.handlingException = True
       Log.error("%s: %s" % (e.__class__, e))
       import traceback
       traceback.print_exc()
+
+      clearMatrixStack(GL_PROJECTION)
+      clearMatrixStack(GL_MODELVIEW)
+      
       Dialogs.showMessage(self, unicode(e))
+      self.handlingException = False
       return True
