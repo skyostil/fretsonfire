@@ -40,6 +40,10 @@ except ImportError:
   import DummyAmanith as amanith
   haveAmanith    = False
 
+# Add support for 'foo in attributes' syntax
+if not hasattr(sax.xmlreader.AttributesImpl, '__contains__'):
+  sax.xmlreader.AttributesImpl.__contains__ = sax.xmlreader.AttributesImpl.has_key
+
 #
 #  Bugs and limitations:
 #

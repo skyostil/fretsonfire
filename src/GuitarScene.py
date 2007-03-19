@@ -63,7 +63,6 @@ class GuitarSceneClient(GuitarScene, SceneClient):
     self.enteredCode      = []
     self.song             = None
     self.autoPlay         = False
-    self.twangPos         = None
     self.lastPickPos      = None
     self.lastSongPos      = 0.0
     self.camera.target    = (0, 0, 4)
@@ -109,7 +108,7 @@ class GuitarSceneClient(GuitarScene, SceneClient):
     self.guitarVolume     = self.engine.config.get("audio", "guitarvol")
     self.songVolume       = self.engine.config.get("audio", "songvol")
     self.rhythmVolume     = self.engine.config.get("audio", "rhythmvol")
-    self.guitar.leftyMode = self.engine.config.get("game", "leftymode")
+    self.guitar.leftyMode = self.engine.config.get("game",  "leftymode")
 
     if self.song:
       self.song.setBackgroundVolume(self.songVolume)
@@ -254,19 +253,25 @@ class GuitarSceneClient(GuitarScene, SceneClient):
         return self.lastSongPos + 4.0 * (1 - self.visibility) * self.song.period - self.delay
     return 0.0
     
-  #def doTwang(self):
-  #  self.twangPos = self.getSongPosition()
-
   def doPick(self):
     if not self.song:
       return
-      
+
+    pos = self.getSongPosition()
+    
+    # If all the played notes are tappable and there are no required notes, ignore this pick
+    for time, note in self.guitar.playedNotes:
+      if not note.tappable:
+        break
+    else:
+      if not self.guitar.getRequiredNotes(self.song, pos):
+        return
+    
     if self.guitar.playedNotes:
       self.endPick()
 
-    pos = self.getSongPosition()
     self.lastPickPos = pos
-    
+
     if self.guitar.startPick(self.song, pos, self.controls):
       self.song.setGuitarVolume(self.guitarVolume)
       self.player.streak += 1
@@ -303,6 +308,7 @@ class GuitarSceneClient(GuitarScene, SceneClient):
     control = self.controls.keyPressed(key)
 
     if key == ord('r'):
+      # fixme xxx remove
       self.stage = Stage.Stage(self, self.engine.resource.fileName("stage.ini"))
 
     if control in (Player.ACTION1, Player.ACTION2):
@@ -316,6 +322,16 @@ class GuitarSceneClient(GuitarScene, SceneClient):
 
     if control in (Player.ACTION1, Player.ACTION2) and self.song:
       self.doPick()
+    elif control in KEYS and self.song:
+      # Check whether we can tap the currently required notes
+      pos   = self.getSongPosition()
+      notes = self.guitar.getRequiredNotes(self.song, pos)
+      if notes:
+        for time, note in notes:
+          if not note.tappable or not self.controls.getState(KEYS[note.number]):
+            break
+        else:
+          self.doPick()
     elif control == Player.CANCEL:
       self.pauseGame()
       self.engine.view.pushLayer(self.menu)

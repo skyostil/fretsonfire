@@ -288,11 +288,12 @@ class Event:
     self.length = length
 
 class Note(Event):
-  def __init__(self, number, length, special = False):
+  def __init__(self, number, length, special = False, tappable = False):
     Event.__init__(self, length)
-    self.number  = number
-    self.played  = False
-    self.special = special
+    self.number   = number
+    self.played   = False
+    self.special  = special
+    self.tappable = tappable
 
 class Tempo(Event):
   def __init__(self, bpm):
@@ -355,6 +356,59 @@ class Track:
         if isinstance(event, Note):
           event.played = False
 
+  def update(self):
+    # Determine which notes are tappable. The rules are:
+    #  1. Not the first note of the track
+    #  2. Previous note not the same as this one
+    #  3. Previous note not a chord
+    #  4. Previous note ends at most 161 ticks before this one starts
+    bpm             = None
+    ticksPerBeat    = 480
+    tickThreshold   = 161
+    prevNotes       = []
+    currentNotes    = []
+    currentTicks    = 0.0
+    prevTicks       = 0.0
+    epsilon         = 1e-3
+
+    def beatsToTicks(time):
+      return (time * bpm * ticksPerBeat) / 60000.0
+    
+    for time, event in self.allEvents:
+      if isinstance(event, Tempo):
+        bpm = event.bpm
+      elif isinstance(event, Note):
+        # All notes are initially not tappable
+        event.tappable = False
+        ticks = beatsToTicks(time)
+        
+        # Part of chord?
+        if ticks < currentTicks + epsilon:
+          currentNotes.append(event)
+          continue
+
+        # Previous note not a chord?
+        if len(prevNotes) == 1:
+          # Previous note ended recently enough?
+          prevEndTicks = prevTicks + beatsToTicks(prevNotes[0].length)
+          if currentTicks - prevEndTicks <= tickThreshold:
+            for note in currentNotes:
+              # Are any current notes the same as the previous one?
+              if note.number == prevNotes[0].number:
+                break
+            else:
+              # If all the notes are different, mark the current notes tappable
+              for note in currentNotes:
+                note.tappable = True
+                
+        # Set the current notes as the previous notes
+        prevNotes    = currentNotes
+        prevTicks    = currentTicks
+        currentNotes = [event]
+        currentTicks = ticks
+          
+
+
 class Song(object):
   def __init__(self, engine, infoFileName, songTrackName, guitarTrackName, rhythmTrackName, noteFileName, scriptFileName = None):
     self.engine        = engine
@@ -395,6 +449,10 @@ class Song(object):
     if scriptFileName and os.path.isfile(scriptFileName):
       scriptReader = ScriptReader(self, open(scriptFileName))
       scriptReader.read()
+
+    # update all note tracks
+    for track in self.tracks:
+      track.update()
 
   def getHash(self):
     h = sha.new()

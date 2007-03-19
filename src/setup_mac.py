@@ -63,6 +63,17 @@ dataFiles = [
   "flame1.svg",
   "flame2.svg",
   "ghmidimap.txt",
+  "stage_background.svg",
+  "stage_audience1.svg",
+  "stage_audience2.svg",
+  "stage_drums.svg",
+  "stage_light.svg",
+  "stage_lights1.svg",
+  "stage_lights2.svg",
+  "stage_logo.svg",
+  "stage_speakers.svg",
+  "stage.ini",
+  "loading.svg",
 ]
 
 modFiles = [
