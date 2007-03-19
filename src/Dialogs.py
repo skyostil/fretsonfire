@@ -250,10 +250,16 @@ class LoadingScreen(Layer, KeyListener):
       v = (1 - visibility) ** 2
       fadeScreen(v)
 
+      w, h = self.engine.view.geometry[2:4]
+      self.engine.data.loadingImage.transform.reset()
+      self.engine.data.loadingImage.transform.translate(w / 2, (1.0 - v * .25) * h / 2)
+      self.engine.data.loadingImage.transform.scale(1, -1)
+      self.engine.data.loadingImage.draw(color = (1, 1, 1, visibility))
+
       Theme.setBaseColor(1 - v)
       w, h = font.getStringSize(self.text)
       x = .5 - w / 2
-      y = .5 - h / 2 + v
+      y = .6 - h / 2 + v * .5
       
       font.render(self.text, (x, y))
       

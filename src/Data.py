@@ -45,12 +45,15 @@ class Data(object):
     self.svg      = svg
 
     # load font customization images
-    self.loadSvgDrawing(self, "star1", "star1.svg", textureSize = (128, 128))
-    self.loadSvgDrawing(self, "star2", "star2.svg", textureSize = (128, 128))
-    self.loadSvgDrawing(self, "left",  "left.svg",  textureSize = (128, 128))
-    self.loadSvgDrawing(self, "right", "right.svg", textureSize = (128, 128))
-    self.loadSvgDrawing(self, "ball1", "ball1.svg", textureSize = (128, 128))
-    self.loadSvgDrawing(self, "ball2", "ball2.svg", textureSize = (128, 128))
+    self.loadSvgDrawing(self, "star1",   "star1.svg", textureSize = (128, 128))
+    self.loadSvgDrawing(self, "star2",   "star2.svg", textureSize = (128, 128))
+    self.loadSvgDrawing(self, "left",    "left.svg",  textureSize = (128, 128))
+    self.loadSvgDrawing(self, "right",   "right.svg", textureSize = (128, 128))
+    self.loadSvgDrawing(self, "ball1",   "ball1.svg", textureSize = (128, 128))
+    self.loadSvgDrawing(self, "ball2",   "ball2.svg", textureSize = (128, 128))
+
+    # load misc images
+    self.loadSvgDrawing(self, "loadingImage", "loading.svg", textureSize = (256, 256))
 
     # load all the data in parallel
     asciiOnly = not bool(Language.language)
