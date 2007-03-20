@@ -70,7 +70,7 @@ Todo:
  - song folder support (FIXED 327)
  - apply alex's patches
  - screw-up volume doesn't work?
- - align notes to beat lines again
+ - align notes to beat lines again (FIXED 400)
  - fix missing encoding error on linux (FIXED 328)
  - dual core perf improvements (FIXED 345)
  - don't dump joystick names (FIXED 325)
@@ -79,7 +79,6 @@ Todo:
  - delete rhythm file after importing each song (FIXED 235)
  - improve importer encoding quality (FIXED 235)
  - make notes disappear when they are hit (FIXED 334)
- - add tapping support
  - fix volume saturation issue with GH2 tracks
  - add rhythm guitar playing support
  - fix performance issue with note effect (FIXED 334)
@@ -93,3 +92,5 @@ Todo:
  - type-ahead find for song chooser (FIXED 339)
  - fix Numeric memory leak (FIXED 342)
  - fix importing two missing songs on GH1 and GH2 disks (FIXED 345)
+ - tapping support, aka hammer-ons and pull-ofs (FIXED 409)
+ - lyrics support
