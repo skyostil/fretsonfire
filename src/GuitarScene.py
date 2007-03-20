@@ -363,8 +363,17 @@ class GuitarSceneClient(GuitarScene, SceneClient):
 
   def keyReleased(self, key):
     if self.controls.keyReleased(key) in KEYS and self.song:
-      self.endPick()
-
+      # Check whether we can tap the currently required notes
+      pos   = self.getSongPosition()
+      notes = self.guitar.getRequiredNotes(self.song, pos)
+      if notes:
+        for time, note in notes:
+          if not note.tappable or not self.controls.getState(KEYS[note.number]):
+            self.endPick()
+        else:
+          self.doPick()
+      else:
+        self.endPick()
   def render(self, visibility, topMost):
     SceneClient.render(self, visibility, topMost)
     
