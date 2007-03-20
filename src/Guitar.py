@@ -300,6 +300,9 @@ class Guitar:
       glPushMatrix()
       glTranslatef(x, (1.0 - visibility) ** (event.number + 1), z)
       self.renderNote(length, color = color, flat = flat, tailOnly = tailOnly)
+      if event.tappable:
+        glTranslatef(0, .1, 0)
+        self.renderNote(length, color = color, flat = flat, tailOnly = tailOnly)
       glPopMatrix()
 
 
@@ -315,16 +318,18 @@ class Guitar:
       zStep = step * proj
 
       def waveForm(t):
-        return (math.sin(event.number + self.time * .1 + t * .01) + math.cos(event.number + self.time * .05 + t * .02)) * .1 + .1
+        u = ((t - time) * -.1 + pos - time) / 64.0 + .0001
+        return (math.sin(event.number + self.time * -.01 + t * .03) + math.cos(event.number + self.time * .01 + t * .02)) * .1 + .1 + math.sin(u) / (4 * u)
 
       glBegin(GL_TRIANGLE_STRIP)
+      f1 = 0
       while t > time:
         z  = (t - pos) * proj
         if z < 0:
           break
-        f  = min(.25 * (s - t) / step + .25, 1.0)
-        a1 = waveForm(t) * f
-        a2 = waveForm(t - step) * f
+        f2 = min((s - t) / (6 * step), 1.0)
+        a1 = waveForm(t) * f1
+        a2 = waveForm(t - step) * f2
         glColor4f(c[0], c[1], c[2], .5)
         glVertex3f(x - a1, 0, z)
         glVertex3f(x - a2, 0, z - zStep)
@@ -337,6 +342,7 @@ class Guitar:
         glVertex3f(x + a2, 0, z - zStep)
         glVertex3f(x - a2, 0, z - zStep)
         t -= step
+        f1 = f2
       glEnd()
       
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA)
