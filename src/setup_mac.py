@@ -60,45 +60,93 @@ dataFiles = [
   "jurgen4.ogg",
   "jurgen5.ogg",
   "icon.png",
-  "flame1.svg",
-  "flame2.svg",
   "ghmidimap.txt",
   "stage_background.svg",
   "stage_audience1.svg",
   "stage_audience2.svg",
   "stage_drums.svg",
+  "stage_bassdrum.svg",
   "stage_light.svg",
   "stage_lights1.svg",
   "stage_lights2.svg",
   "stage_logo.svg",
   "stage_speakers.svg",
+  "stage_speaker_cones.svg",
   "stage.ini",
   "loading.svg",
 ]
 
-modFiles = [
+chillyModFiles = [
   "mods/Chilly/theme.ini",
   "mods/Chilly/flame1.svg",
   "mods/Chilly/flame2.svg",
   "mods/Chilly/logo.svg",
-  "mods/Chilly/neck.svg",
+  "mods/Chilly/neck.svg"
 ]
 
-dataFiles = ["../data/" + f for f in dataFiles]
-modFiles =  ["../data/" + f for f in modFiles]
+lightModFiles = [
+  "mods/LightGraphics/stage.ini",
+  "mods/LightGraphics/2x.png",
+  "mods/LightGraphics/3x.png",
+  "mods/LightGraphics/4x.png",
+  "mods/LightGraphics/ball1.png",
+  "mods/LightGraphics/ball2.png",
+  "mods/LightGraphics/cassette.png",
+  "mods/LightGraphics/editor.png",
+  "mods/LightGraphics/flame1.png",
+  "mods/LightGraphics/flame2.png",
+  "mods/LightGraphics/glow.png",
+  "mods/LightGraphics/keyboard.png",
+  "mods/LightGraphics/left.png",
+  "mods/LightGraphics/light.png",
+  "mods/LightGraphics/loading.png",
+  "mods/LightGraphics/logo.png",
+  "mods/LightGraphics/neck.png",
+  "mods/LightGraphics/pose.png",
+  "mods/LightGraphics/right.png",
+  "mods/LightGraphics/star1.png",
+  "mods/LightGraphics/star2.png",
+  "mods/LightGraphics/star.png",
+  "mods/LightGraphics/2x.svg",
+  "mods/LightGraphics/3x.svg",
+  "mods/LightGraphics/4x.svg",
+  "mods/LightGraphics/ball1.svg",
+  "mods/LightGraphics/ball2.svg",
+  "mods/LightGraphics/cassette.svg",
+  "mods/LightGraphics/editor.svg",
+  "mods/LightGraphics/flame1.svg",
+  "mods/LightGraphics/flame2.svg",
+  "mods/LightGraphics/glow.svg",
+  "mods/LightGraphics/keyboard.svg",
+  "mods/LightGraphics/left.svg",
+  "mods/LightGraphics/light.svg",
+  "mods/LightGraphics/loading.svg",
+  "mods/LightGraphics/logo.svg",
+  "mods/LightGraphics/neck.svg",
+  "mods/LightGraphics/pose.svg",
+  "mods/LightGraphics/right.svg",
+  "mods/LightGraphics/star1.svg",
+  "mods/LightGraphics/star2.svg",
+  "mods/LightGraphics/star.svg"
+]
+
+dataFiles      = ["../data/" + f for f in dataFiles]
+chillyModFiles = ["../data/" + f for f in chillyModFiles]
+lightModFiles  = ["../data/" + f for f in lightModFiles]
 
 def songFiles(song, extra = []):
   return ["../data/songs/%s/%s" % (song, f) for f in ["guitar.ogg", "notes.mid", "song.ini", "song.ogg"] + extra]
 
 dataFiles = [
-  (".", ["../readme.txt", "../copying.txt"]),
-  ("data", dataFiles),
-  ("data/songs/defy",     songFiles("defy", ["label.png"])),
-  ("data/songs/bangbang", songFiles("bangbang", ["label.png"])),
-  ("data/songs/twibmpg",  songFiles("twibmpg", ["label.png"])),
-  ("data/songs/tutorial", songFiles("tutorial", ["esc.svg", "keyboard.svg", "script.txt", "pose.svg"])),
-  ("data/mods/Chilly",    modFiles),
-  ("data/translations",   glob.glob("../data/translations/*.mo")),
+  (".", ["../readme.txt",     "../copying.txt"]),
+  ("data",                    dataFiles),
+  ("data/songs/defy",         songFiles("defy", ["label.png"])),
+  ("data/songs/bangbang",     songFiles("bangbang", ["label.png"])),
+  ("data/songs/twibmpg",      songFiles("twibmpg", ["label.png"])),
+  ("data/songs/tutorial",     songFiles("tutorial", ["esc.svg", "keyboard.svg", "script.txt", "pose.svg"])),
+  ("data/mods/Chilly",        chillyModFiles),
+  ("data/mods/LightGraphics", lightModFiles),
+  ("data/translations",       glob.glob("../data/translations/*.mo")),
 ]
 
 OPTIONS = {
