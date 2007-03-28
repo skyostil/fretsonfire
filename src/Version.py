@@ -22,13 +22,13 @@
 
 import sys
 import os
-VERSION = '1.1'
+VERSION = '1.2'
 
 def appName():
   return "fretsonfire"
 
 def revision():
-  return int("$LastChangedRevision: 359 $".split(" ")[1])
+  return int("$LastChangedRevision: 431 $".split(" ")[1])
 
 def version():
   return "%s.%d" % (VERSION, revision())
