@@ -210,7 +210,7 @@ class Guitar:
     glVertex3f(w / 2,  0, -sw)
     glEnd()
 
-  def renderNote(self, length, color, flat = False, tailOnly = False):
+  def renderNote(self, length, color, flat = False, tailOnly = False, isTappable = False):
     if not self.noteMesh:
       return
 
@@ -234,9 +234,11 @@ class Guitar:
     glEnable(GL_DEPTH_TEST)
     glDepthMask(1)
     glShadeModel(GL_SMOOTH)
-    glRotatef(90, 0, 1, 0)
-    glRotatef(-90, 1, 0, 0)
+    #glRotatef(90, 0, 1, 0)
+    #glRotatef(-90, 1, 0, 0)
     self.noteMesh.render("Mesh_001")
+    if isTappable:
+      self.noteMesh.render("Mesh_003")
     glColor4f(.75 * color[0], .75 * color[1], .75 * color[2], color[3])
     self.noteMesh.render("Mesh")
     glColor4f(.25 * color[0], .25 * color[1], .25 * color[2], color[3])
@@ -280,10 +282,11 @@ class Guitar:
       else:
         f = 1.0
 
-      color    = (.1 + .8 * c[0], .1 + .8 * c[1], .1 + .8 * c[2], 1 * visibility * f)
-      length   = event.length / self.currentPeriod / beatsPerUnit
-      flat     = False
-      tailOnly = False
+      color      = (.1 + .8 * c[0], .1 + .8 * c[1], .1 + .8 * c[2], 1 * visibility * f)
+      length     = event.length / self.currentPeriod / beatsPerUnit
+      flat       = False
+      tailOnly   = False
+      isTappable = event.tappable
       
       # Clip the played notes to the origin
       if z < 0:
@@ -299,10 +302,7 @@ class Guitar:
 
       glPushMatrix()
       glTranslatef(x, (1.0 - visibility) ** (event.number + 1), z)
-      self.renderNote(length, color = color, flat = flat, tailOnly = tailOnly)
-      if event.tappable:
-        glTranslatef(0, .1, 0)
-        self.renderNote(length, color = color, flat = flat, tailOnly = tailOnly)
+      self.renderNote(length, color = color, flat = flat, tailOnly = tailOnly, isTappable = isTappable)
       glPopMatrix()
 
 
@@ -319,7 +319,7 @@ class Guitar:
 
       def waveForm(t):
         u = ((t - time) * -.1 + pos - time) / 64.0 + .0001
-        return (math.sin(event.number + self.time * -.01 + t * .03) + math.cos(event.number + self.time * .01 + t * .02)) * .1 + .1 + math.sin(u) / (4 * u)
+        return (math.sin(event.number + self.time * -.01 + t * .03) + math.cos(event.number + self.time * .01 + t * .02)) * .1 + .1 + math.sin(u) / (5 * u)
 
       glBegin(GL_TRIANGLE_STRIP)
       f1 = 0
