@@ -27,12 +27,12 @@ import Dialogs
 import Song
 import Data
 import Theme
+from Audio import Sound
 from Language import _
 
 import pygame
 import math
 import random
-from pygame.mixer import Sound
 from OpenGL.GL import *
 
 class GameResultsScene:
@@ -140,6 +140,7 @@ class GameResultsSceneClient(GameResultsScene, SceneClient):
     self.counter += ticks
     
     if self.counter > 5000 and self.taunt:
+      self.taunt.setVolume(self.engine.config.get("audio", "guitarvol"))
       self.taunt.play()
       self.taunt = None
     
