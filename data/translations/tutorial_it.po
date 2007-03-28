@@ -1,0 +1,157 @@
+# Frets On Fire
+# Copyright (C) 2006 Unreal Voodoo
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: FretsOnFire\n"
+"POT-Creation-Date: 2006-10-27 23:23+EEST\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Sami Kyostila <skyostil@NOSPAM.kempele.fi>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+msgid "Ah yes, I know. I'm amazing."
+msgstr "Zì, lo zo. Zono schtupefazente."
+
+msgid "Ah, that was cool."
+msgstr "Ah, ke fikata."
+
+msgid "Und hello everyone."
+msgstr "Und zalfe a tutti."
+
+msgid "My name is Jurgen"
+msgstr "Mio nome è Jurgen"
+
+msgid "Guntherswarchzhaffenstrassen."
+msgstr "Guntherswarchzhaffenstrassen."
+
+msgid "Und today I will show you"
+msgstr "Und oggi io moztrare"
+
+msgid "how to play this game."
+msgstr "kome funziona kvezto gioko."
+
+msgid "Check this sh*t!"
+msgstr "Zenti kua!"
+
+msgid "And now, pick up your keyboard"
+msgstr "E ora, prendi tua tastiera"
+
+msgid "like this."
+msgstr "in kvesto modo."
+
+msgid "When I shred,"
+msgstr "Kvando shreddo"
+
+msgid "I use the whole keyboard."
+msgstr "io utilizzare tutta taztiera."
+
+msgid "But since you SUCK,"
+msgstr "Ma dato ke fai SKIFO,"
+
+msgid "You will only need"
+msgstr "Avrai bizogno solo"
+
+msgid "These five frets,"
+msgstr "Di kvezti cinkve tasti,"
+
+msgid "Und zie Pick button."
+msgstr "Und zie Plektropulzante."
+
+msgid "However, zie most important"
+msgstr "Tuttavien, zie più importante"
+
+msgid "is the Escape button."
+msgstr "ezzere tasto Esc."
+
+msgid "You will need it,"
+msgstr "Tu avrai bizogno di ezzo,"
+
+msgid "when you finally realize"
+msgstr "kvando kapirai ke tu fare"
+
+msgid "that you SUCK."
+msgstr "veramente SKIFO."
+
+msgid "Bigtime."
+msgstr "Ke nofità."
+
+msgid "To me, that is already obvious."
+msgstr "Per me, kvesto essere ovvio."
+
+msgid "Ok, there comes your first note."
+msgstr "Ok, ekko arrifare prima nota."
+
+msgid "You can already hold down the 1st fret"
+msgstr "Puoi già tenere premuto primo tasto"
+
+msgid "BUT DON'T PICK IT YET!"
+msgstr "MA NON PLEKTRARE ANKORA!"
+
+msgid "You missed it."
+msgstr "L'hai mankato."
+
+msgid "Ok, let's try it again."
+msgstr "Ok, profiamo ankora."
+
+msgid "Ok, wait for it."
+msgstr "Ok, aspetta."
+
+msgid "Wait for it."
+msgstr "Aspetta..."
+
+msgid "No!"
+msgstr "No!"
+
+msgid "*Sigh*"
+msgstr "*Sigh*"
+
+msgid "Now, hold down two frets."
+msgstr "Adezzo, tu tiene premuti due tasti."
+
+msgid "Ah, you missed it!"
+msgstr "Ah, avere mankato!"
+
+msgid "And now, try this super easy lick."
+msgstr "E ora, profare kvezto lick superzemplice."
+
+msgid "Und up to my tempo."
+msgstr "Und a mio tempo."
+
+msgid "Don't try this,"
+msgstr "Tu non provare nemmeno,"
+
+msgid "or you'll just hurt yourself."
+msgstr "o tu fare te molto male, molto."
+
+msgid "Ok, that was about"
+msgstr "Ok, kvezti erano cirka"
+
+msgid "four billion notes per second."
+msgstr "kvattro miliardi di note a zecondo."
+
+msgid "If I play that any faster,"
+msgstr "Se zuono ankora più feloce,"
+
+msgid "your minds would just blow up."
+msgstr "tue cervella zkoppiare, puf!"
+
+msgid "Ok, that is it for now."
+msgstr "Ok, bazta cozì per ora."
+
+msgid "You can now go and sell"
+msgstr "Puoi ora andare a vendere"
+
+msgid "your keyboards on Ebay."
+msgstr "tue taztiere su EBay."
+
+msgid "Because you SUCK."
+msgstr "Perché tu fare SKIFO."
+
+msgid "And remember one thing."
+msgstr "E rikorda un kosa."
+
+msgid "I am your new god, little girls."
+msgstr "Io ezzere voztro nuovo dio, pampine."
