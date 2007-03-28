@@ -325,7 +325,8 @@ class SongChooser(Layer, KeyListener):
     self.camera         = Camera()
     self.cassetteHeight = .8
     self.cassetteWidth  = 4.0
-    self.libraryHeight  = 3.0
+    self.libraryHeight  = 1.2
+    self.libraryWidth   = 4.0
     self.itemAngles     = None
     self.itemLabels     = None
     self.selectedOffset = 0.0
@@ -445,12 +446,20 @@ class SongChooser(Layer, KeyListener):
       if not self.song:
         self.engine.data.cancelSound.play()
     elif c in [Player.UP, Player.ACTION1]:
-      self.selectedIndex = (self.selectedIndex - 1) % len(self.items)
+      if self.matchesSearch(self.items[self.selectedIndex]):
+        while 1:
+          self.selectedIndex = (self.selectedIndex - 1) % len(self.items)
+          if self.matchesSearch(self.items[self.selectedIndex]):
+            break
       self.updateSelection()
       if not self.song:
         self.engine.data.selectSound.play()
     elif c in [Player.DOWN, Player.ACTION2]:
-      self.selectedIndex = (self.selectedIndex + 1) % len(self.items)
+      if self.matchesSearch(self.items[self.selectedIndex]):
+        while 1:
+          self.selectedIndex = (self.selectedIndex + 1) % len(self.items)
+          if self.matchesSearch(self.items[self.selectedIndex]):
+            break
       self.updateSelection()
       if not self.song:
         self.engine.data.selectSound.play()
@@ -461,18 +470,23 @@ class SongChooser(Layer, KeyListener):
       self.doSearch()
     return True
 
+  def matchesSearch(self, item):
+    if not self.searchText:
+      return True
+    if isinstance(item, Song.SongInfo):
+      if self.searchText.lower() in item.name.lower() or self.searchText.lower() in item.artist.lower():
+        return True
+    elif isinstance(item, Song.LibraryInfo):
+      if self.searchText.lower() in item.name.lower():
+        return True
+    return False
+
   def doSearch(self):
     if not self.searchText:
       return
       
     for i, item in enumerate(self.items):
-      if isinstance(item, Song.SongInfo):
-        if self.searchText.lower() in item.name.lower() or self.searchText.lower() in item.artist.lower():
-          self.selectedIndex =  i
-          self.updateSelection()
-          break
-      elif isinstance(item, Song.LibraryInfo):
-        if self.searchText.lower() in item.name.lower():
+      if self.matchesSearch(item):
           self.selectedIndex =  i
           self.updateSelection()
           break
@@ -483,7 +497,9 @@ class SongChooser(Layer, KeyListener):
     if self.song:
       self.song.stop()
     
-    song.setGuitarVolume(1.0)
+    song.setGuitarVolume(self.engine.config.get("audio", "guitarvol"))
+    song.setBackgroundVolume(self.engine.config.get("audio", "songvol"))
+    song.setRhythmVolume(self.engine.config.get("audio", "rhythmvol"))
     song.play()
     self.song = song
 
@@ -530,10 +546,8 @@ class SongChooser(Layer, KeyListener):
       glColor3f(*color)
 
     glEnable(GL_COLOR_MATERIAL)
-    glRotatef(90, 0, 1, 0)
     self.cassette.render("Mesh_001")
     glColor3f(.1, .1, .1)
-    glScalef(-1, 1, 1)
     self.cassette.render("Mesh")
 
     # Draw the label if there is one
@@ -542,11 +556,11 @@ class SongChooser(Layer, KeyListener):
       label.bind()
       glColor3f(1, 1, 1)
       glMatrixMode(GL_TEXTURE)
-      glScalef(-1, -1, 1)
+      glScalef(1, -1, 1)
       glMatrixMode(GL_MODELVIEW)
       self.label.render("Mesh_001")
       glMatrixMode(GL_TEXTURE)
-      glScalef(-1, -1, 1)
+      glLoadIdentity()
       glMatrixMode(GL_MODELVIEW)
       glDisable(GL_TEXTURE_2D)
   
@@ -558,12 +572,10 @@ class SongChooser(Layer, KeyListener):
       glColor3f(*color)
 
     glEnable(GL_NORMALIZE)
-    glRotatef(-90, 0, 1, 0)
-    glRotate(15, 1, 0, 0)
     glEnable(GL_COLOR_MATERIAL)
-    glRotatef(-90, 1, 0, 0)
-    self.libraryMesh.render()
+    self.libraryMesh.render("Mesh_001")
     glColor3f(.1, .1, .1)
+    self.libraryMesh.render("Mesh")
 
     # Draw the label if there is one
     if label is not None:
@@ -571,11 +583,11 @@ class SongChooser(Layer, KeyListener):
       label.bind()
       glColor3f(1, 1, 1)
       glMatrixMode(GL_TEXTURE)
-      glScalef(-1, -1, 1)
+      glScalef(1, -1, 1)
       glMatrixMode(GL_MODELVIEW)
       self.libraryLabel.render()
       glMatrixMode(GL_TEXTURE)
-      glScalef(-1, -1, 1)
+      glLoadIdentity()
       glMatrixMode(GL_MODELVIEW)
       glDisable(GL_TEXTURE_2D)
     glDisable(GL_NORMALIZE)
@@ -613,12 +625,15 @@ class SongChooser(Layer, KeyListener):
       
       y = 0.0
       for i, item in enumerate(self.items):
+        if not self.matchesSearch(item):
+          continue
+        
         c = math.sin(self.itemAngles[i] * math.pi / 180)
         
         if isinstance(item, Song.SongInfo):
           h = c * self.cassetteWidth + (1 - c) * self.cassetteHeight
         else:
-          h = self.libraryHeight
+          h = c * self.libraryWidth + (1 - c) * self.libraryHeight
         
         d = (y + h * .5 + self.camera.origin[1]) / (4 * (self.camera.target[2] - self.camera.origin[2]))
 
@@ -636,17 +651,9 @@ class SongChooser(Layer, KeyListener):
             glRotate(self.itemAngles[i], 0, 0, 1)
             self.renderCassette(item.cassetteColor, self.itemLabels[i])
           elif isinstance(item, Song.LibraryInfo):
-            pos = [4, 2, 9, 1]
-            diffuse = [.5, .5, .5]
-            ambient = [.25, .25, .25]
-            glEnable(GL_LIGHTING)
-            glEnable(GL_LIGHT0)
-            glLightfv(GL_LIGHT0, GL_POSITION, (pos[0], pos[1], pos[2], 0.0))
-            glLightfv(GL_LIGHT0, GL_AMBIENT,  (ambient[0], ambient[1], ambient[2], 0.0))
-            glLightfv(GL_LIGHT0, GL_DIFFUSE,  (diffuse[0], diffuse[1], diffuse[2], 0.0))
-            glRotate(self.itemAngles[i], 0, 1, 0)
+            glRotate(-self.itemAngles[i], 0, 0, 1)
             if i == self.selectedIndex:
-              glRotate(self.time * 4, 0, 1, 0)
+              glRotate(self.time * 4, 1, 0, 0)
             self.renderLibrary(item.color, self.itemLabels[i])
         glPopMatrix()
         
@@ -672,7 +679,7 @@ class SongChooser(Layer, KeyListener):
       Theme.setBaseColor(1 - v)
 
       if self.searchText:
-        font.render(_("Find: %s") % (self.searchText), (.05, .7 + v), scale = 0.001)
+        font.render(_("Filter: %s") % (self.searchText), (.05, .7 + v), scale = 0.001)
       elif self.songLoader:
         font.render(_("Loading Preview..."), (.05, .7 + v), scale = 0.001)
 

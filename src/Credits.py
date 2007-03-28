@@ -222,7 +222,7 @@ class Credits(Layer, KeyListener):
   
   def render(self, visibility, topMost):
     v = 1.0 - ((1 - visibility) ** 2)
-      
+    
     # render the background    
     t = self.time / 100 + 34
     w, h, = self.engine.view.geometry[2:4]
