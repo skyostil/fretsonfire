@@ -20,7 +20,7 @@
 # MA  02110-1301, USA.                                              #
 #####################################################################
 
-import pygame
+import gc
 
 import Network
 import Object
@@ -97,6 +97,23 @@ class Engine:
     @param task:  L{Task} to resume
     """
     self.paused.remove(task)
+    
+  def enableGarbageCollection(self, enabled):
+    """
+    Enable or disable garbage collection whenever a random garbage
+    collection run would be undesirable. Disabling the garbage collector
+    has the unfortunate side-effect that your memory usage will skyrocket.
+    """
+    if enabled:
+      gc.enable()
+    else:
+      gc.disable()
+      
+  def collectGarbage(self):
+    """
+    Run a garbage collection run.
+    """
+    gc.collect()
 
   def boostBackgroundThreads(self, boost):
     """
