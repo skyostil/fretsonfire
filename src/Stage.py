@@ -173,7 +173,6 @@ class LightEffect(Effect):
     self.lightNumber = int(options.get("light_number", 0))
     self.ambient     = float(options.get("ambient", 0.5))
     self.contrast    = float(options.get("contrast", 0.5))
-    #self.fadeTime    = int(options.get("fade_time",    500))
 
   def apply(self):
     if len(self.stage.averageNotes) < self.lightNumber + 2:
@@ -188,8 +187,6 @@ class LightEffect(Effect):
 class RotateEffect(Effect):
   def __init__(self, layer, options):
     Effect.__init__(self, layer, options)
-    #self.fadeTime = int(options.get("fade_time", 200))
-    #self.freq     = float(options.get("frequency",  6))
     self.angle     = math.pi / 180.0 * float(options.get("angle",  45))
 
   def apply(self):
@@ -197,31 +194,18 @@ class RotateEffect(Effect):
       return
     
     t = self.trigger()
-    #t  = self.stage.pos - self.stage.lastMissPos
-    #t  = 1.0 - self.smoothstep(0, self.fadeTime, t)
-    #if t:
-    #  t = math.sin(t * self.freq)
     self.layer.drawing.transform.rotate(t * self.angle)
 
 class WiggleEffect(Effect):
   def __init__(self, layer, options):
     Effect.__init__(self, layer, options)
-    #self.delay    = float(options.get("delay", 0.0))
-    #self.period   = float(options.get("period", 1.0))
     self.freq     = float(options.get("frequency",  6))
     self.xmag     = float(options.get("xmagnitude", 0.1))
     self.ymag     = float(options.get("ymagnitude", 0.1))
 
   def apply(self):
-    #if not self.stage.lastBeatPos:
-    #  return
     t = self.trigger()
     
-    #f = self.period * self.stage.beatPeriod
-    #t = self.stage.pos - self.stage.lastBeatPos - self.delay * f
-    #t = 1.0 - self.smoothstep(0, f, t)
-
-    #if t:
     w, h = self.stage.engine.view.geometry[2:4]
     p = t * 2 * math.pi * self.freq
     s, c = t * math.sin(p), t * math.cos(p)
@@ -230,18 +214,10 @@ class WiggleEffect(Effect):
 class ScaleEffect(Effect):
   def __init__(self, layer, options):
     Effect.__init__(self, layer, options)
-    #self.delay    = float(options.get("delay", 0.0))
-    #self.period   = float(options.get("period", 1.0))
     self.xmag     = float(options.get("xmagnitude", .1))
     self.ymag     = float(options.get("ymagnitude", .1))
 
   def apply(self):
-    #if not self.stage.lastBeatPos:
-    #  return
-    
-    #f = self.period * self.stage.beatPeriod
-    #t = self.stage.pos - self.stage.lastBeatPos - self.delay * f
-    #t = 1.0 - self.smoothstep(0, f, t)
     t = self.trigger()
     self.layer.drawing.transform.scale(1.0 + self.xmag * t, 1.0 + self.ymag * t)
 
