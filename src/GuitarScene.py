@@ -50,7 +50,6 @@ class GuitarSceneClient(GuitarScene, SceneClient):
   def createClient(self, libraryName, songName):
     self.guitar           = Guitar(self.engine)
     self.visibility       = 0.0
-    self.keyBurstTimeout  = None
     self.libraryName      = libraryName
     self.songName         = songName
     self.done             = False
@@ -65,9 +64,11 @@ class GuitarSceneClient(GuitarScene, SceneClient):
     self.autoPlay         = False
     self.lastPickPos      = None
     self.lastSongPos      = 0.0
+    self.keyBurstTimeout  = None
+    self.keyBurstPeriod   = 30
     self.camera.target    = (0, 0, 4)
     self.camera.origin    = (0, 3, -3)
-    
+
     self.loadSettings()
     self.engine.resource.load(self, "song",          lambda: loadSong(self.engine, songName, library = libraryName), onLoad = self.songLoaded)
     
@@ -76,8 +77,6 @@ class GuitarSceneClient(GuitarScene, SceneClient):
     self.engine.loadSvgDrawing(self, "fx2x",   "2x.svg", textureSize = (256, 256))
     self.engine.loadSvgDrawing(self, "fx3x",   "3x.svg", textureSize = (256, 256))
     self.engine.loadSvgDrawing(self, "fx4x",   "4x.svg", textureSize = (256, 256))
-    self.engine.loadSvgDrawing(self, "flame1", "flame1.svg")
-    self.engine.loadSvgDrawing(self, "flame2", "flame2.svg")
 
     Dialogs.showLoadingScreen(self.engine, lambda: self.song, text = _("Tuning Guitar..."))
 
@@ -141,6 +140,7 @@ class GuitarSceneClient(GuitarScene, SceneClient):
     self.stage.reset()
     self.enteredCode     = []
     self.autoPlay        = False
+    self.engine.collectGarbage()
     
     if not self.song:
       return
@@ -185,6 +185,8 @@ class GuitarSceneClient(GuitarScene, SceneClient):
         self.guitar.setBPM(self.song.bpm)
         self.countdown = max(self.countdown - ticks / self.song.period, 0)
         if not self.countdown:
+          self.engine.collectGarbage()
+          self.song.setGuitarVolume(self.guitarVolume)
           self.song.setBackgroundVolume(self.songVolume)
           self.song.setRhythmVolume(self.rhythmVolume)
           self.song.play()
@@ -194,7 +196,7 @@ class GuitarSceneClient(GuitarScene, SceneClient):
       # done playing the current notes
       self.endPick()
 
-    # missed some notes?    
+    # missed some notes?
     if self.guitar.getMissedNotes(self.song, pos) and not self.guitar.playedNotes:
       self.song.setGuitarVolume(0.0)
       self.player.streak = 0
@@ -203,7 +205,7 @@ class GuitarSceneClient(GuitarScene, SceneClient):
     if self.keyBurstTimeout is not None and self.engine.timer.time > self.keyBurstTimeout:
       self.keyBurstTimeout = None
       self.doPick()
-      
+
   def endPick(self):
     score = self.getExtraScoreForCurrentlyPlayedNotes()
     if not self.guitar.endPick(self.song.getPosition()):
@@ -212,33 +214,6 @@ class GuitarSceneClient(GuitarScene, SceneClient):
 
   def render3D(self):
     self.stage.render(self.visibility)
-    """
-      self.engine.view.setOrthogonalProjection(normalize = True)
-      try:
-        t = math.pi * self.song.period * self.time / 10000.0
-        w, h, = self.engine.view.geometry[2:4]
-        v = (self.countdown / 8.0 + (1 - self.visibility)) ** 2
-        
-        twang = 0.0
-        if self.twangPos is not None:
-          diff = self.getSongPosition() - self.twangPos
-          if diff > 0 and diff < self.song.period * 2:
-            twang = (1.0 - (diff / (self.song.period * 2))) ** 2
-          
-        self.flame1.transform.reset()
-        self.flame1.transform.scale(.7, -.7)
-        self.flame1.transform.translate(w / 2 + math.sin(t / 4.0) * w / 32.0, h / 2 - v * h + math.cos(t) * h / 64.0)
-        self.flame1.transform.translate(twang * math.sin(t * 7.0) * w / 16.0, twang * math.cos(t * 6.0)   * h / 10.0)
-        self.flame1.draw()
-        t += math.pi
-        self.flame2.transform.reset()
-        self.flame2.transform.scale(.7, -.7)
-        self.flame2.transform.translate(w / 2 + math.sin(t / 5.0) * w / 32.0, h / 2 - v * h + math.cos(t) * h / 64.0)
-        self.flame2.transform.translate(twang * math.sin(t * 6.0) * w / 16.0, twang * math.cos(t * 5.0)   * h / 10.0)
-        self.flame2.draw()
-      finally:
-        self.engine.view.resetProjection()
-    """
     
   def renderGuitar(self):
     self.guitar.render(self.visibility, self.song, self.getSongPosition(), self.controls)
@@ -259,15 +234,14 @@ class GuitarSceneClient(GuitarScene, SceneClient):
 
     pos = self.getSongPosition()
     
-    # If all the played notes are tappable and there are no required notes, ignore this pick
-    for time, note in self.guitar.playedNotes:
-      if not note.tappable:
-        break
-    else:
-      if not self.guitar.getRequiredNotes(self.song, pos):
-        return
-    
     if self.guitar.playedNotes:
+      # If all the played notes are tappable and there are no required notes, ignore this pick
+      for time, note in self.guitar.playedNotes:
+        if not note.tappable:
+          break
+      else:
+        if not self.guitar.getRequiredNotes(self.song, pos):
+          return
       self.endPick()
 
     self.lastPickPos = pos
@@ -280,7 +254,6 @@ class GuitarSceneClient(GuitarScene, SceneClient):
       self.stage.triggerPick(pos, [n[1].number for n in self.guitar.playedNotes])
       if self.player.streak % 10 == 0:
         self.lastMultTime = pos
-        # XXX self.doTwang()
     else:
       self.song.setGuitarVolume(0.0)
       self.player.streak = 0
@@ -307,26 +280,22 @@ class GuitarSceneClient(GuitarScene, SceneClient):
   def keyPressed(self, key, unicode):
     control = self.controls.keyPressed(key)
 
-    if key == ord('r'):
-      # fixme xxx remove
-      self.stage = Stage.Stage(self, self.engine.resource.fileName("stage.ini"))
-
     if control in (Player.ACTION1, Player.ACTION2):
       for k in KEYS:
         if self.controls.getState(k):
           self.keyBurstTimeout = None
           break
       else:
-        self.keyBurstTimeout = self.engine.timer.time + 30
+        self.keyBurstTimeout = self.engine.timer.time + self.keyBurstPeriod
         return True
-
+      
     if control in (Player.ACTION1, Player.ACTION2) and self.song:
       self.doPick()
     elif control in KEYS and self.song:
       # Check whether we can tap the currently required notes
       pos   = self.getSongPosition()
       notes = self.guitar.getRequiredNotes(self.song, pos)
-      if notes:
+      if notes and self.player.streak > 0:
         for time, note in notes:
           if not note.tappable or not self.controls.getState(KEYS[note.number]):
             break
@@ -366,10 +335,11 @@ class GuitarSceneClient(GuitarScene, SceneClient):
       # Check whether we can tap the currently required notes
       pos   = self.getSongPosition()
       notes = self.guitar.getRequiredNotes(self.song, pos)
-      if notes:
+      if notes and self.player.streak > 0:
         for time, note in notes:
           if not note.tappable or not self.controls.getState(KEYS[note.number]):
             self.endPick()
+            break
         else:
           self.doPick()
       else:
