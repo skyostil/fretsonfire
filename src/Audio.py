@@ -235,10 +235,15 @@ if ogg:
         return soundBuffer
 
     def _produceSoundBuffers(self):
-      for i in range(self.decodingRate):
-        soundBuffer = self._decodeStream()
-        if soundBuffer:
-          self.soundBuffers.insert(0, soundBuffer)
+      # Decode enough that we have at least one full sound buffer
+      # ready in the queue if possible
+      while 1:
+        for i in range(self.decodingRate):
+          soundBuffer = self._decodeStream()
+          if soundBuffer:
+            self.soundBuffers.insert(0, soundBuffer)
+        if self.soundBuffers or self.done:
+          break
 
     def run(self, ticks):
       if not self.playing:
