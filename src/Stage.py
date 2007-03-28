@@ -23,10 +23,21 @@
 from ConfigParser import ConfigParser
 from OpenGL.GL import *
 import math
+import Log
 import Theme
 
 class Layer(object):
+  """
+  A graphical stage layer that can have a number of animation effects associated with it.
+  """
   def __init__(self, stage, drawing):
+    """
+    Constructor.
+
+    @param stage:     Containing Stage
+    @param drawing:   SvgDrawing for this layer. Make sure this drawing is rendered to
+                      a texture for performance reasons.
+    """
     self.stage       = stage
     self.drawing     = drawing
     self.position    = (0.0, 0.0)
@@ -38,9 +49,21 @@ class Layer(object):
     self.effects     = []
   
   def render(self, visibility):
+    """
+    Render the layer.
+
+    @param visibility:  Floating point visibility factor (1 = opaque, 0 = invisibile)
+    """
     w, h, = self.stage.engine.view.geometry[2:4]
+    v = 1.0 - visibility ** 2
     self.drawing.transform.reset()
     self.drawing.transform.translate(w / 2, h / 2)
+    if v > .01:
+      self.color = (self.color[0], self.color[1], self.color[2], visibility)
+      if self.position[0] < -.25:
+        self.drawing.transform.translate(-v * w, 0)
+      elif self.position[0] > .25:
+        self.drawing.transform.translate(v * w, 0)
     self.drawing.transform.scale(self.scale[0], -self.scale[1])
     self.drawing.transform.translate(self.position[0] * w / 2, -self.position[1] * h / 2)
     self.drawing.transform.rotate(self.angle)
@@ -54,13 +77,60 @@ class Layer(object):
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA)
 
 class Effect(object):
+  """
+  An animationn effect that can be attached to a Layer.
+  """
   def __init__(self, layer, options):
-    self.layer     = layer
-    self.stage     = layer.stage
-    self.intensity = float(options.get("intensity", 1.0))
+    """
+    Constructor.
+
+    @param layer:     Layer to attach this effect to.
+    @param options:   Effect options (default in parens):
+                        intensity - Floating point effect intensity (1.0)
+                        trigger   - Effect trigger, one of "none", "beat",
+                                    "quarterbeat", "pick", "miss" ("none")
+                        period    - Trigger period in ms (200.0)
+                        delay     - Trigger delay in periods (0.0)
+                        profile   - Trigger profile, one of "step", "linstep",
+                                    "smoothstep"
+    """
+    self.layer       = layer
+    self.stage       = layer.stage
+    self.intensity   = float(options.get("intensity", 1.0))
+    self.trigger     = getattr(self, "trigger" + options.get("trigger", "none").capitalize())
+    self.period      = float(options.get("period", 500.0))
+    self.delay       = float(options.get("delay", 0.0))
+    self.triggerProf = getattr(self, options.get("profile", "linstep"))
 
   def apply(self):
     pass
+
+  def triggerNone(self):
+    return 0.0
+
+  def triggerBeat(self):
+    if not self.stage.lastBeatPos:
+      return 0.0
+    t = self.stage.pos - self.delay * self.stage.beatPeriod - self.stage.lastBeatPos
+    return self.intensity * (1.0 - self.triggerProf(0, self.stage.beatPeriod, t))
+
+  def triggerQuarterbeat(self):
+    if not self.stage.lastQuarterBeatPos:
+      return 0.0
+    t = self.stage.pos - self.delay * (self.stage.beatPeriod / 4) - self.stage.lastQuarterBeatPos
+    return self.intensity * (1.0 - self.triggerProf(0, self.stage.beatPeriod / 4, t))
+
+  def triggerPick(self):
+    if not self.stage.lastPickPos:
+      return 0.0
+    t = self.stage.pos - self.delay * self.period - self.stage.lastPickPos
+    return self.intensity * (1.0 - self.triggerProf(0, self.period, t))
+
+  def triggerMiss(self):
+    if not self.stage.lastMissPos:
+      return 0.0
+    t = self.stage.pos - self.delay * self.period - self.stage.lastMissPos
+    return self.intensity * (1.0 - self.triggerProf(0, self.period, t))
 
   def step(self, threshold, x):
     return (x > threshold) and 1 or 0
@@ -81,6 +151,9 @@ class Effect(object):
       return -2 * x**3 + 3*x**2
     return f((x - min) / (max - min))
 
+  def sinstep(self, min, max, x):
+    return math.cos(math.pi * (1.0 - self.linstep(min, max, x)))
+
   def getNoteColor(self, note):
     if note >= len(Theme.fretColors) - 1:
       return Theme.fretColors[-1]
@@ -98,78 +171,79 @@ class LightEffect(Effect):
   def __init__(self, layer, options):
     Effect.__init__(self, layer, options)
     self.lightNumber = int(options.get("light_number", 0))
-    self.fadeTime    = int(options.get("fade_time",    500))
+    self.ambient     = float(options.get("ambient", 0.5))
+    self.contrast    = float(options.get("contrast", 0.5))
+    #self.fadeTime    = int(options.get("fade_time",    500))
 
   def apply(self):
-    if len(self.stage.averageNotes) < self.lightNumber + 1 or not self.stage.lastPickPos:
+    if len(self.stage.averageNotes) < self.lightNumber + 2:
       self.layer.color = (0.0, 0.0, 0.0, 0.0)
       return
 
-    t  = self.stage.pos - self.stage.lastPickPos
-    t  = 1.0 - self.linstep(0, self.fadeTime, t)
-    t  = (0.5 + 0.5 * t) * self.intensity
-    c  = self.getNoteColor(self.stage.averageNotes[self.lightNumber])
-
+    t = self.trigger()
+    t = self.ambient + self.contrast * t
+    c = self.getNoteColor(self.stage.averageNotes[self.lightNumber])
     self.layer.color = (c[0] * t, c[1] * t, c[2] * t, self.intensity)
 
-class RotateOnMissEffect(Effect):
+class RotateEffect(Effect):
   def __init__(self, layer, options):
     Effect.__init__(self, layer, options)
-    self.fadeTime = int(options.get("fade_time", 200))
-    self.freq     = float(options.get("frequency",  6))
+    #self.fadeTime = int(options.get("fade_time", 200))
+    #self.freq     = float(options.get("frequency",  6))
+    self.angle     = math.pi / 180.0 * float(options.get("angle",  45))
 
   def apply(self):
     if not self.stage.lastMissPos:
       return
     
-    t  = self.stage.pos - self.stage.lastMissPos
-    t  = 1.0 - self.smoothstep(0, self.fadeTime, t)
+    t = self.trigger()
+    #t  = self.stage.pos - self.stage.lastMissPos
+    #t  = 1.0 - self.smoothstep(0, self.fadeTime, t)
+    #if t:
+    #  t = math.sin(t * self.freq)
+    self.layer.drawing.transform.rotate(t * self.angle)
 
-    if t:
-      t = math.sin(t * self.freq)
-      self.layer.drawing.transform.rotate(t * self.intensity)
-
-class WiggleToBeatEffect(Effect):
+class WiggleEffect(Effect):
   def __init__(self, layer, options):
     Effect.__init__(self, layer, options)
-    self.delay    = float(options.get("delay", 0.0))
-    self.period   = float(options.get("period", 1.0))
+    #self.delay    = float(options.get("delay", 0.0))
+    #self.period   = float(options.get("period", 1.0))
     self.freq     = float(options.get("frequency",  6))
     self.xmag     = float(options.get("xmagnitude", 0.1))
     self.ymag     = float(options.get("ymagnitude", 0.1))
 
   def apply(self):
-    if not self.stage.lastBeatPos:
-      return
+    #if not self.stage.lastBeatPos:
+    #  return
+    t = self.trigger()
     
-    f = self.period * self.stage.beatPeriod
-    t = self.stage.pos - self.stage.lastBeatPos - self.delay * f
-    t = 1.0 - self.smoothstep(0, f, t)
+    #f = self.period * self.stage.beatPeriod
+    #t = self.stage.pos - self.stage.lastBeatPos - self.delay * f
+    #t = 1.0 - self.smoothstep(0, f, t)
 
-    if t:
-      w, h, = self.stage.engine.view.geometry[2:4]
-      p = t * self.freq * f / (2 * math.pi)
-      s, c = t * math.sin(p), t * math.cos(p)
-      self.layer.drawing.transform.translate(self.xmag * w * s, self.ymag * h * c)
+    #if t:
+    w, h = self.stage.engine.view.geometry[2:4]
+    p = t * 2 * math.pi * self.freq
+    s, c = t * math.sin(p), t * math.cos(p)
+    self.layer.drawing.transform.translate(self.xmag * w * s, self.ymag * h * c)
 
-class ScaleToBeatEffect(Effect):
+class ScaleEffect(Effect):
   def __init__(self, layer, options):
     Effect.__init__(self, layer, options)
-    self.delay    = float(options.get("delay", 0.0))
-    self.period   = float(options.get("period", 1.0))
+    #self.delay    = float(options.get("delay", 0.0))
+    #self.period   = float(options.get("period", 1.0))
     self.xmag     = float(options.get("xmagnitude", .1))
     self.ymag     = float(options.get("ymagnitude", .1))
 
   def apply(self):
-    if not self.stage.lastBeatPos:
-      return
+    #if not self.stage.lastBeatPos:
+    #  return
     
-    f = self.period * self.stage.beatPeriod
-    t = self.stage.pos - self.stage.lastBeatPos - self.delay * f
-    t = 1.0 - self.smoothstep(0, f, t)
-
-    if t:
-      self.layer.drawing.transform.scale(1.0 + self.xmag * t, 1.0 + self.ymag * t)
+    #f = self.period * self.stage.beatPeriod
+    #t = self.stage.pos - self.stage.lastBeatPos - self.delay * f
+    #t = 1.0 - self.smoothstep(0, f, t)
+    t = self.trigger()
+    self.layer.drawing.transform.scale(1.0 + self.xmag * t, 1.0 + self.ymag * t)
 
 class Stage(object):
   def __init__(self, guitarScene, configFileName):
@@ -214,9 +288,9 @@ class Stage(object):
         # Load any effects
         fxClasses = {
           "light":          LightEffect,
-          "rotate_on_miss": RotateOnMissEffect,
-          "wiggle_to_beat": WiggleToBeatEffect,
-          "scale_to_beat":  ScaleToBeatEffect,
+          "rotate":         RotateEffect,
+          "wiggle":         WiggleEffect,
+          "scale":          ScaleEffect,
         }
         
         for j in range(32):
