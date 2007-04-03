@@ -7,7 +7,7 @@ all:	dist
 
 dist:
 	@echo --- Building binary
-	$(CXFREEZE) --target-dir dist --include-modules encodings.string_escape,encodings.iso8859_1,SongChoosingScene,GuitarScene,GameResultsScene src/FretsOnFire.py
+	$(CXFREEZE) --target-dir dist --include-modules encodings.string_escape,encodings.iso8859_1,xml.sax.drivers2.drv_pyexpat,SongChoosingScene,GuitarScene,GameResultsScene src/FretsOnFire.py
 
 	@echo --- Copying data
 	cd src; $(PYTHON) setup.py install_data --install-dir ../dist ; cd ..
@@ -24,7 +24,14 @@ ifeq ($(USE_AMANITH), 1)
 else
 	rm dist/_amanith.so
 endif
-	cp /usr/lib/libpython2.4.so.1.0 /usr/lib/libSDL_ttf-2.0.so.0 /usr/lib/libSDL_mixer-1.2.so.0 dist
+	cp /usr/lib/libpython2.4.so.1.0 \
+           /usr/lib/libSDL_ttf-2.0.so.0 \
+           /usr/lib/libSDL_mixer-1.2.so.0 \
+           /usr/lib/libvorbisfile.so.3 \
+           /usr/lib/libvorbis.so.0 \
+           /usr/lib/libogg.so.0 \
+           /usr/lib/libsmpeg-0.4.so.0 \
+           dist
 	mv dist/FretsOnFire dist/FretsOnFire.bin
 	cp data/launcher.sh dist/FretsOnFire
 	chmod +x dist/FretsOnFire
