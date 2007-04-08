@@ -16,42 +16,9 @@
    inkscape:version="0.44+devel"
    sodipodi:docname="stage_lights2.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
-   sodipodi:docbase="D:\hero\new\FretsOnFire-1.2.400-win32-preview\FretsOnFire\data">
+   sodipodi:docbase="D:\FretsonFire\FretsOnFire-svn\trunk\data">
   <defs
      id="defs5698">
-    <radialGradient
-       r="57.326157"
-       fy="-6.7827616"
-       fx="72.478447"
-       cy="-6.7827616"
-       cx="72.478447"
-       gradientTransform="matrix(1,0,0,0.9779736,-5.8083803,-1.1595527)"
-       gradientUnits="userSpaceOnUse"
-       id="radialGradient2738"
-       xlink:href="#linearGradient2720"
-       inkscape:collect="always" />
-    <radialGradient
-       r="57.326157"
-       fy="-6.7827616"
-       fx="72.478447"
-       cy="-6.7827616"
-       cx="72.478447"
-       gradientTransform="matrix(1,0,0,0.9779736,-71.468295,12.477506)"
-       gradientUnits="userSpaceOnUse"
-       id="radialGradient2734"
-       xlink:href="#linearGradient2720"
-       inkscape:collect="always" />
-    <radialGradient
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(1,0,0,0.9779736,-131.82491,21.568879)"
-       r="57.326157"
-       fy="-6.7827616"
-       fx="72.478447"
-       cy="-6.7827616"
-       cx="72.478447"
-       id="radialGradient2728"
-       xlink:href="#linearGradient2720"
-       inkscape:collect="always" />
     <linearGradient
        id="linearGradient2720">
       <stop
@@ -118,7 +85,7 @@
      inkscape:current-layer="layer1"
      inkscape:window-width="752"
      inkscape:window-height="619"
-     inkscape:window-x="534"
+     inkscape:window-x="528"
      inkscape:window-y="24" />
   <metadata
      id="metadata5701">

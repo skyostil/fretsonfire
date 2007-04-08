@@ -14,7 +14,7 @@
    id="svg5036"
    sodipodi:version="0.32"
    inkscape:version="0.44+devel"
-   sodipodi:docbase="C:\Program Files\Frets on Fire\data"
+   sodipodi:docbase="D:\FretsonFire\FretsOnFire-svn\trunk\data"
    sodipodi:docname="right.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape">
   <defs
@@ -30,102 +30,6 @@
          offset="1"
          id="stop4356" />
     </linearGradient>
-    <linearGradient
-       id="linearGradient2725">
-      <stop
-         style="stop-color:#000000;stop-opacity:1"
-         offset="0"
-         id="stop2727" />
-      <stop
-         style="stop-color:#db0000;stop-opacity:1;"
-         offset="1"
-         id="stop2729" />
-    </linearGradient>
-    <linearGradient
-       id="linearGradient5100">
-      <stop
-         id="stop5102"
-         offset="0"
-         style="stop-color:#d0d0d0;stop-opacity:1;" />
-      <stop
-         id="stop5104"
-         offset="1"
-         style="stop-color:#000000;stop-opacity:1" />
-    </linearGradient>
-    <linearGradient
-       id="linearGradient4875">
-      <stop
-         style="stop-color:#d0d0d0;stop-opacity:1;"
-         offset="0"
-         id="stop4877" />
-      <stop
-         style="stop-color:#505050;stop-opacity:0.7368421;"
-         offset="1"
-         id="stop4879" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4875"
-       id="linearGradient4881"
-       x1="0.46915093"
-       y1="92.892616"
-       x2="0.46915093"
-       y2="-89.422569"
-       gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4875"
-       id="linearGradient5052"
-       gradientUnits="userSpaceOnUse"
-       x1="0.46915093"
-       y1="92.892616"
-       x2="0.46915093"
-       y2="-89.422569"
-       gradientTransform="matrix(0.814677,0.000000,0.000000,0.893747,8.229486,-20.97348)" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient2725"
-       id="linearGradient2731"
-       x1="47.685806"
-       y1="-153.51738"
-       x2="46.992886"
-       y2="-202.79492"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-262.55257,-3.3324829)" />
-    <filter
-       inkscape:collect="always"
-       x="-0.099482885"
-       width="1.1989658"
-       y="-0.16504017"
-       height="1.3300803"
-       id="filter3887">
-      <feGaussianBlur
-         inkscape:collect="always"
-         stdDeviation="7.5403532"
-         id="feGaussianBlur3889" />
-    </filter>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient2725"
-       id="linearGradient3895"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(30.304574,16.667517)"
-       x1="50.54295"
-       y1="-263.19507"
-       x2="51.278599"
-       y2="-364.01852" />
-    <filter
-       inkscape:collect="always"
-       x="-0.019580381"
-       width="1.0391608"
-       y="-0.14433202"
-       height="1.288664"
-       id="filter3966">
-      <feGaussianBlur
-         inkscape:collect="always"
-         stdDeviation="6.1655891"
-         id="feGaussianBlur3968" />
-    </filter>
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient4352"

@@ -69,7 +69,6 @@ dataFiles = [
   "stage_light.svg",
   "stage_lights1.svg",
   "stage_lights2.svg",
-  "stage_logo.svg",
   "stage_speakers.svg",
   "stage_speaker_cones.svg",
   "stage.ini",
