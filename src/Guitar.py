@@ -234,8 +234,6 @@ class Guitar:
     glEnable(GL_DEPTH_TEST)
     glDepthMask(1)
     glShadeModel(GL_SMOOTH)
-    #glRotatef(90, 0, 1, 0)
-    #glRotatef(-90, 1, 0, 0)
     self.noteMesh.render("Mesh_001")
     if isTappable:
       self.noteMesh.render("Mesh_003")
@@ -462,19 +460,16 @@ class Guitar:
     notes = [(time, event) for time, event in track.getEvents(pos - self.lateMargin, pos + self.earlyMargin) if isinstance(event, Note)]
     notes = [(time, event) for time, event in notes if not event.played]
     notes = [(time, event) for time, event in notes if (time >= (pos - self.lateMargin)) and (time <= (pos + self.earlyMargin))]
+    if notes:
+      t     = min([time for time, event in notes])
+      notes = [(time, event) for time, event in notes if time - t < 1e-3]
     return notes
-  
-  def startPick(self, song, pos, controls):
-    if not song:
-      return
-    
-    self.playedNotes = []
-    notes = self.getRequiredNotes(song, pos)
 
+  def controlsMatchNotes(self, controls, notes):
     # no notes?
     if not notes:
       return False
-
+  
     # check each valid chord
     chords = {}
     for time, note in notes:
@@ -488,18 +483,35 @@ class Guitar:
 
       for n, k in enumerate(KEYS):
         if n in requiredKeys and not controls.getState(k):
-          break
+          return False
         if not n in requiredKeys and controls.getState(k):
           # The lower frets can be held down
-          if n >= min(requiredKeys):
-            break
-      else:
-        self.pickStartPos = pos
-        for time, note in notes:
-          self.pickStartPos = max(self.pickStartPos, time)
-          note.played       = True
-        self.playedNotes = notes
-        return True
+          if n > max(requiredKeys):
+            return False
+    return True
+
+  def areNotesTappable(self, notes):
+    if not notes:
+      return
+    for time, note in notes:
+      if not note.tappable:
+        return False
+    return True
+  
+  def startPick(self, song, pos, controls):
+    if not song:
+      return False
+    
+    self.playedNotes = []
+    notes = self.getRequiredNotes(song, pos)
+
+    if self.controlsMatchNotes(controls, notes):
+      self.pickStartPos = pos
+      for time, note in notes:
+        self.pickStartPos = max(self.pickStartPos, time)
+        note.played       = True
+      self.playedNotes = notes
+      return True
     return False
 
   def endPick(self, pos):

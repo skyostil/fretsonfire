@@ -137,6 +137,7 @@ class SettingsMenu(Menu.Menu):
       (_("Mod settings"), modSettings),
       ConfigChoice(engine.config, "game",  "language"),
       ConfigChoice(engine.config, "game",  "leftymode", autoApply = True),
+      ConfigChoice(engine.config, "game",  "tapping", autoApply = True),
       ConfigChoice(engine.config, "game",  "uploadscores", autoApply = True),
     ]
     gameSettingsMenu = Menu.Menu(engine, gameSettings + applyItem)

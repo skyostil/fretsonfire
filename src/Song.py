@@ -294,16 +294,25 @@ class Note(Event):
     self.played   = False
     self.special  = special
     self.tappable = tappable
+    
+  def __repr__(self):
+    return "<#%d>" % self.number
 
 class Tempo(Event):
   def __init__(self, bpm):
     Event.__init__(self, 0)
     self.bpm = bpm
     
+  def __repr__(self):
+    return "<%d bpm>" % self.bpm
+
 class TextEvent(Event):
   def __init__(self, text, length):
     Event.__init__(self, length)
     self.text = text
+
+  def __repr__(self):
+    return "<%s>" % self.text
 
 class PictureEvent(Event):
   def __init__(self, fileName, length):
@@ -373,8 +382,11 @@ class Track:
 
     def beatsToTicks(time):
       return (time * bpm * ticksPerBeat) / 60000.0
-    
-    for time, event in self.allEvents:
+
+    if not self.allEvents:
+      return
+
+    for time, event in self.allEvents + [self.allEvents[-1]]:
       if isinstance(event, Tempo):
         bpm = event.bpm
       elif isinstance(event, Note):
@@ -400,14 +412,12 @@ class Track:
               # If all the notes are different, mark the current notes tappable
               for note in currentNotes:
                 note.tappable = True
-                
+
         # Set the current notes as the previous notes
         prevNotes    = currentNotes
         prevTicks    = currentTicks
         currentNotes = [event]
         currentTicks = ticks
-          
-
 
 class Song(object):
   def __init__(self, engine, infoFileName, songTrackName, guitarTrackName, rhythmTrackName, noteFileName, scriptFileName = None):

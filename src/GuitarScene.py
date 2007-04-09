@@ -117,6 +117,12 @@ class GuitarSceneClient(GuitarScene, SceneClient):
     song.difficulty = self.player.difficulty
     self.delay += song.info.delay
 
+    # If tapping is disabled, remove the tapping indicators
+    if not self.engine.config.get("game", "tapping"):
+      for time, event in self.song.track.getAllEvents():
+        if isinstance(event, Note):
+          event.tappable = False
+
   def quit(self):
     if self.song:
       self.song.stop()
@@ -204,7 +210,9 @@ class GuitarSceneClient(GuitarScene, SceneClient):
     # late pick
     if self.keyBurstTimeout is not None and self.engine.timer.time > self.keyBurstTimeout:
       self.keyBurstTimeout = None
-      self.doPick()
+      notes = self.guitar.getRequiredNotes(self.song, pos)
+      if self.guitar.controlsMatchNotes(self.controls, notes):
+        self.doPick()
 
   def endPick(self):
     score = self.getExtraScoreForCurrentlyPlayedNotes()
@@ -235,13 +243,12 @@ class GuitarSceneClient(GuitarScene, SceneClient):
     pos = self.getSongPosition()
     
     if self.guitar.playedNotes:
-      # If all the played notes are tappable and there are no required notes, ignore this pick
-      for time, note in self.guitar.playedNotes:
-        if not note.tappable:
-          break
-      else:
-        if not self.guitar.getRequiredNotes(self.song, pos):
-          return
+      # If all the played notes are tappable, there are no required notes and
+      # the last note was played recently enough, ignore this pick
+      if self.guitar.areNotesTappable(self.guitar.playedNotes) and \
+         not self.guitar.getRequiredNotes(self.song, pos) and \
+         pos - self.lastPickPos <= self.song.period / 2:
+        return
       self.endPick()
 
     self.lastPickPos = pos
@@ -295,12 +302,11 @@ class GuitarSceneClient(GuitarScene, SceneClient):
       # Check whether we can tap the currently required notes
       pos   = self.getSongPosition()
       notes = self.guitar.getRequiredNotes(self.song, pos)
-      if notes and self.player.streak > 0:
-        for time, note in notes:
-          if not note.tappable or not self.controls.getState(KEYS[note.number]):
-            break
-        else:
-          self.doPick()
+
+      if self.player.streak > 0 and \
+         self.guitar.areNotesTappable(notes) and \
+         self.guitar.controlsMatchNotes(self.controls, notes):
+        self.doPick()
     elif control == Player.CANCEL:
       self.pauseGame()
       self.engine.view.pushLayer(self.menu)
@@ -335,14 +341,12 @@ class GuitarSceneClient(GuitarScene, SceneClient):
       # Check whether we can tap the currently required notes
       pos   = self.getSongPosition()
       notes = self.guitar.getRequiredNotes(self.song, pos)
-      if notes and self.player.streak > 0:
-        for time, note in notes:
-          if not note.tappable or not self.controls.getState(KEYS[note.number]):
-            self.endPick()
-            break
-        else:
-          self.doPick()
-      else:
+      if self.player.streak > 0 and \
+         self.guitar.areNotesTappable(notes) and \
+         self.guitar.controlsMatchNotes(self.controls, notes):
+        self.doPick()
+      # Otherwise we end the pick if the notes have been playing long enough
+      elif self.lastPickPos is not None and pos - self.lastPickPos > self.song.period / 2:
         self.endPick()
   def render(self, visibility, topMost):
     SceneClient.render(self, visibility, topMost)
