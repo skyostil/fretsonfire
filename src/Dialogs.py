@@ -425,15 +425,16 @@ class SongChooser(Layer, KeyListener):
 
     c = self.engine.input.controls.getMapping(key)
     if c in [Player.KEY1] or key == pygame.K_RETURN:
-      if isinstance(self.selectedItem, Song.LibraryInfo):
-        self.library     = self.selectedItem.libraryName
-        self.initialItem = None
-        self.loadCollection()
-      else:
-        self.engine.view.popLayer(self)
-        self.accepted = True
-      if not self.song:
-        self.engine.data.acceptSound.play()
+      if self.matchesSearch(self.selectedItem):
+        if isinstance(self.selectedItem, Song.LibraryInfo):
+          self.library     = self.selectedItem.libraryName
+          self.initialItem = None
+          self.loadCollection()
+        else:
+          self.engine.view.popLayer(self)
+          self.accepted = True
+        if not self.song:
+          self.engine.data.acceptSound.play()
     elif c in [Player.CANCEL, Player.KEY2]:
       if self.library != Song.DEFAULT_LIBRARY:
         self.initialItem = self.library
@@ -679,7 +680,10 @@ class SongChooser(Layer, KeyListener):
       Theme.setBaseColor(1 - v)
 
       if self.searchText:
-        font.render(_("Filter: %s") % (self.searchText), (.05, .7 + v), scale = 0.001)
+        text = _("Filter: %s") % (self.searchText) + "|"
+        if not self.matchesSearch(self.items[self.selectedIndex]):
+          text += " (%s)" % _("Not found")
+        font.render(text, (.05, .7 + v), scale = 0.001)
       elif self.songLoader:
         font.render(_("Loading Preview..."), (.05, .7 + v), scale = 0.001)
 
@@ -690,43 +694,44 @@ class SongChooser(Layer, KeyListener):
       Theme.setSelectedColor(1 - v)
       
       item  = self.items[self.selectedIndex]
-      angle = self.itemAngles[self.selectedIndex]
-      f = ((90.0 - angle) / 90.0) ** 2
-      pos = wrapText(font, (x, y), item.name, visibility = f, scale = 0.0016)
 
-      if isinstance(item, Song.SongInfo):
-        Theme.setBaseColor(1 - v)
-        wrapText(font, (x, pos[1] + font.getHeight() * 0.0016), item.artist, visibility = f, scale = 0.0016)
+      if self.matchesSearch(item):
+        angle = self.itemAngles[self.selectedIndex]
+        f = ((90.0 - angle) / 90.0) ** 2
+        pos = wrapText(font, (x, y), item.name, visibility = f, scale = 0.0016)
 
-        Theme.setSelectedColor(1 - v)
-        scale = 0.0011
-        w, h = font.getStringSize(self.prompt, scale = scale)
-        x = .6
-        y = .5 + f / 2.0
-        if len(item.difficulties) > 3:
-          y = .42 + f / 2.0
-          
-        for d in item.difficulties:
-          scores = item.getHighscores(d)
-          if scores:
-            score, stars, name = scores[0]
-          else:
-            score, stars, name = "---", 0, "---"
+        if isinstance(item, Song.SongInfo):
           Theme.setBaseColor(1 - v)
-          font.render(unicode(d),     (x, y),           scale = scale)
-          font.render(unicode(Data.STAR2 * stars + Data.STAR1 * (5 - stars)), (x, y + h), scale = scale * .9)
+          wrapText(font, (x, pos[1] + font.getHeight() * 0.0016), item.artist, visibility = f, scale = 0.0016)
+
           Theme.setSelectedColor(1 - v)
-          font.render(unicode(score), (x + .15, y),     scale = scale)
-          font.render(name,       (x + .15, y + h),     scale = scale)
-          y += 2 * h + f / 4.0
-      elif isinstance(item, Song.LibraryInfo):
-        Theme.setBaseColor(1 - v)
-        if item.songCount == 1:
-          songCount = _("One song in this library")
-        else:
-          songCount = _("%d songs in this library") % item.songCount
-        wrapText(font, (x, pos[1] + 3 * font.getHeight() * 0.0016), songCount, visibility = f, scale = 0.0016)
-        
+          scale = 0.0011
+          w, h = font.getStringSize(self.prompt, scale = scale)
+          x = .6
+          y = .5 + f / 2.0
+          if len(item.difficulties) > 3:
+            y = .42 + f / 2.0
+            
+          for d in item.difficulties:
+            scores = item.getHighscores(d)
+            if scores:
+              score, stars, name = scores[0]
+            else:
+              score, stars, name = "---", 0, "---"
+            Theme.setBaseColor(1 - v)
+            font.render(unicode(d),     (x, y),           scale = scale)
+            font.render(unicode(Data.STAR2 * stars + Data.STAR1 * (5 - stars)), (x, y + h), scale = scale * .9)
+            Theme.setSelectedColor(1 - v)
+            font.render(unicode(score), (x + .15, y),     scale = scale)
+            font.render(name,       (x + .15, y + h),     scale = scale)
+            y += 2 * h + f / 4.0
+        elif isinstance(item, Song.LibraryInfo):
+          Theme.setBaseColor(1 - v)
+          if item.songCount == 1:
+            songCount = _("One song in this library")
+          else:
+            songCount = _("%d songs in this library") % item.songCount
+          wrapText(font, (x, pos[1] + 3 * font.getHeight() * 0.0016), songCount, visibility = f, scale = 0.0016)
     finally:
       self.engine.view.resetProjection()
 
