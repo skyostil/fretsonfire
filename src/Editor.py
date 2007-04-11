@@ -28,7 +28,7 @@ import colorsys
 
 from View import Layer
 from Input import KeyListener
-from Song import loadSong, createSong, Note, difficulties
+from Song import loadSong, createSong, Note, difficulties, DEFAULT_LIBRARY
 from Guitar import Guitar, KEYS
 from Camera import Camera
 from Menu import Menu, Choice
@@ -43,7 +43,7 @@ from struct import unpack
 
 class Editor(Layer, KeyListener):
   """Song editor layer."""
-  def __init__(self, engine, songName = None, libraryName = None):
+  def __init__(self, engine, songName = None, libraryName = DEFAULT_LIBRARY):
     self.engine      = engine
     self.time        = 0.0
     self.guitar      = Guitar(self.engine, editorMode = True)
