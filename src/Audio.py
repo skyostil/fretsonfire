@@ -22,6 +22,7 @@
 
 import pygame
 import Log
+import time
 from Task import Task
 
 try:
@@ -34,7 +35,7 @@ class Audio:
   def pre_open(self, frequency = 22050, bits = 16, stereo = True, bufferSize = 1024):
     pygame.mixer.pre_init(frequency, -bits, stereo and 2 or 1, bufferSize)
     return True
-    
+
   def open(self, frequency = 22050, bits = 16, stereo = True, bufferSize = 1024):
     try:
       pygame.mixer.quit()
@@ -133,27 +134,6 @@ class Sound(object):
   def fadeout(self, time):
     self.sound.fadeout(time)
 
-class StreamingSound(Sound, Task):
-  def __init__(self, engine, channel, fileName):
-    Task.__init__(self)
-    Sound.__init__(self, fileName)
-    self.channel = channel
-
-  def play(self):
-    self.channel.play(self.sound)
-
-  def stop(self):
-    Sound.stop(self)
-    self.channel.stop()
-
-  def setVolume(self, volume):
-    Sound.setVolume(self, volume)
-    self.channel.setVolume(volume)
-
-  def fadeout(self, time):
-    Sound.fadeout(self, time)
-    self.channel.fadeout(time)
-
 if ogg:
   import struct
   from Numeric import reshape, array, zeros
@@ -166,7 +146,7 @@ if ogg:
       (data, bytes, bit) = self.file.read(bytes)
       return data[:bytes]
 
-  class StreamingSound(Sound, Task):
+  class StreamingOggSound(Sound, Task):
     def __init__(self, engine, channel, fileName):
       Task.__init__(self)
       self.engine       = engine
@@ -174,19 +154,22 @@ if ogg:
       self.channel      = channel.channel
       self.playing      = False
       self.bufferSize   = 1024 * 64
-      self.bufferCount  = 4
+      self.bufferCount  = 8
       self.volume       = 1.0
-      self.buffer       = zeros((2 * self.bufferSize, 2))
+      self.buffer       = zeros((2 * self.bufferSize, 2), typecode = 's')
       self.decodingRate = 4
       self._reset()
 
     def _reset(self):
-      self.stream       = OggStream(self.fileName)
-      self.soundBuffers = []
-      self.bufferPos    = 0
-      self.done         = False
+      self.stream        = OggStream(self.fileName)
+      self.buffersIn     = [pygame.sndarray.make_sound(zeros((self.bufferSize, 2), typecode = 's')) for i in range(self.bufferCount + 1)]
+      self.buffersOut    = []
+      self.buffersBusy   = []
+      self.bufferPos     = 0
+      self.done          = False
+      self.lastQueueTime = time.time()
 
-      while len(self.soundBuffers) < self.bufferCount and not self.done:
+      while len(self.buffersOut) < self.bufferCount and not self.done:
         self._produceSoundBuffers()
 
     def __del__(self):
@@ -199,10 +182,10 @@ if ogg:
       self.engine.addTask(self, synchronized = False)
       self.playing = True
 
-      while len(self.soundBuffers) < self.bufferCount and not self.done:
+      while len(self.buffersOut) < self.bufferCount and not self.done:
         self._produceSoundBuffers()
-        
-      self.channel.play(self.soundBuffers.pop())
+
+      self.channel.play(self.buffersOut.pop())
 
     def stop(self):
       self.playing = False
@@ -217,7 +200,10 @@ if ogg:
       self.stop()
 
     def _decodeStream(self):
-      decodedBytes = 0
+      # No available buffers to fill?
+      if not self.buffersIn or self.done:
+        return
+
       data = self.stream.read()
 
       if not data:
@@ -229,20 +215,31 @@ if ogg:
         self.buffer[self.bufferPos:self.bufferPos + samples, 1] = data[1::2]
         self.bufferPos += samples
 
+      # If we have at least one full buffer decode, claim a buffer and copy the
+      # data over to it.
       if self.bufferPos >= self.bufferSize or (self.done and self.bufferPos):
-        soundBuffer = pygame.sndarray.make_sound(self.buffer[0:self.bufferPos])
-        self.bufferPos = 0
+        # Claim the sound buffer and copy the data
+        if self.bufferPos < self.bufferSize:
+          self.buffer[self.bufferPos:]  = 0
+        soundBuffer = self.buffersIn.pop()
+        pygame.sndarray.samples(soundBuffer)[:] = self.buffer[0:self.bufferSize]
+
+        # Discard the copied sound data
+        n = max(0, self.bufferPos - self.bufferSize)
+        self.buffer[0:n] = self.buffer[self.bufferSize:self.bufferSize+n]
+        self.bufferPos   = n
+
         return soundBuffer
 
     def _produceSoundBuffers(self):
       # Decode enough that we have at least one full sound buffer
       # ready in the queue if possible
-      while 1:
-        for i in range(self.decodingRate):
+      while not self.done:
+        for i in xrange(self.decodingRate):
           soundBuffer = self._decodeStream()
           if soundBuffer:
-            self.soundBuffers.insert(0, soundBuffer)
-        if self.soundBuffers or self.done:
+            self.buffersOut.insert(0, soundBuffer)
+        if self.buffersOut:
           break
 
     def run(self, ticks):
@@ -250,16 +247,49 @@ if ogg:
         return
 
       self.channel.set_volume(self.volume)
-      
-      if len(self.soundBuffers) < self.bufferCount:
+
+      if len(self.buffersOut) < self.bufferCount:
         self._produceSoundBuffers()
 
-      if not self.soundBuffers and self.done:
+      if not self.channel.get_queue() and self.buffersOut:
+        # Queue one decoded sound buffer and mark the previously played buffer as free
+        soundBuffer = self.buffersOut.pop()
+        self.buffersBusy.insert(0, soundBuffer)
+        self.lastQueueTime = time.time()
+        self.channel.queue(soundBuffer)
+        if len(self.buffersBusy) > 2:
+          self.buffersIn.insert(0, self.buffersBusy.pop())
+      
+      if not self.buffersOut and self.done and time.time() - self.lastQueueTime > 4:
         self.stop()
 
-      if not self.channel.get_queue() and self.soundBuffers:
-        soundBuffer = self.soundBuffers.pop()
-        try:
-          self.channel.queue(soundBuffer)
-        except TypeError:
-          pass
+class StreamingSound(Sound, Task):
+  def __init__(self, engine, channel, fileName):
+    Task.__init__(self)
+    Sound.__init__(self, fileName)
+    self.channel = channel
+
+  def __new__(cls, engine, channel, fileName):
+    frequency, format, stereo = pygame.mixer.get_init()
+    if fileName.lower().endswith(".ogg"):
+      if frequency == 44100 and format == -16 and stereo:
+        return StreamingOggSound(engine, channel, fileName)
+      else:
+        Log.warn("Audio settings must match stereo 16 bits at 44100 Hz in order to stream OGG files.")
+    return super(StreamingSound, cls).__new__(cls, engine, channel, fileName)
+
+  def play(self):
+    self.channel.play(self)
+
+  def stop(self):
+    Sound.stop(self)
+    self.channel.stop()
+
+  def setVolume(self, volume):
+    Sound.setVolume(self, volume)
+    self.channel.setVolume(volume)
+
+  def fadeout(self, time):
+    Sound.fadeout(self, time)
+    self.channel.fadeout(time)
+
