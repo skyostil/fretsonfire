@@ -47,12 +47,16 @@ sdist:	doc
 	mkdir FretsOnFire-src-$(VERSION)/src
 	mkdir FretsOnFire-src-$(VERSION)/src/midi
 	mkdir FretsOnFire-src-$(VERSION)/doc
+	mkdir FretsOnFire-src-$(VERSION)/data
+	mkdir FretsOnFire-src-$(VERSION)/data/translations
 	cp -rvp src/*.py      FretsOnFire-src-$(VERSION)/src
 	cp -rvp src/*.pot     FretsOnFire-src-$(VERSION)/src
 	cp -rvp src/midi/*.py FretsOnFire-src-$(VERSION)/src/midi
 	cp -rvp doc/html      FretsOnFire-src-$(VERSION)/doc
 	cp -rvp *.txt         FretsOnFire-src-$(VERSION)
 	cp -rvp Makefile*     FretsOnFire-src-$(VERSION)
+	cp -rvp data/translations/*.po     FretsOnFire-src-$(VERSION)/data/translations
+	cp -rvp data/translations/update*     FretsOnFire-src-$(VERSION)/data/translations
 	tar cvzf FretsOnFire-src-$(VERSION).tar.gz FretsOnFire-src-$(VERSION)
 
 clean:
