@@ -116,63 +116,67 @@ msgstr ""
 msgid "Copyright 2006, 2007 by Unreal Voodoo"
 msgstr ""
 
-#: Data.py:57
+#: Data.py:60
 msgid "__lefttoright__"
 msgstr ""
 
-#: Dialogs.py:265
+#: Dialogs.py:271
 msgid "<OK>"
 msgstr ""
 
-#: Dialogs.py:350
+#: Dialogs.py:357
 msgid "Browsing Collection..."
 msgstr ""
 
-#: Dialogs.py:669
-msgid "Find: %s"
+#: Dialogs.py:683
+msgid "Filter: %s"
 msgstr ""
 
-#: Dialogs.py:671
+#: Dialogs.py:685
+msgid "Not found"
+msgstr ""
+
+#: Dialogs.py:688
 msgid "Loading Preview..."
 msgstr ""
 
-#: Dialogs.py:712
+#: Dialogs.py:731
 msgid "One song in this library"
 msgstr ""
 
-#: Dialogs.py:714
+#: Dialogs.py:733
 msgid "%d songs in this library"
 msgstr ""
 
-#: Dialogs.py:740
+#: Dialogs.py:758
 msgid "[Parent Folder]"
 msgstr ""
 
-#: Dialogs.py:742
+#: Dialogs.py:760
 msgid "%s [Folder]"
 msgstr ""
 
-#: Dialogs.py:948
+#: Dialogs.py:966
 msgid "%.2f beats per minute"
 msgstr ""
 
-#: Dialogs.py:1012
+#: Dialogs.py:1030
 msgid "Pick!"
 msgstr ""
 
-#: Dialogs.py:1051
+#: Dialogs.py:1069
 msgid "Choose a Song"
 msgstr ""
 
-#: Dialogs.py:1066
+#: Dialogs.py:1084
 msgid "Choose a File"
 msgstr ""
 
-#: Dialogs.py:1092
+#: Dialogs.py:1110
 msgid "Play with the keys and press Escape when you're done."
 msgstr ""
 
-#: Dialogs.py:1102
+#: Dialogs.py:1120
 msgid "Loading..."
 msgstr ""
 
@@ -212,7 +216,7 @@ msgstr ""
 msgid "Editing Help"
 msgstr ""
 
-#: Editor.py:75 GameResultsScene.py:60 GuitarScene.py:92
+#: Editor.py:75 GameResultsScene.py:60 GuitarScene.py:90
 msgid "Quit to Main Menu"
 msgstr ""
 
@@ -388,11 +392,11 @@ msgstr ""
 msgid "Upload Highscores"
 msgstr ""
 
-#: GameEngine.py:51 GameEngine.py:53 GameEngine.py:54
+#: GameEngine.py:51 GameEngine.py:53 GameEngine.py:54 GameEngine.py:55
 msgid "No"
 msgstr ""
 
-#: GameEngine.py:51 GameEngine.py:53 GameEngine.py:54
+#: GameEngine.py:51 GameEngine.py:53 GameEngine.py:54 GameEngine.py:55
 msgid "Yes"
 msgstr ""
 
@@ -401,106 +405,110 @@ msgid "Lefty mode"
 msgstr ""
 
 #: GameEngine.py:54
+msgid "Tappable notes"
+msgstr ""
+
+#: GameEngine.py:55
 msgid "Fullscreen Mode"
 msgstr ""
 
-#: GameEngine.py:55
+#: GameEngine.py:56
 msgid "2x"
 msgstr ""
 
-#: GameEngine.py:55
+#: GameEngine.py:56
 msgid "4x"
 msgstr ""
 
-#: GameEngine.py:55
+#: GameEngine.py:56
 msgid "6x"
 msgstr ""
 
-#: GameEngine.py:55
+#: GameEngine.py:56
 msgid "8x"
 msgstr ""
 
-#: GameEngine.py:55
+#: GameEngine.py:56
 msgid "Antialiasing Quality"
 msgstr ""
 
-#: GameEngine.py:55
+#: GameEngine.py:56
 msgid "None"
 msgstr ""
 
-#: GameEngine.py:57
+#: GameEngine.py:58
 msgid "Frames per Second"
 msgstr ""
 
-#: GameEngine.py:58
+#: GameEngine.py:59
 msgid "High"
 msgstr ""
 
-#: GameEngine.py:58
+#: GameEngine.py:59
 msgid "Low"
 msgstr ""
 
-#: GameEngine.py:58
+#: GameEngine.py:59
 msgid "Normal"
 msgstr ""
 
-#: GameEngine.py:58
+#: GameEngine.py:59
 msgid "SVG Quality"
 msgstr ""
 
-#: GameEngine.py:59
+#: GameEngine.py:60
 msgid "Sample Frequency"
 msgstr ""
 
-#: GameEngine.py:60
+#: GameEngine.py:61
 msgid "Sample Bits"
 msgstr ""
 
-#: GameEngine.py:62
+#: GameEngine.py:63
 msgid "Buffer Size"
 msgstr ""
 
-#: GameEngine.py:63
+#: GameEngine.py:64
 msgid "A/V delay"
 msgstr ""
 
-#: GameEngine.py:64
+#: GameEngine.py:65
 msgid "Loud"
 msgstr ""
 
-#: GameEngine.py:64
+#: GameEngine.py:65
 msgid "Painful"
 msgstr ""
 
-#: GameEngine.py:64
+#: GameEngine.py:65
 msgid "Quiet"
 msgstr ""
 
-#: GameEngine.py:64
+#: GameEngine.py:65
 msgid "Screw Up Sounds"
 msgstr ""
 
-#: GameEngine.py:64 Mod.py:33
+#: GameEngine.py:65 Mod.py:33
 msgid "Off"
 msgstr ""
 
-#: GameEngine.py:65
+#: GameEngine.py:66
 msgid "Guitar Volume"
 msgstr ""
 
-#: GameEngine.py:66
+#: GameEngine.py:67
 msgid "Song Volume"
 msgstr ""
 
-#: GameEngine.py:67
+#: GameEngine.py:68
 msgid "Rhythm Volume"
 msgstr ""
 
-#: GameEngine.py:68
+#: GameEngine.py:69
 msgid "Text scale"
 msgstr ""
 
-#: GameEngine.py:134
+#: GameEngine.py:135
 msgid "Frets on Fire"
 msgstr ""
 
@@ -508,7 +516,7 @@ msgstr ""
 msgid "Replay"
 msgstr ""
 
-#: GameResultsScene.py:59 GuitarScene.py:90
+#: GameResultsScene.py:59 GuitarScene.py:88
 msgid "Change Song"
 msgstr ""
 
@@ -524,23 +532,23 @@ msgstr ""
 msgid "%d points is a new high score! Please enter your name:"
 msgstr ""
 
-#: GameResultsScene.py:176
+#: GameResultsScene.py:177
 msgid "Highest Scores (%s)"
 msgstr ""
 
-#: GameResultsScene.py:197
+#: GameResultsScene.py:198
 msgid "Uploading Scores..."
 msgstr ""
 
-#: GameResultsScene.py:201
+#: GameResultsScene.py:202
 msgid "Song Finished!"
 msgstr ""
 
-#: GameResultsScene.py:219
+#: GameResultsScene.py:220
 msgid "Accuracy: %d%%"
 msgstr ""
 
-#: GameResultsScene.py:222
+#: GameResultsScene.py:223
 msgid "Longest note streak: %d"
 msgstr ""
 
@@ -548,35 +556,35 @@ msgstr ""
 msgid "Connection lost."
 msgstr ""
 
-#: GuitarScene.py:83
+#: GuitarScene.py:81
 msgid "Tuning Guitar..."
 msgstr ""
 
-#: GuitarScene.py:89
+#: GuitarScene.py:87
 msgid "Restart Song"
 msgstr ""
 
-#: GuitarScene.py:91
+#: GuitarScene.py:89
 msgid "Settings"
 msgstr ""
 
-#: GuitarScene.py:289
+#: GuitarScene.py:274
 msgid "Jurgen will show you how it is done."
 msgstr ""
 
-#: GuitarScene.py:291
+#: GuitarScene.py:276
 msgid "Jurgen has left the building."
 msgstr ""
 
-#: GuitarScene.py:365
+#: GuitarScene.py:364
 msgid "Get Ready to Rock"
 msgstr ""
 
-#: GuitarScene.py:390
+#: GuitarScene.py:389
 msgid "%d hit"
 msgstr ""
 
-#: GuitarScene.py:407
+#: GuitarScene.py:406
 msgid "Missed!"
 msgstr ""
 
@@ -612,47 +620,47 @@ msgstr ""
 msgid "Join Multiplayer Game"
 msgstr ""
 
-#: MainMenu.py:132
+#: MainMenu.py:59
 msgid "Edit Existing Song"
 msgstr ""
 
-#: MainMenu.py:133
+#: MainMenu.py:60
 msgid "Import New Song"
 msgstr ""
 
-#: MainMenu.py:134
+#: MainMenu.py:61
 msgid "Import Guitar Hero(tm) Songs"
 msgstr ""
 
-#: MainMenu.py:140
+#: MainMenu.py:67
 msgid "Play Game"
 msgstr ""
 
-#: MainMenu.py:141
+#: MainMenu.py:68
 msgid "Tutorial"
 msgstr ""
 
-#: MainMenu.py:142
+#: MainMenu.py:69
 msgid "Song Editor"
 msgstr ""
 
-#: MainMenu.py:143
+#: MainMenu.py:70
 msgid "Settings >"
 msgstr ""
 
-#: MainMenu.py:144
+#: MainMenu.py:71
 msgid "Credits"
 msgstr ""
 
-#: MainMenu.py:145
+#: MainMenu.py:72
 msgid "Quit"
 msgstr ""
 
-#: MainMenu.py:221
+#: MainMenu.py:148
 msgid "Enter the server address:"
 msgstr ""
 
-#: MainMenu.py:228
+#: MainMenu.py:155
 msgid "Connecting..."
 msgstr ""
 
@@ -720,31 +728,31 @@ msgstr ""
 msgid "Mod settings"
 msgstr ""
 
-#: Settings.py:145
+#: Settings.py:146
 msgid "Test Keys"
 msgstr ""
 
-#: Settings.py:163
+#: Settings.py:164
 msgid "Video Resolution"
 msgstr ""
 
-#: Settings.py:184
+#: Settings.py:185
 msgid "Volume Settings"
 msgstr ""
 
-#: Settings.py:193
+#: Settings.py:194
 msgid "Game Settings"
 msgstr ""
 
-#: Settings.py:194
+#: Settings.py:195
 msgid "Key Settings"
 msgstr ""
 
-#: Settings.py:195
+#: Settings.py:196
 msgid "Video Settings"
 msgstr ""
 
-#: Settings.py:196
+#: Settings.py:197
 msgid "Audio Settings"
 msgstr ""
 
