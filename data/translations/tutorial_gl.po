@@ -1,0 +1,160 @@
+# Galician translation
+# Frets On Fire
+# Copyright (C) 2006 Unreal Voodoo
+#
+# Ciberirmandade da Fala - www.ciberirmandade.org
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: FretsOnFire-src 1.1.324\n"
+"POT-Creation-Date: 2006-10-27 23:23+EEST\n"
+"PO-Revision-Date: 2007-03-17 01:12+0000\n"
+"Last-Translator: Moucho <moucho@ciberirmandade.org>\n"
+"Language-Team: Galician <trasno@ceu.fi.udc.es>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Ah yes, I know. I'm amazing."
+msgstr "Seino, si, son incríbel."
+
+msgid "Ah, that was cool."
+msgstr "Ah, iso foi show."
+
+msgid "Und hello everyone."
+msgstr "Er.. Ola a todos."
+
+msgid "My name is Jurgen"
+msgstr "O meu nome é Jurgen"
+
+msgid "Guntherswarchzhaffenstrassen."
+msgstr "Guntherswarchzhaffenstrassen."
+
+msgid "Und today I will show you"
+msgstr "Hoxe vouvos ensinar"
+
+msgid "how to play this game."
+msgstr "cómo xogar a este xogo."
+
+msgid "Check this sh*t!"
+msgstr "Comproba isto!"
+
+msgid "And now, pick up your keyboard"
+msgstr "E agora, colle o teu teclado"
+
+msgid "like this."
+msgstr "desta forma."
+
+msgid "When I shred,"
+msgstr "Cando eu toco,"
+
+msgid "I use the whole keyboard."
+msgstr "Uso todo o teclado."
+
+msgid "But since you SUCK,"
+msgstr "Mais como ti es unha M*RDA,"
+
+msgid "You will only need"
+msgstr "Só vas precisar"
+
+msgid "These five frets,"
+msgstr "Destes cinco trastos,"
+
+msgid "Und zie Pick button."
+msgstr "e a tecla de tocar."
+
+msgid "However, zie most important"
+msgstr "Porén, o máis importante"
+
+msgid "is the Escape button."
+msgstr "é a tecla de Escape."
+
+msgid "You will need it,"
+msgstr "Vala necesitar,"
+
+msgid "when you finally realize"
+msgstr "cando finalmente notes"
+
+msgid "that you SUCK."
+msgstr "que es unha M*RDA."
+
+msgid "Bigtime."
+msgstr "Moito."
+
+msgid "To me, that is already obvious."
+msgstr "Para mi, iso xa é obvio."
+
+msgid "Ok, there comes your first note."
+msgstr "Vale, aquí vén a túa primeira nota."
+
+msgid "You can already hold down the 1st fret"
+msgstr "Xa podes pulsar o primeiro trasto"
+
+msgid "BUT DON'T PICK IT YET!"
+msgstr "PERO NON TOQUES AÍNDA!"
+
+msgid "You missed it."
+msgstr "Fallaches."
+
+msgid "Ok, let's try it again."
+msgstr "Veña, imos probar de novo."
+
+msgid "Ok, wait for it."
+msgstr "Vale, Espera por ela."
+
+msgid "Wait for it."
+msgstr "Espera por ela."
+
+msgid "No!"
+msgstr "Non!"
+
+msgid "*Sigh*"
+msgstr "*Suspiro*"
+
+msgid "Now, hold down two frets."
+msgstr "Agora, mantén pulsados dous trastos."
+
+msgid "Ah, you missed it!"
+msgstr "Ah, escapóuseche!"
+
+msgid "And now, try this super easy lick."
+msgstr "E agora, tenta facer esta lambida superfácil."
+
+msgid "Und up to my tempo."
+msgstr "Trata de seguirme."
+
+msgid "Don't try this,"
+msgstr "Non tentes facer isto,"
+
+msgid "or you'll just hurt yourself."
+msgstr "mancaríaste."
+
+msgid "Ok, that was about"
+msgstr "Si, iso foron perto de"
+
+msgid "four billion notes per second."
+msgstr "catro billóns de notas por segundo."
+
+msgid "If I play that any faster,"
+msgstr "Se eu consigo tocar máis rápido,"
+
+msgid "your minds would just blow up."
+msgstr "os teus miolos explotarían."
+
+msgid "Ok, that is it for now."
+msgstr "Iso foi todo por agora."
+
+msgid "You can now go and sell"
+msgstr "Xa podes marchar e vender"
+
+msgid "your keyboards on Ebay."
+msgstr "os teus teclados en Ebay."
+
+msgid "Because you SUCK."
+msgstr "Porque es unha M*RDA"
+
+msgid "And remember one thing."
+msgstr "E lembra unha cousa."
+
+msgid "I am your new god, little girls."
+msgstr "Son o teu novo deus, ruliña."

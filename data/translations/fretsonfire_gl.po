@@ -1,0 +1,805 @@
+# Galician translation
+# Frets On Fire
+# Copyright (C) 2006 Unreal Voodoo
+#
+# Ciberirmandade da Fala - www.ciberirmandade.org
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: fretsonfire_gl\n"
+"POT-Creation-Date: 2006-10-27 23:23+EEST\n"
+"PO-Revision-Date: 2007-07-20 15:30+0000\n"
+"Last-Translator: Moucho <moucho@ciberirmandade.org>\n"
+"Language-Team: Galician <trasno@ceu.fi.udc.es>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: Credits.py:111
+msgid "Unreal Voodoo"
+msgstr "Unreal Voodoo"
+
+#: Credits.py:112
+msgid "presents"
+msgstr "presenta"
+
+#: Credits.py:116
+msgid "Version %s"
+msgstr "Versión %s"
+
+#: Credits.py:118
+msgid "Game Design,"
+msgstr "Deseño do xogo,"
+
+#: Credits.py:119
+msgid "Programming:"
+msgstr "Programación:"
+
+#: Credits.py:122
+msgid "Music,"
+msgstr "Música,"
+
+#: Credits.py:123
+msgid "Sound Effects:"
+msgstr "Efectos sonoros:"
+
+#: Credits.py:126
+msgid "Graphics:"
+msgstr "Gráficos:"
+
+#: Credits.py:129
+msgid "Introducing:"
+msgstr "Presentando a:"
+
+#: Credits.py:131
+msgid "as Jurgen, Your New God"
+msgstr "como Jurgen, o seu novo Deus"
+
+#: Credits.py:134
+msgid "as Groupie"
+msgstr "como Groupie"
+
+#: Credits.py:136
+msgid "Song Credits:"
+msgstr "Créditos das cancións:"
+
+#: Credits.py:137
+msgid "Bang Bang, Mystery Man"
+msgstr "Bang Bang, Mystery Man"
+
+#: Credits.py:138
+msgid "music by Mary Jo and Tommi Inkila"
+msgstr "música por Mary Jo e Tommi Inkila"
+
+#: Credits.py:139
+msgid "lyrics by Mary Jo"
+msgstr "letras por Mary Jo"
+
+#: Credits.py:141
+msgid "Defy The Machine"
+msgstr "Defy The Machine"
+
+#: Credits.py:142
+msgid "music by Tommi Inkila"
+msgstr "música por Tommi Inkila"
+
+#: Credits.py:144
+msgid "This Week I've Been"
+msgstr "This Week I've Been"
+
+#: Credits.py:145
+msgid "Mostly Playing Guitar"
+msgstr "Mostly Playing Guitar"
+
+#: Credits.py:146
+msgid "composed and performed by Tommi Inkila"
+msgstr "composta e tocada por Tommi Inkila"
+
+#: Credits.py:148
+msgid "Testing:"
+msgstr "Probas:"
+
+#: Credits.py:155
+msgid "Mac OS X port:"
+msgstr "Port para Mac OS X:"
+
+#: Credits.py:158
+msgid "Special thanks to:"
+msgstr "Agradecementos especiais a:"
+
+#: Credits.py:161
+msgid "Made with:"
+msgstr "Feito con:"
+
+#: Credits.py:184
+msgid "Source Code available under the GNU General Public License"
+msgstr "Código fonte dispoñíbel baixo a licenza GNU General Public License"
+
+#: Credits.py:190
+#, fuzzy
+msgid "Copyright 2006, 2007 by Unreal Voodoo"
+msgstr "Copyright 2006, 2007 Unreal Voodoo"
+
+#: Data.py:60
+msgid "__lefttoright__"
+msgstr "__deesquerdaadereita__"
+
+#: Dialogs.py:271
+msgid "<OK>"
+msgstr "<OK>"
+
+#: Dialogs.py:357
+msgid "Browsing Collection..."
+msgstr "Cargando colección..."
+
+#: Dialogs.py:683
+#, fuzzy
+msgid "Filter: %s"
+msgstr "Filtro: %s"
+
+#: Dialogs.py:685
+msgid "Not found"
+msgstr "Non atopado"
+
+#: Dialogs.py:688
+msgid "Loading Preview..."
+msgstr "Cargando previa..."
+
+#: Dialogs.py:731
+msgid "One song in this library"
+msgstr "Unha canción neste cartafol"
+
+#: Dialogs.py:733
+msgid "%d songs in this library"
+msgstr "%d cancións neste cartafol"
+
+#: Dialogs.py:758
+msgid "[Parent Folder]"
+msgstr "[Cartafol anterior]"
+
+#: Dialogs.py:760
+msgid "%s [Folder]"
+msgstr "%s [Cartafol]"
+
+#: Dialogs.py:966
+msgid "%.2f beats per minute"
+msgstr "%.2f batidas por minuto"
+
+#: Dialogs.py:1030
+msgid "Pick!"
+msgstr "Tocar!"
+
+#: Dialogs.py:1069
+msgid "Choose a Song"
+msgstr "Escolle unha canción"
+
+#: Dialogs.py:1084
+msgid "Choose a File"
+msgstr "Escolle un ficheiro"
+
+#: Dialogs.py:1110
+msgid "Play with the keys and press Escape when you're done."
+msgstr "Pulsa as teclas e preme Escape cando remates."
+
+#: Dialogs.py:1120
+msgid "Loading..."
+msgstr "Cargando..."
+
+#: Editor.py:66
+msgid "Save Song"
+msgstr "Gravar canción"
+
+#: Editor.py:67
+msgid "Set Song Name"
+msgstr "Definir nome da canción"
+
+#: Editor.py:68
+msgid "Set Artist Name"
+msgstr "Definir nome do artista"
+
+#: Editor.py:69
+msgid "Set Beats per Minute"
+msgstr "Definir número de batidas por minuto"
+
+#: Editor.py:70
+msgid "Estimate Beats per Minute"
+msgstr "Estimar número de batidas por minuto"
+
+#: Editor.py:71
+msgid "Set A/V delay"
+msgstr "Definir retardo A/V"
+
+#: Editor.py:72
+msgid "Set Cassette Color"
+msgstr "Definir cor da cinta"
+
+#: Editor.py:73
+msgid "Set Cassette Label"
+msgstr "Definir etiqueta da cinta"
+
+#: Editor.py:74
+msgid "Editing Help"
+msgstr "Editando axuda"
+
+#: Editor.py:75 GameResultsScene.py:60 GuitarScene.py:90
+msgid "Quit to Main Menu"
+msgstr "Saír ó menú principal"
+
+#: Editor.py:81
+msgid "There are no changes to save."
+msgstr "Non hai cambios que gardar."
+
+#: Editor.py:89
+msgid "Saving..."
+msgstr "Gravando..."
+
+#: Editor.py:90
+msgid "'%s' saved."
+msgstr "'%s' gravado."
+
+#: Editor.py:93
+msgid "Editing keys: "
+msgstr "Editando teclas: "
+
+#: Editor.py:94
+msgid "Arrows - Move cursor, "
+msgstr "Frechas - Moven cursor, "
+
+#: Editor.py:95
+msgid "Space - Play/pause song, "
+msgstr "Espazo - Tocar/pausar canción, "
+
+#: Editor.py:96
+msgid "Enter - Make note (hold and move for long notes), "
+msgstr "Enter - Facer nota (mantén pulsado para notas longas), "
+
+#: Editor.py:97
+msgid "Delete - Delete note, "
+msgstr "Suprimir - Eliminar nota, "
+
+#: Editor.py:98
+msgid "Page Up/Down - Change difficulty"
+msgstr "Muda a dificultade"
+
+#: Editor.py:102
+msgid "Enter Song Name"
+msgstr "Insire o nome da canción"
+
+#: Editor.py:108
+msgid "Enter Artist Name"
+msgstr "Insire o nome do artista"
+
+#: Editor.py:114
+msgid "Enter A/V delay in milliseconds"
+msgstr "Insire o retardo A/V en milisegundos"
+
+#: Editor.py:120 Editor.py:129
+msgid "That isn't a number."
+msgstr "Iso non é un número."
+
+#: Editor.py:123
+msgid "Enter Beats per Minute Value"
+msgstr "Insire número de batidas por minuto"
+
+#: Editor.py:132
+msgid ""
+"Tap the Space bar to the beat of the song. Press Enter when done or Escape "
+"to cancel."
+msgstr ""
+"Pulsa a barra espazadora para determinar as batidas por minuto. Pulsa Enter "
+"cando remates ou Escape para cancelar"
+
+#: Editor.py:142
+msgid "Enter cassette color in HTML (#RRGGBB) format."
+msgstr "Insire a cor da cinta no formato HTML (#RRGGBB)"
+
+#: Editor.py:148
+msgid "That isn't a color."
+msgstr "Iso non é unha cor."
+
+#: Editor.py:151
+msgid "Choose a 256x128 PNG format label image."
+msgstr "Escolle unha imaxe PNG de 256x128 para a carátula"
+
+#: Editor.py:168
+msgid "Loading song..."
+msgstr "Cargando canción..."
+
+#: Editor.py:334
+msgid "Playing"
+msgstr "Reproducindo"
+
+#: Editor.py:336
+msgid "Stopped"
+msgstr "Detido"
+
+#: Editor.py:377
+msgid "Enter a name for the song."
+msgstr "Insire un nome para a canción."
+
+#: Editor.py:385
+msgid "That song already exists."
+msgstr "Esa canción xa existe."
+
+#: Editor.py:389
+msgid "Choose the Instrument Track (OGG format)."
+msgstr "Escolle a pista do instrumento (formato OGG)."
+
+#: Editor.py:395
+msgid "Choose the Background Track (OGG format) or press Escape to skip."
+msgstr "Escolle a pista de fondo (formato OGG) ou preme Escape."
+
+#: Editor.py:399
+msgid "Importing..."
+msgstr "Importando..."
+
+#: Editor.py:591
+msgid "Stage 1/8: Splitting VGS file"
+msgstr "Etapa 1/8: Dividindo ficheiro VGS"
+
+#: Editor.py:626
+msgid "Stage 6/8: Joining song stereo tracks"
+msgstr "Etapa 6/8: Xuntando pistas estéreo da canción"
+
+#: Editor.py:630
+msgid "Stage 7/8: Joining guitar stereo tracks"
+msgstr "Etapa 7/8: Xuntando pistas estéreo da guitarra"
+
+#: Editor.py:645
+msgid "Stage 8/8: Compressing tracks"
+msgstr "Etapa 8/8: Comprimindo pistas"
+
+#: Editor.py:680
+msgid "Reading the song list."
+msgstr "Lendo a lista de cancións."
+
+#: Editor.py:687
+msgid "Reading the archive index."
+msgstr "Lendo o índice do arquivo."
+
+#: Editor.py:711
+msgid ""
+"Extracting %s by %s. %d of %d songs imported. Yeah, this is going to take "
+"forever."
+msgstr ""
+"Extraendo %s de %s. %d de %d cancións importadas. Si, isto vai levar un bo "
+"anaco."
+
+#: Editor.py:756
+msgid "Ready"
+msgstr "Preparado"
+
+#: Editor.py:771
+msgid "All done! %d songs imported. Have fun!"
+msgstr "Todo feito! %d cancións importadas. Divírtete."
+
+#: Editor.py:773
+msgid ""
+"No songs could be imported, sorry. Check the log files for more information."
+msgstr ""
+"Non se puido importar ningunha canción. Comproba os ficheiros de log para "
+"máis información."
+
+#: Editor.py:782
+msgid ""
+"Ogg Vorbis encoder (oggenc.exe) not found. Please install it to the game "
+"directory and try again."
+msgstr ""
+"Non se atopou o codificador de Ogg Vorbis (oggenc.exe). Instálao no "
+"directorio do xogo e proba de novo."
+
+#: Editor.py:784
+msgid "Ogg Vorbis encoder (oggenc) not found. Please install it and try again."
+msgstr ""
+"Non se atopou o codificador de Ogg Vorbis (oggenc). Instálao e proba de novo."
+
+#: Editor.py:788
+msgid ""
+"Make sure you have at least 500 megabytes of free disk space before using "
+"this importer."
+msgstr ""
+"Asegúrate de ter polo menos 500 megabytes libres de disco duro antes de usar "
+"o importador."
+
+#: Editor.py:792
+msgid "Enter the path to the mounted Guitar Hero (tm) DVD"
+msgstr "Insire a ruta ó DVD montado de Guitar Hero (tm)"
+
+#: Editor.py:801
+msgid "That's not it. Try again."
+msgstr "Non é. Proba de novo."
+
+#: Editor.py:819
+msgid "Importing Songs"
+msgstr "Importando Cancións"
+
+#: GameEngine.py:51
+msgid "Upload Highscores"
+msgstr "Subir puntuacións"
+
+#: GameEngine.py:51 GameEngine.py:53 GameEngine.py:54 GameEngine.py:55
+msgid "No"
+msgstr "Non"
+
+#: GameEngine.py:51 GameEngine.py:53 GameEngine.py:54 GameEngine.py:55
+msgid "Yes"
+msgstr "Si"
+
+#: GameEngine.py:53
+msgid "Lefty mode"
+msgstr "Modo esquerdeiro (zurdo)"
+
+#: GameEngine.py:54
+msgid "Tappable notes"
+msgstr "Notas \"tappables\""
+
+#: GameEngine.py:55
+msgid "Fullscreen Mode"
+msgstr "Modo pantalla completa"
+
+#: GameEngine.py:56
+msgid "2x"
+msgstr "2x"
+
+#: GameEngine.py:56
+msgid "4x"
+msgstr "4x"
+
+#: GameEngine.py:56
+msgid "6x"
+msgstr "6x"
+
+#: GameEngine.py:56
+msgid "8x"
+msgstr "8x"
+
+#: GameEngine.py:56
+msgid "Antialiasing Quality"
+msgstr "Calidade do suavizado"
+
+#: GameEngine.py:56
+msgid "None"
+msgstr "Nada"
+
+#: GameEngine.py:58
+msgid "Frames per Second"
+msgstr "Cadros por segundo"
+
+#: GameEngine.py:59
+msgid "High"
+msgstr "Alta"
+
+#: GameEngine.py:59
+msgid "Low"
+msgstr "Baixa"
+
+#: GameEngine.py:59
+msgid "Normal"
+msgstr "Normal"
+
+#: GameEngine.py:59
+msgid "SVG Quality"
+msgstr "Calidade do SVG"
+
+#: GameEngine.py:60
+msgid "Sample Frequency"
+msgstr "Frecuencia de mostraxe"
+
+#: GameEngine.py:61
+msgid "Sample Bits"
+msgstr "Bits de mostraxe"
+
+#: GameEngine.py:63
+msgid "Buffer Size"
+msgstr "Tamaño do buffer"
+
+#: GameEngine.py:64
+msgid "A/V delay"
+msgstr "Retardo A/V"
+
+#: GameEngine.py:65
+msgid "Loud"
+msgstr "Alto"
+
+#: GameEngine.py:65
+msgid "Painful"
+msgstr "Doloroso"
+
+#: GameEngine.py:65
+msgid "Quiet"
+msgstr "Baixiño"
+
+#: GameEngine.py:65
+msgid "Screw Up Sounds"
+msgstr "Son de erro"
+
+#: GameEngine.py:65 Mod.py:33
+msgid "Off"
+msgstr "Desactivado"
+
+#: GameEngine.py:66
+msgid "Guitar Volume"
+msgstr "Volume da guitarra"
+
+#: GameEngine.py:67
+msgid "Song Volume"
+msgstr "Volume da canción"
+
+#: GameEngine.py:68
+msgid "Rhythm Volume"
+msgstr "Volume do ritmo"
+
+#: GameEngine.py:69
+msgid "Text scale"
+msgstr "Escalado do texto"
+
+#: GameEngine.py:135
+msgid "Frets on Fire"
+msgstr "Frets on Fire"
+
+#: GameResultsScene.py:58
+msgid "Replay"
+msgstr "Tocar outra vez"
+
+#: GameResultsScene.py:59 GuitarScene.py:88
+msgid "Change Song"
+msgstr "Tocar outra canción"
+
+#: GameResultsScene.py:66
+msgid "Chilling..."
+msgstr "Procesando..."
+
+#: GameResultsScene.py:76
+msgid "No highscores for cheaters!"
+msgstr "¡Para os trampulleiros non hai clasificación!"
+
+#: GameResultsScene.py:78
+msgid "%d points is a new high score! Please enter your name:"
+msgstr "%d puntos é un novo récord! Escribe o teu nome:"
+
+#: GameResultsScene.py:177
+msgid "Highest Scores (%s)"
+msgstr "Mellores puntuacións (%s)"
+
+#: GameResultsScene.py:198
+msgid "Uploading Scores..."
+msgstr "Subindo puntuacións..."
+
+#: GameResultsScene.py:202
+msgid "Song Finished!"
+msgstr "¡Canción rematada!"
+
+#: GameResultsScene.py:220
+msgid "Accuracy: %d%%"
+msgstr "Precisión: %d%%"
+
+#: GameResultsScene.py:223
+msgid "Longest note streak: %d"
+msgstr "Maior secuencia de notas: %d"
+
+#: GameTask.py:72
+msgid "Connection lost."
+msgstr "Perdeuse a conexión."
+
+#: GuitarScene.py:81
+msgid "Tuning Guitar..."
+msgstr "Afinando a guitarra..."
+
+#: GuitarScene.py:87
+msgid "Restart Song"
+msgstr "Empezar de novo"
+
+#: GuitarScene.py:89
+#, fuzzy
+msgid "Settings"
+msgstr "Axustes"
+
+#: GuitarScene.py:274
+msgid "Jurgen will show you how it is done."
+msgstr "Jurgen dirache cómo se fai isto."
+
+#: GuitarScene.py:276
+msgid "Jurgen has left the building."
+msgstr "Jurgen abandonou o edificio."
+
+#: GuitarScene.py:364
+msgid "Get Ready to Rock"
+msgstr "¿Preparado para o Rock?"
+
+#: GuitarScene.py:389
+msgid "%d hit"
+msgstr "%d acertos"
+
+#: GuitarScene.py:406
+msgid "Missed!"
+msgstr "Fallaches"
+
+#: Language.py:56
+msgid "Language"
+msgstr "Idioma"
+
+#: Lobby.py:52
+msgid "Player"
+msgstr "Xogador"
+
+#: Lobby.py:59
+msgid "Enter your name:"
+msgstr "Escribe o teu nome:"
+
+#: Lobby.py:59
+msgid "Player #%d"
+msgstr "Xogador #%d"
+
+#: Lobby.py:109
+msgid "Lobby (%d players)"
+msgstr "Lobby (%d xogadores)"
+
+#: Lobby.py:138
+msgid "Press Enter to Start Game"
+msgstr "Preme Enter para comezar o xogo"
+
+#: MainMenu.py:54
+msgid "Host Multiplayer Game"
+msgstr "Anfitrión de partida multixogador"
+
+#: MainMenu.py:55
+msgid "Join Multiplayer Game"
+msgstr "Unirse a partida multixogador"
+
+#: MainMenu.py:59
+msgid "Edit Existing Song"
+msgstr "Editar canción existente"
+
+#: MainMenu.py:60
+msgid "Import New Song"
+msgstr "Importar unha nova canción"
+
+#: MainMenu.py:61
+msgid "Import Guitar Hero(tm) Songs"
+msgstr "Importar cancións do Guitar Hero(tm)"
+
+#: MainMenu.py:67
+msgid "Play Game"
+msgstr "Xogar"
+
+#: MainMenu.py:68
+msgid "Tutorial"
+msgstr "Tutorial"
+
+#: MainMenu.py:69
+msgid "Song Editor"
+msgstr "Editor de cancións"
+
+#: MainMenu.py:70
+msgid "Settings >"
+msgstr "Axustes >"
+
+#: MainMenu.py:71
+msgid "Credits"
+msgstr "Créditos"
+
+#: MainMenu.py:72
+msgid "Quit"
+msgstr "Saír"
+
+#: MainMenu.py:148
+msgid "Enter the server address:"
+msgstr "Insire o enderezo do servidor:"
+
+#: MainMenu.py:155
+msgid "Connecting..."
+msgstr "Conectando..."
+
+#: Mod.py:33
+msgid "On"
+msgstr "Activado"
+
+#: Player.py:44
+msgid "Move left"
+msgstr "Mover á esquerda"
+
+#: Player.py:45
+msgid "Move right"
+msgstr "Mover á dereita"
+
+#: Player.py:46
+msgid "Move up"
+msgstr "Mover arriba"
+
+#: Player.py:47
+msgid "Move down"
+msgstr "Mover abaixo"
+
+#: Player.py:48
+msgid "Pick"
+msgstr "Púa"
+
+#: Player.py:49
+msgid "Secondary Pick"
+msgstr "Púa secundaria"
+
+#: Player.py:50
+msgid "Fret #1"
+msgstr "Trasto #1"
+
+#: Player.py:51
+msgid "Fret #2"
+msgstr "Trasto #2"
+
+#: Player.py:52
+msgid "Fret #3"
+msgstr "Trasto #3"
+
+#: Player.py:53
+msgid "Fret #4"
+msgstr "Trasto #4"
+
+#: Player.py:54
+msgid "Fret #5"
+msgstr "Trasto #5"
+
+#: Player.py:55
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: Settings.py:118
+msgid "Press a key for '%s' or Escape to cancel."
+msgstr "Preme unha tecla para '%s' ou Escape para cancelar"
+
+#: Settings.py:130
+msgid "Apply New Settings"
+msgstr "Aplicar axustes novos"
+
+#: Settings.py:137
+#, fuzzy
+msgid "Mod settings"
+msgstr "Axustes de audio"
+
+#: Settings.py:146
+msgid "Test Keys"
+msgstr "Probar teclas"
+
+#: Settings.py:164
+msgid "Video Resolution"
+msgstr "Resolución do vídeo"
+
+#: Settings.py:185
+#, fuzzy
+msgid "Volume Settings"
+msgstr "Axustes de volume"
+
+#: Settings.py:194
+msgid "Game Settings"
+msgstr "Axustes do xogo"
+
+#: Settings.py:195
+msgid "Key Settings"
+msgstr "Axustes das teclas"
+
+#: Settings.py:196
+msgid "Video Settings"
+msgstr "Axustes de vídeo"
+
+#: Settings.py:197
+msgid "Audio Settings"
+msgstr "Axustes de audio"
+
+#: Song.py:58
+msgid "Supaeasy"
+msgstr "Moi fácil"
+
+#: Song.py:59
+msgid "Easy"
+msgstr "Fácil"
+
+#: Song.py:60
+msgid "Medium"
+msgstr "Medio"
+
+#: Song.py:61
+msgid "Amazing"
+msgstr "Incríbel"
+
+#: SongChoosingScene.py:68
+msgid "Choose a difficulty:"
+msgstr "Escolle a dificultade:"
