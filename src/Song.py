@@ -370,7 +370,7 @@ class Track:
     #  1. Not the first note of the track
     #  2. Previous note not the same as this one
     #  3. Previous note not a chord
-    #  4. Previous note ends at most 161 ticks before this one starts
+    #  4. Previous note starts at most 161 ticks before this one
     bpm             = None
     ticksPerBeat    = 480
     tickThreshold   = 161
@@ -401,9 +401,8 @@ class Track:
 
         # Previous note not a chord?
         if len(prevNotes) == 1:
-          # Previous note ended recently enough?
-          prevEndTicks = prevTicks + beatsToTicks(prevNotes[0].length)
-          if currentTicks - prevEndTicks <= tickThreshold:
+          # Previous note started recently enough?
+          if currentTicks - prevTicks <= tickThreshold:
             for note in currentNotes:
               # Are any current notes the same as the previous one?
               if note.number == prevNotes[0].number:
