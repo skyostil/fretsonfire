@@ -358,9 +358,12 @@ class TextureAtlas(object):
     self.surfaceCount = 0
     self.texture.loadEmpty((size, size), GL_RGBA)
 
-  def add(self, surface):
+  def add(self, surface, margin = 0):
     w, h = surface.get_size()
     x, y = self.cursor
+
+    w += margin
+    h += margin
 
     if w > self.texture.pixelSize[0] or h > self.texture.pixelSize[1]:
       raise ValueError("Surface is too big to fit into atlas.")
@@ -381,6 +384,8 @@ class TextureAtlas(object):
     self.cursor = (x + w, y + h)
 
     # Return the coordinates for the uploaded texture patch
+    w -= margin
+    h -= margin
     return  x      / float(self.texture.pixelSize[0]),  y      / float(self.texture.pixelSize[1]), \
            (x + w) / float(self.texture.pixelSize[0]), (y + h) / float(self.texture.pixelSize[1])
 

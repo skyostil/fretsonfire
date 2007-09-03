@@ -45,24 +45,29 @@ import os
 
 usage = """%(prog)s [options]
 Options:
-  --verbose, -v      Verbose messages
+  --verbose, -v         Verbose messages
+  --play, -p [songName] Start playing the given song
 """ % {"prog": sys.argv[0] }
 
 if __name__ == "__main__":
   try:
-    opts, args = getopt.getopt(sys.argv[1:], "v", ["verbose"])
+    opts, args = getopt.getopt(sys.argv[1:], "vp:", ["verbose", "play="])
   except getopt.GetoptError:
     print usage
     sys.exit(1)
 
+  songName = None
   for opt, arg in opts:
     if opt in ["--verbose", "-v"]:
       Log.quiet = False
+    elif opt in ["--play", "-p"]:
+      songName = arg
 
   while True:
     config = Config.load(Version.appName() + ".ini", setAsDefault = True)
     engine = GameEngine(config)
-    engine.setStartupLayer(MainMenu(engine))
+    menu   = MainMenu(engine, songName = songName)
+    engine.setStartupLayer(menu)
 
     try:
       import psyco
@@ -75,6 +80,7 @@ if __name__ == "__main__":
         pass
     except KeyboardInterrupt:
         pass
+
     if engine.restartRequested:
       Log.notice("Restarting.")
 

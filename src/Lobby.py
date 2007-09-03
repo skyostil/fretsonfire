@@ -36,13 +36,13 @@ import Player
 import Song
 
 class Lobby(Layer, KeyListener, MessageHandler):
-  def __init__(self, engine, session, singlePlayer = False, tutorial = False):
+  def __init__(self, engine, session, singlePlayer = False, songName = None):
     self.engine       = engine
     self.session      = session
     self.time         = 0.0
     self.gameStarted  = False
     self.singlePlayer = singlePlayer
-    self.tutorial     = tutorial
+    self.songName     = songName
     self.session.broker.addMessageHandler(self)
 
   def shown(self):
@@ -50,8 +50,8 @@ class Lobby(Layer, KeyListener, MessageHandler):
 
     if self.singlePlayer:
       self.session.world.createPlayer(_("Player"))
-      if self.tutorial:
-        self.session.world.startGame(libraryName = Song.DEFAULT_LIBRARY, songName = "tutorial")
+      if self.songName:
+        self.session.world.startGame(libraryName = Song.DEFAULT_LIBRARY, songName = self.songName)
       else:
         self.session.world.startGame()
     else:

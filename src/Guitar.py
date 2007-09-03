@@ -27,6 +27,7 @@ import Theme
 
 from OpenGL.GL import *
 import math
+import numpy
 
 KEYS = [Player.KEY1, Player.KEY2, Player.KEY3, Player.KEY4, Player.KEY5]
 
@@ -306,6 +307,9 @@ class Guitar:
 
     # Draw a waveform shape over the currently playing notes
     glBlendFunc(GL_SRC_ALPHA, GL_ONE)
+    glEnableClientState(GL_VERTEX_ARRAY)
+    glEnableClientState(GL_COLOR_ARRAY)
+
     for time, event in self.playedNotes:
       step  = self.currentPeriod / 16
       t     = time + event.length
@@ -315,12 +319,17 @@ class Guitar:
       proj  = 1.0 / self.currentPeriod / beatsPerUnit
       zStep = step * proj
 
+      n              = int((t - time) / step) + 1
+      vertices       = numpy.empty((8 * n, 3), numpy.float32)
+      colors         = numpy.empty((8 * n, 4), numpy.float32)
+      vertexCount    = 0
+
       def waveForm(t):
         u = ((t - time) * -.1 + pos - time) / 64.0 + .0001
         return (math.sin(event.number + self.time * -.01 + t * .03) + math.cos(event.number + self.time * .01 + t * .02)) * .1 + .1 + math.sin(u) / (5 * u)
 
-      glBegin(GL_TRIANGLE_STRIP)
       f1 = 0
+      i  = 0
       while t > time:
         z  = (t - pos) * proj
         if z < 0:
@@ -328,26 +337,37 @@ class Guitar:
         f2 = min((s - t) / (6 * step), 1.0)
         a1 = waveForm(t) * f1
         a2 = waveForm(t - step) * f2
-        glColor4f(c[0], c[1], c[2], .5)
-        glVertex3f(x - a1, 0, z)
-        glVertex3f(x - a2, 0, z - zStep)
-        glColor4f(1, 1, 1, .75)
-        glVertex3f(x, 0, z)
-        glVertex3f(x, 0, z - zStep)
-        glColor4f(c[0], c[1], c[2], .5)
-        glVertex3f(x + a1, 0, z)
-        glVertex3f(x + a2, 0, z - zStep)
-        glVertex3f(x + a2, 0, z - zStep)
-        glVertex3f(x - a2, 0, z - zStep)
+
+        colors[i    ]   = \
+        colors[i + 1]   = (c[0], c[1], c[2], .5)
+        colors[i + 2]   = \
+        colors[i + 3]   = (1, 1, 1, .75)
+        colors[i + 4]   = \
+        colors[i + 5]   = \
+        colors[i + 6]   = \
+        colors[i + 7]   = (c[0], c[1], c[2], .5)
+        vertices[i    ] = (x - a1, 0, z)
+        vertices[i + 1] = (x - a2, 0, z - zStep)
+        vertices[i + 2] = (x, 0, z)
+        vertices[i + 3] = (x, 0, z - zStep)
+        vertices[i + 4] = (x + a1, 0, z)
+        vertices[i + 5] = (x + a2, 0, z - zStep)
+        vertices[i + 6] = (x + a2, 0, z - zStep)
+        vertices[i + 7] = (x - a2, 0, z - zStep)
+
+        i += 8
         t -= step
         f1 = f2
-      glEnd()
-      
+
+      glVertexPointer(3, GL_FLOAT, 0, vertices)
+      glColorPointer(4, GL_FLOAT, 0, colors)
+      glDrawArrays(GL_TRIANGLE_STRIP, 0, i)
+    glDisableClientState(GL_VERTEX_ARRAY)
+    glDisableClientState(GL_COLOR_ARRAY)
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA)
 
   def renderFrets(self, visibility, song, controls):
     w = self.boardWidth / self.strings
-    size = (.22, .22)
     v = 1.0 - visibility
     
     glEnable(GL_DEPTH_TEST)
@@ -386,41 +406,42 @@ class Guitar:
 
       if f:
         glBlendFunc(GL_ONE, GL_ONE)
-
         s = 0.0
-        while s < 1:
-          ms = s * (math.sin(self.time) * .25 + 1)
-          glColor3f(c[0] * (1 - ms), c[1] * (1 - ms), c[2] * (1 - ms))
-          glPushMatrix()
-          glTranslate(x, y, 0)
-          glScalef(1 + .6 * ms * f, 1 + .6 * ms * f, 1 + .6 * ms * f)
-          glRotatef( 90, 0, 1, 0)
-          glRotatef(-90, 1, 0, 0)
-          glRotatef(-90, 0, 0, 1)
-          self.keyMesh.render()
-          glPopMatrix()
-          s += 0.2
-
-        glColor3f(c[0], c[1], c[2])
-        glEnable(GL_TEXTURE_2D)
         self.glowDrawing.texture.bind()
-        f += 2
 
+        glEnable(GL_TEXTURE_2D)
+        glDisable(GL_DEPTH_TEST)
         glPushMatrix()
         glTranslate(x, y, 0)
-        glRotate(f * 90 + self.time, 0, 1, 0)
-        glBegin(GL_TRIANGLE_STRIP)
-        glTexCoord2f(0.0, 0.0)
-        glVertex3f(-size[0] * f, 0, -size[1] * f)
-        glTexCoord2f(1.0, 0.0)
-        glVertex3f( size[0] * f, 0, -size[1] * f)
-        glTexCoord2f(0.0, 1.0)
-        glVertex3f(-size[0] * f, 0,  size[1] * f)
-        glTexCoord2f(1.0, 1.0)
-        glVertex3f( size[0] * f, 0,  size[1] * f)
-        glEnd()
+        glRotate(f + self.time * .1, 0, 1, 0)
+        size = (.22 * (f + 1.5), .22 * (f + 1.5))
+
+        if self.playedNotes:
+          t = math.cos(math.pi + (self.time - self.playedNotes[0][0]) * 0.01)
+        else:
+          t = math.cos(self.time * 0.01)
+
+        while s < .5:
+          ms = (1 - s) * f * t * .25 + .75
+          glColor3f(c[0] * ms, c[1] * ms, c[2] * ms)
+          glBegin(GL_TRIANGLE_STRIP)
+          glTexCoord2f(0.0, 0.0)
+          glVertex3f(-size[0] * f, 0, -size[1] * f)
+          glTexCoord2f(1.0, 0.0)
+          glVertex3f( size[0] * f, 0, -size[1] * f)
+          glTexCoord2f(0.0, 1.0)
+          glVertex3f(-size[0] * f, 0,  size[1] * f)
+          glTexCoord2f(1.0, 1.0)
+          glVertex3f( size[0] * f, 0,  size[1] * f)
+          glEnd()
+          glTranslatef(0, ms * .2, 0)
+          glScalef(.8, 1, .8)
+          glRotate(ms * 20, 0, 1, 0)
+          s += 0.2
+
         glPopMatrix()
-        
+        glEnable(GL_DEPTH_TEST)
+
         glDisable(GL_TEXTURE_2D)
         glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA)
 

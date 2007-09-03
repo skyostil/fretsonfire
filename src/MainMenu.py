@@ -37,11 +37,12 @@ import Audio
 import Settings
 
 class MainMenu(BackgroundLayer):
-  def __init__(self, engine):
+  def __init__(self, engine, songName = None):
     self.engine              = engine
     self.time                = 0.0
     self.nextLayer           = None
     self.visibility          = 0.0
+    self.songName            = songName
     
     self.engine.loadSvgDrawing(self, "background", "keyboard.svg")
     self.engine.loadSvgDrawing(self, "guy",        "pose.svg")
@@ -76,6 +77,9 @@ class MainMenu(BackgroundLayer):
   def shown(self):
     self.engine.view.pushLayer(self.menu)
     self.engine.stopServer()
+
+    if self.songName:
+      self.newSinglePlayerGame(self.songName)
     
   def hidden(self):
     self.engine.view.popLayer(self.menu)
@@ -122,17 +126,17 @@ class MainMenu(BackgroundLayer):
     self.engine.resource.load(self, "session", lambda: self.engine.connect("127.0.0.1"), synch = True)
 
     if Dialogs.showLoadingScreen(self.engine, lambda: self.session and self.session.isConnected):
-      self.launchLayer(lambda: Lobby(self.engine, self.session, singlePlayer = True, tutorial = True))
+      self.launchLayer(lambda: Lobby(self.engine, self.session, singlePlayer = True, songName = "tutorial"))
   showTutorial = catchErrors(showTutorial)
 
-  def newSinglePlayerGame(self):
+  def newSinglePlayerGame(self, songName = None):
     if self.engine.isServerRunning():
       return
     self.engine.startServer()
     self.engine.resource.load(self, "session", lambda: self.engine.connect("127.0.0.1"), synch = True)
 
     if Dialogs.showLoadingScreen(self.engine, lambda: self.session and self.session.isConnected):
-      self.launchLayer(lambda: Lobby(self.engine, self.session, singlePlayer = True))
+      self.launchLayer(lambda: Lobby(self.engine, self.session, singlePlayer = True, songName = songName))
   newSinglePlayerGame = catchErrors(newSinglePlayerGame)
 
   def hostMultiplayerGame(self):
