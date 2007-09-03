@@ -151,6 +151,13 @@ class Font:
 
     if self.reversed:
       text = "".join(reversed(text))
+
+    if self.outline:
+      glPushAttrib(GL_CURRENT_BIT)
+      glColor4f(0, 0, 0, glGetFloatv(GL_CURRENT_COLOR)[3])
+      self._renderString(text, (pos[0] + 0.003, pos[1] + 0.003), direction, scale)
+      glPopAttrib()
+
     self._renderString(text, pos, direction, scale)
     
     glDisableClientState(GL_VERTEX_ARRAY)
