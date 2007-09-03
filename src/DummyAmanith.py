@@ -31,6 +31,9 @@ G_HIGH_RENDERING_QUALITY   = 2
 class GKernel:
   pass
 
+class GMatrix33:
+  pass
+
 class GOpenGLBoard:
   def __init__(*a, **b):
     pass
