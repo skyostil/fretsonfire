@@ -42,7 +42,7 @@ class GOpenGLBoard:
     pass
 
   def SetViewport(self, x, y, w, h):
-    glViewport(x, y, w, h)
+    glViewport(int(x), int(y), int(w), int(h))
 
   def SetProjection(self, left, right, bottom, top):
     glMatrixMode(GL_PROJECTION)

@@ -165,7 +165,7 @@ class GameEngine(Engine):
     geometry = (0, 0, w, h)
     self.svg = SvgContext(geometry)
     self.svg.setRenderingQuality(self.config.get("opengl", "svgquality"))
-    glViewport(*viewport)
+    glViewport(int(viewport[0]), int(viewport[1]), int(viewport[2]), int(viewport[3]))
 
     self.input     = Input()
     self.view      = View(self, geometry)

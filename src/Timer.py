@@ -59,6 +59,3 @@ class Timer(object):
       self.fpsEstimateStartFrame = self.frame
 
     return [min(diff, self.timestep * 16)]
-    #timeslice = max(self.timestep, min(diff, self.timestep * 16))
-    #timeslice = max(self.timestep, timeslice - self.timestep)
-    #return [self.timestep] * int(self.timestep / timeslice)
