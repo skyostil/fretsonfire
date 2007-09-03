@@ -21,10 +21,11 @@
 #####################################################################
 
 import pygame
+import numpy
 from OpenGL.GL import *
 import sys
 
-from Texture import Texture
+from Texture import Texture, TextureAtlas, TextureAtlasFullException
 
 class Font:
   """A texture-mapped font."""
@@ -36,6 +37,7 @@ class Font:
     self.glyphCache     = {}
     self.glyphSizeCache = {}
     self.outline        = outline
+    self.glyphTextures  = []
     self.reversed       = reversed
     # Try loading a system font first if one was requested
     self.font           = None
@@ -87,11 +89,52 @@ class Font:
     """
     texture.setFilter(GL_LINEAR, GL_LINEAR)
     texture.setRepeat(GL_CLAMP, GL_CLAMP)
-    self.glyphCache[character]     = texture
+    self.glyphCache[character]     = (texture, (0.0, 0.0, texture.size[0], texture.size[1]))
     s = .75 * self.getHeight() / float(texture.pixelSize[0])
     self.glyphSizeCache[character] = (texture.pixelSize[0] * s, texture.pixelSize[1] * s)
 
-  def render(self, text, pos = (0, 0), direction = (1, 0, 0), scale = 0.002):
+  def _renderString(self, text, pos, direction, scale):
+    currentTexture = None
+    x, y           = pos[0], pos[1]
+    vertices       = numpy.empty((4 * len(text), 2), numpy.float32)
+    texCoords      = numpy.empty((4 * len(text), 2), numpy.float32)
+    vertexCount    = 0
+
+    glVertexPointer(2, GL_FLOAT, 0, vertices)
+    glTexCoordPointer(2, GL_FLOAT, 0, texCoords)
+
+    for i, ch in enumerate(text):
+      g, coordinates     = self.getGlyph(ch)
+      w, h               = self.getStringSize(ch, scale = scale)
+      tx1, ty1, tx2, ty2 = coordinates
+
+      # Set the initial texture
+      if currentTexture is None:
+        currentTexture = g
+        currentTexture.bind()
+
+      # If the texture changed, flush the geometry
+      if currentTexture != g:
+        glDrawArrays(GL_QUADS, 0, vertexCount)
+        currentTexture = g
+        currentTexture.bind()
+        vertexCount = 0
+
+      vertices[vertexCount + 0]  = (x,     y)
+      vertices[vertexCount + 1]  = (x + w, y)
+      vertices[vertexCount + 2]  = (x + w, y + h)
+      vertices[vertexCount + 3]  = (x,     y + h)
+      texCoords[vertexCount + 0] = (tx1, ty2)
+      texCoords[vertexCount + 1] = (tx2, ty2)
+      texCoords[vertexCount + 2] = (tx2, ty1)
+      texCoords[vertexCount + 3] = (tx1, ty1)
+      vertexCount += 4
+
+      x += w * direction[0]
+      y += w * direction[1]
+    glDrawArrays(GL_QUADS, 0, vertexCount)
+
+  def render(self, text, pos = (0, 0), direction = (1, 0), scale = 0.002):
     """
     Draw some text.
 
@@ -105,75 +148,36 @@ class Font:
     glEnableClientState(GL_TEXTURE_COORD_ARRAY)
 
     scale *= self.scale
-    glPushMatrix()
-    glTranslatef(pos[0], pos[1], 0)
-    
+
     if self.reversed:
       text = "".join(reversed(text))
-
-    if self.outline:
-      glPushAttrib(GL_CURRENT_BIT)
-      glPushMatrix()
-      glColor4f(0, 0, 0, .25 * glGetDoublev(GL_CURRENT_COLOR)[3])
-      for ch in text:
-        g = self.getGlyph(ch)
-        w, h = self.getStringSize(ch, scale = scale)
-        tw, th = g.size
-  
-        glVertexPointerf([(0.0, 0.0, 0.0), (w, 0.0, 0.0), (0.0, h, 0.0), (w, h, 0.0)])
-        glTexCoordPointerf([(0.0, th), (tw, th), (0.0, 0.0), (tw, 0.0)])
-  
-        g.bind()
-  
-        blur = 2 * 0.002
-        for offset in [(-.7, -.7), (0, -1), (.7, -.7), (-1, 0), (1, 0), (-.7, .7), (0, 1), (.7, .7)]:
-          glPushMatrix()
-          glTranslatef( blur * offset[0], blur * offset[1], 0)
-          glDrawElementsui(GL_TRIANGLE_STRIP, [0, 1, 2, 3])
-          glPopMatrix()
-
-        glTranslatef(w * direction[0],
-                     w * direction[1],
-                     w * direction[2])
-
-      glPopAttrib()
-      glPopMatrix()
-
-    for ch in text:
-      g = self.getGlyph(ch)
-      w, h = self.getStringSize(ch, scale = scale)
-      tw, th = g.size
-
-      glVertexPointerf([(0.0, 0.0, 0.0), (w, 0.0, 0.0), (0.0, h, 0.0), (w, h, 0.0)])
-      glTexCoordPointerf([(0.0, th), (tw, th), (0.0, 0.0), (tw, 0.0)])
-
-      g.bind()
-      glDrawElementsui(GL_TRIANGLE_STRIP, [0, 1, 2, 3])
-
-      glTranslatef(w * direction[0],
-                   w * direction[1],
-                   w * direction[2])
-
-    glPopMatrix()
-
+    self._renderString(text, pos, direction, scale)
+    
     glDisableClientState(GL_VERTEX_ARRAY)
     glDisableClientState(GL_TEXTURE_COORD_ARRAY)
     glDisable(GL_TEXTURE_2D)
 
+  def _allocateGlyphTexture(self):
+    t = TextureAtlas(size = glGetInteger(GL_MAX_TEXTURE_SIZE))
+    t.texture.setFilter(GL_LINEAR, GL_LINEAR)
+    t.texture.setRepeat(GL_CLAMP, GL_CLAMP)
+    self.glyphTextures.append(t)
+    return t
+
   def getGlyph(self, ch):
     """
-    Get the L{Texture} for a given character.
+    Get a (L{Texture}, coordinate tuple) pair for a given character.
 
     @param ch:    Character
-    @return:      L{Texture} instance
+    @return:      (L{Texture} instance, coordinate tuple)
     """
     try:
       return self.glyphCache[ch]
     except KeyError:
       s = self.font.render(ch, True, (255, 255, 255))
 
-      """
       # Draw outlines
+      """
       import Image, ImageFilter
       srcImg = Image.fromstring("RGBA", s.get_size(), pygame.image.tostring(s, "RGBA"))
       img    = Image.fromstring("RGBA", s.get_size(), pygame.image.tostring(s, "RGBA"))
@@ -190,11 +194,19 @@ class Font:
             img.putpixel((x, y), (0, 0, 0, a / n))
       s = pygame.image.fromstring(img.tostring(), s.get_size(), "RGBA")
       """
-      
-      t = Texture()
-      t.setFilter(GL_LINEAR, GL_LINEAR)
-      t.setRepeat(GL_CLAMP, GL_CLAMP)
-      t.loadSurface(s, alphaChannel = True)
-      del s
-      self.glyphCache[ch] = t
-      return t
+
+      if not self.glyphTextures:
+        texture = self._allocateGlyphTexture()
+      else:
+        texture = self.glyphTextures[-1]
+
+      # Insert the texture into the glyph cache
+      try:
+        coordinates = texture.add(s)
+      except TextureAtlasFullException:
+        # Try again with a fresh atlas
+        texture = self._allocateGlyphTexture()
+        return self.getGlyph(ch)
+
+      self.glyphCache[ch] = (texture, coordinates)
+      return (texture, coordinates)
