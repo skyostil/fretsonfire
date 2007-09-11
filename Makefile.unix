@@ -1,5 +1,6 @@
 CXFREEZE=~/src/cx_Freeze-3.0.3/FreezePython
 PYTHON=python
+PYTHON_LIBS=/usr/lib/python2.4
 VERSION=test
 USE_AMANITH=1
 
@@ -7,10 +8,26 @@ all:	dist
 
 dist:
 	@echo --- Building binary
-	$(CXFREEZE) --target-dir dist --include-modules encodings.string_escape,encodings.iso8859_1,xml.sax.drivers2.drv_pyexpat,SongChoosingScene,GuitarScene,GameResultsScene src/FretsOnFire.py
+	$(CXFREEZE) --target-dir dist --include-modules \
+encodings.string_escape,\
+encodings.iso8859_1,\
+xml.sax.drivers2.drv_pyexpat,\
+OpenGL.arrays.numpymodule,\
+OpenGL.arrays.ctypesarrays,\
+OpenGL.arrays.ctypesparameters,\
+OpenGL.arrays.ctypespointers,\
+OpenGL.arrays.strings,\
+OpenGL.arrays.numbers,\
+OpenGL.arrays.nones,\
+SongChoosingScene,\
+GuitarScene,\
+GameResultsScene src/FretsOnFire.py
 
 	@echo --- Copying data
 	cd src; $(PYTHON) setup.py install_data --install-dir ../dist ; cd ..
+
+	@echo --- Fixing PyOpenGL-ctypes
+	cp -Lr $(PYTHON_LIBS)/site-packages/PyOpenGL*egg-info dist
 
 ifneq ($(USE_AMANITH), 1)
 	@echo --- Rendering SVG files to PNG images
@@ -31,6 +48,10 @@ endif
            /usr/lib/libvorbis.so.0 \
            /usr/lib/libogg.so.0 \
            /usr/lib/libsmpeg-0.4.so.0 \
+           /usr/lib/libffi.so.4 \
+           /usr/lib/liblapack.so.3 \
+           /usr/lib/libg2c.so.0 \
+           /usr/lib/atlas/libblas.so.3 \
            dist
 	mv dist/FretsOnFire dist/FretsOnFire.bin
 	cp data/launcher.sh dist/FretsOnFire
