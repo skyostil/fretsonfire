@@ -32,13 +32,15 @@ class Font:
   def __init__(self, fileName, size, bold = False, italic = False, underline = False, outline = True,
                scale = 1.0, reversed = False, systemFont = False):
     pygame.font.init()
-    self.size           = size
-    self.scale          = scale
-    self.glyphCache     = {}
-    self.glyphSizeCache = {}
-    self.outline        = outline
-    self.glyphTextures  = []
-    self.reversed       = reversed
+    self.size             = size
+    self.scale            = scale
+    self.glyphCache       = {}
+    self.glyphSizeCache   = {}
+    self.outline          = outline
+    self.glyphTextures    = []
+    self.reversed         = reversed
+    self.stringCache      = {}
+    self.stringCacheLimit = 256
     # Try loading a system font first if one was requested
     self.font           = None
     if systemFont and sys.platform != "win32":
@@ -94,45 +96,64 @@ class Font:
     self.glyphSizeCache[character] = (texture.pixelSize[0] * s, texture.pixelSize[1] * s)
 
   def _renderString(self, text, pos, direction, scale):
-    currentTexture = None
-    x, y           = pos[0], pos[1]
-    vertices       = numpy.empty((4 * len(text), 2), numpy.float32)
-    texCoords      = numpy.empty((4 * len(text), 2), numpy.float32)
-    vertexCount    = 0
+    if not text:
+      return
 
-    glVertexPointer(2, GL_FLOAT, 0, vertices)
-    glTexCoordPointer(2, GL_FLOAT, 0, texCoords)
+    if not (text, scale) in self.stringCache:
+      currentTexture = None
+      #x, y           = pos[0], pos[1]
+      x, y           = 0.0, 0.0
+      vertices       = numpy.empty((4 * len(text), 2), numpy.float32)
+      texCoords      = numpy.empty((4 * len(text), 2), numpy.float32)
+      vertexCount    = 0
+      cacheEntry     = []
 
-    for i, ch in enumerate(text):
-      g, coordinates     = self.getGlyph(ch)
-      w, h               = self.getStringSize(ch, scale = scale)
-      tx1, ty1, tx2, ty2 = coordinates
+      for i, ch in enumerate(text):
+        g, coordinates     = self.getGlyph(ch)
+        w, h               = self.getStringSize(ch, scale = scale)
+        tx1, ty1, tx2, ty2 = coordinates
 
-      # Set the initial texture
-      if currentTexture is None:
-        currentTexture = g
-        currentTexture.bind()
+        # Set the initial texture
+        if currentTexture is None:
+          currentTexture = g
 
-      # If the texture changed, flush the geometry
-      if currentTexture != g:
-        glDrawArrays(GL_QUADS, 0, vertexCount)
-        currentTexture = g
-        currentTexture.bind()
-        vertexCount = 0
+        # If the texture changed, flush the geometry
+        if currentTexture != g:
+          cacheEntry.append((currentTexture, vertexCount, numpy.array(vertices[:vertexCount]), numpy.array(texCoords[:vertexCount])))
+          currentTexture = g
+          vertexCount = 0
 
-      vertices[vertexCount + 0]  = (x,     y)
-      vertices[vertexCount + 1]  = (x + w, y)
-      vertices[vertexCount + 2]  = (x + w, y + h)
-      vertices[vertexCount + 3]  = (x,     y + h)
-      texCoords[vertexCount + 0] = (tx1, ty2)
-      texCoords[vertexCount + 1] = (tx2, ty2)
-      texCoords[vertexCount + 2] = (tx2, ty1)
-      texCoords[vertexCount + 3] = (tx1, ty1)
-      vertexCount += 4
+        vertices[vertexCount + 0]  = (x,     y)
+        vertices[vertexCount + 1]  = (x + w, y)
+        vertices[vertexCount + 2]  = (x + w, y + h)
+        vertices[vertexCount + 3]  = (x,     y + h)
+        texCoords[vertexCount + 0] = (tx1, ty2)
+        texCoords[vertexCount + 1] = (tx2, ty2)
+        texCoords[vertexCount + 2] = (tx2, ty1)
+        texCoords[vertexCount + 3] = (tx1, ty1)
+        vertexCount += 4
 
-      x += w * direction[0]
-      y += w * direction[1]
-    glDrawArrays(GL_QUADS, 0, vertexCount)
+        x += w * direction[0]
+        y += w * direction[1]
+      cacheEntry.append((currentTexture, vertexCount, vertices[:vertexCount], texCoords[:vertexCount]))
+
+      # Don't store very short strings
+      if len(text) > 5:
+        # Limit the cache size
+        if len(self.stringCache) > self.stringCacheLimit:
+          del self.stringCache[self.stringCache.keys()[0]]
+        self.stringCache[(text, scale)] = cacheEntry
+    else:
+      cacheEntry = self.stringCache[(text, scale)]
+
+    glPushMatrix()
+    glTranslatef(pos[0], pos[1], 0)
+    for texture, vertexCount, vertices, texCoords in cacheEntry:
+      texture.bind()
+      glVertexPointer(2, GL_FLOAT, 0, vertices)
+      glTexCoordPointer(2, GL_FLOAT, 0, texCoords)
+      glDrawArrays(GL_QUADS, 0, vertexCount)
+    glPopMatrix()
 
   def render(self, text, pos = (0, 0), direction = (1, 0), scale = 0.002):
     """

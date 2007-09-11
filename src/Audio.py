@@ -136,7 +136,8 @@ class Sound(object):
 
 if ogg:
   import struct
-  from Numeric import reshape, array, zeros
+  # Must use Numeric instead of numpy, since PyGame 1.7.1 is not compatible with the former
+  import Numeric
 
   class OggStream(object):
     def __init__(self, inputFileName):
@@ -156,13 +157,13 @@ if ogg:
       self.bufferSize   = 1024 * 64
       self.bufferCount  = 8
       self.volume       = 1.0
-      self.buffer       = zeros((2 * self.bufferSize, 2), typecode = 's')
+      self.buffer       = Numeric.zeros((2 * self.bufferSize, 2), typecode = "s")
       self.decodingRate = 4
       self._reset()
 
     def _reset(self):
       self.stream        = OggStream(self.fileName)
-      self.buffersIn     = [pygame.sndarray.make_sound(zeros((self.bufferSize, 2), typecode = 's')) for i in range(self.bufferCount + 1)]
+      self.buffersIn     = [pygame.sndarray.make_sound(Numeric.zeros((self.bufferSize, 2), typecode = "s")) for i in range(self.bufferCount + 1)]
       self.buffersOut    = []
       self.buffersBusy   = []
       self.bufferPos     = 0

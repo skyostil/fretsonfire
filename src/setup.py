@@ -72,6 +72,7 @@ options = {
       "GimpPaletteFile",
       "PaletteFile",
       "macosx",
+      "matplotlib"
     ],
     "optimize":  2,
   }

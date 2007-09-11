@@ -1,3 +1,4 @@
+$library; Guitar Hero
 spanishcastlemagic;		Spanish Castle Magic;		Jimi Hendrix
 stellar;			Stellar;			Incubus
 storyofmylove;			The Story of my Love;		The Model Sons
@@ -47,6 +48,7 @@ nooneknows;			No One Knows;			Queens of the Stone Age
 sailyourshipby;			Sail Your Ship By;		CountZero
 sharpdressedman;		Sharp Dressed Man;		ZZ Top
 smokeonthewater;		Smoke on the Water;		Deep Purple
+$library; Guitar Hero II
 searchanddestroy;		Search and Destroy;		Iggy Pop and The Stooges
 rockthistown;			Rock This Town;			Stray Cats
 fallofpangea;			Fall of Pangea;			Valient Thorr
@@ -111,3 +113,34 @@ mother;				Mother;				Danzig
 carryonwayward;			Carry On Wayward Son;		Kansas
 gemini;				Gemini;				Brian Kahanek
 lesstalkmorerokk;		Less Talk More Rokk;		Freezepop
+$library; Guitar Hero Encore
+bangyourhead;			(Bang Your Head) Metal Health;	Quiet Riot
+wegotthebeat;			We Got the Beat;		The Go-Go's
+iran;				I Ran (So Far Away);		A Flock of Seagulls
+ballstothewall;			Balls to the Wall;		Accept
+18andlife;			18 and Life;			Skid Row
+noonelikeyou;			No One Like You;		Scorpions
+shakin;				Shakin';			Eddie Money
+heatofthemoment;		Heat of the Moment;		Asia
+radarlove;			Radar Love;			White Lion
+becauseitsmidnite;		Because, It's Midnite;		Limozeen
+holydiver;			Holy Diver;			Dio
+turningjapanese;		Turning Japanese;		The Vapors
+holdonloosely;			Hold on Loosely;		.38 Special
+thewarrior;			The Warrior;			Scandal
+iwannarock;			I Wanna Rock;			Twisted Sister
+whatilikeaboutyou;		What I Like About You;		The Romantics
+synchronicity2;			Synchronicity II;		The Police
+ballroomblitz;			Ballroom Blitz;			Krokus
+onlyalad;			Only a Lad;			Oingo Boingo
+roundandround;			Round and Round;		Ratt
+aintnothinbut;			Ain't Nothin' But a Good Time;	Poison
+lonelyisthenight;		Lonely is the Night;		Billy Squier
+bathroomwall;			Bathroom Wall;			Faster Pussycat
+losangeles;			Los Angeles;			X
+wrathchild;			Wrathchild;			Iron Maiden
+electriceye;			Electric Eye;			Judas Priest
+policetruck;			Police Truck;			Dead Kennedys
+seventeen;			Seventeen;			Winger
+caughtinamosh;			Caught in a Mosh;		Anthrax
+playwithme;			Play With Me;			Extreme

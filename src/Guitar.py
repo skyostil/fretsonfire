@@ -53,6 +53,8 @@ class Guitar:
     self.lastBpmChange  = -1.0
     self.baseBeat       = 0.0
     self.setBPM(self.currentBpm)
+    self.vertexCache    = numpy.empty((8 * 4096, 3), numpy.float32)
+    self.colorCache     = numpy.empty((8 * 4096, 4), numpy.float32)
 
     engine.resource.load(self,  "noteMesh", lambda: Mesh(engine.resource.fileName("note.dae")))
     engine.resource.load(self,  "keyMesh",  lambda: Mesh(engine.resource.fileName("key.dae")))
@@ -306,37 +308,46 @@ class Guitar:
 
 
     # Draw a waveform shape over the currently playing notes
+    vertices = self.vertexCache
+    colors   = self.colorCache
+
     glBlendFunc(GL_SRC_ALPHA, GL_ONE)
     glEnableClientState(GL_VERTEX_ARRAY)
     glEnableClientState(GL_COLOR_ARRAY)
+    glVertexPointer(3, GL_FLOAT, 0, vertices)
+    glColorPointer(4, GL_FLOAT, 0, colors)
 
     for time, event in self.playedNotes:
-      step  = self.currentPeriod / 16
       t     = time + event.length
+      dt    = t - pos
+      proj  = 1.0 / self.currentPeriod / beatsPerUnit
+
+      # Increase these values to improve performance
+      step1 = dt * proj * 25
+      step2 = 10.0
+
+      if dt < 1e-3:
+        continue
+
+      dStep = (step2 - step1) / dt
       x     = (self.strings / 2 - event.number) * w
       c     = self.fretColors[event.number]
       s     = t
-      proj  = 1.0 / self.currentPeriod / beatsPerUnit
-      zStep = step * proj
+      step  = step1
 
-      n              = int((t - time) / step) + 1
-      vertices       = numpy.empty((8 * n, 3), numpy.float32)
-      colors         = numpy.empty((8 * n, 4), numpy.float32)
       vertexCount    = 0
 
       def waveForm(t):
         u = ((t - time) * -.1 + pos - time) / 64.0 + .0001
         return (math.sin(event.number + self.time * -.01 + t * .03) + math.cos(event.number + self.time * .01 + t * .02)) * .1 + .1 + math.sin(u) / (5 * u)
 
-      f1 = 0
-      i  = 0
-      while t > time:
+      i     = 0
+      a1    = 0.0
+      zStep = step * proj
+
+      while t > time and t - step > pos and i < len(vertices) / 8:
         z  = (t - pos) * proj
-        if z < 0:
-          break
-        f2 = min((s - t) / (6 * step), 1.0)
-        a1 = waveForm(t) * f1
-        a2 = waveForm(t - step) * f2
+        a2 = waveForm(t - step)
 
         colors[i    ]   = \
         colors[i + 1]   = (c[0], c[1], c[2], .5)
@@ -355,12 +366,12 @@ class Guitar:
         vertices[i + 6] = (x + a2, 0, z - zStep)
         vertices[i + 7] = (x - a2, 0, z - zStep)
 
-        i += 8
-        t -= step
-        f1 = f2
+        i    += 8
+        t    -= step
+        a1    = a2
+        step  = step1 + dStep * (s - t)
+        zStep = step * proj
 
-      glVertexPointer(3, GL_FLOAT, 0, vertices)
-      glColorPointer(4, GL_FLOAT, 0, colors)
       glDrawArrays(GL_TRIANGLE_STRIP, 0, i)
     glDisableClientState(GL_VERTEX_ARRAY)
     glDisableClientState(GL_COLOR_ARRAY)
@@ -487,10 +498,12 @@ class Guitar:
     return notes
 
   def controlsMatchNotes(self, controls, notes):
+    result = True
+    
     # no notes?
     if not notes:
-      return False
-  
+      result = False
+
     # check each valid chord
     chords = {}
     for time, note in notes:
@@ -504,12 +517,14 @@ class Guitar:
 
       for n, k in enumerate(KEYS):
         if n in requiredKeys and not controls.getState(k):
-          return False
+          result = False
+          break
         if not n in requiredKeys and controls.getState(k):
           # The lower frets can be held down
           if n > max(requiredKeys):
-            return False
-    return True
+            result = False
+            break
+    return result
 
   def areNotesTappable(self, notes):
     if not notes:
@@ -525,8 +540,30 @@ class Guitar:
     
     self.playedNotes = []
     notes = self.getRequiredNotes(song, pos)
+    match = self.controlsMatchNotes(controls, notes)
 
-    if self.controlsMatchNotes(controls, notes):
+    """
+    if match:
+      print "\033[0m",
+    else:
+      print "\033[31m",
+    print "MATCH?",
+    n = [note.number for time, note in notes]
+    for i, k in enumerate(KEYS):
+      if i in n:
+        if controls.getState(k):
+          print " [#] ",
+        else:
+          print "  #  ",
+      else:
+        if controls.getState(k):
+          print " [.] ",
+        else:
+          print "  .  ",
+    print
+    """
+
+    if match:
       self.pickStartPos = pos
       for time, note in notes:
         self.pickStartPos = max(self.pickStartPos, time)

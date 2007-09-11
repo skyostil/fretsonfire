@@ -179,7 +179,7 @@ class SongInfo(object):
       return self.highScores[difficulty]
     except KeyError:
       return []
-      
+
   def uploadHighscores(self, url, songHash):
     try:
       d = {
@@ -190,11 +190,14 @@ class SongInfo(object):
       }
       data = urllib.urlopen(url + "?" + urllib.urlencode(d)).read()
       Log.debug("Score upload result: %s" % data)
-      return data == "True"
+      if ";" in data:
+        fields = data.split(";")
+      else:
+        fields = [data, "0"]
+      return (fields[0] == "True", int(fields[1]))
     except Exception, e:
       Log.error(e)
-      return False
-    return True
+      return (False, 0)
   
   def addHighscore(self, difficulty, score, stars, name):
     if not difficulty in self.highScores:
@@ -348,12 +351,11 @@ class Track:
     if t1 > t2:
       t1, t2 = t2, t1
 
-    events = []
+    events = set()
     for t in range(max(t1, 0), min(len(self.events), t2)):
       for diff, event in self.events[t]:
         time = (self.granularity * t) + diff
-        if not (time, event) in events:
-          events.append((time, event))
+        events.add((time, event))
     return events
 
   def getAllEvents(self):
@@ -370,7 +372,7 @@ class Track:
     #  1. Not the first note of the track
     #  2. Previous note not the same as this one
     #  3. Previous note not a chord
-    #  4. Previous note starts at most 161 ticks before this one
+    #  4. Previous note ends at most 161 ticks before this one
     bpm             = None
     ticksPerBeat    = 480
     tickThreshold   = 161
@@ -398,11 +400,27 @@ class Track:
         if ticks < currentTicks + epsilon:
           currentNotes.append(event)
           continue
+        
+        """
+        for i in range(5):
+          if i in [n.number for n in prevNotes]:
+            print " # ",
+          else:
+            print " . ",
+        print " | ",
+        for i in range(5):
+          if i in [n.number for n in currentNotes]:
+            print " # ",
+          else:
+            print " . ",
+        print
+        """
 
         # Previous note not a chord?
         if len(prevNotes) == 1:
-          # Previous note started recently enough?
-          if currentTicks - prevTicks <= tickThreshold:
+          # Previous note ended recently enough?
+          prevEndTicks = prevTicks + beatsToTicks(prevNotes[0].length)
+          if currentTicks - prevEndTicks <= tickThreshold:
             for note in currentNotes:
               # Are any current notes the same as the previous one?
               if note.number == prevNotes[0].number:

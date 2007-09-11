@@ -590,6 +590,12 @@ class GHImporter(Layer):
     # Split the file into different tracks
     self.stageInfoText = _("Stage 1/8: Splitting VGS file")
 
+    # For debugging
+    #os.system("cp /tmp/foo.ogg " + outputSongOggFile)
+    #os.system("cp /tmp/foo.ogg " + outputGuitarOggFile)
+    #os.system("cp /tmp/foo.ogg " + outputRhythmOggFile)
+    #return
+
     f         = vgsFile
     blockSize = 16
 
@@ -679,18 +685,25 @@ class GHImporter(Layer):
       # Read the song map
       self.statusText = _("Reading the song list.")
       songMap = {}
-      vgsMap =  {}
+      vgsMap  = {}
+      library = DEFAULT_LIBRARY
       for line in open(self.engine.resource.fileName("ghmidimap.txt")):
-        songName, fullName, artist = map(lambda s: s.strip(), line.strip().split(";"))
-        songMap[songName] = (fullName, artist)
+        fields = map(lambda s: s.strip(), line.strip().split(";"))
+        if fields[0] == "$library":
+          library = os.path.join(DEFAULT_LIBRARY, fields[1])
+        else:
+          songName, fullName, artist = fields
+          songMap[songName] = (library, fullName, artist)
 
       self.statusText = _("Reading the archive index.")
       archive = ArkFile(headerPath, archivePath)
-      songPath = self.engine.resource.fileName("songs", writable = True)
       songs    = []
 
       # Filter out the songs that aren't in this archive
       for songName, data in songMap.items():
+        library, fullName, artist = data
+        songPath = self.engine.resource.fileName(library, songName, writable = True)
+
         vgsMap[songName] = "songs/%s/%s.vgs" % (songName, songName)
         if not vgsMap[songName] in archive.files:
           vgsMap[songName] = "songs/%s/%s_sp.vgs" % (songName, songName)
@@ -699,13 +712,15 @@ class GHImporter(Layer):
             del songMap[songName]
             continue
 
-        if os.path.exists(os.path.join(songPath, songName)):
+        if os.path.exists(songPath):
           Log.warn("Song '%s' already exists." % songName)
           del songMap[songName]
           continue
 
       for songName, data in songMap.items():
-        fullName, artist = data
+        library, fullName, artist = data
+        songPath = self.engine.resource.fileName(library, songName, writable = True)
+        print songPath
 
         Log.notice("Extracting song '%s'" % songName)
         self.statusText = _("Extracting %s by %s. %d of %d songs imported. Yeah, this is going to take forever.") % (fullName, artist, len(songs), len(songMap))
@@ -739,13 +754,13 @@ class GHImporter(Layer):
         if not os.path.isfile(rhythmOggFile):
           rhythmOggFile = None
 
-        song = createSong(self.engine, songName, guitarOggFile, songOggFile, rhythmOggFile)
+        song = createSong(self.engine, songName, guitarOggFile, songOggFile, rhythmOggFile, library = library)
         song.info.name   = fullName.strip()
         song.info.artist = artist.strip()
         song.save()
 
         # Grab the MIDI file
-        archive.extractFile(archiveMidiFile, os.path.join(songPath, songName, "notes.mid"))
+        archive.extractFile(archiveMidiFile, os.path.join(songPath, "notes.mid"))
 
         # Done with this song
         songs.append(songName)
@@ -789,7 +804,7 @@ class GHImporter(Layer):
 
     path = ""
     while True:
-      path = Dialogs.getText(self.engine, prompt = _("Enter the path to the mounted Guitar Hero (tm) DVD"), text = path)
+      path = Dialogs.getText(self.engine, prompt = _("Enter the path to the mounted Guitar Hero (tm) I/II/Encore DVD"), text = path)
 
       if not path:
         self.engine.view.popLayer(self)

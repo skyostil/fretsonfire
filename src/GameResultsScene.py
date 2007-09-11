@@ -80,7 +80,7 @@ class GameResultsSceneClient(GameResultsScene, SceneClient):
             self.player.name = name
           self.highscoreIndex = self.song.info.addHighscore(self.player.difficulty, self.player.score, self.stars, self.player.name)
           self.song.info.save()
-          
+
           if self.engine.config.get("game", "uploadscores"):
             self.uploadingScores = True
             fn = lambda: self.song.info.uploadHighscores(self.engine.config.get("game", "uploadurl"), self.song.getHash())
@@ -193,9 +193,20 @@ class GameResultsSceneClient(GameResultsScene, SceneClient):
           font.render(name, (x + .5, y), scale = scale)
           y += h
           
-        if self.uploadingScores and self.uploadResult is None:
+        if self.uploadingScores:
           Theme.setBaseColor(1 - v)
-          font.render(_("Uploading Scores..."), (.05, .7 + v), scale = 0.001)
+          if self.uploadResult is None:
+            text = _("Uploading Scores...")
+          else:
+            success, ordinal = self.uploadResult
+            if success:
+              if ordinal > 0:
+                text = _("You're #%d on the world charts!") % ordinal
+              else:
+                text = ""
+            else:
+              text = _("Score upload failed")
+          font.render(text, (.05, .7 + v), scale = 0.001)
         return
       
       Theme.setBaseColor(1 - v)

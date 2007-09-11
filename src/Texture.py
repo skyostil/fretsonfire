@@ -73,7 +73,7 @@ class Framebuffer:
     glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR)
     # PyOpenGL does not support NULL textures, so we must make a temporary buffer here
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0,
-                 GL_RGBA, GL_UNSIGNED_BYTE, " " * (width * height * 4))
+                 GL_RGBA, GL_UNSIGNED_BYTE, "\x00" * (width * height * 4))
     self._checkError()
     
     if self.emulated:
@@ -309,8 +309,7 @@ class Texture:
     self.format = format
     Texture.bind(self)
     glTexImage2D(GL_TEXTURE_2D, 0, format, size[0], size[1], 0,
-                 format, GL_UNSIGNED_BYTE, " " * (size[0] * size[1] * 4))
-#                 format, GL_UNSIGNED_BYTE, None)
+                 format, GL_UNSIGNED_BYTE, "\x00" * (size[0] * size[1] * 4))
 
   def setDefaults(self):
     """Set the default OpenGL options for this texture"""
