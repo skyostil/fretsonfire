@@ -1,0 +1,159 @@
+# Frets On Fire
+# Copyright (C) 2006 Unreal Voodoo
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"#-#-#-#-#  tutorial.pot (FretsOnFire)  #-#-#-#-#\n"
+"Project-Id-Version: FretsOnFire\n"
+"POT-Creation-Date: 2006-10-27 23:23+EEST\n"
+"PO-Revision-Date: 2007-07-21 16:25+CET\n"
+"Last-Translator: Johny_G <msoft at tiscali dot cz>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+msgid "Ah yes, I know. I'm amazing."
+msgstr "Jo, vím. Jsem skvělej."
+
+msgid "Ah, that was cool."
+msgstr "Haha, nářez."
+
+msgid "Und hello everyone."
+msgstr "Nazdar všichni."
+
+msgid "My name is Jurgen"
+msgstr "Jmenuju se Jurgen"
+
+msgid "Guntherswarchzhaffenstrassen."
+msgstr "Guntherswarchzhaffenstrassen."
+
+msgid "Und today I will show you"
+msgstr "A chci ti předvést"
+
+msgid "how to play this game."
+msgstr "jak se to hraje."
+
+msgid "Check this sh*t!"
+msgstr "Zírej, saláte!"
+
+msgid "And now, pick up your keyboard"
+msgstr "A teď si vem klávesnici"
+
+msgid "like this."
+msgstr "nějak takhle."
+
+msgid "When I shred,"
+msgstr "Když hraju já,"
+
+msgid "I use the whole keyboard."
+msgstr "potřebuju všechny klávesy."
+
+msgid "But since you SUCK,"
+msgstr "Ale dokud jsi salát,"
+
+msgid "You will only need"
+msgstr "bude ti stačit"
+
+msgid "These five frets,"
+msgstr "pět pražců"
+
+msgid "Und zie Pick button."
+msgstr "a trsátko."
+
+msgid "However, zie most important"
+msgstr "Pro tebe bude nejdůležitější"
+
+msgid "is the Escape button."
+msgstr "klávesa Escape."
+
+msgid "You will need it,"
+msgstr "Přijde ti vhod,"
+
+msgid "when you finally realize"
+msgstr "až si konečně uvědomíš,"
+
+msgid "that you SUCK."
+msgstr "že jsi salát."
+
+msgid "Bigtime."
+msgstr "Jedem."
+
+msgid "To me, that is already obvious."
+msgstr "Já už to mám dávno v malíku."
+
+msgid "Ok, there comes your first note."
+msgstr "Ok, tvoje první nota."
+
+msgid "You can already hold down the 1st fret"
+msgstr "Už můzes držet první pražec,"
+
+msgid "BUT DON'T PICK IT YET!"
+msgstr "JEŠTĚ BEZ TRSÁTKA!"
+
+msgid "You missed it."
+msgstr "Prošvihls to."
+
+msgid "Ok, let's try it again."
+msgstr "Ok, dáme si to znovu."
+
+msgid "Ok, wait for it."
+msgstr "Ok, vydrž."
+
+msgid "Wait for it."
+msgstr "Ještě vydrž."
+
+msgid "No!"
+msgstr "Ne!"
+
+msgid "*Sigh*"
+msgstr "..."
+
+msgid "Now, hold down two frets."
+msgstr "Teď podrž dva pražce."
+
+msgid "Ah, you missed it!"
+msgstr "Zase jsi to prošvih'."
+
+msgid "And now, try this super easy lick."
+msgstr "Teď si zkus tenhle primitivní riff."
+
+msgid "Und up to my tempo."
+msgstr "A teď v mém tempu."
+
+msgid "Don't try this,"
+msgstr "Radši to nezkoušej,"
+
+msgid "or you'll just hurt yourself."
+msgstr "nebo si něco uděláš."
+
+msgid "Ok, that was about"
+msgstr "To byly približně"
+
+msgid "four billion notes per second."
+msgstr "čtyři miliardy not za vteřinu."
+
+msgid "If I play that any faster,"
+msgstr "Kdybych hrál jen o kus rychleji,"
+
+msgid "your minds would just blow up."
+msgstr "vybouchla by ti hlava."
+
+msgid "Ok, that is it for now."
+msgstr "To dneska stačí."
+
+msgid "You can now go and sell"
+msgstr "Můžeš jít a prodat"
+
+msgid "your keyboards on Ebay."
+msgstr "svý klávesnice na Ebay."
+
+msgid "Because you SUCK."
+msgstr "Protože jsi salát."
+
+msgid "And remember one thing."
+msgstr "Jo a tohle si zapiš:"
+
+msgid "I am your new god, little girls."
+msgstr "Jsem váš novej bůh, slečinky."

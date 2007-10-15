@@ -15,7 +15,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 
 msgid "Ah yes, I know. I'm amazing."
-msgstr "Je sais, je suis excellent."
+msgstr "Oui je sais, je suis incroyable."
 
 msgid "Ah, that was cool."
 msgstr "Ah, c'était bon"
@@ -39,7 +39,7 @@ msgid "Check this sh*t!"
 msgstr "Écoute moi ça !"
 
 msgid "And now, pick up your keyboard"
-msgstr "Maintenant, prend ton clavier"
+msgstr "Maintenant, prends ton clavier"
 
 msgid "like this."
 msgstr "comme ça."
@@ -54,7 +54,7 @@ msgid "But since you SUCK,"
 msgstr "Mais comme t'es une MERDE,"
 
 msgid "You will only need"
-msgstr "tu va juste avoir besoin"
+msgstr "tu vas juste avoir besoin"
 
 msgid "These five frets,"
 msgstr "de ces cinq touchettes,"
@@ -72,37 +72,37 @@ msgid "You will need it,"
 msgstr "Tu en auras besoin,"
 
 msgid "when you finally realize"
-msgstr "quand tu te rendra compte,"
+msgstr "quand tu te rendras compte,"
 
 msgid "that you SUCK."
 msgstr "que t'es une MERDE."
 
 msgid "Bigtime."
-msgstr "Un grand moment."
+msgstr "Une grosse merde."
 
 msgid "To me, that is already obvious."
 msgstr "Pour moi, c'est déjà évident."
 
 msgid "Ok, there comes your first note."
-msgstr "Ok, voila la première note."
+msgstr "Ok, voilà ta première note."
 
 msgid "You can already hold down the 1st fret"
 msgstr "Tu peux déjà appuyer sur la première touchette."
 
 msgid "BUT DON'T PICK IT YET!"
-msgstr "MAIS NE GRATTE PAR TOUT DE SUITE."
+msgstr "MAIS NE GRATTE PAS TOUT DE SUITE."
 
 msgid "You missed it."
-msgstr "Tu l'a raté."
+msgstr "Tu l'as raté."
 
 msgid "Ok, let's try it again."
 msgstr "D'accord, on va réessayer."
 
 msgid "Ok, wait for it."
-msgstr "Ok, attend."
+msgstr "Ok, attends la."
 
 msgid "Wait for it."
-msgstr "Attend."
+msgstr "Attends la."
 
 msgid "No!"
 msgstr "Non !"
@@ -111,13 +111,13 @@ msgid "*Sigh*"
 msgstr "*Soupir* "
 
 msgid "Now, hold down two frets."
-msgstr "Maintenant, appuie sur la première touchette."
+msgstr "Maintenant, appuie sur deux touchettes."
 
 msgid "Ah, you missed it!"
-msgstr "Ah, tu l'a raté !"
+msgstr "Ah, tu l'as raté !"
 
 msgid "And now, try this super easy lick."
-msgstr "Et maintenant, essaye enchaînement super facile."
+msgstr "Et maintenant, essaye cet enchaînement super facile."
 
 msgid "Und up to my tempo."
 msgstr "Augmentons la vitesse."
@@ -129,7 +129,7 @@ msgid "or you'll just hurt yourself."
 msgstr "ou tu risque de te blesser."
 
 msgid "Ok, that was about"
-msgstr "Ok, ça allais à peu près"
+msgstr "Ok, ça allait à peu près"
 
 msgid "four billion notes per second."
 msgstr "à quatre millards de notes par seconde."
@@ -138,7 +138,7 @@ msgid "If I play that any faster,"
 msgstr "Si je jouais plus vite,"
 
 msgid "your minds would just blow up."
-msgstr "Ton cerveau exploserai."
+msgstr "ton cerveau exploserait."
 
 msgid "Ok, that is it for now."
 msgstr "Ok, c'est tout pour l'instant."

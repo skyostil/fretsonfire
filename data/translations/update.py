@@ -12,6 +12,7 @@ translations = {
   "es":  "spanish",
   "it":  "italian",
   "gl":  "galician",
+  "cz":  "czech",
 }
 
 files = ["fretsonfire", "tutorial"]

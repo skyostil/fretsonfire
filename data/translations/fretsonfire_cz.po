@@ -1,0 +1,783 @@
+# Frets On Fire
+# Copyright (C) 2006 Unreal Voodoo
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"#-#-#-#-#  fretsonfire.pot (FretsOnFire)  #-#-#-#-#\n"
+"Project-Id-Version: FretsOnFire\n"
+"POT-Creation-Date: 2006-10-27 23:23+EEST\n"
+"PO-Revision-Date: 2007-07-21 16:25+CET\n"
+"Last-Translator: Johny_G <msoft at tiscali dot cz>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+#: Credits.py:111
+msgid "Unreal Voodoo"
+msgstr "Unreal Voodoo"
+
+#: Credits.py:112
+msgid "presents"
+msgstr "uvádí"
+
+#: Credits.py:116
+msgid "Version %s"
+msgstr "Verze %s"
+
+#: Credits.py:118
+msgid "Game Design,"
+msgstr "Game design,"
+
+#: Credits.py:119
+msgid "Programming:"
+msgstr "Program:"
+
+#: Credits.py:122
+msgid "Music,"
+msgstr "Hudba,"
+
+#: Credits.py:123
+msgid "Sound Effects:"
+msgstr "Zvukové efekty:"
+
+#: Credits.py:126
+msgid "Graphics:"
+msgstr "Grafika:"
+
+#: Credits.py:129
+msgid "Introducing:"
+msgstr "Účinkují:"
+
+#: Credits.py:131
+msgid "as Jurgen, Your New God"
+msgstr "jako Jurgen, váš nový bůh"
+
+#: Credits.py:134
+msgid "as Groupie"
+msgstr "jako groupie"
+
+#: Credits.py:136
+msgid "Song Credits:"
+msgstr "Skladby:"
+
+#: Credits.py:137
+msgid "Bang Bang, Mystery Man"
+msgstr "Bang Bang, Mystery Man"
+
+#: Credits.py:138
+msgid "music by Mary Jo and Tommi Inkila"
+msgstr "hudba: Mary Jo and Tommi Inkila"
+
+#: Credits.py:139
+msgid "lyrics by Mary Jo"
+msgstr "texty: Mary Jo"
+
+#: Credits.py:141
+msgid "Defy The Machine"
+msgstr "Defy The Machine"
+
+#: Credits.py:142
+msgid "music by Tommi Inkila"
+msgstr "hudba: Tommi Inkila"
+
+#: Credits.py:144
+msgid "This Week I've Been"
+msgstr "This Week I've Been"
+
+#: Credits.py:145
+msgid "Mostly Playing Guitar"
+msgstr "Mostly Playing Guitar"
+
+#: Credits.py:146
+msgid "composed and performed by Tommi Inkila"
+msgstr "složil a zahrál: Tommi Inkila"
+
+#: Credits.py:148
+msgid "Testing:"
+msgstr "Testování:"
+
+#: Credits.py:155
+msgid "Mac OS X port:"
+msgstr "Portace na Mac OS X:"
+
+#: Credits.py:158
+msgid "Special thanks to:"
+msgstr "Zvláštní poděkování:"
+
+#: Credits.py:161
+msgid "Made with:"
+msgstr "Vytvořeno pomocí:"
+
+#: Credits.py:184
+msgid "Source Code available under the GNU General Public License"
+msgstr "Zdrojové kódy jsou k dispozici pod GNU General Public License"
+
+#: Credits.py:190
+msgid "Copyright 2006, 2007 by Unreal Voodoo"
+msgstr "Copyright 2006, 2007 od Unreal Voodoo"
+
+#: Data.py:57
+msgid "__lefttoright__"
+msgstr "__lefttoright__"
+
+#: Dialogs.py:265
+msgid "<OK>"
+msgstr "<OK>"
+
+#: Dialogs.py:350
+msgid "Browsing Collection..."
+msgstr "Prohlížím si sbírku..."
+
+#: Dialogs.py:669
+msgid "Find: %s"
+msgstr "Hledat: %s"
+
+#: Dialogs.py:671
+msgid "Loading Preview..."
+msgstr "Nahrávám ukázku..."
+
+#: Dialogs.py:712
+msgid "One song in this library"
+msgstr "V knihovně je jedna skladba"
+
+#: Dialogs.py:714
+msgid "%d songs in this library"
+msgstr "V knihovně je %d skladeb"
+
+#: Dialogs.py:740
+msgid "[Parent Folder]"
+msgstr "[O úroveň výš]"
+
+#: Dialogs.py:742
+msgid "%s [Folder]"
+msgstr "%s [Složka]"
+
+#: Dialogs.py:948
+msgid "%.2f beats per minute"
+msgstr "%.2f úderů za minutu"
+
+#: Dialogs.py:1012
+msgid "Pick!"
+msgstr "Trsátko"
+
+#: Dialogs.py:1051
+msgid "Choose a Song"
+msgstr "Zvolte si skladbu"
+
+#: Dialogs.py:1066
+msgid "Choose a File"
+msgstr "Vyberte soubor"
+
+#: Dialogs.py:1092
+msgid "Play with the keys and press Escape when you're done."
+msgstr "Hrajte na klávesách a poté přerušte Escapem."
+
+#: Dialogs.py:1102
+msgid "Loading..."
+msgstr "Nahrávám..."
+
+#: Editor.py:66
+msgid "Save Song"
+msgstr "Uložit skladbu"
+
+#: Editor.py:67
+msgid "Set Song Name"
+msgstr "Pojmenovat skladbu"
+
+#: Editor.py:68
+msgid "Set Artist Name"
+msgstr "Pojmenovat interpreta"
+
+#: Editor.py:69
+msgid "Set Beats per Minute"
+msgstr "Nastavit tempo"
+
+#: Editor.py:70
+msgid "Estimate Beats per Minute"
+msgstr "Ručně odhadnout tempo"
+
+#: Editor.py:71
+msgid "Set A/V delay"
+msgstr "Nastavit prodlevu A/V"
+
+#: Editor.py:72
+msgid "Set Cassette Color"
+msgstr "Nastavit barvu kazety"
+
+#: Editor.py:73
+msgid "Set Cassette Label"
+msgstr "Nastavit potisk kazety"
+
+#: Editor.py:74
+msgid "Editing Help"
+msgstr "Nápověda"
+
+#: Editor.py:75 GameResultsScene.py:60 GuitarScene.py:92
+msgid "Quit to Main Menu"
+msgstr "Zpět do menu"
+
+#: Editor.py:81
+msgid "There are no changes to save."
+msgstr "Neproběhly žádné změny k uložení."
+
+#: Editor.py:89
+msgid "Saving..."
+msgstr "Ukládám..."
+
+#: Editor.py:90
+msgid "'%s' saved."
+msgstr "'%s' uloženo."
+
+#: Editor.py:93
+msgid "Editing keys: "
+msgstr "Klávesy:"
+
+#: Editor.py:94
+msgid "Arrows - Move cursor, "
+msgstr "Šipky - Pohyb kurzoru, "
+
+#: Editor.py:95
+msgid "Space - Play/pause song, "
+msgstr "Mezerník - Spustit/pozastavit skladbu, "
+
+#: Editor.py:96
+msgid "Enter - Make note (hold and move for long notes), "
+msgstr "Enter - Umístit notu (přidržet pro dlouhou notu), "
+
+#: Editor.py:97
+msgid "Delete - Delete note, "
+msgstr "Delete - Vymazat notu,"
+
+#: Editor.py:98
+msgid "Page Up/Down - Change difficulty"
+msgstr "Page Up/Down - Změnit obtížnost"
+
+#: Editor.py:102
+msgid "Enter Song Name"
+msgstr "Vložte název skladby"
+
+#: Editor.py:108
+msgid "Enter Artist Name"
+msgstr "Vložte jméno interpreta"
+
+#: Editor.py:114
+msgid "Enter A/V delay in milliseconds"
+msgstr "Nastavte prodlevu A/V v milisekundách"
+
+#: Editor.py:120 Editor.py:129
+msgid "That isn't a number."
+msgstr "Musíte zadat číslo."
+
+#: Editor.py:123
+msgid "Enter Beats per Minute Value"
+msgstr "Zadejte počet úderů za minutu"
+
+#: Editor.py:132
+msgid "Tap the Space bar to the beat of the song. Press Enter when done or Escape to cancel."
+msgstr "Mačkejte mezerník v rytmu skladby. Poté potvrďte Enterem, nebo zrušte Escapem."
+
+#: Editor.py:142
+msgid "Enter cassette color in HTML (#RRGGBB) format."
+msgstr "Vložte barvu v HTML formátu (#RRGGBB)."
+
+#: Editor.py:148
+msgid "That isn't a color."
+msgstr "Neplatný kód barvy."
+
+#: Editor.py:151
+msgid "Choose a 256x128 PNG format label image."
+msgstr "Zvolte PNG obrázek o rozlišení 256x128."
+
+#: Editor.py:168
+msgid "Loading song..."
+msgstr "Nahrávám skladbu..."
+
+#: Editor.py:334
+msgid "Playing"
+msgstr "Přehrávám"
+
+#: Editor.py:336
+msgid "Stopped"
+msgstr "Zastaveno"
+
+#: Editor.py:377
+msgid "Enter a name for the song."
+msgstr "Vložte název skladby."
+
+#: Editor.py:385
+msgid "That song already exists."
+msgstr "Tato skladba již existuje."
+
+#: Editor.py:389
+msgid "Choose the Instrument Track (OGG format)."
+msgstr "Zvolte zvukovou stopu nástroje (formát OGG)."
+
+#: Editor.py:395
+msgid "Choose the Background Track (OGG format) or press Escape to skip."
+msgstr "Zvolte zvukovou stopu podkladu (formát OGG), nebo ji vynechte Escapem."
+
+#: Editor.py:399
+msgid "Importing..."
+msgstr "Importuji..."
+
+#: Editor.py:591
+msgid "Stage 1/8: Splitting VGS file"
+msgstr "Krok 1/8: Rozděluji soubor VGS"
+
+#: Editor.py:626
+msgid "Stage 6/8: Joining song stereo tracks"
+msgstr "Krok 6/8: Spojuji stereo stopy podkladu"
+
+#: Editor.py:630
+msgid "Stage 7/8: Joining guitar stereo tracks"
+msgstr "Krok 7/8: Spojuji stereo stopy nástroje"
+
+#: Editor.py:645
+msgid "Stage 8/8: Compressing tracks"
+msgstr "Krok 8/8: Komprimuji stopy"
+
+#: Editor.py:680
+msgid "Reading the song list."
+msgstr "Načítám seznam skladeb."
+
+#: Editor.py:687
+msgid "Reading the archive index."
+msgstr "Načítám index archivu."
+
+#: Editor.py:711
+msgid "Extracting %s by %s. %d of %d songs imported. Yeah, this is going to take forever."
+msgstr "Rozbaluji %s od %s. %d z %d skladeb importováno. Jo, bude to trvat věčnost."
+
+#: Editor.py:756
+msgid "Ready"
+msgstr "Připraveno"
+
+#: Editor.py:771
+msgid "All done! %d songs imported. Have fun!"
+msgstr "Hotovo! %d skladeb importováno. Příjemnou zábavu!"
+
+#: Editor.py:773
+msgid "No songs could be imported, sorry. Check the log files for more information."
+msgstr "Promiňte, žadná skladba nemůže být importována. Více informací naleznete v souborech logu (LOG)."
+
+#: Editor.py:782
+msgid "Ogg Vorbis encoder (oggenc.exe) not found. Please install it to the game directory and try again."
+msgstr "Nebyl nalezen Ogg Vorbis encoder (oggenc.exe). Prosím, nainstalujte jej do složky hry a zkuste to znovu."
+
+#: Editor.py:784
+msgid "Ogg Vorbis encoder (oggenc) not found. Please install it and try again."
+msgstr "Nebyl nalezen Ogg Vorbis encoder (oggenc). Prosím, nainstalujte jej a zkuste to znovu."
+
+#: Editor.py:788
+msgid "Make sure you have at least 500 megabytes of free disk space before using this importer."
+msgstr "Pro import potřebujete alespoň 500 megabytů volného místa na disku."
+
+#: Editor.py:792
+msgid "Enter the path to the mounted Guitar Hero (tm) DVD"
+msgstr "Zadejte cestu k namountovanému DVD Gutar Hero (tm)"
+
+#: Editor.py:801
+msgid "That's not it. Try again."
+msgstr "To není ono. Zkuste to znovu."
+
+#: Editor.py:819
+msgid "Importing Songs"
+msgstr "Importuji skladby"
+
+#: GameEngine.py:51
+msgid "Upload Highscores"
+msgstr "Odesílat skóre"
+
+#: GameEngine.py:51 GameEngine.py:53 GameEngine.py:54
+msgid "No"
+msgstr "Ne"
+
+#: GameEngine.py:51 GameEngine.py:53 GameEngine.py:54
+msgid "Yes"
+msgstr "Ano"
+
+#: GameEngine.py:53
+msgid "Lefty mode"
+msgstr "Pro leváky"
+
+#: GameEngine.py:54
+msgid "Fullscreen Mode"
+msgstr "Celá obrazovka"
+
+#: GameEngine.py:55
+msgid "2x"
+msgstr "2x"
+
+#: GameEngine.py:55
+msgid "4x"
+msgstr "4x"
+
+#: GameEngine.py:55
+msgid "6x"
+msgstr "6x"
+
+#: GameEngine.py:55
+msgid "8x"
+msgstr "8x"
+
+#: GameEngine.py:55
+msgid "Antialiasing Quality"
+msgstr "Kvalita vyhlazování"
+
+#: GameEngine.py:55
+msgid "None"
+msgstr "Žádné"
+
+#: GameEngine.py:57
+msgid "Frames per Second"
+msgstr "Snímky za sekundu"
+
+#: GameEngine.py:58
+msgid "High"
+msgstr "Vysoká"
+
+#: GameEngine.py:58
+msgid "Low"
+msgstr "Nízká"
+
+#: GameEngine.py:58
+msgid "Normal"
+msgstr "Normální"
+
+#: GameEngine.py:58
+msgid "SVG Quality"
+msgstr "Kvalita SVG"
+
+#: GameEngine.py:59
+msgid "Sample Frequency"
+msgstr "Vzorkovací frekvence"
+
+#: GameEngine.py:60
+msgid "Sample Bits"
+msgstr "Bitová hloubka"
+
+#: GameEngine.py:62
+msgid "Buffer Size"
+msgstr "Velikost bufferu"
+
+#: GameEngine.py:63
+msgid "A/V delay"
+msgstr "Prodleva A/V"
+
+#: GameEngine.py:64
+msgid "Loud"
+msgstr "Hlasité"
+
+#: GameEngine.py:64
+msgid "Painful"
+msgstr "Bolestivé"
+
+#: GameEngine.py:64
+msgid "Quiet"
+msgstr "Tiché"
+
+#: GameEngine.py:64
+msgid "Screw Up Sounds"
+msgstr "Zvuky přehmatů"
+
+#: GameEngine.py:64 Mod.py:33
+msgid "Off"
+msgstr "Vypnout"
+
+#: GameEngine.py:65
+msgid "Guitar Volume"
+msgstr "Hlasitost kytary"
+
+#: GameEngine.py:66
+msgid "Song Volume"
+msgstr "Hlasitost skladby"
+
+#: GameEngine.py:67
+msgid "Rhythm Volume"
+msgstr "Hlasitost basy"
+
+#: GameEngine.py:68
+msgid "Text scale"
+msgstr "Velikost textů"
+
+#: GameEngine.py:134
+msgid "Frets on Fire"
+msgstr "Frets on Fire"
+
+#: GameResultsScene.py:58
+msgid "Replay"
+msgstr "Hrát znovu"
+
+#: GameResultsScene.py:59 GuitarScene.py:90
+msgid "Change Song"
+msgstr "Změnit skladbu"
+
+#: GameResultsScene.py:66
+msgid "Chilling..."
+msgstr "Chladím zesilovač..."
+
+#: GameResultsScene.py:76
+msgid "No highscores for cheaters!"
+msgstr "Podvodníky do výsledků nezaznamenávám!"
+
+#: GameResultsScene.py:78
+msgid "%d points is a new high score! Please enter your name:"
+msgstr "%d bodů patří k nelepším výsledkům! Zadejte své jméno:"
+
+#: GameResultsScene.py:176
+msgid "Highest Scores (%s)"
+msgstr "Nejlepší skóre (%s)"
+
+#: GameResultsScene.py:197
+msgid "Uploading Scores..."
+msgstr "Odesílám skóre..."
+
+#: GameResultsScene.py:201
+msgid "Song Finished!"
+msgstr "Skladba dokončena!"
+
+#: GameResultsScene.py:219
+msgid "Accuracy: %d%%"
+msgstr "Přesnost: %d%%"
+
+#: GameResultsScene.py:222
+msgid "Longest note streak: %d"
+msgstr "Nejdelší bezchybná řada: %d"
+
+#: GameTask.py:72
+msgid "Connection lost."
+msgstr "Spojení přerušeno."
+
+#: GuitarScene.py:83
+msgid "Tuning Guitar..."
+msgstr "Natahuji struny..."
+
+#: GuitarScene.py:89
+msgid "Restart Song"
+msgstr "Restartovat skladbu"
+
+#: GuitarScene.py:91
+msgid "Settings"
+msgstr "Nastavení"
+
+#: GuitarScene.py:289
+msgid "Jurgen will show you how it is done."
+msgstr "Jurgen ti ukáže jak na to."
+
+#: GuitarScene.py:291
+msgid "Jurgen has left the building."
+msgstr "Jurgen opustil budovu."
+
+#: GuitarScene.py:365
+msgid "Get Ready to Rock"
+msgstr "Jde se na věc!"
+
+#: GuitarScene.py:390
+msgid "%d hit"
+msgstr "%d v řadě"
+
+#: GuitarScene.py:407
+msgid "Missed!"
+msgstr "Chyba!"
+
+#: Language.py:56
+msgid "Language"
+msgstr "Jazyk"
+
+#: Lobby.py:52
+msgid "Player"
+msgstr "Hráč"
+
+#: Lobby.py:59
+msgid "Enter your name:"
+msgstr "Zadejte své jméno:"
+
+#: Lobby.py:59
+msgid "Player #%d"
+msgstr "Hráč #%d"
+
+#: Lobby.py:109
+msgid "Lobby (%d players)"
+msgstr "Lobby (%d hráčů)"
+
+#: Lobby.py:138
+msgid "Press Enter to Start Game"
+msgstr "Hru zahájíte stiskem Enteru"
+
+#: MainMenu.py:54
+msgid "Host Multiplayer Game"
+msgstr "Založit hru"
+
+#: MainMenu.py:55
+msgid "Join Multiplayer Game"
+msgstr "Připojit se ke hře"
+
+#: MainMenu.py:132
+msgid "Edit Existing Song"
+msgstr "Upravit stávající skladbu"
+
+#: MainMenu.py:133
+msgid "Import New Song"
+msgstr "Importovat novou skladbu"
+
+#: MainMenu.py:134
+msgid "Import Guitar Hero(tm) Songs"
+msgstr "Importovat z Guitar Hero(tm)"
+
+#: MainMenu.py:140
+msgid "Play Game"
+msgstr "Hrát hru"
+
+#: MainMenu.py:141
+msgid "Tutorial"
+msgstr "Výuka"
+
+#: MainMenu.py:142
+msgid "Song Editor"
+msgstr "Editor skladeb"
+
+#: MainMenu.py:143
+msgid "Settings >"
+msgstr "Nastavení >"
+
+#: MainMenu.py:144
+msgid "Credits"
+msgstr "Autoři"
+
+#: MainMenu.py:221
+msgid "Enter the server address:"
+msgstr "Zadejte adresu serveru:"
+
+#: MainMenu.py:228
+msgid "Connecting..."
+msgstr "Připojuji se..."
+
+#: Mod.py:33
+msgid "On"
+msgstr "Zapnout"
+
+#: Player.py:44
+msgid "Move left"
+msgstr "Vlevo"
+
+#: Player.py:45
+msgid "Move right"
+msgstr "Vpravo"
+
+#: Player.py:46
+msgid "Move up"
+msgstr "Nahoru"
+
+#: Player.py:47
+msgid "Move down"
+msgstr "Dolů"
+
+#: Player.py:48
+msgid "Pick"
+msgstr "Trsátko"
+
+#: Player.py:49
+msgid "Secondary Pick"
+msgstr "Sekundární trsátko"
+
+#: Player.py:50
+msgid "Fret #1"
+msgstr "Pražec #1"
+
+#: Player.py:51
+msgid "Fret #2"
+msgstr "Pražec #2"
+
+#: Player.py:52
+msgid "Fret #3"
+msgstr "Pražec #3"
+
+#: Player.py:53
+msgid "Fret #4"
+msgstr "Pražec #4"
+
+#: Player.py:54
+msgid "Fret #5"
+msgstr "Pražec #5"
+
+#: Player.py:55
+msgid "Cancel"
+msgstr "Zrušit"
+
+#: Settings.py:118
+msgid "Press a key for '%s' or Escape to cancel."
+msgstr "Zadejte klávesu pro '%s', nebo stornujte Escapem."
+
+#: Settings.py:130
+msgid "Apply New Settings"
+msgstr "Použít změny"
+
+#: Settings.py:137
+msgid "Mod settings"
+msgstr "Nastavení modifikací"
+
+#: Settings.py:145
+msgid "Test Keys"
+msgstr "Test kláves"
+
+#: Settings.py:163
+msgid "Video Resolution"
+msgstr "Rozlišení"
+
+#: Settings.py:184
+msgid "Volume Settings"
+msgstr "Nastavení hlasitosti"
+
+#: Settings.py:193
+msgid "Game Settings"
+msgstr "Herní nastavení"
+
+#: Settings.py:194
+msgid "Key Settings"
+msgstr "Nastavení kláves"
+
+#: Settings.py:195
+msgid "Video Settings"
+msgstr "Nastavení obrazu"
+
+#: Settings.py:196
+msgid "Audio Settings"
+msgstr "Nastavení zvuku"
+
+#: Song.py:58
+msgid "Supaeasy"
+msgstr "Primitivní"
+
+#: Song.py:59
+msgid "Easy"
+msgstr "Lehká"
+
+#: Song.py:60
+msgid "Medium"
+msgstr "Střední"
+
+#: Song.py:61
+msgid "Amazing"
+msgstr "Šílená"
+
+#: SongChoosingScene.py:68
+msgid "Choose a difficulty:"
+msgstr "Zvolte si obtížnost:"
+
+#: Dialogs.py:683
+msgid "Filter: %s"
+msgstr "Filtr: %s"
+
+#: Dialogs.py:685
+msgid "Not found"
+msgstr "Nenalezeno"
+
+#: GameEngine.py:54
+msgid "Tappable notes"
+msgstr "Noty bez trsátka"
+
+#: MainMenu.py:72
+msgid "Quit"
+msgstr "Ukončit"

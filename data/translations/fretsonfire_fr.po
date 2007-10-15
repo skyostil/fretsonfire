@@ -94,7 +94,7 @@ msgstr "Mostly Playing Guitar"
 
 #: Credits.py:145
 msgid "composed and performed by Tommi Inkila"
-msgstr "écrit et joué  par Tommi Inkila"
+msgstr "écrit et interprété  par Tommi Inkila"
 
 #: Credits.py:147
 msgid "Testing:"
@@ -174,7 +174,7 @@ msgstr "Définir le nom de l'artiste"
 
 #: Editor.py:68
 msgid "Set Beats per Minute"
-msgstr "Definir le nombre de battements par minute"
+msgstr "Définir le nombre de battements par minute"
 
 #: Editor.py:69
 msgid "Estimate Beats per Minute"
@@ -366,7 +366,7 @@ msgstr "L'encodeur Ogg Vorbis (oggenc) n'a pas pu être trouvé. Veuillez l'inst
 msgid ""
 "Make sure you have at least 500 megabytes of free disk space before using "
 "this importer."
-msgstr "Assurez vous d'avoir au moins 500 megaoctets d'espace libre avant d'utiliser importateur."
+msgstr "Assurez vous d'avoir au moins 500 megaoctets d'espace libre avant d'utiliser l'import."
 
 #: Editor.py:756
 msgid "Enter the path to the mounted Guitar Hero (tm) DVD"
@@ -378,7 +378,7 @@ msgstr "Ce n'est pas ça. Réessayez."
 
 #: Editor.py:782
 msgid "Importing Songs"
-msgstr "Importation des chansons"
+msgstr "Import des chansons"
 
 #: GameEngine.py:49
 msgid "Upload Highscores"
