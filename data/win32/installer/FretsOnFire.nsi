@@ -2,7 +2,7 @@
 ;Written by Joonas Kerttula
 
 !ifndef VERSION
-  !define VERSION '1.2.432-win32'
+  !define VERSION '1.2.451-win32'
 !endif
 
 ;--------------------------------
@@ -100,10 +100,10 @@ Section "Frets on Fire core files (required)" SecCore
   SetOutPath "$INSTDIR"
   RMDir /r "$SMPROGRAMS\Frets on Fire"
 
-  File ..\*.dll
-  File ..\readme.txt
-  File ..\copying.txt
-  File ..\FretsOnFire.exe
+  File ..\*.*
+
+  SetOutPath "$INSTDIR\OpenGL-3.0.0a4-py2.4.egg-info"
+  File ..\OpenGL-3.0.0a4-py2.4.egg-info\*.*
 
   SetOutPath "$INSTDIR\data"
   
@@ -135,7 +135,7 @@ Section "Desktop Shortcut" SecShortcuts
   SetOutPath $INSTDIR
 !ifndef NO_STARTMENUSHORTCUTS
   CreateDirectory "$SMPROGRAMS\Frets on Fire"
-  CreateShortCut "$SMPROGRAMS\Frets on Fire\Frets on Fire.lnk" "$INSTDIR\FretsOnFire.exe"
+  CreateShortCut "$SMPROGRAMS\Frets on Fire\Frets on Fire.lnk" "$INSTDIR\FretsOnFire.exe" "" "$INSTDIR\icon.ico" 0
   CreateShortCut "$SMPROGRAMS\Frets on Fire\Readme.lnk" "$INSTDIR\readme.txt"
   CreateShortCut "$SMPROGRAMS\Frets on Fire\Uninstall Frets on Fire.lnk" "$INSTDIR\Uninstall.exe"
   WriteINIStr "$SMPROGRAMS\Frets on Fire\Frets on Fire Webpage.url" "InternetShortcut" "URL" "http://louhi.kempele.fi/~skyostil/uv/fretsonfire/"
@@ -368,7 +368,7 @@ Section -post
   WriteRegExpandStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Frets on Fire" "UninstallString" '"$INSTDIR\Uninstall.exe"'
   WriteRegExpandStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Frets on Fire" "InstallLocation" "$INSTDIR"
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Frets on Fire" "DisplayName" "Frets On Fire"
-  WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Frets on Fire" "DisplayIcon" "$INSTDIR\FretsOnFire.exe,0"
+  WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Frets on Fire" "DisplayIcon" "$INSTDIR\icon.ico,0"
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Frets on Fire" "DisplayVersion" "${VERSION}"
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Frets on Fire" "URLInfoAbout" "http://louhi.kempele.fi/~skyostil/uv/fretsonfire/"
   WriteRegDWORD HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Frets on Fire" "NoModify" "1"
