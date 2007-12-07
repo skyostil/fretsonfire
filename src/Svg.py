@@ -539,7 +539,7 @@ class SvgDrawing:
     elif type(svgData) == str:
       # Check whether we have a cached bitmap version
       bitmapFile = svgData.replace(".svg", ".png")
-      if svgData.endswith(".svg") and os.path.exists(bitmapFile) and 0:
+      if svgData.endswith(".svg") and os.path.exists(bitmapFile):
         Log.debug("Loading cached bitmap '%s' instead of '%s'." % (bitmapFile, svgData))
         self.texture = Texture(bitmapFile)
       else:
