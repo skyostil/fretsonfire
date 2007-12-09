@@ -1,4 +1,4 @@
-# Frets On Fire
+﻿# Frets On Fire
 # Copyright (C) 2006 Unreal Voodoo
 #
 #, fuzzy
@@ -15,145 +15,145 @@ msgstr ""
 "Generated-By: pygettext.py 1.5\n"
 
 msgid "Ah yes, I know. I'm amazing."
-msgstr "Jo, vím. Jsem skvělej."
+msgstr "Ach ano, já vím. Jsem úzasný."
 
 msgid "Ah, that was cool."
-msgstr "Haha, nářez."
+msgstr "Á, to bylo super."
 
 msgid "Und hello everyone."
-msgstr "Nazdar všichni."
+msgstr "Ahoj, vsichni"
 
 msgid "My name is Jurgen"
-msgstr "Jmenuju se Jurgen"
+msgstr "Jmenuji se Jurgen"
 
 msgid "Guntherswarchzhaffenstrassen."
 msgstr "Guntherswarchzhaffenstrassen."
 
 msgid "Und today I will show you"
-msgstr "A chci ti předvést"
+msgstr "A dnes vás naucím"
 
 msgid "how to play this game."
-msgstr "jak se to hraje."
+msgstr "jak hrát tuhle hru."
 
 msgid "Check this sh*t!"
-msgstr "Zírej, saláte!"
+msgstr "Cum na *****, vole!"
 
 msgid "And now, pick up your keyboard"
-msgstr "A teď si vem klávesnici"
+msgstr "A ted si vem klávesnici"
 
 msgid "like this."
-msgstr "nějak takhle."
+msgstr "nejak takhle."
 
 msgid "When I shred,"
-msgstr "Když hraju já,"
+msgstr "Kdyz já hraju,"
 
 msgid "I use the whole keyboard."
-msgstr "potřebuju všechny klávesy."
+msgstr "Pouzívám celou klávesnici."
 
 msgid "But since you SUCK,"
-msgstr "Ale dokud jsi salát,"
+msgstr "Ale protoze TI TO NEJDE,"
 
 msgid "You will only need"
-msgstr "bude ti stačit"
+msgstr "budes potrebovat"
 
 msgid "These five frets,"
-msgstr "pět pražců"
+msgstr "jenom 5 prazců"
 
 msgid "Und zie Pick button."
-msgstr "a trsátko."
+msgstr "a tlacítko Vybrat."
 
 msgid "However, zie most important"
-msgstr "Pro tebe bude nejdůležitější"
+msgstr "Mimochodem, nejdulezitejsí"
 
 msgid "is the Escape button."
-msgstr "klávesa Escape."
+msgstr "je klávesa Escape."
 
 msgid "You will need it,"
-msgstr "Přijde ti vhod,"
+msgstr "Budes ji potrebovat,"
 
 msgid "when you finally realize"
-msgstr "až si konečně uvědomíš,"
+msgstr "az si konecne uvedomis,"
 
 msgid "that you SUCK."
-msgstr "že jsi salát."
+msgstr "ze TI TO NEJDE."
 
 msgid "Bigtime."
-msgstr "Jedem."
+msgstr "Velká chvíle."
 
 msgid "To me, that is already obvious."
-msgstr "Já už to mám dávno v malíku."
+msgstr "Me uz to je jasné."
 
 msgid "Ok, there comes your first note."
-msgstr "Ok, tvoje první nota."
+msgstr "Tak fajn, tam je tvoje první nota."
 
 msgid "You can already hold down the 1st fret"
-msgstr "Už můzes držet první pražec,"
+msgstr "Uz můzes drzet první pražec,"
 
 msgid "BUT DON'T PICK IT YET!"
-msgstr "JEŠTĚ BEZ TRSÁTKA!"
+msgstr "ALE JESTE HO NEBER!"
 
 msgid "You missed it."
-msgstr "Prošvihls to."
+msgstr "Vedle."
 
 msgid "Ok, let's try it again."
-msgstr "Ok, dáme si to znovu."
+msgstr "Tak fajn, zkusme to znovu."
 
 msgid "Ok, wait for it."
-msgstr "Ok, vydrž."
+msgstr "Dobre, cekej."
 
 msgid "Wait for it."
-msgstr "Ještě vydrž."
+msgstr "Cekej."
 
 msgid "No!"
-msgstr "Ne!"
+msgstr "Né!"
 
 msgid "*Sigh*"
-msgstr "..."
+msgstr "*vzdychá*"
 
 msgid "Now, hold down two frets."
-msgstr "Teď podrž dva pražce."
+msgstr "Ted drz dva prazce."
 
 msgid "Ah, you missed it!"
-msgstr "Zase jsi to prošvih'."
+msgstr "Á, vedle!'."
 
 msgid "And now, try this super easy lick."
-msgstr "Teď si zkus tenhle primitivní riff."
+msgstr "A ted, zkus tenhle super lehkej jazyk."
 
 msgid "Und up to my tempo."
-msgstr "A teď v mém tempu."
+msgstr "A ted k mému tempu."
 
 msgid "Don't try this,"
-msgstr "Radši to nezkoušej,"
+msgstr "Tohle nezkousej,"
 
 msgid "or you'll just hurt yourself."
-msgstr "nebo si něco uděláš."
+msgstr "nebo si jenom ublízís."
 
 msgid "Ok, that was about"
-msgstr "To byly približně"
+msgstr "OK, to byly asi"
 
 msgid "four billion notes per second."
-msgstr "čtyři miliardy not za vteřinu."
+msgstr "ctyri miliardy not za vterinu."
 
 msgid "If I play that any faster,"
-msgstr "Kdybych hrál jen o kus rychleji,"
+msgstr "Kdybych to hral rychleji,"
 
 msgid "your minds would just blow up."
-msgstr "vybouchla by ti hlava."
+msgstr "tvoje mysl by explodovala."
 
 msgid "Ok, that is it for now."
-msgstr "To dneska stačí."
+msgstr "Tak fajn, to je pro ted vsechno."
 
 msgid "You can now go and sell"
-msgstr "Můžeš jít a prodat"
+msgstr "Můzes jít a prodat"
 
 msgid "your keyboards on Ebay."
-msgstr "svý klávesnice na Ebay."
+msgstr "svoje klávesnice na Ebay."
 
 msgid "Because you SUCK."
-msgstr "Protože jsi salát."
+msgstr "Protoze TI TO NEJDE."
 
 msgid "And remember one thing."
-msgstr "Jo a tohle si zapiš:"
+msgstr "A neco si zapamatuj."
 
 msgid "I am your new god, little girls."
-msgstr "Jsem váš novej bůh, slečinky."
+msgstr "Jsem vás nový bůh, holcicky."
