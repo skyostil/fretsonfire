@@ -1,0 +1,149 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding:ISO-8859-1\n"
+
+msgid "Ah yes, I know. I'm amazing."
+msgstr "Ah kyllä, tiedän. Olen uskomaton."
+
+msgid "Ah, that was cool."
+msgstr "Ah, tuo oli siistiä."
+
+msgid "Und hello everyone."
+msgstr "Ja hei kaikki"
+
+msgid "My name is Jurgen"
+msgstr "Minun nimeni on Jurgen"
+
+msgid "Guntherswarchzhaffenstrassen."
+msgstr "Guntherswarchzhaffenstrassen."
+
+msgid "Und today I will show you"
+msgstr "Ja tänään näytän teille"
+
+msgid "how to play this game."
+msgstr "kuinka tätä peliä pelataan."
+
+msgid "Check this sh*t!"
+msgstr "Tsekkaas tätä!"
+
+msgid "And now, pick up your keyboard"
+msgstr "Ja nyt, nostakaa näppäimistönne"
+
+msgid "like this."
+msgstr "näin."
+
+msgid "When I shred,"
+msgstr "Kun minä soitan,"
+
+msgid "I use the whole keyboard."
+msgstr "Käytän koko näppäimistöä."
+
+msgid "But since you SUCK,"
+msgstr "Mutta koska te HAISETTE,"
+
+msgid "You will only need"
+msgstr "Tarvitsette vain"
+
+msgid "These five frets,"
+msgstr "Näitä viittä kieltä,"
+
+msgid "Und zie Pick button."
+msgstr "Ja plektra-näppäintä."
+
+msgid "However, zie most important"
+msgstr "Siitä huolimatta, tärkein"
+
+msgid "is the Escape button."
+msgstr "on Escape-näppäin."
+
+msgid "You will need it,"
+msgstr "Tulette tarvitsemaan sitä,"
+
+msgid "when you finally realize"
+msgstr "kun vihdoin käsitätte,"
+
+msgid "that you SUCK."
+msgstr "että HAISETTE."
+
+msgid "Bigtime."
+msgstr "Paljon."
+
+msgid "To me, that is already obvious."
+msgstr "Minulle se on jo itsestäänselvyys."
+
+msgid "Ok, there comes your first note."
+msgstr "Ok, sieltä tulee ensimmäinen nuotti."
+
+msgid "You can already hold down the 1st fret"
+msgstr "Voitte pitää pohjassa vain ensimmäistä kieltä"
+
+msgid "BUT DON'T PICK IT YET!"
+msgstr "MUTTA ÄLKÄÄ SOITTAKO SITÄ VIELÄ!"
+
+msgid "You missed it."
+msgstr "Ette osuneet siihen."
+
+msgid "Ok, let's try it again."
+msgstr "Ok, yritetään uudestaan."
+
+msgid "Ok, wait for it."
+msgstr "Ok, odottakaa sitä."
+
+msgid "Wait for it."
+msgstr "Odottakaa sitä."
+
+msgid "No!"
+msgstr "Ei!"
+
+msgid "*Sigh*"
+msgstr "*Huokaus*"
+
+msgid "Now, hold down two frets."
+msgstr "Nyt, painakaa kahta kieltä."
+
+msgid "Ah, you missed it!"
+msgstr "Äh, ette osuneet!"
+
+msgid "And now, try this super easy lick."
+msgstr "Ja nyt, kokeilkaa tätä tosi helppoa sarjaa."
+
+msgid "Und up to my tempo."
+msgstr "Ja nyt minun tahtiini."
+
+msgid "Don't try this,"
+msgstr "Älkää yrittäkö tätä,"
+
+msgid "or you'll just hurt yourself."
+msgstr "tai loukkaatte itsenne."
+
+msgid "Ok, that was about"
+msgstr "Ok, tuo oli noin"
+
+msgid "four billion notes per second."
+msgstr "neljä miljardia iskua sekunnissa."
+
+msgid "If I play that any faster,"
+msgstr "Jos soitan tuon yhtään nopeammin,"
+
+msgid "your minds would just blow up."
+msgstr "teidän mielenne räjähtäisivät."
+
+msgid "Ok, that is it for now."
+msgstr "Ok, siinä kaikki tällä kertaa."
+
+msgid "You can now go and sell"
+msgstr "Voitte nyt mennä ja myydä"
+
+msgid "your keyboards on Ebay."
+msgstr "näppäimistönne Ebayssä."
+
+msgid "Because you SUCK."
+msgstr "Koska HAISETTE."
+
+msgid "And remember one thing."
+msgstr "Ja muistakaa yksi asia."
+
+msgid "I am your new god, little girls."
+msgstr "Minä olen teidän uusi jumalanne, pikku tytöt."
+

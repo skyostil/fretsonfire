@@ -1,4 +1,4 @@
-﻿# Frets On Fire
+# Frets On Fire
 # Copyright (C) 2006 Unreal Voodoo
 #
 #, fuzzy
@@ -340,7 +340,8 @@ msgstr "Krok 8/8: Komprimuji stopy"
 
 #: Editor.py:680
 msgid "Reading the song list."
-msgstr "Ctu seznam skladeb.
+msgstr "Ctu seznam skladeb."
+
 #: Editor.py:687
 msgid "Reading the archive index."
 msgstr "Načítám index archivu."

@@ -1,0 +1,777 @@
+# Frets On Fire
+# Copyright (C) 2006 Unreal Voodoo
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: FretsOnFire\n"
+"POT-Creation-Date: 2006-10-27 23:23+EEST\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Sami Kyostila <skyostil@NOSPAM.kempele.fi>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding:ISO-8859-1\n"
+"Generated-By: pygettext.py 1.5\n"
+
+#: Credits.py:111
+msgid "Unreal Voodoo"
+msgstr "Unreal Voodoo"
+
+#: Credits.py:112
+msgid "presents"
+msgstr "esittää"
+
+#: Credits.py:116
+msgid "Version %s"
+msgstr "Versio %s"
+
+#: Credits.py:118
+msgid "Game Design,"
+msgstr "Pelin suunnittelu,"
+
+#: Credits.py:119
+msgid "Programming:"
+msgstr "Ohjelmointi:"
+
+#: Credits.py:122
+msgid "Music,"
+msgstr "Musiikki,"
+
+#: Credits.py:123
+msgid "Sound Effects:"
+msgstr "Ääniefektit:"
+
+#: Credits.py:126
+msgid "Graphics:"
+msgstr "Grafiikka:"
+
+#: Credits.py:129
+msgid "Introducing:"
+msgstr "Esitellen:"
+
+#: Credits.py:131
+msgid "as Jurgen, Your New God"
+msgstr "Jurgenina, teidän uutena jumalananne"
+
+#: Credits.py:134
+msgid "as Groupie"
+msgstr "Bändärinä"
+
+#: Credits.py:136
+msgid "Song Credits:"
+msgstr "Kappaleiden tekijät:"
+
+#: Credits.py:137
+msgid "Bang Bang, Mystery Man"
+msgstr "Bang Bang, Mystery Man"
+
+#: Credits.py:138
+msgid "music by Mary Jo and Tommi Inkila"
+msgstr "musiikki: Mary Jo ja Tommi Inkila"
+
+#: Credits.py:139
+msgid "lyrics by Mary Jo"
+msgstr "sanoitukset: Mary Jo"
+
+#: Credits.py:141
+msgid "Defy The Machine"
+msgstr "Defy The Machine"
+
+#: Credits.py:142
+msgid "music by Tommi Inkila"
+msgstr "musikki: Tommi Inkila"
+
+#: Credits.py:144
+msgid "This Week I've Been"
+msgstr "This Week I've Been"
+
+#: Credits.py:145
+msgid "Mostly Playing Guitar"
+msgstr "Mostly Playing Guitar"
+
+#: Credits.py:146
+msgid "composed and performed by Tommi Inkila"
+msgstr "säveltänyt ja esittänyt: Tommi Inkila"
+
+#: Credits.py:148
+msgid "Testing:"
+msgstr "Testaus:"
+
+#: Credits.py:155
+msgid "Mac OS X port:"
+msgstr "Mac OS X käännös:"
+
+#: Credits.py:158
+msgid "Special thanks to:"
+msgstr "Erikoiskiitokset:"
+
+#: Credits.py:161
+msgid "Made with:"
+msgstr "Tehty käyttäen:"
+
+#: Credits.py:184
+msgid "Source Code available under the GNU General Public License"
+msgstr "Lähdekoodi saatavilla GNU General Public Lisenssin alaisena"
+
+#: Credits.py:190
+msgid "Copyright 2006, 2007 by Unreal Voodoo"
+msgstr "Tekijänoikeudet 2006, 2007 Unreal Voodoo"
+
+#: Data.py:60
+msgid "__lefttoright__"
+msgstr "__lefttoright__"
+
+#: Dialogs.py:271
+msgid "<OK>"
+msgstr "<OK>"
+
+#: Dialogs.py:357
+msgid "Browsing Collection..."
+msgstr "Selataan kokoelmaa..."
+
+#: Dialogs.py:683
+msgid "Filter: %s"
+msgstr "Suodatin: %s"
+
+#: Dialogs.py:685
+msgid "Not found"
+msgstr "Ei löydy"
+
+#: Dialogs.py:688
+msgid "Loading Preview..."
+msgstr "Ladataan esikuuntelua..."
+
+#: Dialogs.py:731
+msgid "One song in this library"
+msgstr "Yksi kappale tässä kirjastossa"
+
+#: Dialogs.py:733
+msgid "%d songs in this library"
+msgstr "%d kappaletta tässä kirjastossa"
+
+#: Dialogs.py:758
+msgid "[Parent Folder]"
+msgstr "[Yläkansio]"
+
+#: Dialogs.py:760
+msgid "%s [Folder]"
+msgstr "%s [Kansio]"
+
+#: Dialogs.py:966
+msgid "%.2f beats per minute"
+msgstr "%.2f iskua minuutissa"
+
+#: Dialogs.py:1030
+msgid "Pick!"
+msgstr "Plektra!"
+
+#: Dialogs.py:1069
+msgid "Choose a Song"
+msgstr "Valitse kappale"
+
+#: Dialogs.py:1084
+msgid "Choose a File"
+msgstr "Valitse tiedosto"
+
+#: Dialogs.py:1110
+msgid "Play with the keys and press Escape when you're done."
+msgstr "Soita näppäimillä ja paina Escape-näppäintä kun olet valmis."
+
+#: Dialogs.py:1120
+msgid "Loading..."
+msgstr "Lataa..."
+
+#: Editor.py:66
+msgid "Save Song"
+msgstr "Tallenna kappale"
+
+#: Editor.py:67
+msgid "Set Song Name"
+msgstr "Määritä kappaleen nimi"
+
+#: Editor.py:68
+msgid "Set Artist Name"
+msgstr "Määritä artistin nimi"
+
+#: Editor.py:69
+msgid "Set Beats per Minute"
+msgstr "Määritä tempo"
+
+#: Editor.py:70
+msgid "Estimate Beats per Minute"
+msgstr "Arvioi tempo"
+
+#: Editor.py:71
+msgid "Set A/V delay"
+msgstr "Määritä A/V viive"
+
+#: Editor.py:72
+msgid "Set Cassette Color"
+msgstr "Määritä kasetin väri"
+
+#: Editor.py:73
+msgid "Set Cassette Label"
+msgstr "Määritä kasetin etiketti"
+
+#: Editor.py:74
+msgid "Editing Help"
+msgstr "Muokkausapua"
+
+#: Editor.py:75 GameResultsScene.py:60 GuitarScene.py:90
+msgid "Quit to Main Menu"
+msgstr "Poistu päävalikkoon"
+
+#: Editor.py:81
+msgid "There are no changes to save."
+msgstr "Ei mitään tallenettavaa"
+
+#: Editor.py:89
+msgid "Saving..."
+msgstr "Tallennetaan..."
+
+#: Editor.py:90
+msgid "'%s' saved."
+msgstr "'%s' tallennettu"
+
+#: Editor.py:93
+msgid "Editing keys: "
+msgstr "Muokataan näppäimiä: "
+
+#: Editor.py:94
+msgid "Arrows - Move cursor, "
+msgstr "Nuolet - Liikuta kursoria, "
+
+#: Editor.py:95
+msgid "Space - Play/pause song, "
+msgstr "Välilyönti - Toista/tauko, "
+
+#: Editor.py:96
+msgid "Enter - Make note (hold and move for long notes), "
+msgstr "Enter - Tee nuotti (pidä pohjassa ja liikuta tehdäksesi pitkiä nuotteja), "
+
+#: Editor.py:97
+msgid "Delete - Delete note, "
+msgstr "Delete - Poista nuotti, "
+
+#: Editor.py:98
+msgid "Page Up/Down - Change difficulty"
+msgstr "Page Up/Down - Vaihda vaikeusastetta"
+
+#: Editor.py:102
+msgid "Enter Song Name"
+msgstr "Kirjoita kappaleen nimi"
+
+#: Editor.py:108
+msgid "Enter Artist Name"
+msgstr "Kirjoita artistin nimi"
+
+#: Editor.py:114
+msgid "Enter A/V delay in milliseconds"
+msgstr "Kirjoita A/V viive millisekunneissa"
+
+#: Editor.py:120 Editor.py:129
+msgid "That isn't a number."
+msgstr "Tuo ei ole numero."
+
+#: Editor.py:123
+msgid "Enter Beats per Minute Value"
+msgstr "Kirjoita tempo"
+
+#: Editor.py:132
+msgid "Tap the Space bar to the beat of the song. Press Enter when done or Escape to cancel."
+msgstr "Napauta Välilyöntiä kappaleen tahtiin. Paina Enteriäkun olet valmis tai Escapea peruttaaksesi."
+
+#: Editor.py:142
+msgid "Enter cassette color in HTML (#RRGGBB) format."
+msgstr "Kirjoita kasetin väri HTML (#RRGGBB) muodossa."
+
+#: Editor.py:148
+msgid "That isn't a color."
+msgstr "Tuo ei ole väri."
+
+#: Editor.py:151
+msgid "Choose a 256x128 PNG format label image."
+msgstr "Valitse kokoa 256x128 oleva PNG kuva etiketiksi."
+
+#: Editor.py:168
+msgid "Loading song..."
+msgstr "Lataa kappaletta..."
+
+#: Editor.py:334
+msgid "Playing"
+msgstr "Soittaa"
+
+#: Editor.py:336
+msgid "Stopped"
+msgstr "Pysäytetty"
+
+#: Editor.py:377
+msgid "Enter a name for the song."
+msgstr "Kirjoita kappaleen nimi."
+
+#: Editor.py:385
+msgid "That song already exists."
+msgstr "Tuo kappale on jo olemassa."
+
+#: Editor.py:389
+msgid "Choose the Instrument Track (OGG format)."
+msgstr "Valitse instrumentti raita (OGG muotoa)."
+
+#: Editor.py:395
+msgid "Choose the Background Track (OGG format) or press Escape to skip."
+msgstr "Valitse tausta raita (OGG muotoa) tai paina Escapea peruuttaaksesi."
+
+#: Editor.py:399
+msgid "Importing..."
+msgstr "Tuodaan..."
+
+#: Editor.py:591
+msgid "Stage 1/8: Splitting VGS file"
+msgstr "Vaihe 1/8: Puolitetaan VGS tiedosto"
+
+#: Editor.py:626
+msgid "Stage 6/8: Joining song stereo tracks"
+msgstr "Vaihe 6/8: Yhdistetään kappaleen stereo raitoja"
+
+#: Editor.py:630
+msgid "Stage 7/8: Joining guitar stereo tracks"
+msgstr "Vaihe 7/8: Yhdistetään kitara stereo raitoja"
+
+#: Editor.py:645
+msgid "Stage 8/8: Compressing tracks"
+msgstr "Vaihe 8/8: Tiivistetään raitoja"
+
+#: Editor.py:680
+msgid "Reading the song list."
+msgstr "Luetaan kappale listaa."
+
+#: Editor.py:687
+msgid "Reading the archive index."
+msgstr "Luetaan arkiston taulukkoa."
+
+#: Editor.py:711
+msgid "Extracting %s by %s. %d of %d songs imported. Yeah, this is going to take forever."
+msgstr "Puretaan %s %s. %d / %d tuotu. Joo, tässä menee ikuisuus."
+
+#: Editor.py:756
+msgid "Ready"
+msgstr "Valmis"
+
+#: Editor.py:771
+msgid "All done! %d songs imported. Have fun!"
+msgstr "Kaikki valmista! %d kappaletta tuotu. Pidä hauskaa!"
+
+#: Editor.py:773
+msgid "No songs could be imported, sorry. Check the log files for more information."
+msgstr "Kappaleita ei voitu tuoda. Katso lokitiedostoa saadaksesi lisätietoa."
+
+#: Editor.py:782
+msgid "Ogg Vorbis encoder (oggenc.exe) not found. Please install it to the game directory and try again."
+msgstr "Ogg Vorbis enkooderia (oggenc.exe) ei löydy. Ole hyvä ja asenna se pelin kansioon ja yritä uudelleen."
+
+#: Editor.py:784
+msgid "Ogg Vorbis encoder (oggenc) not found. Please install it and try again."
+msgstr "Ogg Vorbis enkooderia (oggenc) ei löytynyt. Ole hyvä ja asenna se ja yritä uudelleen."
+
+#: Editor.py:788
+msgid "Make sure you have at least 500 megabytes of free disk space before using this importer."
+msgstr "Varmista että sinulla on vähintään 500 Mt tyhjää tilaa ennen kuin käytät tätä."
+
+#: Editor.py:792
+msgid "Enter the path to the mounted Guitar Hero (tm) DVD"
+msgstr "Kirjoita polku mountattuun Guitar Hero (tm) DVD:hen"
+
+#: Editor.py:801
+msgid "That's not it. Try again."
+msgstr "Se ei ole tuo. Yritä uudelleen."
+
+#: Editor.py:819
+msgid "Importing Songs"
+msgstr "Tuodaan kappaleita"
+
+#: GameEngine.py:51
+msgid "Upload Highscores"
+msgstr "Lataa ennätys pisteet"
+
+#: GameEngine.py:51 GameEngine.py:53 GameEngine.py:54 GameEngine.py:55
+msgid "No"
+msgstr "Ei"
+
+#: GameEngine.py:51 GameEngine.py:53 GameEngine.py:54 GameEngine.py:55
+msgid "Yes"
+msgstr "Kyllä"
+
+#: GameEngine.py:53
+msgid "Lefty mode"
+msgstr "Vasuri moodi"
+
+#: GameEngine.py:54
+msgid "Tappable notes"
+msgstr "Näpäytettävät (Tappable) nuotit"
+
+#: GameEngine.py:55
+msgid "Fullscreen Mode"
+msgstr "Kokoruutu"
+
+#: GameEngine.py:56
+msgid "2x"
+msgstr "2x"
+
+#: GameEngine.py:56
+msgid "4x"
+msgstr "4x"
+
+#: GameEngine.py:56
+msgid "6x"
+msgstr "6x"
+
+#: GameEngine.py:56
+msgid "8x"
+msgstr "8x"
+
+#: GameEngine.py:56
+msgid "Antialiasing Quality"
+msgstr "Antialiasing laatu"
+
+#: GameEngine.py:56
+msgid "None"
+msgstr "Ei yhtään"
+
+#: GameEngine.py:58
+msgid "Frames per Second"
+msgstr "Ruutua sekunnissa"
+
+#: GameEngine.py:59
+msgid "High"
+msgstr "Korkea"
+
+#: GameEngine.py:59
+msgid "Low"
+msgstr "Matala"
+
+#: GameEngine.py:59
+msgid "Normal"
+msgstr "Normaali"
+
+#: GameEngine.py:59
+msgid "SVG Quality"
+msgstr "SVG Laatu"
+
+#: GameEngine.py:60
+msgid "Sample Frequency"
+msgstr "Näytteen taajuus"
+
+#: GameEngine.py:61
+msgid "Sample Bits"
+msgstr "Näytteen bitit"
+
+#: GameEngine.py:63
+msgid "Buffer Size"
+msgstr "Puskurin koko"
+
+#: GameEngine.py:64
+msgid "A/V delay"
+msgstr "A/V delay"
+
+#: GameEngine.py:65
+msgid "Loud"
+msgstr "Luja"
+
+#: GameEngine.py:65
+msgid "Painful"
+msgstr "Kivulias"
+
+#: GameEngine.py:65
+msgid "Quiet"
+msgstr "Hiljainen"
+
+#: GameEngine.py:65
+msgid "Screw Up Sounds"
+msgstr "Mokaus äänet"
+
+#: GameEngine.py:65 Mod.py:33
+msgid "Off"
+msgstr "Pois päältä"
+
+#: GameEngine.py:66
+msgid "Guitar Volume"
+msgstr "Kitaran äänenvoimakkuus"
+
+#: GameEngine.py:67
+msgid "Song Volume"
+msgstr "Kappaleen äänenvoimakkuus"
+
+#: GameEngine.py:68
+msgid "Rhythm Volume"
+msgstr "Rytmin äänenvoimakkuus"
+
+#: GameEngine.py:69
+msgid "Text scale"
+msgstr "Tekstin skaalaus"
+
+#: GameEngine.py:135
+msgid "Frets on Fire"
+msgstr "Frets on Fire"
+
+#: GameResultsScene.py:58
+msgid "Replay"
+msgstr "Soita uudelleen"
+
+#: GameResultsScene.py:59 GuitarScene.py:88
+msgid "Change Song"
+msgstr "Vaihda kappaletta"
+
+#: GameResultsScene.py:66
+msgid "Chilling..."
+msgstr "Chillataan..."
+
+#: GameResultsScene.py:76
+msgid "No highscores for cheaters!"
+msgstr "Ei ennätyspisteitä huijareille!"
+
+#: GameResultsScene.py:78
+msgid "%d points is a new high score! Please enter your name:"
+msgstr "%d on uusi ennätys! Ole hyvä ja kirjoita nimesi:"
+
+#: GameResultsScene.py:177
+msgid "Highest Scores (%s)"
+msgstr "Parhaat pisteet (%s)"
+
+#: GameResultsScene.py:198
+msgid "Uploading Scores..."
+msgstr "Lataa Pisteitä..."
+
+#: GameResultsScene.py:202
+msgid "Song Finished!"
+msgstr "Kappale soitettu!"
+
+#: GameResultsScene.py:220
+msgid "Accuracy: %d%%"
+msgstr "Tarkkuus: %d%%"
+
+#: GameResultsScene.py:223
+msgid "Longest note streak: %d"
+msgstr "Pisin nuotti putki: %d"
+
+#: GameTask.py:72
+msgid "Connection lost."
+msgstr "Yhteys katkesi."
+
+#: GuitarScene.py:81
+msgid "Tuning Guitar..."
+msgstr "Viritetään kitaraa..."
+
+#: GuitarScene.py:87
+msgid "Restart Song"
+msgstr "Aloita kappale alusta"
+
+#: GuitarScene.py:89
+msgid "Settings"
+msgstr "Asetukset"
+
+#: GuitarScene.py:274
+msgid "Jurgen will show you how it is done."
+msgstr "Jurgen näyttää sinulle miten se tehdään."
+
+#: GuitarScene.py:276
+msgid "Jurgen has left the building."
+msgstr "Jurgen has left the building."
+
+#: GuitarScene.py:364
+msgid "Get Ready to Rock"
+msgstr "Valmistaudu rokkaamaan"
+
+#: GuitarScene.py:389
+msgid "%d hit"
+msgstr "%d osumaa"
+
+#: GuitarScene.py:406
+msgid "Missed!"
+msgstr "Ohi!"
+
+#: Language.py:56
+msgid "Language"
+msgstr "Kieli"
+
+#: Lobby.py:52
+msgid "Player"
+msgstr "Pelaaja"
+
+#: Lobby.py:59
+msgid "Enter your name:"
+msgstr "Kirjoita nimesi:"
+
+#: Lobby.py:59
+msgid "Player #%d"
+msgstr "Pelaaja #%d"
+
+#: Lobby.py:109
+msgid "Lobby (%d players)"
+msgstr "Aula (%d pelaajaa)"
+
+#: Lobby.py:138
+msgid "Press Enter to Start Game"
+msgstr "Paina Enteriä aloittaaksesi"
+
+#: MainMenu.py:54
+msgid "Host Multiplayer Game"
+msgstr "Isännöi moninpeliä"
+
+#: MainMenu.py:55
+msgid "Join Multiplayer Game"
+msgstr "Liity moninpeliin"
+
+#: MainMenu.py:59
+msgid "Edit Existing Song"
+msgstr "Muokkaa olemassa olevaa kappaletta"
+
+#: MainMenu.py:60
+msgid "Import New Song"
+msgstr "Tuo uusi kappale"
+
+#: MainMenu.py:61
+msgid "Import Guitar Hero(tm) Songs"
+msgstr "Tuo Guitar Hero(tm) kappaleita"
+
+#: MainMenu.py:67
+msgid "Play Game"
+msgstr "Pelaa"
+
+#: MainMenu.py:68
+msgid "Tutorial"
+msgstr "Tutoriaali"
+
+#: MainMenu.py:69
+msgid "Song Editor"
+msgstr "Kappale editori"
+
+#: MainMenu.py:70
+msgid "Settings >"
+msgstr "Asetukset >"
+
+#: MainMenu.py:71
+msgid "Credits"
+msgstr "Tekijät"
+
+#: MainMenu.py:72
+msgid "Quit"
+msgstr "Poistu"
+
+#: MainMenu.py:148
+msgid "Enter the server address:"
+msgstr "Kirjoita palvelimen osoite:"
+
+#: MainMenu.py:155
+msgid "Connecting..."
+msgstr "Yhdistää..."
+
+#: Mod.py:33
+msgid "On"
+msgstr "Päällä"
+
+#: Player.py:44
+msgid "Move left"
+msgstr "Liiku vasemmalle"
+
+#: Player.py:45
+msgid "Move right"
+msgstr "Liiku oikealle"
+
+#: Player.py:46
+msgid "Move up"
+msgstr "Liiku ylöspäin"
+
+#: Player.py:47
+msgid "Move down"
+msgstr "Liiku alaspäin"
+
+#: Player.py:48
+msgid "Pick"
+msgstr "Plektra"
+
+#: Player.py:49
+msgid "Secondary Pick"
+msgstr "Vaihtoehtoinen Plektra"
+
+#: Player.py:50
+msgid "Fret #1"
+msgstr "Kieli #1"
+
+#: Player.py:51
+msgid "Fret #2"
+msgstr "Kieli #2"
+
+#: Player.py:52
+msgid "Fret #3"
+msgstr "Kieli #3"
+
+#: Player.py:53
+msgid "Fret #4"
+msgstr "Kieli #4"
+
+#: Player.py:54
+msgid "Fret #5"
+msgstr "Kieli #5"
+
+#: Player.py:55
+msgid "Cancel"
+msgstr "Peruuta"
+
+#: Settings.py:118
+msgid "Press a key for '%s' or Escape to cancel."
+msgstr "Valitse näppäin '%s' tai paina Escapea peruttaaksesi."
+
+#: Settings.py:130
+msgid "Apply New Settings"
+msgstr "Ota uudet asetukset käyttöön"
+
+#: Settings.py:137
+msgid "Mod settings"
+msgstr "Modi asetukset"
+
+#: Settings.py:146
+msgid "Test Keys"
+msgstr "Testaa näppäimiä"
+
+#: Settings.py:164
+msgid "Video Resolution"
+msgstr "Resoluutio"
+
+#: Settings.py:185
+msgid "Volume Settings"
+msgstr "Äänenvoimakkuuden asetukset"
+
+#: Settings.py:194
+msgid "Game Settings"
+msgstr "Pelin asetukset"
+
+#: Settings.py:195
+msgid "Key Settings"
+msgstr "Näppäinten asetukset"
+
+#: Settings.py:196
+msgid "Video Settings"
+msgstr "Kuvan asetukset"
+
+#: Settings.py:197
+msgid "Audio Settings"
+msgstr "Äänen asetukset"
+
+#: Song.py:58
+msgid "Supaeasy"
+msgstr "Tosi helppo"
+
+#: Song.py:59
+msgid "Easy"
+msgstr "Helppo"
+
+#: Song.py:60
+msgid "Medium"
+msgstr "Keskivaikea"
+
+#: Song.py:61
+msgid "Amazing"
+msgstr "Uskomaton"
+
+#: SongChoosingScene.py:68
+msgid "Choose a difficulty:"
+msgstr "Valitse vaikeusaste:"

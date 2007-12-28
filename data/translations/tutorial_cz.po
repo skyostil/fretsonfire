@@ -1,4 +1,4 @@
-﻿# Frets On Fire
+# Frets On Fire
 # Copyright (C) 2006 Unreal Voodoo
 #
 #, fuzzy
