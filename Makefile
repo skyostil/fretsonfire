@@ -28,8 +28,7 @@ GameResultsScene --exclude-modules matplotlib,Tkinter src/FretsOnFire.py
 	cp -Lr $(PYTHON_LIBS)/site-packages/OpenGL-3.0.0a4-py2.4.egg/EGG-INFO/* dist/OpenGL-3.0.0a4-py2.4.egg-info
 
 	@echo --- Adding missing stuff
-	cp /c/winnt/system32/msvcp71.dll \
-	   data/win32/lib/*.dll \
+	cp data/win32/lib/*.dll \
 	   data/icon.ico \
   	 dist
 

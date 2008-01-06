@@ -2,7 +2,7 @@
 ;Written by Joonas Kerttula
 
 !ifndef VERSION
-  !define VERSION '1.2.451-win32'
+  !define VERSION '1.2.512-win32'
 !endif
 
 ;--------------------------------
@@ -138,7 +138,7 @@ Section "Desktop Shortcut" SecShortcuts
   CreateShortCut "$SMPROGRAMS\Frets on Fire\Frets on Fire.lnk" "$INSTDIR\FretsOnFire.exe" "" "$INSTDIR\icon.ico" 0
   CreateShortCut "$SMPROGRAMS\Frets on Fire\Readme.lnk" "$INSTDIR\readme.txt"
   CreateShortCut "$SMPROGRAMS\Frets on Fire\Uninstall Frets on Fire.lnk" "$INSTDIR\Uninstall.exe"
-  WriteINIStr "$SMPROGRAMS\Frets on Fire\Frets on Fire Webpage.url" "InternetShortcut" "URL" "http://louhi.kempele.fi/~skyostil/uv/fretsonfire/"
+  WriteINIStr "$SMPROGRAMS\Frets on Fire\Frets on Fire Webpage.url" "InternetShortcut" "URL" "http://fretsonfire.sourceforge.net"
 
 !endif
 
