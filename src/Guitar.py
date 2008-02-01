@@ -464,7 +464,7 @@ class Guitar:
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA)
     glEnable(GL_COLOR_MATERIAL)
     if self.leftyMode:
-      glScale(-1, 1, 1)
+      glScalef(-1, 1, 1)
 
     self.renderNeck(visibility, song, pos)
     self.renderTracks(visibility)
@@ -472,7 +472,7 @@ class Guitar:
     self.renderNotes(visibility, song, pos)
     self.renderFrets(visibility, song, controls)
     if self.leftyMode:
-      glScale(-1, 1, 1)
+      glScalef(-1, 1, 1)
 
   def getMissedNotes(self, song, pos):
     if not song:
