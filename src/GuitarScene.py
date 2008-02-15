@@ -84,6 +84,7 @@ class GuitarSceneClient(GuitarScene, SceneClient):
     settingsMenu.fadeScreen = True
 
     self.menu = Menu(self.engine, [
+      (_("Return to Song"),    lambda: None),
       (_("Restart Song"),      self.restartSong),
       (_("Change Song"),       self.changeSong),
       (_("Settings"),          settingsMenu),
