@@ -1,0 +1,148 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding:ISO-8859-1\n"
+
+msgid "Ah yes, I know. I'm amazing."
+msgstr "Oh Ja, Ik weet het. Ik ben geweldig."
+
+msgid "Ah, that was cool."
+msgstr "Oh, dat was cool."
+
+msgid "Und hello everyone."
+msgstr "Und hallo iedereen."
+
+msgid "My name is Jurgen"
+msgstr "Mijn naam is Jurgen"
+
+msgid "Guntherswarchzhaffenstrassen."
+msgstr "Guntherswarchzhaffenstrassen."
+
+msgid "Und today I will show you"
+msgstr "Und vandaag zal ik jullie laten zien"
+
+msgid "how to play this game."
+msgstr "hoe je dit spel speelt."
+
+msgid "Check this sh*t!"
+msgstr "Check this sh*t!"
+
+msgid "And now, pick up your keyboard"
+msgstr "En nu, pak je toetsenbord op"
+
+msgid "like this."
+msgstr "deze manier."
+
+msgid "When I shred,"
+msgstr "Wanneer ik speel,"
+
+msgid "I use the whole keyboard."
+msgstr "gebruik ik het hele toetsenbord."
+
+msgid "But since you SUCK,"
+msgstr "Maar omdat jij ZUIGT,"
+
+msgid "You will only need"
+msgstr "heb je alleen"
+
+msgid "These five frets,"
+msgstr "deze 5 frets"
+
+msgid "Und zie Pick button."
+msgstr "und die Aanslaan toets nodig."
+
+msgid "However, zie most important"
+msgstr "Maar, het meest belangrijk"
+
+msgid "is the Escape button."
+msgstr "is de Escape toets."
+
+msgid "You will need it,"
+msgstr "Je hebt hem nodig,"
+
+msgid "when you finally realize"
+msgstr "wanneer je er uiteindelijk achterkomt"
+
+msgid "that you SUCK."
+msgstr "dat je Zuigt."
+
+msgid "Bigtime."
+msgstr "Bigtime."
+
+msgid "To me, that is already obvious."
+msgstr "Voor mij, is dat allemaal al duidelijk."
+
+msgid "Ok, there comes your first note."
+msgstr "Oké, hier komt je eerste noot."
+
+msgid "You can already hold down the 1st fret"
+msgstr "Je kan al vast de eerst fret indrukken"
+
+msgid "BUT DON'T PICK IT YET!"
+msgstr "MAAR NOG NIET AANSLAAN!"
+
+msgid "You missed it."
+msgstr "Je hebt hem gemist."
+
+msgid "Ok, let's try it again."
+msgstr "Oké, probeer het opnieuw."
+
+msgid "Ok, wait for it."
+msgstr "Oké, wachten."
+
+msgid "Wait for it."
+msgstr "Wachten."
+
+msgid "No!"
+msgstr "Nee!"
+
+msgid "*Sigh*"
+msgstr "*Zucht*"
+
+msgid "Now, hold down two frets."
+msgstr "Nu, hou twee frets ingedrukt."
+
+msgid "Ah, you missed it!"
+msgstr "Oh, je hebt hem gemist."
+
+msgid "And now, try this super easy lick."
+msgstr "En nu, probeer deze super makkelijke deuntje."
+
+msgid "Und up to my tempo."
+msgstr "Und omhoog naar mijn tempo."
+
+msgid "Don't try this,"
+msgstr "Probeer dit niet,"
+
+msgid "or you'll just hurt yourself."
+msgstr "of je verwondt jezelf."
+
+msgid "Ok, that was about"
+msgstr "Oké, dat was ongeveer"
+
+msgid "four billion notes per second."
+msgstr "vier miljard noten per seconde."
+
+msgid "If I play that any faster,"
+msgstr "Als ik nog sneller speel,"
+
+msgid "your minds would just blow up."
+msgstr "dan zouden je hersenen gewoon ontploffen."
+
+msgid "Ok, that is it for now."
+msgstr "Oké, dat was het voor nu."
+
+msgid "You can now go and sell"
+msgstr "Je kan nu gaan en verkoop"
+
+msgid "your keyboards on Ebay."
+msgstr "je toetsenbord op Ebay."
+
+msgid "Because you SUCK."
+msgstr "Omdat je ZUIGT."
+
+msgid "And remember one thing."
+msgstr "En onthoudt één ding:"
+
+msgid "I am your new god, little girls."
+msgstr "Ik ben jullie nieuwe god, kleine meisjes."
