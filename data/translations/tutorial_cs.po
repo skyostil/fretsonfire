@@ -1,0 +1,155 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2006-10-30 14:24+0100\n"
+"Last-Translator: Ondrej Novy <onovy@nomi.cz>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Ah yes, I know. I'm amazing."
+msgstr "Jasný, ja vím. Sem úžasnej."
+
+msgid "Ah, that was cool."
+msgstr "Jo, sem krutej."
+
+msgid "Und hello everyone."
+msgstr "Takže, nazdárek všichni."
+
+msgid "My name is Jurgen"
+msgstr "Jmenuju se Jurgen"
+
+msgid "Guntherswarchzhaffenstrassen."
+msgstr "Guntherswarchzhaffenstrassen."
+
+msgid "Und today I will show you"
+msgstr "A dneska ti ukážu"
+
+msgid "how to play this game."
+msgstr "jak se hraje tato hra."
+
+msgid "Check this sh*t!"
+msgstr "Sleduj tohle!"
+
+msgid "And now, pick up your keyboard"
+msgstr "Vem do ruky klávesku"
+
+msgid "like this."
+msgstr "ňák takto."
+
+msgid "When I shred,"
+msgstr "Když já hraju,"
+
+msgid "I use the whole keyboard."
+msgstr "Používám celou klávesku."
+
+msgid "But since you SUCK,"
+msgstr "Ale protože ty seš smažka,"
+
+msgid "You will only need"
+msgstr "Bude ti stačit"
+
+msgid "These five frets,"
+msgstr "Jenom pět pražců,"
+
+msgid "Und zie Pick button."
+msgstr "A trsátko"
+
+msgid "However, zie most important"
+msgstr "A taky samozřějmě nejdůležitější"
+
+msgid "is the Escape button."
+msgstr "čudl je Escape."
+
+msgid "You will need it,"
+msgstr "Budeš ho potřebovat,"
+
+msgid "when you finally realize"
+msgstr "až si uvědomíš"
+
+msgid "that you SUCK."
+msgstr "že seš opravdu smažka."
+
+msgid "Bigtime."
+msgstr "Konečně."
+
+msgid "To me, that is already obvious."
+msgstr "Mně už je to naprosto jasný."
+
+msgid "Ok, there comes your first note."
+msgstr "Ok, tady je tvoje první nota."
+
+msgid "You can already hold down the 1st fret"
+msgstr "Klidně už můžeš držet první pražec"
+
+msgid "BUT DON'T PICK IT YET!"
+msgstr "ALE NETRSNI JEŠTĚ"
+
+msgid "You missed it."
+msgstr "Prošvihls to."
+
+msgid "Ok, let's try it again."
+msgstr "Fajn, zkusíme to znova."
+
+msgid "Ok, wait for it."
+msgstr "Supr, čekej."
+
+msgid "Wait for it."
+msgstr "Čekej."
+
+msgid "No!"
+msgstr "Ne!"
+
+msgid "*Sigh*"
+msgstr "*Achjo*"
+
+msgid "Now, hold down two frets."
+msgstr "Teďka zmáčkní dva pražce."
+
+msgid "Ah, you missed it!"
+msgstr "Hej, prošvihls to!"
+
+msgid "And now, try this super easy lick."
+msgstr "No a teďka zkus tuto super snadnou špetku."
+
+msgid "Und up to my tempo."
+msgstr "A mojím tempem."
+
+msgid "Don't try this,"
+msgstr "Nezkoušej to,"
+
+msgid "or you'll just hurt yourself."
+msgstr "nebo si ublížíš."
+
+msgid "Ok, that was about"
+msgstr "Fajn, takže to byly"
+
+msgid "four billion notes per second."
+msgstr "4 miliardy not za sekundu."
+
+msgid "If I play that any faster,"
+msgstr "Pokud bych to zahrál rychleji,"
+
+msgid "your minds would just blow up."
+msgstr "vybuchla by ti hlava."
+
+msgid "Ok, that is it for now."
+msgstr "Takže to je pro teď vše."
+
+msgid "You can now go and sell"
+msgstr "Teď můžeš jít a prodat"
+
+msgid "your keyboards on Ebay."
+msgstr "svou klávesku na Ebay."
+
+msgid "Because you SUCK."
+msgstr "Páč ses smažka."
+
+msgid "And remember one thing."
+msgstr "A pamatuj"
+
+msgid "I am your new god, little girls."
+msgstr "Já jsem váš novej bůh, zlatíčka."
+
