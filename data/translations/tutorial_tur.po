@@ -1,0 +1,157 @@
+# Frets On Fire
+# Copyright (C) 2006 Unreal Voodoo
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: FretsOnFire\n"
+"POT-Creation-Date: 2006-10-27 23:23+EEST\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Sami Kyostila <skyostil@NOSPAM.kempele.fi>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: utf-8\n"
+"Generated-By: pygettext.py 1.5\n"
+
+msgid "Ah yes, I know. I'm amazing."
+msgstr "Ah evet, harika olduğumu biliyorum."
+
+msgid "Ah, that was cool."
+msgstr "Ah, o baya cooldu, be!"
+
+msgid "Und hello everyone."
+msgstr "Merhabalar."
+
+msgid "My name is Jurgen"
+msgstr "Ben adım Jurgen"
+
+msgid "Guntherswarchzhaffenstrassen."
+msgstr "Guntherswarchzhaffenstrassen."
+
+msgid "Und today I will show you"
+msgstr "Ve bügün bu oyunun nasıl"
+
+msgid "how to play this game."
+msgstr "oynanıldığını göstereceğim."
+
+msgid "Check this sh*t!"
+msgstr "Şu b*ka çatlayın!"
+
+msgid "And now, pick up your keyboard"
+msgstr "Ve şimdi klavyelerinizi kaldırın"
+
+msgid "like this."
+msgstr "şöyle gibi."
+
+msgid "When I shred,"
+msgstr "Şredlediğimde,"
+
+msgid "I use the whole keyboard."
+msgstr "bütün klavyeyi kullanıyorum."
+
+msgid "But since you SUCK,"
+msgstr "Ama B*K gibi çaldığınız için,"
+
+msgid "You will only need"
+msgstr "Sadece bu beş perde demire"
+
+msgid "These five frets,"
+msgstr "ve Pena tuşuna"
+
+msgid "Und zie Pick button."
+msgstr "ihtiyacınız olacak."
+
+msgid "However, zie most important"
+msgstr "Fakat en önemli tuş"
+
+msgid "is the Escape button."
+msgstr "Escape tuşudur."
+
+msgid "You will need it,"
+msgstr "B*K gibi çaldığınızından"
+
+msgid "when you finally realize"
+msgstr "farkında olduğun zaman"
+
+msgid "that you SUCK."
+msgstr "buna ihtiyacın olacak."
+
+msgid "Bigtime."
+msgstr "Hem de koca B*K."
+
+msgid "To me, that is already obvious."
+msgstr "Bence, o zaten bellidir."
+
+msgid "Ok, there comes your first note."
+msgstr "Tamam, ilk notan geliyor."
+
+msgid "You can already hold down the 1st fret"
+msgstr "Zaten birinci freti uzun süre bastırabilirsin"
+
+msgid "BUT DON'T PICK IT YET!"
+msgstr "AMA DAHA SEÇMEYİN!"
+
+msgid "You missed it."
+msgstr "Kaçırdın."
+
+msgid "Ok, let's try it again."
+msgstr "Tamam, tekrar deneyelim."
+
+msgid "Ok, wait for it."
+msgstr "Bekle..."
+
+msgid "Wait for it."
+msgstr "Bekle..."
+
+msgid "No!"
+msgstr "Hayır!"
+
+msgid "*Sigh*"
+msgstr "*İç çekiş*"
+
+msgid "Now, hold down two frets."
+msgstr "Tamam. Şimdi, iki freti bastırın."
+
+msgid "Ah, you missed it!"
+msgstr "Ay, kaçırdın!"
+
+msgid "And now, try this super easy lick."
+msgstr "Ve şimdi, şu süper kolay yalamayı deneyin."
+
+msgid "Und up to my tempo."
+msgstr "Hem de benim tempoma göre."
+
+msgid "Don't try this,"
+msgstr "Bunu hiç denemeyin,"
+
+msgid "or you'll just hurt yourself."
+msgstr "yoksa sadece bir yerini kıracaksınız."
+
+msgid "Ok, that was about"
+msgstr "Tamam, o neredeyse"
+
+msgid "four billion notes per second."
+msgstr "saniyede dört bilyon notadı."
+
+msgid "If I play that any faster,"
+msgstr "Onu daha hızlı çalarsam,"
+
+msgid "your minds would just blow up."
+msgstr "beyinleriniz patlar."
+
+msgid "Ok, that is it for now."
+msgstr "Tamam, şimdilik o kadar."
+
+msgid "You can now go and sell"
+msgstr "Artık Gittigidiyor'da"
+
+msgid "your keyboards on Ebay."
+msgstr "klavyelerinizi satabilirsiniz"
+
+msgid "Because you SUCK."
+msgstr "Çünkü siz B*K gibi çalıyorsunuz."
+
+msgid "And remember one thing."
+msgstr "Ve şunu aklınızda tutun."
+
+msgid "I am your new god, little girls."
+msgstr "Yeni tanrınızım, küçük kızlar."

@@ -1,0 +1,777 @@
+# Frets On Fire
+# Copyright (C) 2006 Unreal Voodoo
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: FretsOnFire\n"
+"POT-Creation-Date: 2006-10-27 23:23+EEST\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Sami Kyostila <skyostil@NOSPAM.kempele.fi>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: utf-8\n"
+"Generated-By: pygettext.py 1.5\n"
+
+#: Credits.py:111
+msgid "Unreal Voodoo"
+msgstr "Unreal Voodoo"
+
+#: Credits.py:112
+msgid "presents"
+msgstr "sunar:"
+
+#: Credits.py:116
+msgid "Version %s"
+msgstr "Sürüm %s"
+
+#: Credits.py:118
+msgid "Game Design,"
+msgstr "Oyun Tasarım"
+
+#: Credits.py:119
+msgid "Programming:"
+msgstr "Programlama"
+
+#: Credits.py:122
+msgid "Music,"
+msgstr "Müzik"
+
+#: Credits.py:123
+msgid "Sound Effects:"
+msgstr "Ses Efektleri"
+
+#: Credits.py:126
+msgid "Graphics:"
+msgstr "Grafikler"
+
+#: Credits.py:129
+msgid "Introducing:"
+msgstr "Tanıtım:"
+
+#: Credits.py:131
+msgid "as Jurgen, Your New God"
+msgstr "Yeni Tanrınız, Jurgen"
+
+#: Credits.py:134
+msgid "as Groupie"
+msgstr "Orospu Hayranı"
+
+#: Credits.py:136
+msgid "Song Credits:"
+msgstr "Şarkı Kredileri"
+
+#: Credits.py:137
+msgid "Bang Bang, Mystery Man"
+msgstr "Bang Bang, Mystery Man"
+
+#: Credits.py:138
+msgid "music by Mary Jo and Tommi Inkila"
+msgstr "müzik Mary Jo ve Tommi Inkila tarafından"
+
+#: Credits.py:139
+msgid "lyrics by Mary Jo"
+msgstr "şarkı sözleri Mary Jo tarafından"
+
+#: Credits.py:141
+msgid "Defy The Machine"
+msgstr "Defy The Machine"
+
+#: Credits.py:142
+msgid "music by Tommi Inkila"
+msgstr "müzik Tommi Inkila tarafından"
+
+#: Credits.py:144
+msgid "This Week I've Been"
+msgstr "This Week I've Been"
+
+#: Credits.py:145
+msgid "Mostly Playing Guitar"
+msgstr "Mostly Playing Guitar"
+
+#: Credits.py:146
+msgid "composed and performed by Tommi Inkila"
+msgstr "Tommi Inkila tarafından bestelendi ve çalındı"
+
+#: Credits.py:148
+msgid "Testing:"
+msgstr "Testler:"
+
+#: Credits.py:155
+msgid "Mac OS X port:"
+msgstr "Mac OS X portu:"
+
+#: Credits.py:158
+msgid "Special thanks to:"
+msgstr "Teşekkür ediyoruz:"
+
+#: Credits.py:161
+msgid "Made with:"
+msgstr "Yapım kaynağı:"
+
+#: Credits.py:184
+msgid "Source Code available under the GNU General Public License"
+msgstr "Kaynak Kodu GNU Genel Kamu Lisansı tarafından elde edilebilir"
+
+#: Credits.py:190
+msgid "Copyright 2006, 2007 by Unreal Voodoo"
+msgstr "© 2006, 2007 Unreal Voodoo, Telif Hakkı altında koruma altında olmaktadır"
+
+#: Data.py:60
+msgid "__lefttoright__"
+msgstr "__soldansağa__"
+
+#: Dialogs.py:271
+msgid "<OK>"
+msgstr "<TAMAM>"
+
+#: Dialogs.py:357
+msgid "Browsing Collection..."
+msgstr "Koleksiyona Göz Atmak..."
+
+#: Dialogs.py:683
+msgid "Filter: %s"
+msgstr "Filtre: %s"
+
+#: Dialogs.py:685
+msgid "Not found"
+msgstr "Bulunmadı"
+
+#: Dialogs.py:688
+msgid "Loading Preview..."
+msgstr "Önizleme Yükleniyor..."
+
+#: Dialogs.py:731
+msgid "One song in this library"
+msgstr "Bu kütüphanede bir tane şarkı var"
+
+#: Dialogs.py:733
+msgid "%d songs in this library"
+msgstr "Bu kütüphane %d şarkı var"
+
+#: Dialogs.py:758
+msgid "[Parent Folder]"
+msgstr "[Temel Klasörü]"
+
+#: Dialogs.py:760
+msgid "%s [Folder]"
+msgstr "%S [Klasörü]"
+
+#: Dialogs.py:966
+msgid "%.2f beats per minute"
+msgstr "Dakikada %.2f vuruş"
+
+#: Dialogs.py:1030
+msgid "Pick!"
+msgstr "Seçin!"
+
+#: Dialogs.py:1069
+msgid "Choose a Song"
+msgstr "Şarkı Seçin"
+
+#: Dialogs.py:1084
+msgid "Choose a File"
+msgstr "Dosya Seçin"
+
+#: Dialogs.py:1110
+msgid "Play with the keys and press Escape when you're done."
+msgstr "Tuşlarla oynayın ve bittikten sonra Escape tuşuna basın."
+
+#: Dialogs.py:1120
+msgid "Loading..."
+msgstr "Yükleniyor..."
+
+#: Editor.py:66
+msgid "Save Song"
+msgstr "Şarkıyı Kaydet"
+
+#: Editor.py:67
+msgid "Set Song Name"
+msgstr "Şarkı Adını Seçin"
+
+#: Editor.py:68
+msgid "Set Artist Name"
+msgstr "Şarkıcının Adını Seçin"
+
+#: Editor.py:69
+msgid "Set Beats per Minute"
+msgstr "Dakikada Vuruş Sayısını Seçin"
+
+#: Editor.py:70
+msgid "Estimate Beats per Minute"
+msgstr "Dakikada Vuruş Sayısını Tahmin Edin"
+
+#: Editor.py:71
+msgid "Set A/V delay"
+msgstr "A/V ertelemeyi Seçin"
+
+#: Editor.py:72
+msgid "Set Cassette Color"
+msgstr "Kasetin Rengini Seçin"
+
+#: Editor.py:73
+msgid "Set Cassette Label"
+msgstr "Kasetin Etiketini Seçin"
+
+#: Editor.py:74
+msgid "Editing Help"
+msgstr "Değiştirme Yardımı"
+
+#: Editor.py:75 GameResultsScene.py:60 GuitarScene.py:90
+msgid "Quit to Main Menu"
+msgstr "Ana Seçenekler Listesine Geri Dönün"
+
+#: Editor.py:81
+msgid "There are no changes to save."
+msgstr "Kaydetilecek değişiklik yoktur."
+
+#: Editor.py:89
+msgid "Saving..."
+msgstr "Kaydediliyor..."
+
+#: Editor.py:90
+msgid "'%s' saved."
+msgstr "%s' kaydedildi."
+
+#: Editor.py:93
+msgid "Editing keys: "
+msgstr "Tuşlar değiştirilmektedir: "
+
+#: Editor.py:94
+msgid "Arrows - Move cursor, "
+msgstr "Oklar - İmleçi taşıttırmak"
+
+#: Editor.py:95
+msgid "Space - Play/pause song, "
+msgstr "Boşluk tuşu - Şarkıyı çalmak/duraklamak, "
+
+#: Editor.py:96
+msgid "Enter - Make note (hold and move for long notes), "
+msgstr "Enter - Nota çalmak (uzun notlar için tutun ve hareket edin), "
+
+#: Editor.py:97
+msgid "Delete - Delete note, "
+msgstr "Del/Delete - Notu silmek, "
+
+#: Editor.py:98
+msgid "Page Up/Down - Change difficulty"
+msgstr "Page Up/Down - Zorluğu değiştirin"
+
+#: Editor.py:102
+msgid "Enter Song Name"
+msgstr "Şarkı Adını Girin"
+
+#: Editor.py:108
+msgid "Enter Artist Name"
+msgstr "Şarkıcının Adını Girin"
+
+#: Editor.py:114
+msgid "Enter A/V delay in milliseconds"
+msgstr "Millisaniye olarak A/V ertelemeyi girin"
+
+#: Editor.py:120 Editor.py:129
+msgid "That isn't a number."
+msgstr "O numara değil."
+
+#: Editor.py:123
+msgid "Enter Beats per Minute Value"
+msgstr "Dakikada Vuruş Sayısının Değerini Girin"
+
+#: Editor.py:132
+msgid "Tap the Space bar to the beat of the song. Press Enter when done or Escape to cancel."
+msgstr "Şarkının ritmine göre Boşluk tuşuna basın. Bittikten sonra Enter tuşuna basın veya iptal etmek için Escape tuşuna basın."
+
+#: Editor.py:142
+msgid "Enter cassette color in HTML (#RRGGBB) format."
+msgstr "Kasetin rengini HTML (#RRGGBB) formatı olarak girin."
+
+#: Editor.py:148
+msgid "That isn't a color."
+msgstr "O renk değil."
+
+#: Editor.py:151
+msgid "Choose a 256x128 PNG format label image."
+msgstr "256x128 PNG formatlı etiket resimi seçin."
+
+#: Editor.py:168
+msgid "Loading song..."
+msgstr "Şarkı yükleniyor..."
+
+#: Editor.py:334
+msgid "Playing"
+msgstr "Çalmaktadır"
+
+#: Editor.py:336
+msgid "Stopped"
+msgstr "Durduruldu"
+
+#: Editor.py:377
+msgid "Enter a name for the song."
+msgstr "Şarkının yeni adını girin."
+
+#: Editor.py:385
+msgid "That song already exists."
+msgstr "O şarkı zaten var olmaktadır."
+
+#: Editor.py:389
+msgid "Choose the Instrument Track (OGG format)."
+msgstr "Enstruman şarkısını (OGG formatı) seçin."
+
+#: Editor.py:395
+msgid "Choose the Background Track (OGG format) or press Escape to skip."
+msgstr "Arka plan şarkısını (OGG formatı) seçin veya bu soruyu geçmek için Escape tuşuna basın."
+
+#: Editor.py:399
+msgid "Importing..."
+msgstr "İçeriye Aktarılıyor..."
+
+#: Editor.py:591
+msgid "Stage 1/8: Splitting VGS file"
+msgstr "Staj 1/8: VGS dosyası bölündürülüyor"
+
+#: Editor.py:626
+msgid "Stage 6/8: Joining song stereo tracks"
+msgstr "Staj 6/8: Stereo şarkılar ekleniyor"
+
+#: Editor.py:630
+msgid "Stage 7/8: Joining guitar stereo tracks"
+msgstr "Staj 7/8: Gitar stereo şarkılar ekleniyor"
+
+#: Editor.py:645
+msgid "Stage 8/8: Compressing tracks"
+msgstr "Şarkılar sıkıştırılıyor"
+
+#: Editor.py:680
+msgid "Reading the song list."
+msgstr "Şarkı listesi okunuyor."
+
+#: Editor.py:687
+msgid "Reading the archive index."
+msgstr "Arşiv endeksi okunuyor."
+
+#: Editor.py:711
+msgid "Extracting %s by %s. %d of %d songs imported. Yeah, this is going to take forever."
+msgstr "%s'den %s şarkı çıkartılmaktadır. %d/%d şarkı içeriye aktarılıdı. Vallah bu sonsuza kadar sürecek."
+
+#: Editor.py:756
+msgid "Ready"
+msgstr "Hazır"
+
+#: Editor.py:771
+msgid "All done! %d songs imported. Have fun!"
+msgstr "Bitti! %d şarkı içeriye aktarıldı. İyi eğlenceler!"
+
+#: Editor.py:773
+msgid "No songs could be imported, sorry. Check the log files for more information."
+msgstr "Özür dileriz, hiç bir şarkı içeriye aktarılamadı. Ayrıntılı bilgiler için log dosyalarına bakın."
+
+#: Editor.py:782
+msgid "Ogg Vorbis encoder (oggenc.exe) not found. Please install it to the game directory and try again."
+msgstr "Ogg Vorbis kodlayıcı (oggenc.exe) bulunmadı. Lütfen oyun dizine kurun ve tekrar deneyin."
+
+#: Editor.py:784
+msgid "Ogg Vorbis encoder (oggenc) not found. Please install it and try again."
+msgstr "Ogg Vorbis kodlayıcı (oggenc) bulunmadı. Lütfen kodlayıcıyı kurun ve tekrar deneyin."
+
+#: Editor.py:788
+msgid "Make sure you have at least 500 megabytes of free disk space before using this importer."
+msgstr "İthalatçıyı kullanmaktan önce 500 megabayt boş disk alanınız olduğundan emin olun."
+
+#: Editor.py:792
+msgid "Enter the path to the mounted Guitar Hero (tm) DVD"
+msgstr "Monte edilmiş Guitar Hero (tm) DVD'nin yönünü girin"
+
+#: Editor.py:801
+msgid "That's not it. Try again."
+msgstr "O değil. Tekrar deneyin."
+
+#: Editor.py:819
+msgid "Importing Songs"
+msgstr "Şarkılar İçeriye Aktarılıyor"
+
+#: GameEngine.py:51
+msgid "Upload Highscores"
+msgstr "Yüksek Skorları Yüklemek"
+
+#: GameEngine.py:51 GameEngine.py:53 GameEngine.py:54 GameEngine.py:55
+msgid "No"
+msgstr "Hayır"
+
+#: GameEngine.py:51 GameEngine.py:53 GameEngine.py:54 GameEngine.py:55
+msgid "Yes"
+msgstr "Evet"
+
+#: GameEngine.py:53
+msgid "Lefty mode"
+msgstr "Solak tarzı"
+
+#: GameEngine.py:54
+msgid "Tappable notes"
+msgstr "Bastırılabilen notalar"
+
+#: GameEngine.py:55
+msgid "Fullscreen Mode"
+msgstr "Tam ekran Modu"
+
+#: GameEngine.py:56
+msgid "2x"
+msgstr "2x"
+
+#: GameEngine.py:56
+msgid "4x"
+msgstr "4x"
+
+#: GameEngine.py:56
+msgid "6x"
+msgstr "6x"
+
+#: GameEngine.py:56
+msgid "8x"
+msgstr "8x"
+
+#: GameEngine.py:56
+msgid "Antialiasing Quality"
+msgstr "Keskinliği Yumuşatma"
+
+#: GameEngine.py:56
+msgid "None"
+msgstr "Hiç"
+
+#: GameEngine.py:58
+msgid "Frames per Second"
+msgstr "Saniyede çerçeve"
+
+#: GameEngine.py:59
+msgid "High"
+msgstr "Yüksek"
+
+#: GameEngine.py:59
+msgid "Low"
+msgstr "Düşük"
+
+#: GameEngine.py:59
+msgid "Normal"
+msgstr "Normal"
+
+#: GameEngine.py:59
+msgid "SVG Quality"
+msgstr "SVG Kalitesi"
+
+#: GameEngine.py:60
+msgid "Sample Frequency"
+msgstr "Örnek Frekansı"
+
+#: GameEngine.py:61
+msgid "Sample Bits"
+msgstr "Örnek Bitleri"
+
+#: GameEngine.py:63
+msgid "Buffer Size"
+msgstr "Ara Bellek Boyutu"
+
+#: GameEngine.py:64
+msgid "A/V delay"
+msgstr "A/V ertelemesi"
+
+#: GameEngine.py:65
+msgid "Loud"
+msgstr "Yüksek sesli"
+
+#: GameEngine.py:65
+msgid "Painful"
+msgstr "Acılı sesli"
+
+#: GameEngine.py:65
+msgid "Quiet"
+msgstr "Sakin"
+
+#: GameEngine.py:65
+msgid "Screw Up Sounds"
+msgstr "Sesleri Bozun"
+
+#: GameEngine.py:65 Mod.py:33
+msgid "Off"
+msgstr "Kapalı"
+
+#: GameEngine.py:66
+msgid "Guitar Volume"
+msgstr "Gitarın Ses Düzeyi"
+
+#: GameEngine.py:67
+msgid "Song Volume"
+msgstr "Şarkının Ses Düzeyi"
+
+#: GameEngine.py:68
+msgid "Rhythm Volume"
+msgstr "Ritmin Ses Düzeyi"
+
+#: GameEngine.py:69
+msgid "Text scale"
+msgstr "Söz ölçeği"
+
+#: GameEngine.py:135
+msgid "Frets on Fire"
+msgstr "Frets on Fire"
+
+#: GameResultsScene.py:58
+msgid "Replay"
+msgstr "Tekrar çalın"
+
+#: GameResultsScene.py:59 GuitarScene.py:88
+msgid "Change Song"
+msgstr "Şarkıyı değiştirin"
+
+#: GameResultsScene.py:66
+msgid "Chilling..."
+msgstr "Rahatlanıyor..."
+
+#: GameResultsScene.py:76
+msgid "No highscores for cheaters!"
+msgstr "Üç kağıtçılar için yüksek skor yok!"
+
+#: GameResultsScene.py:78
+msgid "%d points is a new high score! Please enter your name:"
+msgstr "%d puan yeni yüksek skorudur! Lütfen adınızı girin:"
+
+#: GameResultsScene.py:177
+msgid "Highest Scores (%s)"
+msgstr "En yüksek skorlar (%s)"
+
+#: GameResultsScene.py:198
+msgid "Uploading Scores..."
+msgstr "Skorlar Yükleniyor..."
+
+#: GameResultsScene.py:202
+msgid "Song Finished!"
+msgstr "Şarkı Bitti!"
+
+#: GameResultsScene.py:220
+msgid "Accuracy: %d%%"
+msgstr "Hatasızlık: %d%%"
+
+#: GameResultsScene.py:223
+msgid "Longest note streak: %d"
+msgstr "En uzun süre nota tutulması: %d"
+
+#: GameTask.py:72
+msgid "Connection lost."
+msgstr "Bağlantı kaybedildi."
+
+#: GuitarScene.py:81
+msgid "Tuning Guitar..."
+msgstr "Gitar Akort Ediliyor..."
+
+#: GuitarScene.py:87
+msgid "Restart Song"
+msgstr "Şarkıyı Tekrar Çalın"
+
+#: GuitarScene.py:89
+msgid "Settings"
+msgstr "Ayarlar"
+
+#: GuitarScene.py:274
+msgid "Jurgen will show you how it is done."
+msgstr "Jurgen size nasıl yapıldığını gösterecek."
+
+#: GuitarScene.py:276
+msgid "Jurgen has left the building."
+msgstr "Jurgen binayı terk etti."
+
+#: GuitarScene.py:364
+msgid "Get Ready to Rock"
+msgstr "Rocklamaya Hazır Olun"
+
+#: GuitarScene.py:389
+msgid "%d hit"
+msgstr "%d vur"
+
+#: GuitarScene.py:406
+msgid "Missed!"
+msgstr "Kaçırdın!"
+
+#: Language.py:56
+msgid "Language"
+msgstr "Dil"
+
+#: Lobby.py:52
+msgid "Player"
+msgstr "Oyuncu"
+
+#: Lobby.py:59
+msgid "Enter your name:"
+msgstr "Adınızı girin:"
+
+#: Lobby.py:59
+msgid "Player #%d"
+msgstr "Oyuncu #%d"
+
+#: Lobby.py:109
+msgid "Lobby (%d players)"
+msgstr "Lobi (%d oyuncu)"
+
+#: Lobby.py:138
+msgid "Press Enter to Start Game"
+msgstr "Oyunu Başlamak için Enter tuşunu basın"
+
+#: MainMenu.py:54
+msgid "Host Multiplayer Game"
+msgstr "Çokoyunculu Oyun için Konukçu Olun"
+
+#: MainMenu.py:55
+msgid "Join Multiplayer Game"
+msgstr "Çokoyunculu Oyuna Katılın"
+
+#: MainMenu.py:59
+msgid "Edit Existing Song"
+msgstr "Var olan Şarkıyı Değiştirin"
+
+#: MainMenu.py:60
+msgid "Import New Song"
+msgstr "Yeni bir Şarkıyı İçeriye Alın"
+
+#: MainMenu.py:61
+msgid "Import Guitar Hero(tm) Songs"
+msgstr "Guitar Hero(tm) Şarkıları İçeriye Alın"
+
+#: MainMenu.py:67
+msgid "Play Game"
+msgstr "Oyunu Oynayın"
+
+#: MainMenu.py:68
+msgid "Tutorial"
+msgstr "Nasıl oynanılır?"
+
+#: MainMenu.py:69
+msgid "Song Editor"
+msgstr "Şarkı değiştirici"
+
+#: MainMenu.py:70
+msgid "Settings >"
+msgstr "Ayarlar >"
+
+#: MainMenu.py:71
+msgid "Credits"
+msgstr "Krediler"
+
+#: MainMenu.py:72
+msgid "Quit"
+msgstr "Çıkış"
+
+#: MainMenu.py:148
+msgid "Enter the server address:"
+msgstr "Sunucu adresini girin:"
+
+#: MainMenu.py:155
+msgid "Connecting..."
+msgstr "Bağlanıyor..."
+
+#: Mod.py:33
+msgid "On"
+msgstr "Açık"
+
+#: Player.py:44
+msgid "Move left"
+msgstr "Sola hareket edin"
+
+#: Player.py:45
+msgid "Move right"
+msgstr "Sağa hareket edin"
+
+#: Player.py:46
+msgid "Move up"
+msgstr "Yukarıya hareket edin"
+
+#: Player.py:47
+msgid "Move down"
+msgstr "Aşağa hareket edin"
+
+#: Player.py:48
+msgid "Pick"
+msgstr "Seçim"
+
+#: Player.py:49
+msgid "Secondary Pick"
+msgstr "İkincil Seçim"
+
+#: Player.py:50
+msgid "Fret #1"
+msgstr "1. Fret"
+
+#: Player.py:51
+msgid "Fret #2"
+msgstr "2. Fret"
+
+#: Player.py:52
+msgid "Fret #3"
+msgstr "3. Fret"
+
+#: Player.py:53
+msgid "Fret #4"
+msgstr "4. Fret"
+
+#: Player.py:54
+msgid "Fret #5"
+msgstr "5. Fret"
+
+#: Player.py:55
+msgid "Cancel"
+msgstr "İptal Et"
+
+#: Settings.py:118
+msgid "Press a key for '%s' or Escape to cancel."
+msgstr "'%s' için bir tuşa basın veya iptal etmek için Escape tuşuna basın."
+
+#: Settings.py:130
+msgid "Apply New Settings"
+msgstr "Yeni Ayarlar Uygulayın"
+
+#: Settings.py:137
+msgid "Mod settings"
+msgstr "Mod ayarları"
+
+#: Settings.py:146
+msgid "Test Keys"
+msgstr "Test Tuşları"
+
+#: Settings.py:164
+msgid "Video Resolution"
+msgstr "Görüntü Kalitesi"
+
+#: Settings.py:185
+msgid "Volume Settings"
+msgstr "Ses Yükseklik Ayarları"
+
+#: Settings.py:194
+msgid "Game Settings"
+msgstr "Oyun Ayarları"
+
+#: Settings.py:195
+msgid "Key Settings"
+msgstr "Tuş Ayarları"
+
+#: Settings.py:196
+msgid "Video Settings"
+msgstr "Görüntü Ayarları"
+
+#: Settings.py:197
+msgid "Audio Settings"
+msgstr "Ses Ayarları"
+
+#: Song.py:58
+msgid "Supaeasy"
+msgstr "Süperkolay"
+
+#: Song.py:59
+msgid "Easy"
+msgstr "Kolay"
+
+#: Song.py:60
+msgid "Medium"
+msgstr "Orta"
+
+#: Song.py:61
+msgid "Amazing"
+msgstr "Mükemmel"
+
+#: SongChoosingScene.py:68
+msgid "Choose a difficulty:"
+msgstr "Zorluk seçin"

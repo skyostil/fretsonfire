@@ -1,143 +1,155 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-2\n"
+"Content-Transfer-Encoding: 8bit\n"
+
 msgid "Ah yes, I know. I'm amazing."
-msgstr "O tak... Wiem, ze wymiatam."
+msgstr "Ach, wiem ¿e wymiatam."
 
 msgid "Ah, that was cool."
-msgstr "Ah, to bylo dobre"
+msgstr "Taa, to by³o dobre."
 
 msgid "Und hello everyone."
-msgstr "Tak wiec, witam wszystkich"
+msgstr "A, siema wszystkim."
 
 msgid "My name is Jurgen"
-msgstr "Nazywam sie Jurgen"
+msgstr "Nazywam siê Jurgen"
 
 msgid "Guntherswarchzhaffenstrassen."
 msgstr "Guntherswarchzhaffenstrassen."
 
 msgid "Und today I will show you"
-msgstr "Dzisiaj pokaze Tobie"
+msgstr "Dzisiaj poka¿ê wam"
 
 msgid "how to play this game."
-msgstr "jak grac w te gre."
+msgstr "jak pykaæ w t± gierkê."
 
 msgid "Check this sh*t!"
-msgstr "Sluchaj tego!"
+msgstr "Obczajcie to gow*o!"
 
 msgid "And now, pick up your keyboard"
-msgstr "A teraz chwyc swoja klawiature"
+msgstr "A teraz chwyæcie zwoj± klawkê"
 
 msgid "like this."
-msgstr "w ten sposob."
+msgstr "o tak!"
 
 msgid "When I shred,"
 msgstr "Kiedy ja gram,"
 
 msgid "I use the whole keyboard."
-msgstr "Uzywam calej klawiatury"
+msgstr "U¿ywam ca³ej klawiatury"
 
 msgid "But since you SUCK,"
-msgstr "Ale poki Ty SSIESZ,"
+msgstr "Jednak dopóki CHRZANICIE,"
 
 msgid "You will only need"
-msgstr "Bedziesz potrzebowac"
+msgstr "Bêdziecie potrzebowali tylko"
 
 msgid "These five frets,"
-msgstr "Tych pieciu klawiszy,"
+msgstr "Tych piêciu progów,"
 
 msgid "Und zie Pick button."
-msgstr "i przycisku Uderzenia (Enter)."
+msgstr "I przycizku szarpania."
 
 msgid "However, zie most important"
-msgstr "Natomiast najwazniejszy"
+msgstr "Jednak najwa¿niejszym przycizkiem"
 
 msgid "is the Escape button."
-msgstr "jest przycisk Escape."
+msgstr "jest klawisz izkejp."
 
 msgid "You will need it,"
-msgstr "Bedziesz go potrzebowac,"
+msgstr "Bêdziecie go potrzebowali,"
 
 msgid "when you finally realize"
-msgstr "gdy ostatecznie zdasz sobie sprawe"
+msgstr "kiedy w koñcu zrozumiecie"
 
 msgid "that you SUCK."
-msgstr "ze SSIESZ."
+msgstr "¿e CHRZANICIE."
 
 msgid "Bigtime."
-msgstr "Serio."
+msgstr "Szansa na sukces."
 
 msgid "To me, that is already obvious."
-msgstr "Dla mnie to jest oczywiste."
+msgstr "Dla mnie to pestka."
 
 msgid "Ok, there comes your first note."
-msgstr "Ok, leci Twoj pierwszy dzwiek."
+msgstr "Ok, nadje¿d¿a wasza pierwsza nutka."
 
 msgid "You can already hold down the 1st fret"
-msgstr "Mozesz przytrzymac pierwszy przycisk"
+msgstr "Mo¿ecie juz przytrzymaæ pierwszy próg"
 
 msgid "BUT DON'T PICK IT YET!"
-msgstr "ALE JESZCZE NIE UDERZAJ!"
+msgstr "ALE NIE SZARPCIE STRUNY!"
 
 msgid "You missed it."
-msgstr "Nie zdazyles."
+msgstr "No i zpud³owali¶cie."
 
 msgid "Ok, let's try it again."
-msgstr "Ok, sprobojmy ponownie."
+msgstr "Ok, zpróbujmy jeszcze raz."
 
 msgid "Ok, wait for it."
-msgstr "Ok, czekaj na niego."
+msgstr "Ok, czekajcie..."
 
 msgid "Wait for it."
-msgstr "Czekaj na niego..."
+msgstr "Czekajcie..."
 
 msgid "No!"
 msgstr "Nie!"
 
 msgid "*Sigh*"
-msgstr "*Wzdycha*"
+msgstr "*Ehh*"
 
 msgid "Now, hold down two frets."
-msgstr "Teraz, przytrzymaj dwa przyciski."
+msgstr "Dobra, teraz dwa progi."
 
 msgid "Ah, you missed it!"
-msgstr "Ah, znow nie zdazyles!"
+msgstr "Ach, znowu pud³o!"
 
 msgid "And now, try this super easy lick."
-msgstr "A teraz, sproboj tej super prostej kombinacji."
+msgstr "A teraz zpróbujcie tej ³atwizny."
 
 msgid "Und up to my tempo."
-msgstr "Teraz w moim tempie."
+msgstr "Przejd¼my na moje tempo."
 
 msgid "Don't try this,"
-msgstr "Nie proboj tego,"
+msgstr "Nie próbujcie tego w domu,"
 
 msgid "or you'll just hurt yourself."
-msgstr "bo zrobisz sobie krzywde."
+msgstr "bo mo¿ecie siê pokaleczyæ."
 
 msgid "Ok, that was about"
-msgstr "Ok, to bylo cos w stylu"
+msgstr "Ok, to by³o co¶ oko³o"
 
 msgid "four billion notes per second."
-msgstr "czterech bilionow nut na sekunde."
+msgstr "czterech bilionów nut na zekundê."
 
 msgid "If I play that any faster,"
-msgstr "Jesli zagralbym to choc troche szybciej,"
+msgstr "Je¶li zagra³bym to choæ trochê szybciej,"
 
 msgid "your minds would just blow up."
-msgstr "Twoj mozg by eksplodowal."
+msgstr "To wyzadzi³oby wasze mózgi."
 
 msgid "Ok, that is it for now."
-msgstr "Ok, to wszystko na dzis."
+msgstr "Ok, to by by³o na tyle."
 
 msgid "You can now go and sell"
-msgstr "Mozesz isc i sprzedac"
+msgstr "Teraz mo¿ecie opyliæ"
 
 msgid "your keyboards on Ebay."
-msgstr "swoja klawiature na Ebay."
+msgstr "swoje klawki na Allegro."
 
 msgid "Because you SUCK."
-msgstr "Bo SSIESZ."
+msgstr "Bo CHRZANICIE."
 
 msgid "And remember one thing."
-msgstr "I zapamietaj jedna rzecz."
+msgstr "I pamiêtajcie jedn± rzecz."
 
 msgid "I am your new god, little girls."
-msgstr "Ja jestem Twoim nowym bogiem, dziewczynko."
+msgstr "Jestem Waszym nowym bogiem, ma³e."
+
