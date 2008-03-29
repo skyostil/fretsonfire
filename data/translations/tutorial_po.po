@@ -1,3 +1,4 @@
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
@@ -6,35 +7,35 @@ msgstr ""
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=iso-8859-2\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "Ah yes, I know. I'm amazing."
-msgstr "Ach, wiem ¿e wymiatam."
+msgstr "Ach, wiem Å¼e wymiatam."
 
 msgid "Ah, that was cool."
-msgstr "Taa, to by³o dobre."
+msgstr "Taa, to byÅ‚o dobre."
 
 msgid "Und hello everyone."
 msgstr "A, siema wszystkim."
 
 msgid "My name is Jurgen"
-msgstr "Nazywam siê Jurgen"
+msgstr "Nazywam siÄ™ Jurgen"
 
 msgid "Guntherswarchzhaffenstrassen."
 msgstr "Guntherswarchzhaffenstrassen."
 
 msgid "Und today I will show you"
-msgstr "Dzisiaj poka¿ê wam"
+msgstr "Dzisiaj pokaÅ¼Ä™ wam"
 
 msgid "how to play this game."
-msgstr "jak pykaæ w t± gierkê."
+msgstr "jak pykaÄ‡ w tÄ… gierkÄ™."
 
 msgid "Check this sh*t!"
-msgstr "Obczajcie to gow*o!"
+msgstr "Obczajcie to gÃ³w*o!"
 
 msgid "And now, pick up your keyboard"
-msgstr "A teraz chwyæcie zwoj± klawkê"
+msgstr "A teraz chwyÄ‡cie swojÄ… klawkÄ™"
 
 msgid "like this."
 msgstr "o tak!"
@@ -43,34 +44,34 @@ msgid "When I shred,"
 msgstr "Kiedy ja gram,"
 
 msgid "I use the whole keyboard."
-msgstr "U¿ywam ca³ej klawiatury"
+msgstr "UÅ¼ywam caÅ‚ej klawiatury"
 
 msgid "But since you SUCK,"
-msgstr "Jednak dopóki CHRZANICIE,"
+msgstr "Jednak dopÃ³ki CHRZANICIE,"
 
 msgid "You will only need"
-msgstr "Bêdziecie potrzebowali tylko"
+msgstr "BÄ™dziecie potrzebowali tylko"
 
 msgid "These five frets,"
-msgstr "Tych piêciu progów,"
+msgstr "Tych piÄ™ciu progÃ³w,"
 
 msgid "Und zie Pick button."
-msgstr "I przycizku szarpania."
+msgstr "I przycisku szarpania."
 
 msgid "However, zie most important"
-msgstr "Jednak najwa¿niejszym przycizkiem"
+msgstr "Jednak najwaÅ¼niejszym przyciskiem"
 
 msgid "is the Escape button."
-msgstr "jest klawisz izkejp."
+msgstr "jest klawisz Escape."
 
 msgid "You will need it,"
-msgstr "Bêdziecie go potrzebowali,"
+msgstr "BÄ™dziecie go potrzebowali,"
 
 msgid "when you finally realize"
-msgstr "kiedy w koñcu zrozumiecie"
+msgstr "kiedy w koÅ„cu zrozumiecie"
 
 msgid "that you SUCK."
-msgstr "¿e CHRZANICIE."
+msgstr "Å¼e CHRZANICIE."
 
 msgid "Bigtime."
 msgstr "Szansa na sukces."
@@ -79,19 +80,19 @@ msgid "To me, that is already obvious."
 msgstr "Dla mnie to pestka."
 
 msgid "Ok, there comes your first note."
-msgstr "Ok, nadje¿d¿a wasza pierwsza nutka."
+msgstr "Ok, nadjeÅ¼dÅ¼a wasza pierwsza nutka."
 
 msgid "You can already hold down the 1st fret"
-msgstr "Mo¿ecie juz przytrzymaæ pierwszy próg"
+msgstr "MoÅ¼ecie juz przytrzymaÄ‡ pierwszy prÃ³g"
 
 msgid "BUT DON'T PICK IT YET!"
 msgstr "ALE NIE SZARPCIE STRUNY!"
 
 msgid "You missed it."
-msgstr "No i zpud³owali¶cie."
+msgstr "No i spudÅ‚owaliÅ›cie."
 
 msgid "Ok, let's try it again."
-msgstr "Ok, zpróbujmy jeszcze raz."
+msgstr "Ok, sprÃ³bujmy jeszcze raz."
 
 msgid "Ok, wait for it."
 msgstr "Ok, czekajcie..."
@@ -109,37 +110,37 @@ msgid "Now, hold down two frets."
 msgstr "Dobra, teraz dwa progi."
 
 msgid "Ah, you missed it!"
-msgstr "Ach, znowu pud³o!"
+msgstr "Ach, znowu pudÅ‚o!"
 
 msgid "And now, try this super easy lick."
-msgstr "A teraz zpróbujcie tej ³atwizny."
+msgstr "A teraz sprÃ³bujcie tej Å‚atwizny."
 
 msgid "Und up to my tempo."
-msgstr "Przejd¼my na moje tempo."
+msgstr "PrzejdÅºmy na moje tempo."
 
 msgid "Don't try this,"
-msgstr "Nie próbujcie tego w domu,"
+msgstr "Nie prÃ³bujcie tego w domu,"
 
 msgid "or you'll just hurt yourself."
-msgstr "bo mo¿ecie siê pokaleczyæ."
+msgstr "bo siÄ™ pokaleczycie."
 
 msgid "Ok, that was about"
-msgstr "Ok, to by³o co¶ oko³o"
+msgstr "Ok, to byÅ‚o coÅ› okoÅ‚o"
 
 msgid "four billion notes per second."
-msgstr "czterech bilionów nut na zekundê."
+msgstr "czterech bilionÃ³w nut na sekundÄ™."
 
 msgid "If I play that any faster,"
-msgstr "Je¶li zagra³bym to choæ trochê szybciej,"
+msgstr "JeÅ›li zagraÅ‚bym to choÄ‡ trochÄ™ szybciej,"
 
 msgid "your minds would just blow up."
-msgstr "To wyzadzi³oby wasze mózgi."
+msgstr "To wysadziÅ‚oby wam mÃ³zgi."
 
 msgid "Ok, that is it for now."
-msgstr "Ok, to by by³o na tyle."
+msgstr "Ok, to by byÅ‚o na tyle."
 
 msgid "You can now go and sell"
-msgstr "Teraz mo¿ecie opyliæ"
+msgstr "Teraz moÅ¼ecie opyliÄ‡"
 
 msgid "your keyboards on Ebay."
 msgstr "swoje klawki na Allegro."
@@ -148,8 +149,8 @@ msgid "Because you SUCK."
 msgstr "Bo CHRZANICIE."
 
 msgid "And remember one thing."
-msgstr "I pamiêtajcie jedn± rzecz."
+msgstr "I pamiÄ™tajcie jednÄ… rzecz."
 
 msgid "I am your new god, little girls."
-msgstr "Jestem Waszym nowym bogiem, ma³e."
+msgstr "Jestem Waszym nowym bogiem, maÅ‚e."
 
