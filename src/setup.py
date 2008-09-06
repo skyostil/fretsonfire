@@ -34,7 +34,7 @@ options = {
     "dist_dir":  "../dist",
     "includes":  SceneFactory.scenes,
     "excludes":  [
-      "OpenGL",
+      "OpenGL",   # OpenGL must be excluded and handled manually due to a py2exe bug
       "glew.gl.apple",
       "glew.gl.ati",
       "glew.gl.atix",
@@ -71,6 +71,8 @@ options = {
       "PaletteFile",
       "macosx",
       "matplotlib",
+      "Tkinter",
+      "curses",
     ],
     "optimize":  2,
   }

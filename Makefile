@@ -1,7 +1,6 @@
 TOP=.
-CXFREEZE=/c/cygwin/home/sami/proj/cx_Freeze-3.0.3/FreezePython
 PYTHON=python
-PYTHON_LIBS=/c/apps/actpython/lib
+PYTHON_LIBS=c:/python25/lib
 MAKENSIS=/c/Program\ Files/NSIS/makeNSIS.exe
 
 include data/Makefile
@@ -9,35 +8,17 @@ include data/Makefile
 all:	dist
 
 dist: graphics
-	@echo --- Building EXE
-	$(CXFREEZE) --target-dir dist --base-name=Win32GUI.exe --include-modules \
-encodings.string_escape,\
-encodings.iso8859_1,\
-OpenGL.arrays.numpymodule,\
-OpenGL.arrays.ctypesarrays,\
-OpenGL.arrays.ctypespointers,\
-OpenGL.arrays.strings,\
-OpenGL.arrays.numbers,\
-OpenGL.arrays.nones,\
-SongChoosingScene,\
-GuitarScene,\
-GameResultsScene --exclude-modules matplotlib,Tkinter src/FretsOnFire.py
-
-	@echo --- Copying data
-	cd src; $(PYTHON) setup.py install_data --install-dir ../dist ; cd ..
+	@echo --- Compiling
+	cd src; $(PYTHON) setup.py py2exe; cd ..
 
 	@echo --- Fixing PyOpenGL-ctypes
-	mkdir -p dist/OpenGL-3.0.0a4-py2.4.egg-info
-	cp -Lr $(PYTHON_LIBS)/site-packages/OpenGL-3.0.0a4-py2.4.egg/EGG-INFO/* dist/OpenGL-3.0.0a4-py2.4.egg-info
+	cp -Lr $(PYTHON_LIBS)/site-packages/PyOpenGL-3.0.0a5-py2.5.egg dist/data
+	cp -Lr $(PYTHON_LIBS)/site-packages/setuptools-0.6c8-py2.5.egg dist/data
 
-	@echo --- Adding missing stuff
-	cp data/win32/lib/*.dll \
-	   data/icon.ico \
-  	 dist
-
-	@echo --- Fixing text files
+	@echo --- Fixing miscellaneous things
 	@unix2dos dist/readme.txt
 	@unix2dos dist/copying.txt
+	@rm -f dist/w9xpopen.exe
 
 installer: dist
 	@echo --- Making installer

@@ -26,13 +26,19 @@ import time
 import sys
 from Task import Task
 
+# Yeah, py2exe is weird...
+if hasattr(sys, "frozen"):
+  import pygame.mixer_music
+  pygame.mixer.music = sys.modules["pygame.mixer_music"]
+
 # Pyglet-based audio is still experimental at the moment
 #import pyglet
 
-try:
-  import ogg.vorbis
-except ImportError:
-  Log.warn("PyOGG not found. OGG files will be fully decoded prior to playing; expect absurd memory usage.")
+# OGG support disabled due to incompatibility with Python 2.5
+#try:
+#  import ogg.vorbis
+#except ImportError:
+#  Log.warn("PyOGG not found. OGG files will be fully decoded prior to playing; expect absurd memory usage.")
 
 if "pyglet" in sys.modules:
   class AudioPyglet(Task):
@@ -163,6 +169,7 @@ if "pyglet" in sys.modules:
     def fadeout(self, time):
       # TODO
       self.stop()
+
 else: # pygame
   class Audio(Task):
     def __init__(self):
@@ -255,6 +262,7 @@ else: # pygame
 
   class Sound(object):
     def __init__(self, fileName):
+      print "SOUND", fileName
       self.sound   = pygame.mixer.Sound(fileName)
 
     def play(self, loops = 0):
@@ -431,5 +439,5 @@ if "ogg.vorbis" in sys.modules:
 else: # pyglet & pygame
   class StreamingSound(Sound, Task):
     def __init__(self, engine, channel, fileName):
-      Sound.__init__(self, fileName, streaming = True)
+      Sound.__init__(self, fileName)
 
