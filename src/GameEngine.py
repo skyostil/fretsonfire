@@ -185,6 +185,7 @@ class GameEngine(Engine):
     if self.config.get("game", "uploadurl").startswith("http://kempele.fi"):
       self.config.set("game", "uploadurl", "http://fretsonfire.sourceforge.net/play")
 
+    self.addTask(self.audio, synchronized = False)
     self.addTask(self.input, synchronized = False)
     self.addTask(self.view)
     self.addTask(self.resource, synchronized = False)
@@ -244,6 +245,10 @@ class GameEngine(Engine):
     else:
       self.quit()
     
+  def quit(self):
+    self.audio.close()
+    Engine.quit(self)
+
   def resizeScreen(self, width, height):
     """
     Resize the game screen.
