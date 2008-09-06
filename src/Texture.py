@@ -317,7 +317,7 @@ class Texture:
     self.setFilter()
     glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST)
 
-  def setRepeat(self, u=GL_REPEAT, v=GL_REPEAT):
+  def setRepeat(self, u=GL_CLAMP, v=GL_CLAMP):
     Texture.bind(self)
     glTexParameteri(self.glTarget, GL_TEXTURE_WRAP_S, u)
     glTexParameteri(self.glTarget, GL_TEXTURE_WRAP_T, v)

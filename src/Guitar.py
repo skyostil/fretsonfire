@@ -92,6 +92,8 @@ class Guitar:
 
     glEnable(GL_TEXTURE_2D)
     self.neckDrawing.texture.bind()
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT)
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT)
     
     glBegin(GL_TRIANGLE_STRIP)
     glColor4f(1, 1, 1, 0)
@@ -306,7 +308,6 @@ class Guitar:
       self.renderNote(length, color = color, flat = flat, tailOnly = tailOnly, isTappable = isTappable)
       glPopMatrix()
 
-
     # Draw a waveform shape over the currently playing notes
     vertices = self.vertexCache
     colors   = self.colorCache
@@ -416,7 +417,7 @@ class Guitar:
       f = self.fretActivity[n]
 
       if f:
-        glBlendFunc(GL_ONE, GL_ONE)
+        glBlendFunc(GL_SRC_ALPHA, GL_ONE)
         s = 0.0
         self.glowDrawing.texture.bind()
 

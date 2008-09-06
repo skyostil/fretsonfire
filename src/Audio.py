@@ -73,7 +73,8 @@ class Music(object):
 
   @staticmethod
   def setEndEvent(event):
-    pygame.mixer.music.set_endevent(event)
+    #pygame.mixer.music.set_endevent(event)
+    pass
 
   def play(self, loops = -1, pos = 0.0):
     pygame.mixer.music.play(loops, pos)
@@ -137,7 +138,8 @@ class Sound(object):
 if ogg:
   import struct
   # Must use Numeric instead of numpy, since PyGame 1.7.1 is not compatible with the former
-  import Numeric
+  #import Numeric
+  import numpy
 
   class OggStream(object):
     def __init__(self, inputFileName):
@@ -157,13 +159,15 @@ if ogg:
       self.bufferSize   = 1024 * 64
       self.bufferCount  = 8
       self.volume       = 1.0
-      self.buffer       = Numeric.zeros((2 * self.bufferSize, 2), typecode = "s")
+      #self.buffer       = Numeric.zeros((2 * self.bufferSize, 2), typecode = "s")
+      self.buffer       = numpy.zeros((2 * self.bufferSize, 2), dtype = numpy.int16)
       self.decodingRate = 4
       self._reset()
 
     def _reset(self):
       self.stream        = OggStream(self.fileName)
-      self.buffersIn     = [pygame.sndarray.make_sound(Numeric.zeros((self.bufferSize, 2), typecode = "s")) for i in range(self.bufferCount + 1)]
+      #self.buffersIn     = [pygame.sndarray.make_sound(Numeric.zeros((self.bufferSize, 2), typecode = "s")) for i in range(self.bufferCount + 1)]
+      self.buffersIn     = [pygame.sndarray.make_sound(numpy.zeros((self.bufferSize, 2), dtype = numpy.int16)) for i in range(self.bufferCount + 1)]
       self.buffersOut    = []
       self.buffersBusy   = []
       self.bufferPos     = 0

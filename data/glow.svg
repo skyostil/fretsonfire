@@ -2,7 +2,7 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
@@ -13,11 +13,19 @@
    height="1052.3622047"
    id="svg2862"
    sodipodi:version="0.32"
-   inkscape:version="0.44"
+   inkscape:version="0.46"
    sodipodi:docbase="/home/skyostil/proj/keyboardhero/data"
-   sodipodi:docname="glow.svg">
+   sodipodi:docname="glow.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
   <defs
      id="defs2864">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective26" />
     <linearGradient
        id="linearGradient2806">
       <stop
@@ -119,14 +127,15 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="147.80872"
-     inkscape:cy="960.05643"
+     inkscape:cx="147.83591"
+     inkscape:cy="960.19327"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      inkscape:window-width="1280"
      inkscape:window-height="978"
-     inkscape:window-x="1152"
-     inkscape:window-y="25" />
+     inkscape:window-x="640"
+     inkscape:window-y="25"
+     showgrid="false" />
   <metadata
      id="metadata2867">
     <rdf:RDF>
@@ -142,13 +151,6 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <rect
-       style="opacity:1;color:black;fill:black;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:6.00899982;stroke-linecap:butt;stroke-linejoin:round;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible"
-       id="rect2800"
-       width="406.42856"
-       height="334.28571"
-       x="-244.28571"
-       y="-166.92352" />
     <path
        style="fill:url(#radialGradient2794);fill-opacity:1;stroke:none;stroke-width:7.8210001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M -60.691125,-61.125583 L 67.170448,-61.125583 L 67.170448,61.432968 L -60.691125,61.432968 L -60.691125,-61.125583 z "

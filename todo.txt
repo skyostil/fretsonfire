@@ -94,3 +94,8 @@ Todo:
  - fix importing two missing songs on GH1 and GH2 disks (FIXED 345)
  - tapping support, aka hammer-ons and pull-ofs (FIXED 409)
  - lyrics support
+
+Changelog:
+
+ - removed amanith dependency
+

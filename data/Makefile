@@ -1,3 +1,5 @@
+TOP?=..
+
 ifneq "$(findstring Windows_NT, $(OS))" ""
   INKSCAPE="c:/Program Files/inkscape/inkscape.exe"
 else
@@ -5,67 +7,68 @@ else
 endif
 
 all: graphics
+DATA=$(TOP)/data
 
 IMAGES=\
-2x.png \
-3x.png \
-4x.png \
-ball1.png \
-ball2.png \
-cassette.png \
-editor.png \
-glow.png \
-keyboard.png \
-koopa.png \
-koopa2.png \
-left.png \
-light.png \
-loading.png \
-logo.png \
-mods/Chilly/flame1.png \
-mods/Chilly/flame2.png \
-mods/Chilly/logo.png \
-mods/Chilly/neck.png \
-mods/LightGraphics/2x.png \
-mods/LightGraphics/3x.png \
-mods/LightGraphics/4x.png \
-mods/LightGraphics/ball1.png \
-mods/LightGraphics/ball2.png \
-mods/LightGraphics/cassette.png \
-mods/LightGraphics/editor.png \
-mods/LightGraphics/flame1.png \
-mods/LightGraphics/flame2.png \
-mods/LightGraphics/glow.png \
-mods/LightGraphics/keyboard.png \
-mods/LightGraphics/left.png \
-mods/LightGraphics/light.png \
-mods/LightGraphics/loading.png \
-mods/LightGraphics/logo.png \
-mods/LightGraphics/neck.png \
-mods/LightGraphics/pose.png \
-mods/LightGraphics/right.png \
-mods/LightGraphics/star.png \
-mods/LightGraphics/star1.png \
-mods/LightGraphics/star2.png \
-neck.png \
-pose.png \
-right.png \
-songs/tutorial/esc.png \
-songs/tutorial/keyboard.png \
-songs/tutorial/pose.png \
-stage_audience1.png \
-stage_audience2.png \
-stage_background.png \
-stage_bassdrum.png \
-stage_drums.png \
-stage_light.png \
-stage_lights1.png \
-stage_lights2.png \
-stage_speakers.png \
-stage_speaker_cones.png \
-star.png \
-star1.png \
-star2.png \
+$(DATA)/2x.png \
+$(DATA)/3x.png \
+$(DATA)/4x.png \
+$(DATA)/ball1.png \
+$(DATA)/ball2.png \
+$(DATA)/cassette.png \
+$(DATA)/editor.png \
+$(DATA)/glow.png \
+$(DATA)/keyboard.png \
+$(DATA)/koopa.png \
+$(DATA)/koopa2.png \
+$(DATA)/left.png \
+$(DATA)/light.png \
+$(DATA)/loading.png \
+$(DATA)/logo.png \
+$(DATA)/mods/Chilly/flame1.png \
+$(DATA)/mods/Chilly/flame2.png \
+$(DATA)/mods/Chilly/logo.png \
+$(DATA)/mods/Chilly/neck.png \
+$(DATA)/mods/LightGraphics/2x.png \
+$(DATA)/mods/LightGraphics/3x.png \
+$(DATA)/mods/LightGraphics/4x.png \
+$(DATA)/mods/LightGraphics/ball1.png \
+$(DATA)/mods/LightGraphics/ball2.png \
+$(DATA)/mods/LightGraphics/cassette.png \
+$(DATA)/mods/LightGraphics/editor.png \
+$(DATA)/mods/LightGraphics/flame1.png \
+$(DATA)/mods/LightGraphics/flame2.png \
+$(DATA)/mods/LightGraphics/glow.png \
+$(DATA)/mods/LightGraphics/keyboard.png \
+$(DATA)/mods/LightGraphics/left.png \
+$(DATA)/mods/LightGraphics/light.png \
+$(DATA)/mods/LightGraphics/loading.png \
+$(DATA)/mods/LightGraphics/logo.png \
+$(DATA)/mods/LightGraphics/neck.png \
+$(DATA)/mods/LightGraphics/pose.png \
+$(DATA)/mods/LightGraphics/right.png \
+$(DATA)/mods/LightGraphics/star.png \
+$(DATA)/mods/LightGraphics/star1.png \
+$(DATA)/mods/LightGraphics/star2.png \
+$(DATA)/neck.png \
+$(DATA)/pose.png \
+$(DATA)/right.png \
+$(DATA)/songs/tutorial/esc.png \
+$(DATA)/songs/tutorial/keyboard.png \
+$(DATA)/songs/tutorial/pose.png \
+$(DATA)/stage_audience1.png \
+$(DATA)/stage_audience2.png \
+$(DATA)/stage_background.png \
+$(DATA)/stage_bassdrum.png \
+$(DATA)/stage_drums.png \
+$(DATA)/stage_light.png \
+$(DATA)/stage_lights1.png \
+$(DATA)/stage_lights2.png \
+$(DATA)/stage_speakers.png \
+$(DATA)/stage_speaker_cones.png \
+$(DATA)/star.png \
+$(DATA)/star1.png \
+$(DATA)/star2.png
 
 graphics: $(IMAGES)
 

@@ -31,14 +31,17 @@ import Log
 import Config
 from Texture import Texture, TextureException
 
-try:
-  import amanith
-  import SvgColors
-  haveAmanith    = True
-except ImportError:
-  Log.warn("PyAmanith not found, SVG support disabled.")
-  import DummyAmanith as amanith
-  haveAmanith    = False
+# Amanith support is now deprecated
+#try:
+#  import amanith
+#  import SvgColors
+#  haveAmanith    = True
+#except ImportError:
+#  Log.warn("PyAmanith not found, SVG support disabled.")
+#  import DummyAmanith as amanith
+#  haveAmanith    = False
+import DummyAmanith as amanith
+haveAmanith = True
 
 # Add support for 'foo in attributes' syntax
 if not hasattr(sax.xmlreader.AttributesImpl, '__contains__'):
@@ -537,14 +540,17 @@ class SvgDrawing:
     if type(svgData) == file:
       self.svgData = svgData.read()
     elif type(svgData) == str:
-      # Check whether we have a cached bitmap version
       bitmapFile = svgData.replace(".svg", ".png")
-      if svgData.endswith(".svg") and os.path.exists(bitmapFile):
+      # Load PNG files directly
+      if svgData.endswith(".png"):
+        self.texture = Texture(svgData)
+      # Check whether we have a prerendered bitmap version of the SVG file
+      elif svgData.endswith(".svg") and os.path.exists(bitmapFile):
         Log.debug("Loading cached bitmap '%s' instead of '%s'." % (bitmapFile, svgData))
         self.texture = Texture(bitmapFile)
       else:
         if not haveAmanith:
-          e = "PyAmanith is not installed and you are trying to load an SVG file."
+          e = "PyAmanith support is deprecated and you are trying to load an SVG file."
           Log.error(e)
           raise RuntimeError(e)
         Log.debug("Loading SVG file '%s'." % (svgData))

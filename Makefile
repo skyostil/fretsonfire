@@ -1,11 +1,14 @@
-CXFREEZE=/c/users/proj/cx_Freeze-3.0.3/FreezePython
+TOP=.
+CXFREEZE=/c/cygwin/home/sami/proj/cx_Freeze-3.0.3/FreezePython
 PYTHON=python
 PYTHON_LIBS=/c/apps/actpython/lib
 MAKENSIS=/c/Program\ Files/NSIS/makeNSIS.exe
 
+include data/Makefile
+
 all:	dist
 
-dist:
+dist: graphics
 	@echo --- Building EXE
 	$(CXFREEZE) --target-dir dist --base-name=Win32GUI.exe --include-modules \
 encodings.string_escape,\
@@ -43,7 +46,7 @@ installer: dist
 	$(MAKENSIS) dist/installer/FretsOnFire.nsi
 
 run:	dist
-	@cd dist ; ./KeyboardHero.exe ; cd ..
+	@cd dist ; ./FretsOnFire.exe ; cd ..
 
 clean:
 	@rm -rf dist build
