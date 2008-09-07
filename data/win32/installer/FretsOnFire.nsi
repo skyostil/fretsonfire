@@ -102,8 +102,8 @@ Section "Frets on Fire core files (required)" SecCore
 
   File ..\*.*
 
-  SetOutPath "$INSTDIR\OpenGL-3.0.0a4-py2.4.egg-info"
-  File ..\OpenGL-3.0.0a4-py2.4.egg-info\*.*
+  SetOutPath "$INSTDIR\data"
+  File /r ..\data\PyOpenGL-3.0.0a5-py2.5.egg
 
   SetOutPath "$INSTDIR\data"
   
@@ -253,7 +253,7 @@ Section "Hebrew" SecTransHebrew
   File ..\data\translations\hebrew.mo
 
 SectionEnd
-/*
+
 Section "Italian" SecTransItalian
 
   SetOverwrite on
@@ -267,7 +267,7 @@ Section "Italian" SecTransItalian
   File ..\data\translations\italian.mo
 
 SectionEnd
-*/
+
 Section "German" SecTransGerman
 
   SetOverwrite on
@@ -352,6 +352,76 @@ Section "Brazilian Portuguese" SecTransBrazilianPortuguese
 
 SectionEnd
 
+Section "Dutch" SecTransDutch
+  
+  SetOverwrite on
+  SetDetailsPrint textonly
+  DetailPrint "Installing translation | Dutch..."
+  SetDetailsPrint listonly
+
+  SectionIn 1
+  SetOutPath $INSTDIR\data\translations
+
+  File ..\data\translations\dutch.mo
+
+SectionEnd
+
+Section "Finnish" SecTransFinnish
+  
+  SetOverwrite on
+  SetDetailsPrint textonly
+  DetailPrint "Installing translation | Finnish..."
+  SetDetailsPrint listonly
+
+  SectionIn 1
+  SetOutPath $INSTDIR\data\translations
+
+  File ..\data\translations\finnish.mo
+
+SectionEnd
+
+Section "Turkish" SecTransTurkish
+  
+  SetOverwrite on
+  SetDetailsPrint textonly
+  DetailPrint "Installing translation | Turkish..."
+  SetDetailsPrint listonly
+
+  SectionIn 1
+  SetOutPath $INSTDIR\data\translations
+
+  File ..\data\translations\turkish.mo
+
+SectionEnd
+
+Section "Galician" SecTransGalician
+  
+  SetOverwrite on
+  SetDetailsPrint textonly
+  DetailPrint "Installing translation | Galician..."
+  SetDetailsPrint listonly
+
+  SectionIn 1
+  SetOutPath $INSTDIR\data\translations
+
+  File ..\data\translations\galician.mo
+
+SectionEnd
+
+Section "Hungarian" SecTransHungarian
+  
+  SetOverwrite on
+  SetDetailsPrint textonly
+  DetailPrint "Installing translation | Hungarian..."
+  SetDetailsPrint listonly
+
+  SectionIn 1
+  SetOutPath $INSTDIR\data\translations
+
+  File ..\data\translations\hungarian.mo
+
+SectionEnd
+
 SectionGroupEnd
 
 Section -post
@@ -420,11 +490,16 @@ SectionEnd
     !insertmacro MUI_DESCRIPTION_TEXT ${SecTransFrench} "Install translation: french"
     !insertmacro MUI_DESCRIPTION_TEXT ${SecTransGerman} "Install translation: german"
     !insertmacro MUI_DESCRIPTION_TEXT ${SecTransHebrew} "Install translation: hebrew"
-    ;!insertmacro MUI_DESCRIPTION_TEXT ${SecTransItalian} "Install translation: italian"
+    !insertmacro MUI_DESCRIPTION_TEXT ${SecTransItalian} "Install translation: italian"
     !insertmacro MUI_DESCRIPTION_TEXT ${SecTransPolish} "Install translation: polish"
     !insertmacro MUI_DESCRIPTION_TEXT ${SecTransRussian} "Install translation: russian"
     !insertmacro MUI_DESCRIPTION_TEXT ${SecTransSpanish} "Install translation: spanish"
     !insertmacro MUI_DESCRIPTION_TEXT ${SecTransSwedish} "Install translation: swedish"
+    !insertmacro MUI_DESCRIPTION_TEXT ${SecTransFinnish} "Install translation: finnish"
+    !insertmacro MUI_DESCRIPTION_TEXT ${SecTransDutch} "Install translation: dutch"
+    !insertmacro MUI_DESCRIPTION_TEXT ${SecTransGalician} "Install translation: galician"
+    !insertmacro MUI_DESCRIPTION_TEXT ${SecTransHungarian} "Install translation: hungarian"
+    !insertmacro MUI_DESCRIPTION_TEXT ${SecTransTurkish} "Install translation: turkish"
     !insertmacro MUI_DESCRIPTION_TEXT ${SecMods} "Install mods"
     !insertmacro MUI_DESCRIPTION_TEXT ${SecModsLightGraphics} "Install mod: Light Graphics"
     !insertmacro MUI_DESCRIPTION_TEXT ${SecModsChilly} "Install mod: Chilly"
@@ -462,7 +537,7 @@ Section "Uninstall"
   Delete "$DESKTOP\Frets on Fire.lnk"
   Delete $INSTDIR\FretsOnFire.exe
   Delete $INSTDIR\msvcr71.dll
-  Delete $INSTDIR\python24.dll
+  Delete $INSTDIR\python25.dll
   Delete $INSTDIR\msvcp71.dll
   Delete $INSTDIR\readme.txt
   Delete $INSTDIR\copying.txt

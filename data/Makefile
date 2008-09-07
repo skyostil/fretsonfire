@@ -1,4 +1,5 @@
 TOP?=..
+PYTHON?=python
 
 ifneq "$(findstring Windows_NT, $(OS))" ""
   INKSCAPE="c:/Program Files/inkscape/inkscape.exe"
@@ -6,9 +7,10 @@ else
   INKSCAPE=inkscape
 endif
 
-all: graphics
+all: graphics translations
 DATA=$(TOP)/data
 
+# Only PNG files that can be generated automatically are listed here
 IMAGES=\
 $(DATA)/2x.png \
 $(DATA)/3x.png \
@@ -17,7 +19,6 @@ $(DATA)/ball1.png \
 $(DATA)/ball2.png \
 $(DATA)/cassette.png \
 $(DATA)/editor.png \
-$(DATA)/glow.png \
 $(DATA)/keyboard.png \
 $(DATA)/koopa.png \
 $(DATA)/koopa2.png \
@@ -38,19 +39,16 @@ $(DATA)/mods/LightGraphics/cassette.png \
 $(DATA)/mods/LightGraphics/editor.png \
 $(DATA)/mods/LightGraphics/flame1.png \
 $(DATA)/mods/LightGraphics/flame2.png \
-$(DATA)/mods/LightGraphics/glow.png \
 $(DATA)/mods/LightGraphics/keyboard.png \
 $(DATA)/mods/LightGraphics/left.png \
 $(DATA)/mods/LightGraphics/light.png \
 $(DATA)/mods/LightGraphics/loading.png \
 $(DATA)/mods/LightGraphics/logo.png \
-$(DATA)/mods/LightGraphics/neck.png \
 $(DATA)/mods/LightGraphics/pose.png \
 $(DATA)/mods/LightGraphics/right.png \
 $(DATA)/mods/LightGraphics/star.png \
 $(DATA)/mods/LightGraphics/star1.png \
 $(DATA)/mods/LightGraphics/star2.png \
-$(DATA)/neck.png \
 $(DATA)/pose.png \
 $(DATA)/right.png \
 $(DATA)/songs/tutorial/esc.png \
@@ -72,6 +70,13 @@ $(DATA)/star2.png
 
 graphics: $(IMAGES)
 
+translations:
+	@pushd $(TOP)/data/translations ; $(PYTHON) update.py ; popd
+
+killscores:
+	@pushd $(TOP)/data/songs ; ./killscores.sh ; popd
+
 %.png: %.svg
 	$(INKSCAPE) -e "$@" -D -f "$<" -b black -y 0.0
 
+.PHONY: graphics translations killscores

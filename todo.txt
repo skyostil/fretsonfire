@@ -43,7 +43,7 @@ Released in 1.0.263:
  - fix the ugly effect at song ending (FIXED 258)
  - fix the end-game screen (FIXED 259)
 
-Released on 1.1.324:
+Released in 1.1.324:
 
  - fix the key configuration bug (FIXED 291)
  - don't reset the multiplier when a long note is released early (FIXED 292)
@@ -58,29 +58,18 @@ Released on 1.1.324:
  - don't allow zero fps (FIXED 303)
  - proper mod support (FIXED 321)
 
-Todo:
+Release in 1.2.512:
 
- - better documentation for the source
- - add custom fretboard and background support
  - abstract pygame mixer behind the Audio class (FIXED 320)
- - support for freetar sng files
- - support for gda files
- - support for dtx files
- - support for midi controllers
  - song folder support (FIXED 327)
- - apply alex's patches
- - screw-up volume doesn't work?
  - align notes to beat lines again (FIXED 400)
  - fix missing encoding error on linux (FIXED 328)
  - dual core perf improvements (FIXED 345)
  - don't dump joystick names (FIXED 325)
- - add a song testing mode to the editor
  - fix backspace etc. on mac (FIXED 326)
  - delete rhythm file after importing each song (FIXED 235)
  - improve importer encoding quality (FIXED 235)
  - make notes disappear when they are hit (FIXED 334)
- - fix volume saturation issue with GH2 tracks
- - add rhythm guitar playing support
  - fix performance issue with note effect (FIXED 334)
  - move the multiplier text upwards (FIXED 330)
  - pause the song while the menu is shown (FIXED 320)
@@ -93,9 +82,27 @@ Todo:
  - fix Numeric memory leak (FIXED 342)
  - fix importing two missing songs on GH1 and GH2 disks (FIXED 345)
  - tapping support, aka hammer-ons and pull-ofs (FIXED 409)
+
+Todo:
+
+ - better documentation for the source
+ - add custom fretboard and background support
+ - support for freetar sng files
+ - support for gda files
+ - support for dtx files
+ - support for midi controllers
+ - apply alex's patches
+ - screw-up volume doesn't work?
+ - add a song testing mode to the editor
+ - fix volume saturation issue with GH2 tracks
+ - add rhythm guitar playing support
  - lyrics support
 
-Changelog:
-
  - removed amanith dependency
+ - fretboard lines are now textured
+ - switched to py2exe for win32 builds
+ - source distribution building works now
+ - experimental pyglet audio support
+ - TODO: fix py2exe restarting
+ - TODO: fix lightgraphics mod
 

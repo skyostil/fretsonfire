@@ -23,7 +23,9 @@
 # Scenes
 import glob
 
-scenes = [n.replace(".py", "") for n in glob.glob("*Scene.py")]
+# Static list for now to ease building
+#scenes = [n.replace(".py", "") for n in glob.glob("*Scene.py")]
+scenes = ["GameResultsScene", "GuitarScene", "SongChoosingScene"]
 
 def _import(name):
   globals()[name] = __import__(name)

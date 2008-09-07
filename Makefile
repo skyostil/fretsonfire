@@ -1,39 +1,44 @@
+#
+# Frets on Fire Makefile
+#
 TOP=.
 PYTHON=python
-PYTHON_LIBS=c:/python25/lib
-MAKENSIS=/c/Program\ Files/NSIS/makeNSIS.exe
 
 include data/Makefile
 
 all:	dist
 
-dist: graphics
-	@echo --- Preparing
-	@sh data/songs/killscores.sh
+ifneq "$(findstring Windows_NT, $(OS))" ""
+# Utility programs for win32
+PYTHON_LIBS=c:/python25/lib
+MAKENSIS=/c/Program\ Files/NSIS/makeNSIS.exe
 
-	@echo --- Compiling
-	cd src; $(PYTHON) setup.py py2exe; cd ..
+dist: graphics translations killscores
+	@echo --- Compiling for win32
+	$(PYTHON) setup.py sdist -o
+	$(PYTHON) setup.py py2exe
 
 	@echo --- Fixing PyOpenGL-ctypes
-	cp -Lr $(PYTHON_LIBS)/site-packages/PyOpenGL-3.0.0a5-py2.5.egg dist/data
-	cp -Lr $(PYTHON_LIBS)/site-packages/setuptools-0.6c8-py2.5.egg dist/data
+	cp -Lr $(PYTHON_LIBS)/site-packages/PyOpenGL-3.0.0a5-py2.5.egg dist/win32/data
+	cp -Lr $(PYTHON_LIBS)/site-packages/setuptools-0.6c8-py2.5.egg dist/win32/data
 
 	@echo --- Fixing miscellaneous things
-	@unix2dos dist/readme.txt
-	@unix2dos dist/copying.txt
-	@rm -f dist/w9xpopen.exe
+	@unix2dos dist/win32/readme.txt
+	@unix2dos dist/win32/copying.txt
+	@rm -f dist/win32/w9xpopen.exe
 
 installer: dist
-	@echo --- Making installer
-	mkdir -p dist/installer
-	cp data/win32/installer/FretsOnFire.nsi dist/installer
-	$(MAKENSIS) dist/installer/FretsOnFire.nsi
+	@echo --- Making installer for win32
+	mkdir -p dist/win32/installer
+	cp data/win32/installer/* dist/win32/installer
+	$(MAKENSIS) dist/win32/installer/FretsOnFire.nsi
+endif
 
-run:	dist
-	@cd dist ; ./FretsOnFire.exe ; cd ..
+sdist: graphics translations killscores
+	$(PYTHON) setup.py sdist
 
 clean:
 	@rm -rf dist build
 
-.PHONY: dist installer
+.PHONY: dist installer sdist
 
