@@ -58,8 +58,11 @@ class Guitar:
 
     engine.resource.load(self,  "noteMesh", lambda: Mesh(engine.resource.fileName("note.dae")))
     engine.resource.load(self,  "keyMesh",  lambda: Mesh(engine.resource.fileName("key.dae")))
-    engine.loadSvgDrawing(self, "glowDrawing", "glow.svg",  textureSize = (128, 128))
-    engine.loadSvgDrawing(self, "neckDrawing", "neck.svg",  textureSize = (256, 256))
+    engine.loadSvgDrawing(self, "glowDrawing", "glow.png")
+    engine.loadSvgDrawing(self, "neckDrawing", "neck.png")
+    engine.loadSvgDrawing(self, "stringDrawing", "string.png")
+    engine.loadSvgDrawing(self, "barDrawing", "bar.png")
+    engine.loadSvgDrawing(self, "noteDrawing", "note.png")
 
   def selectPreviousString(self):
     self.selectedString = (self.selectedString - 1) % self.strings
@@ -141,24 +144,25 @@ class Guitar:
       glVertex3f(x + s, 0, z2)
       glEnd()
 
-    sw = 0.025
+    sw = 0.035
+    glEnable(GL_TEXTURE_2D)
+    glEnable(GL_BLEND)
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA)
+    Theme.setBaseColor(1 - v)
+    self.stringDrawing.texture.bind()
     for n in range(self.strings - 1, -1, -1):
       glBegin(GL_TRIANGLE_STRIP)
-      Theme.setBaseColor(0)
+      glTexCoord2f(0.0, 0.0)
       glVertex3f((n - self.strings / 2) * w - sw, -v, -2)
+      glTexCoord2f(1.0, 0.0)
       glVertex3f((n - self.strings / 2) * w + sw, -v, -2)
-      Theme.setBaseColor((1.0 - v) * .75)
-      glVertex3f((n - self.strings / 2) * w - sw, -v, -1)
-      glVertex3f((n - self.strings / 2) * w + sw, -v, -1)
-      Theme.setBaseColor((1.0 - v) * .75)
-      glVertex3f((n - self.strings / 2) * w - sw, -v, self.boardLength * .7)
-      glVertex3f((n - self.strings / 2) * w + sw, -v, self.boardLength * .7)
-      Theme.setBaseColor(0)
+      glTexCoord2f(0.0, 1.0)
       glVertex3f((n - self.strings / 2) * w - sw, -v, self.boardLength)
+      glTexCoord2f(1.0, 1.0)
       glVertex3f((n - self.strings / 2) * w + sw, -v, self.boardLength)
       glEnd()
       v *= 2
-      
+    glDisable(GL_TEXTURE_2D)
       
   def renderBars(self, visibility, song, pos):
     if not song:
@@ -166,7 +170,7 @@ class Guitar:
     
     w            = self.boardWidth
     v            = 1.0 - visibility
-    sw           = 0.02
+    sw           = 0.04
     beatsPerUnit = self.beatsPerBoard / self.boardLength
     pos         -= self.lastBpmChange
     offset       = pos / self.currentPeriod * beatsPerUnit
@@ -175,7 +179,9 @@ class Guitar:
 
     glEnable(GL_BLEND)
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA)
-    
+    glEnable(GL_TEXTURE_2D)
+    self.barDrawing.texture.bind()
+     
     glPushMatrix()
     while beat < currentBeat + self.beatsPerBoard:
       z = (beat - currentBeat) / beatsPerUnit
@@ -195,9 +201,13 @@ class Guitar:
         Theme.setBaseColor(visibility * c * .5)
 
       glBegin(GL_TRIANGLE_STRIP)
+      glTexCoord2f(0.0, 0.0)
       glVertex3f(-(w / 2), -v, z + sw)
+      glTexCoord2f(0.0, 1.0)
       glVertex3f(-(w / 2), -v, z - sw)
+      glTexCoord2f(1.0, 0.0)
       glVertex3f(w / 2,    -v, z + sw)
+      glTexCoord2f(1.0, 1.0)
       glVertex3f(w / 2,    -v, z - sw)
       glEnd()
       
@@ -209,28 +219,41 @@ class Guitar:
 
     Theme.setSelectedColor(visibility * .5)
     glBegin(GL_TRIANGLE_STRIP)
+    glTexCoord2f(0.0, 0.0)
     glVertex3f(-w / 2, 0,  sw)
+    glTexCoord2f(0.0, 1.0)
     glVertex3f(-w / 2, 0, -sw)
+    glTexCoord2f(1.0, 0.0)
     glVertex3f(w / 2,  0,  sw)
+    glTexCoord2f(1.0, 1.0)
     glVertex3f(w / 2,  0, -sw)
     glEnd()
+
+    glDisable(GL_TEXTURE_2D)
 
   def renderNote(self, length, color, flat = False, tailOnly = False, isTappable = False):
     if not self.noteMesh:
       return
 
     glColor4f(*color)
+    glEnable(GL_TEXTURE_2D)
+    self.noteDrawing.texture.bind()
 
     if flat:
       glScalef(1, .1, 1)
 
     size = (.1, length + 0.00001)
     glBegin(GL_TRIANGLE_STRIP)
+    glTexCoord2f(0.0, 0.0)
     glVertex3f(-size[0], 0, 0)
+    glTexCoord2f(1.0, 0.0)
     glVertex3f( size[0], 0, 0)
+    glTexCoord2f(0.0, 1.0)
     glVertex3f(-size[0], 0, size[1])
+    glTexCoord2f(1.0, 1.0)
     glVertex3f( size[0], 0, size[1])
     glEnd()
+    glDisable(GL_TEXTURE_2D)
 
     if tailOnly:
       return
@@ -238,6 +261,8 @@ class Guitar:
     glPushMatrix()
     glEnable(GL_DEPTH_TEST)
     glDepthMask(1)
+    if color[3] > .9:
+      glDisable(GL_BLEND)
     glShadeModel(GL_SMOOTH)
     self.noteMesh.render("Mesh_001")
     if isTappable:
@@ -248,6 +273,7 @@ class Guitar:
     self.noteMesh.render("Mesh_002")
     glDepthMask(0)
     glPopMatrix()
+    glEnable(GL_BLEND)
 
   def renderNotes(self, visibility, song, pos):
     if not song:

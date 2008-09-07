@@ -187,7 +187,7 @@ class Credits(Layer, KeyListener):
       space,
       space,
       space,
-      Text(nf, bs, c1, "center", _("Copyright 2006, 2007 by Unreal Voodoo")),
+      Text(nf, bs, c1, "center", _("Copyright 2006-2008 by Unreal Voodoo")),
     ]
 
   def songLoaded(self, song):

@@ -168,7 +168,7 @@ class SettingsMenu(Menu.Menu):
       ConfigChoice(engine.config, "video",  "fps"),
       ConfigChoice(engine.config, "video",  "multisamples"),
       #ConfigChoice(engine.config, "opengl", "svgshaders"),    # shaders broken at the moment
-      ConfigChoice(engine.config, "opengl", "svgquality"),
+      #ConfigChoice(engine.config, "opengl", "svgquality"),
       ConfigChoice(engine.config, "video", "fontscale"),
     ]
     videoSettingsMenu = Menu.Menu(engine, videoSettings + applyItem)

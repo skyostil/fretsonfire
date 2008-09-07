@@ -262,7 +262,6 @@ else: # pygame
 
   class Sound(object):
     def __init__(self, fileName):
-      print "SOUND", fileName
       self.sound   = pygame.mixer.Sound(fileName)
 
     def play(self, loops = 0):

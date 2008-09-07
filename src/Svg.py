@@ -102,15 +102,17 @@ class SvgContext:
     self.geometry = geometry
 
   def setRenderingQuality(self, quality):
-    if quality == LOW_QUALITY:
-      q = amanith.G_LOW_RENDERING_QUALITY
-    elif quality == NORMAL_QUALITY:
-      q = amanith.G_NORMAL_RENDERING_QUALITY
-    elif quality == HIGH_QUALITY:
-      q = amanith.G_HIGH_RENDERING_QUALITY
-    else:
-      raise RaiseValueError("Bad rendering quality.")
-    self.drawBoard.SetRenderingQuality(q)
+    # Ignored
+    pass
+    #if quality == LOW_QUALITY:
+    #  q = amanith.G_LOW_RENDERING_QUALITY
+    #elif quality == NORMAL_QUALITY:
+    #  q = amanith.G_NORMAL_RENDERING_QUALITY
+    #elif quality == HIGH_QUALITY:
+    #  q = amanith.G_HIGH_RENDERING_QUALITY
+    #else:
+    #  raise RaiseValueError("Bad rendering quality.")
+    #self.drawBoard.SetRenderingQuality(q)
 
   def getRenderingQuality(self):
     q = self.drawBoard.RenderingQuality()
