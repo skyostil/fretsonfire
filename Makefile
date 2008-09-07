@@ -8,6 +8,9 @@ include data/Makefile
 all:	dist
 
 dist: graphics
+	@echo --- Preparing
+	@sh data/songs/killscores.sh
+
 	@echo --- Compiling
 	cd src; $(PYTHON) setup.py py2exe; cd ..
 

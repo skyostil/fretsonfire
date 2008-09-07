@@ -140,6 +140,9 @@ dataFiles = [
   "stage_speaker_cones.png",
   "stage.ini",
   "loading.png",
+  "bar.png",
+  "string.png",
+  "note.png"
 ]
 
 chillyModFiles = [
