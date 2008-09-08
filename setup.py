@@ -22,14 +22,9 @@
 
 import sys 
 sys.path.append("src")
-from distutils.core import setup
+from setuptools import setup
 import sys, SceneFactory, Version, glob, os
 import distutils.command.sdist
-
-try:
-  import py2exe
-except ImportError:
-  pass
 
 options = {
   "py2exe": {
@@ -77,6 +72,17 @@ options = {
       "curses",
     ],
     "optimize":  2,
+  },
+ "py2app": {
+   'app': ["src/FretsOnFire.py"],
+   'argv_emulation': True,
+   'dist_dir': 'dist/mac',
+   'frameworks': '/opt/local/lib/libvorbisfile.dylib',
+   #'dylib_excludes': 'OpenGL,AGL',
+   'iconfile': 'data/icon_mac_composed.icns',
+   'includes': SceneFactory.scenes,
+   'excludes': [
+    ]
   }
 }
 
@@ -93,32 +99,29 @@ except IOError:
   print "Unable to open MANIFEST. Please run python setup.py sdist -o to generate it."
   dataFiles = []
 
+extraOpts = {}
 if os.name == "nt":
-  setup(version = Version.version(),
-        description = "Rockin' it Oldskool!",
-        name = "Frets on Fire",
-        url = "http://www.unrealvoodoo.org",
-        windows = [
-          {
-            "script":          "src/FretsOnFire.py",
-            "icon_resources":  [(1, "data/icon.ico")]
-          }
-        ],
-        zipfile = "data/library.zip",
-        author = "Unreal Voodoo",
-        author_email = "contact@unrealvoodoo.org",
-        description = "Frets on Fire is a game of musical skill and fast fingers. The aim of the game is to play guitar with the keyboard as accurately as possible.",
-        data_files = dataFiles,
-        options = options)
+  setupRequires = ["py2exe"]
+  extraOpts["windows"] = [
+    {
+       "script":          "src/FretsOnFire.py",
+       "icon_resources":  [(1, "data/icon.ico")]
+     }
+  ]
+  extraOpts["zipfile"] = "data/library.zip",
+elif sys.platform == "darwin":
+  setupRequires = ["py2app"]
 else:
-  setup(version = Version.version(),
-        description = "Rockin' it Oldskool!",
-        name = "FretsOnFire",
-        url = "http://www.unrealvoodoo.org",
-        author = "Unreal Voodoo",
-        author_email = "contact@unrealvoodoo.org",
-        data_files = dataFiles,
-        license = "GPLv2",
-        description = "Frets on Fire is a game of musical skill and fast fingers. The aim of the game is to play guitar with the keyboard as accurately as possible.",
-        options = options)
+  setupRequires = []
 
+setup(version = Version.version(),
+      name = "Frets on Fire",
+      url = "http://www.unrealvoodoo.org",
+      author = "Unreal Voodoo",
+      author_email = "contact@unrealvoodoo.org",
+      license = "GPLv2",
+      description = "Frets on Fire is a game of musical skill and fast fingers. The aim of the game is to play guitar with the keyboard as accurately as possible.",
+      data_files = dataFiles,
+      options = options,
+      setup_requires = setupRequires,
+      *extraOpts)

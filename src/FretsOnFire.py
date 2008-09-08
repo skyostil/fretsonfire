@@ -24,9 +24,10 @@
 Main game executable.
 """
 import sys
+import os
 
 # This trickery is needed to get OpenGL 3.x working with py2exe
-if hasattr(sys, "frozen"):
+if hasattr(sys, "frozen") and os.name == "nt":
   import ctypes
   from ctypes import util
   sys.path.insert(0, "data/PyOpenGL-3.0.0a5-py2.5.egg")
@@ -46,10 +47,7 @@ from MainMenu import MainMenu
 import Log
 import Config
 import Version
-
 import getopt
-import os
-import sys
 
 usage = """%(prog)s [options]
 Options:
