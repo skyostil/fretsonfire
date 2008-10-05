@@ -558,6 +558,15 @@ class SvgDrawing:
         Log.debug("Loading SVG file '%s'." % (svgData))
         self.svgData = open(svgData).read()
 
+    # Make sure we have a valid texture
+    if not self.texture:
+      if type(svgData) == str:
+        e = "Unable to load texture for %s." % svgData
+      else:
+        e = "Unable to load texture for SVG file."
+      Log.error(e)
+      raise RuntimeError(e)
+
   def _cacheDrawing(self, drawBoard):
     self.cache.beginCaching()
     parser = sax.make_parser()
@@ -569,26 +578,30 @@ class SvgDrawing:
     if self.texture:
       return
 
-    try:
-      self.texture = Texture()
-      self.texture.bind()
-      self.texture.prepareRenderTarget(width, height)
-      self.texture.setAsRenderTarget()
-      quality = self.context.getRenderingQuality()
-      self.context.setRenderingQuality(HIGH_QUALITY)
-      geometry = self.context.geometry
-      self.context.setProjection((0, 0, width, height))
-      glViewport(0, 0, width, height)
-      self.context.clear()
-      transform = SvgTransform()
-      transform.translate(width / 2, height / 2)
-      self._render(transform)
-      self.texture.resetDefaultRenderTarget()
-      self.context.setProjection(geometry)
-      glViewport(*geometry)
-      self.context.setRenderingQuality(quality)
-    except TextureException, e:
-      Log.warn("Unable to convert SVG drawing to texture: %s" % str(e))
+    e = "SVG drawing does not have a valid texture image."
+    Log.error(e)
+    raise RuntimeError(e)
+
+    #try:
+    #  self.texture = Texture()
+    #  self.texture.bind()
+    #  self.texture.prepareRenderTarget(width, height)
+    #  self.texture.setAsRenderTarget()
+    #  quality = self.context.getRenderingQuality()
+    #  self.context.setRenderingQuality(HIGH_QUALITY)
+    #  geometry = self.context.geometry
+    #  self.context.setProjection((0, 0, width, height))
+    #  glViewport(0, 0, width, height)
+    #  self.context.clear()
+    #  transform = SvgTransform()
+    #  transform.translate(width / 2, height / 2)
+    #  self._render(transform)
+    #  self.texture.resetDefaultRenderTarget()
+    #  self.context.setProjection(geometry)
+    #  glViewport(*geometry)
+    #  self.context.setRenderingQuality(quality)
+    #except TextureException, e:
+    #  Log.warn("Unable to convert SVG drawing to texture: %s" % str(e))
 
   def _getEffectiveTransform(self):
     transform = SvgTransform(self.transform)
