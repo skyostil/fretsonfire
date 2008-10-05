@@ -38,7 +38,10 @@ def init(engine):
 
 def getAvailableMods(engine):
   modPath = _getModPath(engine)
-  return [m for m in os.listdir(modPath) if os.path.isdir(os.path.join(modPath, m)) and not m.startswith(".")]
+  try:
+    return [m for m in os.listdir(modPath) if os.path.isdir(os.path.join(modPath, m)) and not m.startswith(".")]
+  except OSError:
+    return []
 
 def getActiveMods(engine):
   mods = []
