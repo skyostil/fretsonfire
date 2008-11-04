@@ -16,7 +16,7 @@ ifneq "$(findstring Windows_NT, $(OS))" ""
 PYTHON_LIBS=c:/python25/lib
 MAKENSIS=/c/Program\ Files/NSIS/makeNSIS.exe
 
-dist: graphics translations killscores
+build: graphics translations killscores
 	@echo --- Compiling for win32
 	#$(PYTHON) setup.py sdist -o
 	$(PYTHON) setup.py py2exe
@@ -31,11 +31,13 @@ dist: graphics translations killscores
 	@unix2dos dist/win32/install.txt
 	@rm -f dist/win32/w9xpopen.exe
 
-installer: dist
+VERSION=$(shell cd src; python -c "import Version; print Version.version()")
+
+dist: build
 	@echo --- Making installer for win32
 	mkdir -p dist/win32/installer
 	cp data/win32/installer/* dist/win32/installer
-	$(MAKENSIS) dist/win32/installer/FretsOnFire.nsi
+	$(MAKENSIS) /DVERSION=$(VERSION)-win32 dist/win32/installer/FretsOnFire.nsi
 endif
 
 ifneq "$(findstring Darwin, $(PLATFORM))" ""

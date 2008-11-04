@@ -56,7 +56,7 @@ For Windows:
 
 		$ make dist
 
-        The installer will be created in the dist folder.
+        The installer will be created in the dist/win32/installer folder.
 
 For Mac OS X:
 
