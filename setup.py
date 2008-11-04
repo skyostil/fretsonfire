@@ -101,14 +101,15 @@ except IOError:
 
 extraOpts = {}
 if os.name == "nt":
+  import py2exe
   setupRequires = ["py2exe"]
   extraOpts["windows"] = [
     {
-       "script":          "src/FretsOnFire.py",
-       "icon_resources":  [(1, "data/icon.ico")]
-     }
+      "script":          "src/FretsOnFire.py",
+      "icon_resources":  [(1, "data/icon.ico")]
+    }
   ]
-  extraOpts["zipfile"] = "data/library.zip",
+  extraOpts["zipfile"] = "data/library.zip"
 elif sys.platform == "darwin":
   setupRequires = ["py2app"]
 else:
@@ -124,4 +125,5 @@ setup(version = Version.version(),
       data_files = dataFiles,
       options = options,
       setup_requires = setupRequires,
-      *extraOpts)
+      **extraOpts
+      )

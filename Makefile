@@ -18,7 +18,7 @@ MAKENSIS=/c/Program\ Files/NSIS/makeNSIS.exe
 
 dist: graphics translations killscores
 	@echo --- Compiling for win32
-	$(PYTHON) setup.py sdist -o
+	#$(PYTHON) setup.py sdist -o
 	$(PYTHON) setup.py py2exe
 
 	@echo --- Fixing PyOpenGL-ctypes

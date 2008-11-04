@@ -2,6 +2,7 @@ MANIFEST.in
 Makefile
 copying.txt
 readme.txt
+install.txt
 setup.py
 data/2x.png
 data/3x.png

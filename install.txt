@@ -20,6 +20,23 @@ following commands:
 	$ cd src
 	$ python FretsOnFire.py
 
+Updating translations
+---------------------
+
+First, make sure you have installed the gettext-dev or equivalent package that
+provides the msgfmt tool. Then, run the following command:
+
+        $ make translations
+
+Updating graphics files
+-----------------------
+
+Frets on Fire requires that all graphic files be provided in the PNG format. 
+If you have changed any of the source SVG files, first make sure that Inkscape
+is installed. Then, run the following command:
+
+        $ make graphics
+
 Making an installation package
 ------------------------------
 
@@ -33,11 +50,13 @@ For Windows:
            passing the parameter MAKENSIS=<path to makeNSIS.exe> to make in
            the following step.
 
-	2. Install GNU make.
+        2. Install py2exe.
 
 	3. Run the following command
 
 		$ make dist
+
+        The installer will be created in the dist folder.
 
 For Mac OS X:
 
@@ -47,7 +66,14 @@ For Mac OS X:
 
 		$ make dist
 
-Additionally, a generic source distribution package can be created by typing
+        The installation binary will be created in the dist/mac folder.
 
-	$ make sdist
+Additionally, a generic source distribution package can be created as follows.
+
+        1. Run
+
+                $ make sdist
+
+        The package will be created in the dist folder.
+
 
