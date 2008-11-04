@@ -1,0 +1,87 @@
+Version 1.2.512
+
+     * Effects optimization
+     * Font rendering optimization
+     * Miscellaneous bug fixes
+     * Added import support for Guitar Hero 80s
+     * Translation updates
+     * World Charts standing is now reported after each game
+
+Version 1.2.451
+
+     * Fixed some bugs with the tapping implementation
+     * Audio performance and stability fixes
+     * Song chooser filter enhanced
+     * Introduced new World Charts
+     * Linux packaging fixes
+
+Version 1.2.438
+
+     * Added custom fretboard and background support
+     * Volume control
+     * Song folder support
+     * Fixed screw-up volume
+     * Align notes to beat lines again
+     * Fixed missing encoding error on linux
+     * Dual core performance improvements
+     * Fixed crash with strangely named joysticks
+     * Fixed backspace etc. on mac
+     * Delete rhythm file after importing each song
+     * Improved importer encoding quality
+     * Made notes disappear when they are hit
+     * Fixed volume saturation issue with GH2 tracks
+     * Fixed performance issue with note effect
+     * Move the multiplier text upwards
+     * Pause the song while the menu is shown
+     * Implement playing multiple streaming OGG files simultaneously
+     * Fixed the timer skew and add a high priority mode
+     * Fixed the priority of the loading screens to improve loading time
+     * Made the fret color configurable with the theme
+     * Hit counter
+     * Type-ahead find for song chooser
+     * Fix Numeric memory leak
+     * Fix importing two missing songs on GH1 and GH2 disks
+     * Tapping support, aka hammer-ons and pull-ofs
+     * PPC Mac fixes
+
+Version 1.1.324
+
+     * Support for importing Guitar Hero(TM) II songs
+     * Support for game modifications
+     * Widescreen support
+     * Added the submitted translations to the game. Thanks to everyone who sent theirs in!
+     * Many bugfixes related to configuration settings, song creation, etc.
+     * Mac OS X fixes
+
+Version 1.0.263
+
+     * Mac OS X support. Okay, it's experimental, but it's there. Many thanks to Tero Pihlajakoski for his work on the Mac
+       package!
+     * Windows installer
+     * Localization support
+     * Improvements to the song editor
+     * Fixed a major memory leak
+     * Lefty mode
+     * Support for cassette labels and colors
+     * General performance tuning
+
+Version 1.0.225
+
+     * Added a Guitar Hero(tm) song importer.
+     * Fixed the key-release bug for long notes introduced by the previous version.
+     * Added support for joystick axes and hats.
+     * Added adjustable song delay in the editor.
+     * Improved song chooser to remember last played song.
+     * SDL_mixer and SDL_ttf added to Linux package to ease running on e.g. FreeBSD.
+     * Added custom color scheme support.
+     * Score multiplier now resets when notes are missed.
+     * Added new difficulty level and support for songs with varying tempo.
+
+Version 1.0.192
+
+     * Added joystick support.
+     * Added support for two different pick keys.
+     * Only show the available difficulty levels for songs.
+     * Fixed the startup problems on video cards that do not support antialiasing.
+     * Fixed the red screen of death.
+     * Added the missing DLL to the Window version.
