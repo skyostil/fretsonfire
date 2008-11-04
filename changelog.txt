@@ -1,3 +1,11 @@
+Version 1.3.110
+
+     * Wrote concise instructions for building and installing the game.
+     * Removed runtime SVG support. All images must be pre-rasterized as PNG graphics now. This also removes the dependency on Amanith, making the game simpler to build and package.
+     * Reworked the build system. Now an installation package can be created with a single command for Windows and Mac OS X.
+     * Added textured fretboard strings and bars.
+     * Updated the translations.
+
 Version 1.2.512
 
      * Effects optimization
