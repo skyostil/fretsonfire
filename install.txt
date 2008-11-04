@@ -1,0 +1,53 @@
+Building and installing Frets on Fire
+-------------------------------------
+
+Running the game
+----------------
+
+First, the following supporting Python libraries should be installed.
+
+	- Python 2.4 or later
+	- PyGame
+	- PyOpenGL and a video card with recent OpenGL drivers
+	- Python Imaging Library
+	- numpy
+	- Optional: psyco specializing compiler
+
+After this, the game can be started by running the src/FretsOnFire.py file. For
+example, in Linux and Mac OS X this can be done from the terminal with the
+following commands:
+
+	$ cd src
+	$ python FretsOnFire.py
+
+Making an installation package
+------------------------------
+
+A redistributable installation package for the game can be created as follows.
+
+For Windows:
+
+	1. Install Nullsoft's NSIS installation system.
+           Note: Frets on Fire assumes that the NSIS tool can be found at 
+           c:/Program Files/NSIS/makeNSIS.exe. This can be overridden by 
+           passing the parameter MAKENSIS=<path to makeNSIS.exe> to make in
+           the following step.
+
+	2. Install GNU make.
+
+	3. Run the following command
+
+		$ make dist
+
+For Mac OS X:
+
+	1. Install py2app.
+
+	2. Run the following command
+
+		$ make dist
+
+Additionally, a generic source distribution package can be created by typing
+
+	$ make sdist
+

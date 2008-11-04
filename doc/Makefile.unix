@@ -1,3 +1,9 @@
+#
+# This Makefile is for building a redistributable binary of Frets on Fire
+# on Unix platforms using cx_Freeze. Since we no longer ship such binaries,
+# this file is not in use any longer.
+#
+
 CXFREEZE=~/src/cx_Freeze-3.0.3/FreezePython
 PYTHON=python
 PYTHON_LIBS=/usr/lib/python2.4

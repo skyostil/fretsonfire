@@ -48,7 +48,11 @@
     >> a fairly fast OpenGL graphics card (shader support not necessary,
        antialiasing support recommended)
     >> SDL compatible sound card
-    >> SDL, SDL_ttf and SDL_mixer libraries installed
+
+ Mac OS X:
+
+    >> Mac OS X 10.5 or later
+    >> OpenGL accelerated video card
 
  >>-------------------------------------------------------------------->>
   |  3. Playing the game                                               |
