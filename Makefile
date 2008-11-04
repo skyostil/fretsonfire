@@ -28,6 +28,7 @@ dist: graphics translations killscores
 	@echo --- Fixing miscellaneous things
 	@unix2dos dist/win32/readme.txt
 	@unix2dos dist/win32/copying.txt
+	@unix2dos dist/win32/install.txt
 	@rm -f dist/win32/w9xpopen.exe
 
 installer: dist
