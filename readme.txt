@@ -125,6 +125,11 @@
   RedOctane. To use it, you'll need to have the game DVD, at least 500
   megabytes of free disk space and a lot of patience.
 
+  The game supports Guitar Hero, Guitar Hero II,  Guitar Hero Encore and
+  Guitar Hero 80s discs. Note that only the Playstation 2 version of the
+  discs are supported.
+
+
   You'll also need to have the OGG Vorbis command line compressor
   installed. In Linux, you can usually get it in a package called
   vorbis-tools. In Windows, copy the encoder (oggenc.exe) into the
