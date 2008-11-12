@@ -201,7 +201,9 @@ else: # pygame
       return Channel(n)
 
     def close(self):
-      pygame.mixer.quit()
+      # PyGame crashes on mac if you do this
+      if sys.platform != "darwin":
+        pygame.mixer.quit()
 
     def pause(self):
       pygame.mixer.pause()
