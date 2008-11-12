@@ -525,6 +525,8 @@ class Song(object):
     self.engine.audio.unpause()
 
   def setGuitarVolume(self, volume):
+    if not self.rhythmTrack:
+      volume = max(.1, volume)
     if self.guitarTrack:
       self.guitarTrack.setVolume(volume)
     else:
