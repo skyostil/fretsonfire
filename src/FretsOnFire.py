@@ -95,6 +95,9 @@ if __name__ == "__main__":
         if hasattr(sys, "frozen"):
           if os.name == "nt":
             os.execl("FretsOnFire.exe", "FretsOnFire.exe", *sys.argv[1:])
+          elif os.name == "mac":
+            # This exit code tells the launcher script to restart the game
+            sys.exit(100)
           else:
             os.execl("./FretsOnFire", "./FretsOnFire", *sys.argv[1:])
         else:
