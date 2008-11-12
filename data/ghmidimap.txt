@@ -13,7 +13,7 @@ ziggystardust;			Ziggy Stardust;			David Bowie
 aceofspades;			Ace of Spades;			Motorhead
 advharmony;			*Trippolette;			Andrew Buch
 allofthis;			All of This;			Shaimus
-barkatthemoon;			Bark at the Moon;		Ozzie Osbourne
+barkatthemoon;			Bark at the Moon;		Ozzy Osbourne
 behindthemask;			Behind the Mask;		Anarchy Club
 breakingwheel;			The Breaking Wheel;		Artillery
 callout;			Call Out;			Acro-Brats
@@ -39,7 +39,7 @@ heyyou;				Hey You;			The Exies
 hey;                            Hey;                            Honest Bob and the Factory-to-Dealer Incentives
 higherground;			Higher Ground;			Red Hot Chili Peppers
 iloverockandroll;		I Love Rock and Roll;		Joann Jett
-infected;			Infected;			Black Sabbath
+infected;			Infected;			Bad Religion
 ironman;			Iron Man;			Black Sabbath
 iwannabesedated;		I Wanna Be Sedated;		The Ramones
 killerqueen;			Killer Queen;			Queen
