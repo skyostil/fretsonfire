@@ -243,7 +243,9 @@ class GameEngine(Engine):
       self.restartRequested = True
       self.input.broadcastSystemEvent("restartRequested")
     else:
-      self.quit()
+        # evilynux - With self.audio.close(), calling self.quit() results in
+        #            a crash. Calling the parent directly as a workaround.
+        Engine.quit(self)
     
   def quit(self):
     self.audio.close()
