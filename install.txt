@@ -12,6 +12,7 @@ First, the following supporting Python libraries should be installed.
 	- Python Imaging Library
 	- numpy
 	- Optional: psyco specializing compiler
+	- Optional: vorbis-tools for importing Guitar Hero (tm) songs
 
 After this, the game can be started by running the src/FretsOnFire.py file. For
 example, in Linux and Mac OS X this can be done from the terminal with the
