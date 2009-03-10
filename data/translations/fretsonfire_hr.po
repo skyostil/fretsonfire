@@ -1,0 +1,790 @@
+# Frets On Fire
+# Copyright (C) 2006 Unreal Voodoo
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: FretsOnFire\n"
+"POT-Creation-Date: 2006-10-27 23:23+EEST\n"
+"PO-Revision-Date: 2009-03-08 00:31+0100\n"
+"Last-Translator: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+"Language-Team: \n"
+
+#: Credits.py:111
+msgid "Unreal Voodoo"
+msgstr "Unreal Voodoo"
+
+#: Credits.py:112
+msgid "presents"
+msgstr "predstavlja"
+
+#: Credits.py:116
+msgid "Version %s"
+msgstr "Verzija %s"
+
+#: Credits.py:118
+msgid "Game Design,"
+msgstr "Dizajn igre,"
+
+#: Credits.py:119
+msgid "Programming:"
+msgstr "Programiranje:"
+
+#: Credits.py:122
+msgid "Music,"
+msgstr "Glazba,"
+
+#: Credits.py:123
+msgid "Sound Effects:"
+msgstr "Zvučni efekti:"
+
+#: Credits.py:126
+msgid "Graphics:"
+msgstr "Grafika:"
+
+#: Credits.py:129
+msgid "Introducing:"
+msgstr "Predstavljanje"
+
+#: Credits.py:131
+msgid "as Jurgen, Your New God"
+msgstr "kao Jurgen, vaš novi bog"
+
+#: Credits.py:134
+msgid "as Groupie"
+msgstr "kao Groupie"
+
+#: Credits.py:136
+msgid "Song Credits:"
+msgstr "Zasluge pjesama:"
+
+#: Credits.py:137
+msgid "Bang Bang, Mystery Man"
+msgstr "Bang Bang, Mystery Man"
+
+#: Credits.py:138
+msgid "music by Mary Jo and Tommi Inkila"
+msgstr "glazba: Mary Jo i Tommi Inkila"
+
+#: Credits.py:139
+msgid "lyrics by Mary Jo"
+msgstr "stihovi: Mary Jo"
+
+#: Credits.py:141
+msgid "Defy The Machine"
+msgstr "Defy The Machine"
+
+#: Credits.py:142
+msgid "music by Tommi Inkila"
+msgstr "glazba: Tommi Inkila"
+
+#: Credits.py:144
+msgid "This Week I've Been"
+msgstr "This Week I've Been"
+
+#: Credits.py:145
+msgid "Mostly Playing Guitar"
+msgstr "Mostly Playing Guitar"
+
+#: Credits.py:146
+msgid "composed and performed by Tommi Inkila"
+msgstr "skladao i izveo: Tommi Inkila"
+
+#: Credits.py:148
+msgid "Testing:"
+msgstr "Testiranje:"
+
+#: Credits.py:155
+msgid "Mac OS X port:"
+msgstr "Mac OS X port:"
+
+#: Credits.py:158
+msgid "Special thanks to:"
+msgstr "Posebno hvala:"
+
+#: Credits.py:161
+msgid "Made with:"
+msgstr "Napravljeno sa:"
+
+#: Credits.py:184
+msgid "Source Code available under the GNU General Public License"
+msgstr "Source kod dostupan pod GNU General Public licencom"
+
+#: Credits.py:190
+msgid "Copyright 2006, 2007 by Unreal Voodoo"
+msgstr "Autorsko pravo 2006, 2007 od Unreal Voodoo-a"
+
+#: Data.py:60
+msgid "__lefttoright__"
+msgstr "_lijevonadesno_"
+
+#: Dialogs.py:271
+msgid "<OK>"
+msgstr "<U redu>"
+
+#: Dialogs.py:357
+msgid "Browsing Collection..."
+msgstr "Pregledavanje kolekcije..."
+
+#: Dialogs.py:683
+msgid "Filter: %s"
+msgstr "Filtar: %s"
+
+#: Dialogs.py:685
+msgid "Not found"
+msgstr "Nije pronađeno"
+
+#: Dialogs.py:688
+msgid "Loading Preview..."
+msgstr "Učitavanje pregleda..."
+
+#: Dialogs.py:731
+msgid "One song in this library"
+msgstr "Jedna pjesma u biblioteci"
+
+#: Dialogs.py:733
+msgid "%d songs in this library"
+msgstr "%d pjesama u biblioteci"
+
+#: Dialogs.py:758
+msgid "[Parent Folder]"
+msgstr "[Izvorna mapa]"
+
+#: Dialogs.py:760
+msgid "%s [Folder]"
+msgstr "%s [Mapa]"
+
+#: Dialogs.py:966
+msgid "%.2f beats per minute"
+msgstr "%.2f udara tempa po minuti"
+
+#: Dialogs.py:1030
+msgid "Pick!"
+msgstr "Zatrzaj!"
+
+#: Dialogs.py:1069
+msgid "Choose a Song"
+msgstr "Odaberite pjesmu"
+
+#: Dialogs.py:1084
+msgid "Choose a File"
+msgstr "Odaberite datoteku"
+
+#: Dialogs.py:1110
+msgid "Play with the keys and press Escape when you're done."
+msgstr "Isprobajte tipke i pritisnite Escape kad ste završili."
+
+#: Dialogs.py:1120
+msgid "Loading..."
+msgstr "Učitavanje..."
+
+#: Editor.py:66
+msgid "Save Song"
+msgstr "Spremi pjesmu"
+
+#: Editor.py:67
+msgid "Set Song Name"
+msgstr "Postavi naziv pjesme"
+
+#: Editor.py:68
+msgid "Set Artist Name"
+msgstr "Postavi ime izvođača"
+
+#: Editor.py:69
+msgid "Set Beats per Minute"
+msgstr "Postavi tempo po minuti"
+
+#: Editor.py:70
+msgid "Estimate Beats per Minute"
+msgstr "Predviđeni tempo po minuti"
+
+#: Editor.py:71
+msgid "Set A/V delay"
+msgstr "Postavi A/V odgodu"
+
+#: Editor.py:72
+msgid "Set Cassette Color"
+msgstr "Postavi boju kazete"
+
+#: Editor.py:73
+msgid "Set Cassette Label"
+msgstr "Postavi naljepnicu kazete"
+
+#: Editor.py:74
+msgid "Editing Help"
+msgstr "Uređivanje Pomoći"
+
+#: Editor.py:75
+#: GameResultsScene.py:60
+#: GuitarScene.py:90
+msgid "Quit to Main Menu"
+msgstr "Izađi na Glavni izbornik"
+
+#: Editor.py:81
+msgid "There are no changes to save."
+msgstr "Nema promjena za spremanje"
+
+#: Editor.py:89
+msgid "Saving..."
+msgstr "Spremanje..."
+
+#: Editor.py:90
+msgid "'%s' saved."
+msgstr "'%s' spremljen."
+
+#: Editor.py:93
+msgid "Editing keys: "
+msgstr "Uređivanje tipki:"
+
+#: Editor.py:94
+msgid "Arrows - Move cursor, "
+msgstr "Strelice - Micanje kursora,"
+
+#: Editor.py:95
+msgid "Space - Play/pause song, "
+msgstr "Space - Odsviraj/zaustavi pjesmu,"
+
+#: Editor.py:96
+msgid "Enter - Make note (hold and move for long notes), "
+msgstr "Enter - Napravi notu (drži i pomakni za duge note),"
+
+#: Editor.py:97
+msgid "Delete - Delete note, "
+msgstr "Delete - Izbriši notu,"
+
+#: Editor.py:98
+msgid "Page Up/Down - Change difficulty"
+msgstr "Page Up/Down - Promjena težine"
+
+#: Editor.py:102
+msgid "Enter Song Name"
+msgstr "Unesi naziv pjesme"
+
+#: Editor.py:108
+msgid "Enter Artist Name"
+msgstr "Unesi ime izvođača"
+
+#: Editor.py:114
+msgid "Enter A/V delay in milliseconds"
+msgstr "Unesi A/V odgodu u milisekundama"
+
+#: Editor.py:120
+#: Editor.py:129
+msgid "That isn't a number."
+msgstr "To nije broj."
+
+#: Editor.py:123
+msgid "Enter Beats per Minute Value"
+msgstr "Unesi Tempo po minuti vrijednost"
+
+#: Editor.py:132
+msgid "Tap the Space bar to the beat of the song. Press Enter when done or Escape to cancel."
+msgstr "Tapkajte Spacebar za tempo pjesme. Pritisnite Enter kad ste gotovi ili Escape za prekid."
+
+#: Editor.py:142
+msgid "Enter cassette color in HTML (#RRGGBB) format."
+msgstr "Navedi boju kazete u HTML (#RRGGBB) formatu."
+
+#: Editor.py:148
+msgid "That isn't a color."
+msgstr "To nije boja."
+
+#: Editor.py:151
+msgid "Choose a 256x128 PNG format label image."
+msgstr "Odaberite 256x128 sliku naljepnice PNG formata."
+
+#: Editor.py:168
+msgid "Loading song..."
+msgstr "Učitavanje pjesme..."
+
+#: Editor.py:334
+msgid "Playing"
+msgstr "Sviranje"
+
+#: Editor.py:336
+msgid "Stopped"
+msgstr "Zaustavljeno"
+
+#: Editor.py:377
+msgid "Enter a name for the song."
+msgstr "Unesite naziv za pjesmu."
+
+#: Editor.py:385
+msgid "That song already exists."
+msgstr "Ta pjesma već postoji."
+
+#: Editor.py:389
+msgid "Choose the Instrument Track (OGG format)."
+msgstr "Odaberite Instrumentalni zapis (OGG format)."
+
+#: Editor.py:395
+msgid "Choose the Background Track (OGG format) or press Escape to skip."
+msgstr "Odaberite Pozadinski zapis (OGG format) ili pritisnite Escape za preskok."
+
+#: Editor.py:399
+msgid "Importing..."
+msgstr "Uvezivanje..."
+
+#: Editor.py:591
+msgid "Stage 1/8: Splitting VGS file"
+msgstr "Faza 1/8: Odvajanje VGS datoteke"
+
+#: Editor.py:626
+msgid "Stage 6/8: Joining song stereo tracks"
+msgstr "Faza 6/8: Spajanje stereo zapisa pjesme"
+
+#: Editor.py:630
+msgid "Stage 7/8: Joining guitar stereo tracks"
+msgstr "Faza 7/8: Spajanje stereo zapisa gitare"
+
+#: Editor.py:645
+msgid "Stage 8/8: Compressing tracks"
+msgstr "Faza 8/8: Kompresiranje zapisa"
+
+#: Editor.py:680
+msgid "Reading the song list."
+msgstr "Čitanje liste pjesama."
+
+#: Editor.py:687
+msgid "Reading the archive index."
+msgstr "Čitanje arhivnog registra."
+
+#: Editor.py:711
+msgid "Extracting %s by %s. %d of %d songs imported. Yeah, this is going to take forever."
+msgstr "Ekstrahirano %s od %s. %d od %d pjesama uvezena. Da, ovo će trajati vječno."
+
+#: Editor.py:756
+msgid "Ready"
+msgstr "Spremno"
+
+#: Editor.py:771
+msgid "All done! %d songs imported. Have fun!"
+msgstr "Sve dovršeno! %d pjesama uvezeno. Zabavite se!"
+
+#: Editor.py:773
+msgid "No songs could be imported, sorry. Check the log files for more information."
+msgstr "Žao nam je, pjesme se ne mogu uvesti. Pregledajte datoteke evidencije za više informacija."
+
+#: Editor.py:782
+msgid "Ogg Vorbis encoder (oggenc.exe) not found. Please install it to the game directory and try again."
+msgstr "Ogg Vorbis koder (oggenc.exe) nije pronađen. Molimo instalirajte ga u igrinom direktoriju i pokušajte ponovo."
+
+#: Editor.py:784
+msgid "Ogg Vorbis encoder (oggenc) not found. Please install it and try again."
+msgstr "Ogg Vorbis koder (oggenc) nije pronađen. Molimo instalirajte ga i pokušajte ponovo."
+
+#: Editor.py:788
+msgid "Make sure you have at least 500 megabytes of free disk space before using this importer."
+msgstr "Budite sigurni da imate barem 500 MB praznog prostora u disku prije korištenja uvoznika."
+
+#: Editor.py:792
+msgid "Enter the path to the mounted Guitar Hero (tm) DVD"
+msgstr "Unesite put do mountanog Guitar Hero (tm) DVDa"
+
+#: Editor.py:801
+msgid "That's not it. Try again."
+msgstr "To nije to. Pokušajte ponovo."
+
+#: Editor.py:819
+msgid "Importing Songs"
+msgstr "Uvoz pjesama"
+
+#: GameEngine.py:51
+msgid "Upload Highscores"
+msgstr "Uploadanje Rezultata"
+
+#: GameEngine.py:51
+#: GameEngine.py:53
+#: GameEngine.py:54
+#: GameEngine.py:55
+msgid "No"
+msgstr "Ne"
+
+#: GameEngine.py:51
+#: GameEngine.py:53
+#: GameEngine.py:54
+#: GameEngine.py:55
+msgid "Yes"
+msgstr "Da"
+
+#: GameEngine.py:53
+msgid "Lefty mode"
+msgstr "Ljevački mod"
+
+#: GameEngine.py:54
+msgid "Tappable notes"
+msgstr "Tapkajuće note"
+
+#: GameEngine.py:55
+msgid "Fullscreen Mode"
+msgstr "Puni ekran"
+
+#: GameEngine.py:56
+msgid "2x"
+msgstr "2x"
+
+#: GameEngine.py:56
+msgid "4x"
+msgstr "4x"
+
+#: GameEngine.py:56
+msgid "6x"
+msgstr "6c"
+
+#: GameEngine.py:56
+msgid "8x"
+msgstr "8x"
+
+#: GameEngine.py:56
+msgid "Antialiasing Quality"
+msgstr "Antialiasing kvaliteta"
+
+#: GameEngine.py:56
+msgid "None"
+msgstr "Ništa"
+
+#: GameEngine.py:58
+msgid "Frames per Second"
+msgstr "Sličica po sekundi"
+
+#: GameEngine.py:59
+msgid "High"
+msgstr "Visoko"
+
+#: GameEngine.py:59
+msgid "Low"
+msgstr "Nisko"
+
+#: GameEngine.py:59
+msgid "Normal"
+msgstr "Normalno"
+
+#: GameEngine.py:59
+msgid "SVG Quality"
+msgstr "SVG kvaliteta"
+
+#: GameEngine.py:60
+msgid "Sample Frequency"
+msgstr "Ogledna frekvencija"
+
+#: GameEngine.py:61
+msgid "Sample Bits"
+msgstr "Ogledni bitovi"
+
+#: GameEngine.py:63
+msgid "Buffer Size"
+msgstr "Veličina buffera"
+
+#: GameEngine.py:64
+msgid "A/V delay"
+msgstr "A/V odgoda"
+
+#: GameEngine.py:65
+msgid "Loud"
+msgstr "Bučno"
+
+#: GameEngine.py:65
+msgid "Painful"
+msgstr "Bolno"
+
+#: GameEngine.py:65
+msgid "Quiet"
+msgstr "Tiho"
+
+#: GameEngine.py:65
+msgid "Screw Up Sounds"
+msgstr "Ugasi zvukove"
+
+#: GameEngine.py:65
+#: Mod.py:33
+msgid "Off"
+msgstr "Isključeno"
+
+#: GameEngine.py:66
+msgid "Guitar Volume"
+msgstr "Jačina zvuka gitare"
+
+#: GameEngine.py:67
+msgid "Song Volume"
+msgstr "Jačina zvuka pjesme"
+
+#: GameEngine.py:68
+msgid "Rhythm Volume"
+msgstr "Jačina zvuka ritma"
+
+#: GameEngine.py:69
+msgid "Text scale"
+msgstr "Veličina teksta"
+
+#: GameEngine.py:135
+msgid "Frets on Fire"
+msgstr "Frets on Fire"
+
+#: GameResultsScene.py:58
+msgid "Replay"
+msgstr "Ponovi"
+
+#: GameResultsScene.py:59
+#: GuitarScene.py:88
+msgid "Change Song"
+msgstr "Promjeni pjesmu"
+
+#: GameResultsScene.py:66
+msgid "Chilling..."
+msgstr "Analiziranje..."
+
+#: GameResultsScene.py:76
+msgid "No highscores for cheaters!"
+msgstr "Nema rezultata za varalice!"
+
+#: GameResultsScene.py:78
+msgid "%d points is a new high score! Please enter your name:"
+msgstr "%d bodova je novi visoki rezultat! Unesite svoje ime:"
+
+#: GameResultsScene.py:177
+msgid "Highest Scores (%s)"
+msgstr "Najbolji rezultati (%s)"
+
+#: GameResultsScene.py:198
+msgid "Uploading Scores..."
+msgstr "Uploadanje rezultata..."
+
+#: GameResultsScene.py:202
+msgid "Song Finished!"
+msgstr "Pjesma završena!"
+
+#: GameResultsScene.py:220
+msgid "Accuracy: %d%%"
+msgstr "Preciznost: %d%%"
+
+#: GameResultsScene.py:223
+msgid "Longest note streak: %d"
+msgstr "Najduži pogođeni niz: %d"
+
+#: GameTask.py:72
+msgid "Connection lost."
+msgstr "Konekcija izgubljena."
+
+#: GuitarScene.py:81
+msgid "Tuning Guitar..."
+msgstr "Naštimavanje gitare..."
+
+#: GuitarScene.py:87
+msgid "Restart Song"
+msgstr "Ponovi pjesmu"
+
+#: GuitarScene.py:89
+msgid "Settings"
+msgstr "Postavke"
+
+#: GuitarScene.py:274
+msgid "Jurgen will show you how it is done."
+msgstr "Jurgen će ti pokazati kako je završeno."
+
+#: GuitarScene.py:276
+msgid "Jurgen has left the building."
+msgstr "Jurgen je napustio zgradu."
+
+#: GuitarScene.py:364
+msgid "Get Ready to Rock"
+msgstr "Pripremi se za Rock"
+
+#: GuitarScene.py:389
+msgid "%d hit"
+msgstr "%d pogodaka"
+
+#: GuitarScene.py:406
+msgid "Missed!"
+msgstr "Promašeno!"
+
+#: Language.py:56
+msgid "Language"
+msgstr "Jezik"
+
+#: Lobby.py:52
+msgid "Player"
+msgstr "Igrač"
+
+#: Lobby.py:59
+msgid "Enter your name:"
+msgstr "Unesi svoje ime:"
+
+#: Lobby.py:59
+msgid "Player #%d"
+msgstr "Igrač #%d"
+
+#: Lobby.py:109
+msgid "Lobby (%d players)"
+msgstr "Predsoblje (%d igrača)"
+
+#: Lobby.py:138
+msgid "Press Enter to Start Game"
+msgstr "Pritisni Enter da započneš igru"
+
+#: MainMenu.py:54
+msgid "Host Multiplayer Game"
+msgstr "Host Multiplayer igra"
+
+#: MainMenu.py:55
+msgid "Join Multiplayer Game"
+msgstr "Uđi u Multiplayer igru"
+
+#: MainMenu.py:59
+msgid "Edit Existing Song"
+msgstr "Uredi postojeće pjesme"
+
+#: MainMenu.py:60
+msgid "Import New Song"
+msgstr "Uvezi novu pjesmu"
+
+#: MainMenu.py:61
+msgid "Import Guitar Hero(tm) Songs"
+msgstr "Uvezi Guitar Hero(tm) pjesme"
+
+#: MainMenu.py:67
+msgid "Play Game"
+msgstr "Igraj"
+
+#: MainMenu.py:68
+msgid "Tutorial"
+msgstr "Vodič"
+
+#: MainMenu.py:69
+msgid "Song Editor"
+msgstr "Uređivač pjesama"
+
+#: MainMenu.py:70
+msgid "Settings >"
+msgstr "Postavke >"
+
+#: MainMenu.py:71
+msgid "Credits"
+msgstr "Zasluge"
+
+#: MainMenu.py:72
+msgid "Quit"
+msgstr "Izađi"
+
+#: MainMenu.py:148
+msgid "Enter the server address:"
+msgstr "Unesi adresu servera:"
+
+#: MainMenu.py:155
+msgid "Connecting..."
+msgstr "Konektiranje..."
+
+#: Mod.py:33
+msgid "On"
+msgstr "Uključeno"
+
+#: Player.py:44
+msgid "Move left"
+msgstr "Pomakni lijevo"
+
+#: Player.py:45
+msgid "Move right"
+msgstr "Pomakni desno"
+
+#: Player.py:46
+msgid "Move up"
+msgstr "Pomakni gore"
+
+#: Player.py:47
+msgid "Move down"
+msgstr "Pomakni dolje"
+
+#: Player.py:48
+msgid "Pick"
+msgstr "Trzalica"
+
+#: Player.py:49
+msgid "Secondary Pick"
+msgstr "Sekundarna trzalica"
+
+#: Player.py:50
+msgid "Fret #1"
+msgstr "Tipka #1"
+
+#: Player.py:51
+msgid "Fret #2"
+msgstr "Tipka #2"
+
+#: Player.py:52
+msgid "Fret #3"
+msgstr "Tipka #3"
+
+#: Player.py:53
+msgid "Fret #4"
+msgstr "Tipka #4"
+
+#: Player.py:54
+msgid "Fret #5"
+msgstr "Tipka #5"
+
+#: Player.py:55
+msgid "Cancel"
+msgstr "Prekid"
+
+#: Settings.py:118
+msgid "Press a key for '%s' or Escape to cancel."
+msgstr "Pritisni tipku za '%s' ili Escape za prekid."
+
+#: Settings.py:130
+msgid "Apply New Settings"
+msgstr "Primjeni nove postavke"
+
+#: Settings.py:137
+msgid "Mod settings"
+msgstr "Postavke moda"
+
+#: Settings.py:146
+msgid "Test Keys"
+msgstr "Testiraj tipke"
+
+#: Settings.py:164
+msgid "Video Resolution"
+msgstr "Video rezolucija"
+
+#: Settings.py:185
+msgid "Volume Settings"
+msgstr "Postavke jačine zvuka"
+
+#: Settings.py:194
+msgid "Game Settings"
+msgstr "Igrine postavke"
+
+#: Settings.py:195
+msgid "Key Settings"
+msgstr "Postavke tipki"
+
+#: Settings.py:196
+msgid "Video Settings"
+msgstr "Video postavke"
+
+#: Settings.py:197
+msgid "Audio Settings"
+msgstr "Audio postavke"
+
+#: Song.py:58
+msgid "Supaeasy"
+msgstr "Superlagano"
+
+#: Song.py:59
+msgid "Easy"
+msgstr "Lagano"
+
+#: Song.py:60
+msgid "Medium"
+msgstr "Srednje"
+
+#: Song.py:61
+msgid "Amazing"
+msgstr "Jako teško"
+
+#: SongChoosingScene.py:68
+msgid "Choose a difficulty:"
+msgstr "Odaberite težinu:"
+

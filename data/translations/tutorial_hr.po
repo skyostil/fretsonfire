@@ -1,0 +1,155 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Ah yes, I know. I'm amazing."
+msgstr "Ah da, znam. Nevjerojatan sam."
+
+msgid "Ah, that was cool."
+msgstr "Ah, to je bilo cool."
+
+msgid "Und hello everyone."
+msgstr "Und zdravo svi."
+
+msgid "My name is Jurgen"
+msgstr "Ja sam Jurgen"
+
+msgid "Guntherswarchzhaffenstrassen."
+msgstr "Guntherswarchzhaffenstrassen."
+
+msgid "Und today I will show you"
+msgstr "Und danas pokazat ću vam"
+
+msgid "how to play this game."
+msgstr "kako igrati ovu igru."
+
+msgid "Check this sh*t!"
+msgstr "Poslušaj ovu brijačinu!"
+
+msgid "And now, pick up your keyboard"
+msgstr "A sad, uzmi svoju tipkovnicu"
+
+msgid "like this."
+msgstr "ovako."
+
+msgid "When I shred,"
+msgstr "Kada ja rasturam,"
+
+msgid "I use the whole keyboard."
+msgstr "ja koristim cijelu tipkovnicu."
+
+msgid "But since you SUCK,"
+msgstr "Ali budući da si PLJUGER,"
+
+msgid "You will only need"
+msgstr "Trebat će ti"
+
+msgid "These five frets,"
+msgstr "ove dvije tipke,"
+
+msgid "Und zie Pick button."
+msgstr "und zie Trzalica."
+
+msgid "However, zie most important"
+msgstr "Doduše, zie najvažnija"
+
+msgid "is the Escape button."
+msgstr "je Escape tipka."
+
+msgid "You will need it,"
+msgstr "Trebat će ti,"
+
+msgid "when you finally realize"
+msgstr "kad konačno shvatiš"
+
+msgid "that you SUCK."
+msgstr "da si PLJUGER."
+
+msgid "Bigtime."
+msgstr "Na veliko."
+
+msgid "To me, that is already obvious."
+msgstr "Za mene, to je očigledno."
+
+msgid "Ok, there comes your first note."
+msgstr "Ok, dolazi prva nota."
+
+msgid "You can already hold down the 1st fret"
+msgstr "Možeš već držati 1. tipku"
+
+msgid "BUT DON'T PICK IT YET!"
+msgstr "ALI NEMOJ JU ZATRZATI!"
+
+msgid "You missed it."
+msgstr "Promašio si."
+
+msgid "Ok, let's try it again."
+msgstr "Ok, pokušajmo ponovo."
+
+msgid "Ok, wait for it."
+msgstr "Ok, čekaj."
+
+msgid "Wait for it."
+msgstr "Čekaj"
+
+msgid "No!"
+msgstr "Ne!"
+
+msgid "*Sigh*"
+msgstr "*Ah*"
+
+msgid "Now, hold down two frets."
+msgstr "Sad, drži dvije tipke"
+
+msgid "Ah, you missed it!"
+msgstr "Ah, promašio si!"
+
+msgid "And now, try this super easy lick."
+msgstr "A sad, isprobaj ovu super laganicu."
+
+msgid "Und up to my tempo."
+msgstr "Und na moj način."
+
+msgid "Don't try this,"
+msgstr "Ne pokušavaj ovo,"
+
+msgid "or you'll just hurt yourself."
+msgstr "ili ćeš se ozlijediti."
+
+msgid "Ok, that was about"
+msgstr "U redu, to je bilo oko"
+
+msgid "four billion notes per second."
+msgstr "četiri milijarde nota po sekundi."
+
+msgid "If I play that any faster,"
+msgstr "Ako odsviram imalo brže,"
+
+msgid "your minds would just blow up."
+msgstr "tvoje misli će eksplodirati."
+
+msgid "Ok, that is it for now."
+msgstr "Ok, to je sve zasada."
+
+msgid "You can now go and sell"
+msgstr "Možeš sada otići i prodati"
+
+msgid "your keyboards on Ebay."
+msgstr "tipkovnicu na Ebay."
+
+msgid "Because you SUCK."
+msgstr "Zato jer si PLJUGER."
+
+msgid "And remember one thing."
+msgstr "I zapamti jednu stvar."
+
+msgid "I am your new god, little girls."
+msgstr "Ja sam vaš novi bog, djevojke."
+
