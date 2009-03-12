@@ -127,12 +127,13 @@ class KeyConfigChoice(Menu.Choice):
 
 class SettingsMenu(Menu.Menu):
   def __init__(self, engine):
+    self.engine = engine
     applyItem = [(_("Apply New Settings"), self.applySettings)]
 
     modSettings = [
       ConfigChoice(engine.config, "mods",  "mod_" + m) for m in Mod.getAvailableMods(engine)
     ] + applyItem
-    
+
     gameSettings = [
       (_("Mod settings"), modSettings),
       ConfigChoice(engine.config, "game",  "language"),
@@ -158,7 +159,7 @@ class SettingsMenu(Menu.Menu):
       KeyConfigChoice(engine, engine.config, "player", "key_cancel"),
     ]
     keySettingsMenu = Menu.Menu(engine, keySettings)
-    
+
     modes = engine.video.getVideoModes()
     modes.reverse()
     Config.define("video",  "resolution", str,   "640x480", text = _("Video Resolution"), options = ["%dx%d" % (m[0], m[1]) for m in modes])
@@ -196,7 +197,7 @@ class SettingsMenu(Menu.Menu):
       (_("Video Settings"),    videoSettingsMenu),
       (_("Audio Settings"),    audioSettingsMenu),
     ]
-  
+
     self.settingsToApply = settings + \
                            videoSettings + \
                            audioSettings + \
@@ -205,12 +206,13 @@ class SettingsMenu(Menu.Menu):
                            modSettings
 
     Menu.Menu.__init__(self, engine, settings)
-    
+
   def applySettings(self):
     for option in self.settingsToApply:
       if isinstance(option, ConfigChoice):
         option.apply()
-    self.engine.restart()
+
+    Dialogs.showMessage(self.engine, _("Settings saved. Please restart the game to activate the new settings."))
 
 class GameSettingsMenu(Menu.Menu):
   def __init__(self, engine):
