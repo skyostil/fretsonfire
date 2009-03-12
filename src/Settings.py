@@ -140,6 +140,9 @@ class SettingsMenu(Menu.Menu):
       ConfigChoice(engine.config, "game",  "leftymode", autoApply = True),
       ConfigChoice(engine.config, "game",  "tapping", autoApply = True),
       ConfigChoice(engine.config, "game",  "uploadscores", autoApply = True),
+      ConfigChoice(engine.config, "game",  "compactlist", autoApply = True),
+      ConfigChoice(engine.config, "game",  "autopreview", autoApply = True),
+      ConfigChoice(engine.config, "game",  "artistsort", autoApply = True),
     ]
     gameSettingsMenu = Menu.Menu(engine, gameSettings + applyItem)
 
