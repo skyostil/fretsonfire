@@ -138,7 +138,7 @@ msgstr "%s [Carpeta]"
 
 #: Dialogs.py:818
 msgid "%.2f beats per minute"
-msgstr "%.2f revoluciónes por minuto"
+msgstr "%.2f revoluciones por minuto"
 
 #: Dialogs.py:882
 msgid "Pick!"
@@ -269,7 +269,7 @@ msgstr "Introduce el código de color en formato HTML (#RRGGBB) "
 
 #: Editor.py:147
 msgid "That isn't a color."
-msgstr "Esto no es un color."
+msgstr "Eso no es un color."
 
 #: Editor.py:150
 msgid "Choose a 256x128 PNG format label image."
@@ -345,11 +345,11 @@ msgstr "Listo"
 
 #: Editor.py:735
 msgid "All done! %d songs imported. Have fun!"
-msgstr "¡Completado! %d canciones importadas. ¡Diviertete!"
+msgstr "¡Completado! %d canciones importadas. ¡Diviértete!"
 
 #: Editor.py:737
 msgid "No songs could be imported, sorry. Check the log files for more information."
-msgstr "Lo sentimos, no se han podido importar las canciones. Revisa el log de archivos para mas información."
+msgstr "Lo sentimos, no se han podido importar las canciones. Revisa el log de archivos para más información."
 
 #: Editor.py:746
 msgid "Ogg Vorbis encoder (oggenc.exe) not found. Please install it to the game directory and try again."
@@ -425,7 +425,7 @@ msgstr "Nada"
 
 #: GameEngine.py:55
 msgid "Frames per Second"
-msgstr "Fotogramas por segundo"
+msgstr "Cuadros por segundo"
 
 #: GameEngine.py:56
 msgid "High"
@@ -538,7 +538,7 @@ msgstr "Reiniciar canción"
 
 #: GuitarScene.py:250
 msgid "Jurgen will show you how it is done."
-msgstr "Jurgen te mostrara cómo se hace."
+msgstr "Jurgen te mostrará cómo se hace."
 
 #: GuitarScene.py:252
 msgid "Jurgen has left the building."
