@@ -1,0 +1,158 @@
+# Frets On Fire
+# Copyright (C) 2009 Unreal Voodoo
+# Felipe Castro <fefcas@gmail.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: FretsOnFire\n"
+"POT-Creation-Date: 2006-10-27 23:23+EEST\n"
+"PO-Revision-Date: 2009-03-21 19:14-0300\n"
+"Last-Translator: Felipe Castro <fefcas@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+"Language-Team: \n"
+
+msgid "Ah yes, I know. I'm amazing."
+msgstr "Ho jes, mi scias. Mi estas amuza."
+
+msgid "Ah, that was cool."
+msgstr "Hej, tio estis suka."
+
+msgid "Und hello everyone."
+msgstr "Und saluton al ĉiuj."
+
+msgid "My name is Jurgen"
+msgstr "Mia nomo estas Jurgen"
+
+msgid "Guntherswarchzhaffenstrassen."
+msgstr "Gunteĥŝŭaĥŝhafenstĥasen."
+
+msgid "Und today I will show you"
+msgstr "Und hodiaŭ mi montros al vi"
+
+msgid "how to play this game."
+msgstr "kiel ludi tiun ĉi ludon."
+
+msgid "Check this sh*t!"
+msgstr "Provu tiun ĉi fe*on!"
+
+msgid "And now, pick up your keyboard"
+msgstr "Kaj nun, prenu vian klavaron"
+
+msgid "like this."
+msgstr "tiel ĉi."
+
+msgid "When I shred,"
+msgstr "Kiam mi \"ŝiras\","
+
+msgid "I use the whole keyboard."
+msgstr "mi uzas la tutan klavaron."
+
+msgid "But since you SUCK,"
+msgstr "Sed ĉar vi STULTAS,"
+
+msgid "You will only need"
+msgstr "Vi bezonos nur"
+
+msgid "These five frets,"
+msgstr "Tiujn ĉi 5 fretojn,"
+
+msgid "Und zie Pick button."
+msgstr "Und zie Pinĉ-butonon."
+
+msgid "However, zie most important"
+msgstr "Tamen, zie plej grava"
+
+msgid "is the Escape button."
+msgstr "estas la butono Escape."
+
+msgid "You will need it,"
+msgstr "Vi bezonos ĝin,"
+
+msgid "when you finally realize"
+msgstr "kiam vi finfine agnoskos"
+
+msgid "that you SUCK."
+msgstr "ke vi STULTAS."
+
+msgid "Bigtime."
+msgstr "Iel ajn."
+
+msgid "To me, that is already obvious."
+msgstr "Por mi, tio estas ja certeco."
+
+msgid "Ok, there comes your first note."
+msgstr "Bone, jen via unua noto."
+
+msgid "You can already hold down the 1st fret"
+msgstr "Vi povas jam teni premita la 1-an freton"
+
+msgid "BUT DON'T PICK IT YET!"
+msgstr "SED NE PINĈU ĜIN ANKORAŬ!"
+
+msgid "You missed it."
+msgstr "Vi perdis ĝin."
+
+msgid "Ok, let's try it again."
+msgstr "Bone, ni reprovu tion."
+
+msgid "Ok, wait for it."
+msgstr "Bone, atendu ĝin."
+
+msgid "Wait for it."
+msgstr "Atendu ĝin."
+
+msgid "No!"
+msgstr "Ne!"
+
+msgid "*Sigh*"
+msgstr "*Ve*"
+
+msgid "Now, hold down two frets."
+msgstr "Nun, tenu premitaj du fretojn."
+
+msgid "Ah, you missed it!"
+msgstr "Hej, vi perdis ĝin!"
+
+msgid "And now, try this super easy lick."
+msgstr "Kaj nun, provu tiun ĉi facilegan frapadon."
+
+msgid "Und up to my tempo."
+msgstr "Und al mia tempo."
+
+msgid "Don't try this,"
+msgstr "Ne provu tion ĉi,"
+
+msgid "or you'll just hurt yourself."
+msgstr "aŭ vi simple vundos vin mem."
+
+msgid "Ok, that was about"
+msgstr "Bone, tio temis pri"
+
+msgid "four billion notes per second."
+msgstr "kvar miliardoj da notoj por sekundo."
+
+msgid "If I play that any faster,"
+msgstr "Se mi ludus tion iom pli rapide,"
+
+msgid "your minds would just blow up."
+msgstr "viaj mensoj simple eksplodus."
+
+msgid "Ok, that is it for now."
+msgstr "Bone, jen ĉio nun."
+
+msgid "You can now go and sell"
+msgstr "Vi povas iri nun kaj forvendi"
+
+msgid "your keyboards on Ebay."
+msgstr "viajn klavarojn ĉe Ebay."
+
+msgid "Because you SUCK."
+msgstr "Ĉar vi STULTAS."
+
+msgid "And remember one thing."
+msgstr "Kaj memoru ion."
+
+msgid "I am your new god, little girls."
+msgstr "Mi estas via nova dio, knabinetoj."

@@ -1,0 +1,817 @@
+# Frets On Fire
+# Copyright (C) 2009 Unreal Voodoo
+# Felipe Castro <fefcas@gmail.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: FretsOnFire\n"
+"POT-Creation-Date: 2006-10-27 23:23+EEST\n"
+"PO-Revision-Date: 2009-03-21 19:14-0300\n"
+"Last-Translator: Felipe Castro <fefcas@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+"Language-Team: \n"
+
+#: Credits.py:111
+msgid "Unreal Voodoo"
+msgstr "Unreal Voodoo"
+
+#: Credits.py:112
+msgid "presents"
+msgstr "prezentas"
+
+#: Credits.py:116
+msgid "Version %s"
+msgstr "Versio %s"
+
+#: Credits.py:118
+msgid "Game Design,"
+msgstr "Lud-projekto,"
+
+#: Credits.py:119
+msgid "Programming:"
+msgstr "Programado:"
+
+#: Credits.py:122
+msgid "Music,"
+msgstr "Muziko,"
+
+#: Credits.py:123
+msgid "Sound Effects:"
+msgstr "Son-Efektoj:"
+
+#: Credits.py:126
+msgid "Graphics:"
+msgstr "Grafiko:"
+
+#: Credits.py:129
+msgid "Introducing:"
+msgstr "Enkonduko:"
+
+#: Credits.py:131
+msgid "as Jurgen, Your New God"
+msgstr "kiel Jurgen, Via Nova Dio"
+
+#: Credits.py:134
+msgid "as Groupie"
+msgstr "kiel Groupie"
+
+#: Credits.py:136
+msgid "Song Credits:"
+msgstr "Muzik-verkistoj:"
+
+#: Credits.py:137
+msgid "Bang Bang, Mystery Man"
+msgstr "Bang Bang, Mistera Homo"
+
+#: Credits.py:138
+msgid "music by Mary Jo and Tommi Inkila"
+msgstr "muziko de Mary Jo kaj Tommi Inkila"
+
+#: Credits.py:139
+msgid "lyrics by Mary Jo"
+msgstr "tekstoj de Mary Jo"
+
+#: Credits.py:141
+msgid "Defy The Machine"
+msgstr "Defiu La Maŝinon"
+
+#: Credits.py:142
+msgid "music by Tommi Inkila"
+msgstr "muziko de Tommi Inkila"
+
+#: Credits.py:144
+msgid "This Week I've Been"
+msgstr "Tiu ĉi Semajno Mi Estis"
+
+#: Credits.py:145
+msgid "Mostly Playing Guitar"
+msgstr "Plejeble Ludante Gitaron"
+
+#: Credits.py:146
+msgid "composed and performed by Tommi Inkila"
+msgstr "komponita kaj ludita de Tommi Inkila"
+
+#: Credits.py:148
+msgid "Testing:"
+msgstr "Testado:"
+
+#: Credits.py:155
+msgid "Mac OS X port:"
+msgstr "Pordo Mac OS X:"
+
+#: Credits.py:158
+msgid "Special thanks to:"
+msgstr "Specialajn dankojn al:"
+
+#: Credits.py:161
+msgid "Made with:"
+msgstr "Farite kun:"
+
+#: Credits.py:184
+msgid "Source Code available under the GNU General Public License"
+msgstr "Font-Kodo disponebla laŭ la Ĝenerala Publika Permeso de GNU"
+
+#: Credits.py:190
+msgid "Copyright 2006-2008 by Unreal Voodoo"
+msgstr "Kopirajto 2006-2008 de Unreal Voodoo"
+
+#: Data.py:60
+msgid "__lefttoright__"
+msgstr "__lefttoright__"
+
+#: Dialogs.py:278
+msgid "<OK>"
+msgstr "<Bone>"
+
+#: Dialogs.py:368
+msgid "Browsing Collection..."
+msgstr "Esplorado de la Kolekto..."
+
+#: Dialogs.py:784
+#: Dialogs.py:790
+msgid "Songs library"
+msgstr "Muzikaro"
+
+#: Dialogs.py:820
+msgid "Filter: %s"
+msgstr "Filtro: %s"
+
+#: Dialogs.py:822
+msgid "Not found"
+msgstr "Ne trovite"
+
+#: Dialogs.py:825
+msgid "Loading Preview..."
+msgstr "Ŝargado je Antaŭvido..."
+
+#: Dialogs.py:827
+msgid "Press Space to Preview"
+msgstr "Premu Spacon por Antaŭvidi"
+
+#: Dialogs.py:870
+msgid "One song in this library"
+msgstr "Unu muziko en tiu ĉi biblioteko"
+
+#: Dialogs.py:872
+msgid "%d songs in this library"
+msgstr "%d muzikoj en tiu ĉi biblioteko"
+
+#: Dialogs.py:897
+msgid "[Parent Folder]"
+msgstr "[Supra Dosierujo]"
+
+#: Dialogs.py:899
+msgid "%s [Folder]"
+msgstr "%s [Dosierujo]"
+
+#: Dialogs.py:1105
+msgid "%.2f beats per minute"
+msgstr "po %.2f frapoj por minuto"
+
+#: Dialogs.py:1169
+msgid "Pick!"
+msgstr "Prenu!"
+
+#: Dialogs.py:1208
+msgid "Choose a Song"
+msgstr "Elektu Muzikon"
+
+#: Dialogs.py:1223
+msgid "Choose a File"
+msgstr "Elektu Dosieron"
+
+#: Dialogs.py:1249
+msgid "Play with the keys and press Escape when you're done."
+msgstr "Ludu kun la klavoj kaj premu Escape post kiam vi pretigis."
+
+#: Dialogs.py:1259
+msgid "Loading..."
+msgstr "Ŝargado..."
+
+#: Editor.py:66
+msgid "Save Song"
+msgstr "Konservi Muzikon"
+
+#: Editor.py:67
+msgid "Set Song Name"
+msgstr "Difini Muzik-Nomon"
+
+#: Editor.py:68
+msgid "Set Artist Name"
+msgstr "Difini Artisto-Nomon"
+
+#: Editor.py:69
+msgid "Set Beats per Minute"
+msgstr "Difini po Frapoj por Minuto"
+
+#: Editor.py:70
+msgid "Estimate Beats per Minute"
+msgstr "Kalkuli po Frapoj por Minuto"
+
+#: Editor.py:71
+msgid "Set A/V delay"
+msgstr "Difini prokraston A/V"
+
+#: Editor.py:72
+msgid "Set Cassette Color"
+msgstr "Difini Koloron de Kasedo"
+
+#: Editor.py:73
+msgid "Set Cassette Label"
+msgstr "Difini Etikedon de Kasedo"
+
+#: Editor.py:74
+msgid "Editing Help"
+msgstr "Helpo pri Redaktado"
+
+#: Editor.py:75
+#: GameResultsScene.py:60
+#: GuitarScene.py:91
+msgid "Quit to Main Menu"
+msgstr "Reiri al Ĉef-Menuo"
+
+#: Editor.py:81
+msgid "There are no changes to save."
+msgstr "Estas neniu modifo por konservi."
+
+#: Editor.py:89
+msgid "Saving..."
+msgstr "Konservado..."
+
+#: Editor.py:90
+msgid "'%s' saved."
+msgstr "'%s' savite."
+
+#: Editor.py:93
+msgid "Editing keys: "
+msgstr "Redaktaj klavoj: "
+
+#: Editor.py:94
+msgid "Arrows - Move cursor, "
+msgstr "Sagoj - Movigi kursoron,"
+
+#: Editor.py:95
+msgid "Space - Play/pause song, "
+msgstr "Spaco - Ludi/paŭsi muzikon, "
+
+#: Editor.py:96
+msgid "Enter - Make note (hold and move for long notes), "
+msgstr "Enter - Ludi noton (tenu kaj movu por longaj notoj),"
+
+#: Editor.py:97
+msgid "Delete - Delete note, "
+msgstr "Delete - Forigi noton, "
+
+#: Editor.py:98
+msgid "Page Up/Down - Change difficulty"
+msgstr "Page Up/Down - Ŝanĝi lertecon"
+
+#: Editor.py:102
+msgid "Enter Song Name"
+msgstr "Enigi Muzik-Nomon"
+
+#: Editor.py:108
+msgid "Enter Artist Name"
+msgstr "Enigi Artisto-Nomon"
+
+#: Editor.py:114
+msgid "Enter A/V delay in milliseconds"
+msgstr "Enigi prokraston A/V kiel milisekundojn"
+
+#: Editor.py:120
+#: Editor.py:129
+msgid "That isn't a number."
+msgstr "Tio ne estas numero."
+
+#: Editor.py:123
+msgid "Enter Beats per Minute Value"
+msgstr "Enigi Valoron de Frapoj por Minuto"
+
+#: Editor.py:132
+msgid "Tap the Space bar to the beat of the song. Press Enter when done or Escape to cancel."
+msgstr "Frapetu la Spaco-stangon laŭ la ritmo de la muziko. Premu Enter kiam finite aŭ Escape por rezigni."
+
+#: Editor.py:142
+msgid "Enter cassette color in HTML (#RRGGBB) format."
+msgstr "Enigu kased-koloron laŭ formo HTML (#RRVVBB)."
+
+#: Editor.py:148
+msgid "That isn't a color."
+msgstr "Tio ne estas koloro."
+
+#: Editor.py:151
+msgid "Choose a 256x128 PNG format label image."
+msgstr "Elektu bildo laŭ formo 256x128 PNG por etikedo."
+
+#: Editor.py:168
+msgid "Loading song..."
+msgstr "Ŝargado je muziko..."
+
+#: Editor.py:334
+msgid "Playing"
+msgstr "Ludade"
+
+#: Editor.py:336
+msgid "Stopped"
+msgstr "Halte"
+
+#: Editor.py:377
+msgid "Enter a name for the song."
+msgstr "Enigu nomon por la muziko."
+
+#: Editor.py:385
+msgid "That song already exists."
+msgstr "Tiu muziko jam ekzistas."
+
+#: Editor.py:389
+msgid "Choose the Instrument Track (OGG format)."
+msgstr "Elektu la Instrumentan Trakon (formo OGG)."
+
+#: Editor.py:395
+msgid "Choose the Background Track (OGG format) or press Escape to skip."
+msgstr "Elektu la Fonan Trakon (formo OGG) aŭ premu Escape por preterpasi."
+
+#: Editor.py:399
+msgid "Importing..."
+msgstr "Importado..."
+
+#: Editor.py:591
+msgid "Stage 1/8: Splitting VGS file"
+msgstr "Paŝo 1/8: Apartigado de dosiero VGS"
+
+#: Editor.py:632
+msgid "Stage 6/8: Joining song stereo tracks"
+msgstr "Paŝo 6/8: Kunigado de muzikaj dukanalaj trakoj"
+
+#: Editor.py:636
+msgid "Stage 7/8: Joining guitar stereo tracks"
+msgstr "Paŝo 7/8: Kunigado de gitaraj dukanalaj trakoj"
+
+#: Editor.py:651
+msgid "Stage 8/8: Compressing tracks"
+msgstr "Paŝo 8/8: Kompaktado de trakoj"
+
+#: Editor.py:686
+msgid "Reading the song list."
+msgstr "Legado de muzik-listo."
+
+#: Editor.py:698
+msgid "Reading the archive index."
+msgstr "Legado de arkiv-indekso."
+
+#: Editor.py:726
+msgid "Extracting %s by %s. %d of %d songs imported. Yeah, this is going to take forever."
+msgstr "Elpakado de %s de %s. %d el %s muzikoj importitaj. Jes, tio daŭros senlime."
+
+#: Editor.py:771
+msgid "Ready"
+msgstr "Prete"
+
+#: Editor.py:786
+msgid "All done! %d songs imported. Have fun!"
+msgstr "Ĉio farite! %d muzikoj importitaj. Ĝuu!"
+
+#: Editor.py:788
+msgid "No songs could be imported, sorry. Check the log files for more information."
+msgstr "Neniu muziko povis esti importita, pardonon. Kontrolu la protokol-dosierojn por pli da informoj."
+
+#: Editor.py:797
+msgid "Ogg Vorbis encoder (oggenc.exe) not found. Please install it to the game directory and try again."
+msgstr "Enkodilo Ogg Vorbis (oggenc.exe) ne trovita. Bonvolu instali ĝin en la dosierujo de la ludo kaj reprovu."
+
+#: Editor.py:799
+msgid "Ogg Vorbis encoder (oggenc) not found. Please install it and try again."
+msgstr "Enkodilo Ogg Vorbis (oggenc.exe) ne trovita. Bonvolu instali ĝin kaj reprovu."
+
+#: Editor.py:803
+msgid "Make sure you have at least 500 megabytes of free disk space before using this importer."
+msgstr "Certiĝu ke vi havas almenaŭ 500 megabajtoj da libera disko-spaco antaŭ ol uzi tiun ĉi importilon."
+
+#: Editor.py:807
+msgid "Enter the path to the mounted Guitar Hero (tm) I/II/Encore DVD"
+msgstr "Enmetu la vojon al la muntita DVD Guitar Hero (tm) I/II/Encore"
+
+#: Editor.py:816
+msgid "That's not it. Try again."
+msgstr "Ne estas ĝi. Reprovu."
+
+#: Editor.py:834
+msgid "Importing Songs"
+msgstr "Importado de Muzikoj"
+
+#: GameEngine.py:51
+msgid "Upload Highscores"
+msgstr "Alŝuto de Poentaro"
+
+#: GameEngine.py:51
+#: GameEngine.py:53
+#: GameEngine.py:54
+#: GameEngine.py:55
+#: GameEngine.py:56
+#: GameEngine.py:57
+#: GameEngine.py:58
+msgid "No"
+msgstr "Ne"
+
+#: GameEngine.py:51
+#: GameEngine.py:53
+#: GameEngine.py:54
+#: GameEngine.py:55
+#: GameEngine.py:56
+#: GameEngine.py:57
+#: GameEngine.py:58
+msgid "Yes"
+msgstr "Jes"
+
+#: GameEngine.py:53
+msgid "Lefty mode"
+msgstr "Maldekstrule"
+
+#: GameEngine.py:54
+msgid "Tappable notes"
+msgstr "Frapeteblaj notoj"
+
+#: GameEngine.py:55
+msgid "Compact song list"
+msgstr "Kompakta muziko-listo"
+
+#: GameEngine.py:56
+msgid "Song auto preview"
+msgstr "Aŭtomate antaŭvido de muzikoj"
+
+#: GameEngine.py:57
+msgid "Sort by artist"
+msgstr "Ordigi laŭ artisto"
+
+#: GameEngine.py:58
+msgid "Fullscreen Mode"
+msgstr "Tutekrana Reĝimo"
+
+#: GameEngine.py:59
+msgid "2x"
+msgstr "2x"
+
+#: GameEngine.py:59
+msgid "4x"
+msgstr "4x"
+
+#: GameEngine.py:59
+msgid "6x"
+msgstr "6x"
+
+#: GameEngine.py:59
+msgid "8x"
+msgstr "8x"
+
+#: GameEngine.py:59
+msgid "Antialiasing Quality"
+msgstr "Glatiga Kvalito"
+
+#: GameEngine.py:59
+msgid "None"
+msgstr "Nenio"
+
+#: GameEngine.py:61
+msgid "Frames per Second"
+msgstr "Kadroj por Sekundo"
+
+#: GameEngine.py:63
+msgid "Sample Frequency"
+msgstr "Specimen-Rapido"
+
+#: GameEngine.py:64
+msgid "Sample Bits"
+msgstr "Specimen-Bitoj"
+
+#: GameEngine.py:66
+msgid "Buffer Size"
+msgstr "Bufro-Grandeco"
+
+#: GameEngine.py:67
+msgid "A/V delay"
+msgstr "Prokrasto A/V"
+
+#: GameEngine.py:68
+msgid "Loud"
+msgstr "Laŭte"
+
+#: GameEngine.py:68
+msgid "Painful"
+msgstr "Dolorige"
+
+#: GameEngine.py:68
+msgid "Quiet"
+msgstr "Kviete"
+
+#: GameEngine.py:68
+msgid "Screw Up Sounds"
+msgstr "Mismiksi Sonojn"
+
+#: GameEngine.py:68
+#: Mod.py:33
+msgid "Off"
+msgstr "Malaktive"
+
+#: GameEngine.py:69
+msgid "Guitar Volume"
+msgstr "Gitar-Laŭteco"
+
+#: GameEngine.py:70
+msgid "Song Volume"
+msgstr "Muzik-Laŭteco"
+
+#: GameEngine.py:71
+msgid "Rhythm Volume"
+msgstr "Ritmo-Laŭteco"
+
+#: GameEngine.py:72
+msgid "Text scale"
+msgstr "Teksta skalo"
+
+#: GameEngine.py:138
+msgid "Frets on Fire"
+msgstr "Fretoj je Fajro"
+
+#: GameResultsScene.py:58
+msgid "Replay"
+msgstr "Reludi"
+
+#: GameResultsScene.py:59
+#: GuitarScene.py:89
+msgid "Change Song"
+msgstr "Ŝanĝi Muzikon"
+
+#: GameResultsScene.py:66
+msgid "Chilling..."
+msgstr "Frostige..."
+
+#: GameResultsScene.py:76
+msgid "No highscores for cheaters!"
+msgstr "Sen poentaro por trompantoj!"
+
+#: GameResultsScene.py:78
+msgid "%d points is a new high score! Please enter your name:"
+msgstr "%d poentoj estas nova plejalta atingo! Bonvolu enmeti vian nomon:"
+
+#: GameResultsScene.py:177
+msgid "Highest Scores (%s)"
+msgstr "Plejaltaj Pontoj (%s)"
+
+#: GameResultsScene.py:199
+msgid "Uploading Scores..."
+msgstr "Alŝutado de Poentaro..."
+
+#: GameResultsScene.py:204
+msgid "You're #%d on the world charts!"
+msgstr "Vi estas #%d en la monda konkuro!"
+
+#: GameResultsScene.py:208
+msgid "Score upload failed"
+msgstr "Alŝuto de poentaro malsukcesis"
+
+#: GameResultsScene.py:213
+msgid "Song Finished!"
+msgstr "Muziko Finite!"
+
+#: GameResultsScene.py:231
+msgid "Accuracy: %d%%"
+msgstr "Korekteco: %d%%"
+
+#: GameResultsScene.py:234
+msgid "Longest note streak: %d"
+msgstr "Plejlonga noto-linio: %d"
+
+#: GameTask.py:72
+msgid "Connection lost."
+msgstr "Konektado perdite."
+
+#: GuitarScene.py:81
+msgid "Tuning Guitar..."
+msgstr "Agordado de Gitaro..."
+
+#: GuitarScene.py:87
+msgid "Return to Song"
+msgstr "Retroiri al la Muziko"
+
+#: GuitarScene.py:88
+msgid "Restart Song"
+msgstr "Rekomenci Muzikon"
+
+#: GuitarScene.py:90
+msgid "Settings"
+msgstr "Difinoj"
+
+#: GuitarScene.py:275
+msgid "Jurgen will show you how it is done."
+msgstr "Jurgen ne montros al vi kiel fari tion."
+
+#: GuitarScene.py:277
+msgid "Jurgen has left the building."
+msgstr "Jurgen foriris el la konstruaĵo."
+
+#: GuitarScene.py:365
+msgid "Get Ready to Rock"
+msgstr "Estu Preta por Roki"
+
+#: GuitarScene.py:390
+msgid "%d hit"
+msgstr "%d trafe"
+
+#: GuitarScene.py:407
+msgid "Missed!"
+msgstr "Perdite!"
+
+#: Language.py:56
+msgid "Language"
+msgstr "Lingvo"
+
+#: Lobby.py:52
+msgid "Player"
+msgstr "Ludanto"
+
+#: Lobby.py:59
+msgid "Enter your name:"
+msgstr "Enmetu vian nomon:"
+
+#: Lobby.py:59
+msgid "Player #%d"
+msgstr "Ludanto #%d"
+
+#: Lobby.py:109
+msgid "Lobby (%d players)"
+msgstr "Lobby (%d ludantoj)"
+
+#: Lobby.py:138
+msgid "Press Enter to Start Game"
+msgstr "Premu Enter por Starti la Ludon"
+
+#: MainMenu.py:55
+msgid "Host Multiplayer Game"
+msgstr "Servumi Plurludantan Ludon"
+
+#: MainMenu.py:56
+msgid "Join Multiplayer Game"
+msgstr "Kuniĝi al Plurludanta Ludo"
+
+#: MainMenu.py:60
+msgid "Edit Existing Song"
+msgstr "Redakti Ekzintantan Muzikon"
+
+#: MainMenu.py:61
+msgid "Import New Song"
+msgstr "Importi Novan Muzikon"
+
+#: MainMenu.py:62
+msgid "Import Guitar Hero(tm) Songs"
+msgstr "Importi Muzikojn de Guitar Hero(tm)"
+
+#: MainMenu.py:68
+msgid "Play Game"
+msgstr "Ludi Ludon"
+
+#: MainMenu.py:69
+msgid "Tutorial"
+msgstr "Instruado"
+
+#: MainMenu.py:70
+msgid "Song Editor"
+msgstr "Muzik-redaktilo"
+
+#: MainMenu.py:71
+msgid "Settings >"
+msgstr "Difinoj >"
+
+#: MainMenu.py:72
+msgid "Credits"
+msgstr "Agnoskoj"
+
+#: MainMenu.py:73
+msgid "Quit"
+msgstr "Eliri"
+
+#: MainMenu.py:152
+msgid "Enter the server address:"
+msgstr "Enigu la servil-adreso:"
+
+#: MainMenu.py:159
+msgid "Connecting..."
+msgstr "Konektado..."
+
+#: Mod.py:33
+msgid "On"
+msgstr "Aktive"
+
+#: Player.py:44
+msgid "Move left"
+msgstr "Maldekstren"
+
+#: Player.py:45
+msgid "Move right"
+msgstr "Dekstren"
+
+#: Player.py:46
+msgid "Move up"
+msgstr "Supren"
+
+#: Player.py:47
+msgid "Move down"
+msgstr "Malsupren"
+
+#: Player.py:48
+msgid "Pick"
+msgstr "Pinĉi"
+
+#: Player.py:49
+msgid "Secondary Pick"
+msgstr "Dua Pinĉo"
+
+#: Player.py:50
+msgid "Fret #1"
+msgstr "Freto #1"
+
+#: Player.py:51
+msgid "Fret #2"
+msgstr "Freto #2"
+
+#: Player.py:52
+msgid "Fret #3"
+msgstr "Freto #3"
+
+#: Player.py:53
+msgid "Fret #4"
+msgstr "Freto #4"
+
+#: Player.py:54
+msgid "Fret #5"
+msgstr "Freto #5"
+
+#: Player.py:55
+msgid "Cancel"
+msgstr "Nuligi"
+
+#: Settings.py:118
+msgid "Press a key for '%s' or Escape to cancel."
+msgstr "Premu klavon por '%s' aŭ Escape por rezigni."
+
+#: Settings.py:131
+msgid "Apply New Settings"
+msgstr "Apliki Novajn Difinojn"
+
+#: Settings.py:138
+msgid "Mod settings"
+msgstr "Difinoj Mod(ifajn)"
+
+#: Settings.py:150
+msgid "Test Keys"
+msgstr "Testi Klavojn"
+
+#: Settings.py:168
+msgid "Video Resolution"
+msgstr "Ekrana Distingeco"
+
+#: Settings.py:189
+msgid "Volume Settings"
+msgstr "Difino de Laŭteco"
+
+#: Settings.py:198
+msgid "Game Settings"
+msgstr "Ludaj Difinoj"
+
+#: Settings.py:199
+msgid "Key Settings"
+msgstr "Difinoj de Klavoj"
+
+#: Settings.py:200
+msgid "Video Settings"
+msgstr "Difinoj de Video"
+
+#: Settings.py:201
+msgid "Audio Settings"
+msgstr "Difinoj de Sono"
+
+#: Settings.py:218
+msgid "Settings saved. Please restart the game to activate the new settings."
+msgstr "Difinoj konservite. Bonvolu restarti la ludon por aktivigi la novajn difinojn."
+
+#: Song.py:58
+msgid "Supaeasy"
+msgstr "Facilege"
+
+#: Song.py:59
+msgid "Easy"
+msgstr "Facile"
+
+#: Song.py:60
+msgid "Medium"
+msgstr "Meze"
+
+#: Song.py:61
+msgid "Amazing"
+msgstr "Amuze"
+
+#: SongChoosingScene.py:68
+msgid "Choose a difficulty:"
+msgstr "Elektu lertecon:"
+

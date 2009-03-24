@@ -19,6 +19,7 @@ translations = {
   "cs":  "czech",
   "tur": "turkish",
   "hr":  "croatian",
+  "eo":  "esperanto",
 }
 
 files = ["fretsonfire", "tutorial"]
