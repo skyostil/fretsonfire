@@ -1,7 +1,8 @@
-All source code and data files are copyright 2006, 2007 by Sami Kyöstilä,
+All source code and data files are copyright 2006-2009 by Sami Kyöstilä,
 Tommi Inkilä, Joonas Kerttula, except:
 
-  * Font data/title.ttf copyright by Astigmatic One Eye.
+  * Font data/title.ttf copyright by Astigmatic One Eye
+    (see http://www.astigmatic.com/freeware.html)
   * Font data/default.ttf copyright by 1001 Free Fonts.
   * Font data/international.ttf Bitstream Vera font license described below.
 
@@ -9,8 +10,7 @@ Distribution, modification or commercial usage of the songs is not allowed.
 
 All data files, excluding the songs and the font files mentioned above but
 including the tutorial are licensed under the GNU General Public License 
-described below. Note that some source files derived from other sources might 
-have differing licenses.
+described below.
 
 ----------------------------------------------------------------------------
 Bitstream Vera Fonts Copyright
@@ -482,3 +482,4 @@ library.  If this is what you want to do, use the GNU Library General
 Public License instead of this License.
 
 ----------------------------------------------------------------------------
+
