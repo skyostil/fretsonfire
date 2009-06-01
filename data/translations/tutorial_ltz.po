@@ -1,0 +1,155 @@
+# Frets On Fire
+# Copyright (C) 2006 Unreal Voodoo
+msgid ""
+msgstr ""
+"Project-Id-Version: FretsOnFire\n"
+"POT-Creation-Date: 2006-10-27 23:23+EEST\n"
+"Last-Translator: Sami Kyostila <skyostil@NOSPAM.kempele.fi>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+msgid "Ah yes, I know. I'm amazing."
+msgstr "Ah jo, ech wees ech si genial."
+
+msgid "Ah, that was cool."
+msgstr "Ah, daat woar cool."
+
+msgid "Und hello everyone."
+msgstr "An Salut jiddereen."
+
+msgid "My name is Jurgen"
+msgstr "Main Numm as Jurgen"
+
+msgid "Guntherswarchzhaffenstrassen."
+msgstr "Guntherswarchzhaffenstrassen."
+
+msgid "Und today I will show you"
+msgstr "An haut well ech iech waisen"
+
+msgid "how to play this game."
+msgstr "wei een daat Spill hai spillt."
+
+msgid "Check this sh*t!"
+msgstr "Check den Sch**ss!"
+
+msgid "And now, pick up your keyboard"
+msgstr "An elo graif der dain Keyboard"
+
+msgid "like this."
+msgstr "an zwar sou."
+
+msgid "When I shred,"
+msgstr "Wann et shred,"
+
+msgid "I use the whole keyboard."
+msgstr "Ech benotzen den ganzen Keyboard"
+
+msgid "But since you SUCK,"
+msgstr "Ma vue que daste SUCKS,"
+
+msgid "You will only need"
+msgstr "Brauchste just"
+
+msgid "These five frets,"
+msgstr "Des fennef Frets,"
+
+msgid "Und zie Pick button."
+msgstr "An den Pick Knäppchen"
+
+msgid "However, zie most important"
+msgstr "wei och emmer, daat wichtegst"
+
+msgid "is the Escape button."
+msgstr "as den Escape Knäppcehn."
+
+msgid "You will need it,"
+msgstr "Du brauchs en"
+
+msgid "when you finally realize"
+msgstr "Wannste op eemol mierks"
+
+msgid "that you SUCK."
+msgstr "daste SUCKS."
+
+msgid "Bigtime."
+msgstr "Groussen Kino"
+
+msgid "To me, that is already obvious."
+msgstr "Fir mech as dat ganz kloer."
+
+msgid "Ok, there comes your first note."
+msgstr "OK, hai kennt deng eischt Nout."
+
+msgid "You can already hold down the 1st fret"
+msgstr "Du kansn den eischten Fret schon gedreckt haalen"
+
+msgid "BUT DON'T PICK IT YET!"
+msgstr "Awer nach net PICKEN!"
+
+msgid "You missed it."
+msgstr "Du hues en verpasst."
+
+msgid "Ok, let's try it again."
+msgstr "OK, komm mer probéieren nach eng keier."
+
+msgid "Ok, wait for it."
+msgstr "OK, waard op se."
+
+msgid "Wait for it."
+msgstr "Waard op se."
+
+msgid "No!"
+msgstr "Nee!"
+
+msgid "*Sigh*"
+msgstr "*Sigh*"
+
+msgid "Now, hold down two frets."
+msgstr "Sou, lo haal dei 2 Frets gedreckt."
+
+msgid "Ah, you missed it!"
+msgstr "Ah, du hues se verpasst!"
+
+msgid "And now, try this super easy lick."
+msgstr "Sou an elo probéier desen doud einfachen Lick."
+
+msgid "Und up to my tempo."
+msgstr "An zwar an mengem Tempo"
+
+msgid "Don't try this,"
+msgstr "Probéier daat hai net,"
+
+msgid "or you'll just hurt yourself."
+msgstr "well du dees der just selwer weih."
+
+msgid "Ok, that was about"
+msgstr "OK, daat woaren ongefeiert"
+
+msgid "four billion notes per second."
+msgstr "veier Billiounen Nouten and er Sekonn."
+
+msgid "If I play that any faster,"
+msgstr "Wann ech daat nach en bessen mieh seier geif spillen"
+
+msgid "your minds would just blow up."
+msgstr "geif daat der den Käppchen wegsprengen."
+
+msgid "Ok, that is it for now."
+msgstr "OK, daat wir et fir elo."
+
+msgid "You can now go and sell"
+msgstr "Du kanns elo goen"
+
+msgid "your keyboards on Ebay."
+msgstr "an dain Keyboard bei eBay verkaafen."
+
+msgid "Because you SUCK."
+msgstr "Well du SUCKS."
+
+msgid "And remember one thing."
+msgstr "An verhaal der eent."
+
+msgid "I am your new god, little girls."
+msgstr "Ech sin dain naien Gott, kleng Meedercher."
