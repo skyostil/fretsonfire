@@ -26,6 +26,7 @@
 import sys
 import os
 import unittest
+import Config
 
 tests = []
 
@@ -50,4 +51,5 @@ for test in tests:
     if item.endswith(suffix):
       suite.addTest(unittest.makeSuite(test.__dict__[item]))
   
+Config.load(setAsDefault = True)
 unittest.TextTestRunner(verbosity = 2).run(suite)

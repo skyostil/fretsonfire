@@ -158,8 +158,6 @@ def get(section, option):
   @return:          Key value
   """
   global config
-  if (not config):
-    load(None, True)
   return config.get(section, option)
   
 def set(section, option, value):
@@ -171,6 +169,4 @@ def set(section, option, value):
   @param value:     New key value
   """
   global config
-  if (not config):
-    load(None, True)
-  return config.set(section, option, value)
+  config.set(section, option, value)
