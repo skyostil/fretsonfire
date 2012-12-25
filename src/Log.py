@@ -26,6 +26,7 @@ import Resource
 
 quiet = True
 logFile = open(os.path.join(Resource.getWritableResourcePath(), "fretsonfire.log"), "w")
+logFile = sys.stdout
 encoding = "iso-8859-1"
 
 if "-v" in sys.argv:

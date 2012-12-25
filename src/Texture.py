@@ -339,7 +339,8 @@ class Texture:
     if not glTarget:
         glTarget = self.glTarget
     glBindTexture(glTarget, self.texture)
-    glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, self.texEnv)
+    if self.texEnv:
+      glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, self.texEnv)
 
 #
 # Texture atlas

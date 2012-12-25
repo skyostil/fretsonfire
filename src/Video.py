@@ -23,8 +23,13 @@
 import pygame
 import os
 from OpenGL.GL import *
-from OpenGL.GL.ARB.multisample import *
 import Log
+
+try:
+  from OpenGL.GL.ARB.multisample import *
+  _useMultisampling = True
+except ImportError:
+  _useMultisampling = False
 
 class Video:
   def __init__(self, caption = "Game"):
@@ -52,7 +57,10 @@ class Video:
     pygame.display.gl_set_attribute(pygame.GL_GREEN_SIZE, 8)
     pygame.display.gl_set_attribute(pygame.GL_BLUE_SIZE,  8)
     pygame.display.gl_set_attribute(pygame.GL_ALPHA_SIZE, 8)
-      
+
+    if not _useMultisampling:
+      multisamples = 0
+
     if multisamples:
       pygame.display.gl_set_attribute(pygame.GL_MULTISAMPLEBUFFERS, 1);
       pygame.display.gl_set_attribute(pygame.GL_MULTISAMPLESAMPLES, multisamples);

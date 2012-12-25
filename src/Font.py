@@ -103,8 +103,8 @@ class Font:
       currentTexture = None
       #x, y           = pos[0], pos[1]
       x, y           = 0.0, 0.0
-      vertices       = numpy.empty((4 * len(text), 2), numpy.float32)
-      texCoords      = numpy.empty((4 * len(text), 2), numpy.float32)
+      vertices       = numpy.empty((6 * len(text), 2), numpy.float32)
+      texCoords      = numpy.empty((6 * len(text), 2), numpy.float32)
       vertexCount    = 0
       cacheEntry     = []
 
@@ -126,12 +126,16 @@ class Font:
         vertices[vertexCount + 0]  = (x,     y)
         vertices[vertexCount + 1]  = (x + w, y)
         vertices[vertexCount + 2]  = (x + w, y + h)
-        vertices[vertexCount + 3]  = (x,     y + h)
+        vertices[vertexCount + 3]  = (x,     y)
+        vertices[vertexCount + 4]  = (x + w, y + h)
+        vertices[vertexCount + 5]  = (x,     y + h)
         texCoords[vertexCount + 0] = (tx1, ty2)
         texCoords[vertexCount + 1] = (tx2, ty2)
         texCoords[vertexCount + 2] = (tx2, ty1)
-        texCoords[vertexCount + 3] = (tx1, ty1)
-        vertexCount += 4
+        texCoords[vertexCount + 3] = (tx1, ty2)
+        texCoords[vertexCount + 4] = (tx2, ty1)
+        texCoords[vertexCount + 5] = (tx1, ty1)
+        vertexCount += 6
 
         x += w * direction[0]
         y += w * direction[1]
@@ -152,7 +156,7 @@ class Font:
       texture.bind()
       glVertexPointer(2, GL_FLOAT, 0, vertices)
       glTexCoordPointer(2, GL_FLOAT, 0, texCoords)
-      glDrawArrays(GL_QUADS, 0, vertexCount)
+      glDrawArrays(GL_TRIANGLES, 0, vertexCount)
     glPopMatrix()
 
   def render(self, text, pos = (0, 0), direction = (1, 0), scale = 0.002):
