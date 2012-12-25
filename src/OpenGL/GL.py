@@ -16,7 +16,7 @@ def glGetIntegerv(param):
   if param == GL_VIEWPORT:
     return [0, 0, pygame.display.width, pygame.display.height]
   elif param == GL_MAX_TEXTURE_SIZE:
-    return 512
+    return 1024
   return pogles.gles2.glGetIntegerv(param)
 
 glGetInteger = glGetIntegerv

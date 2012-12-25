@@ -1,7 +1,10 @@
 # Fake pygame for Raspberry Pi
+import pygame as _pygame
 import time as _time
 from pogles.egl import *
 from pogles.platform import ppCreateNativeWindow
+
+_pygame_display = _pygame.display
 
 OPENGL = 1 << 0
 DOUBLEBUF = 1 << 1
@@ -64,6 +67,7 @@ class Mixer(object):
 
 class Display(object):
   def __init__(self):
+    _pygame.display.init()
     self.nativeWindow = None
     self.display = None
     self.context = None
@@ -98,7 +102,12 @@ class Display(object):
     self.width = eglQuerySurface(self.display, self.surface, EGL_WIDTH)
     self.height = eglQuerySurface(self.display, self.surface, EGL_HEIGHT)
 
+    _pygame_display.set_mode((1, 1), 0)
+
   def flip(self):
+    import pogles
+    pogles.gles2.glClearColor(0.2, 0.4, 0.6, 1.0)
+    pogles.gles2.glClear(pogles.gles2.GL_COLOR_BUFFER_BIT)
     eglSwapBuffers(self.display, self.surface)
 
   def list_modes(self):
@@ -181,10 +190,13 @@ def init():
 
 time = Time()
 mixer = Mixer()
-display = Display()
-mouse = Mouse()
+#display = Display()
+#mouse = Mouse()
 key = Key()
 joystick = Joystick()
 event = Event()
 font = FontModule()
 image = Image()
+
+_pygame.display = Display()
+_pygame.mouse = Mouse()

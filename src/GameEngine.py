@@ -20,6 +20,7 @@
 # MA  02110-1301, USA.                                              #
 #####################################################################
 
+import pygame_rpi
 from OpenGL.GL import *
 import pygame
 import os
