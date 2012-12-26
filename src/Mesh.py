@@ -101,7 +101,7 @@ class Mesh:
           
           if hasattr(prim, "polygons"):
             for poly in prim.polygons:
-              glBegin(GL_POLYGON)
+              glBegin(GL_TRIANGLE_FAN)
               for indices in self._unflatten(poly, maxOffset + 1):
                 drawElement(indices, normalOffset,   normals,   glNormal3f)
                 drawElement(indices, texcoordOffset, texcoords, glTexCoord2f)

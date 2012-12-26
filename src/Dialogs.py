@@ -28,6 +28,7 @@ from OpenGL.GLU import *
 import math
 import os
 import fnmatch
+import time
 
 from View import Layer, BackgroundLayer
 from Input import KeyListener
@@ -250,6 +251,7 @@ class LoadingScreen(Layer, KeyListener):
 
     if visibility > 0.9:
       self.engine.boostBackgroundThreads(True)
+      time.sleep(0.2)
     else:
       self.engine.boostBackgroundThreads(False)
     

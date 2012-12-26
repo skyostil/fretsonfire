@@ -23,6 +23,7 @@
 import Player
 from Song import Note, Tempo
 from Mesh import Mesh
+from array import array
 import Theme
 
 from OpenGL.GL import *
@@ -53,8 +54,8 @@ class Guitar:
     self.lastBpmChange  = -1.0
     self.baseBeat       = 0.0
     self.setBPM(self.currentBpm)
-    self.vertexCache    = numpy.empty((8 * 4096, 3), numpy.float32)
-    self.colorCache     = numpy.empty((8 * 4096, 4), numpy.float32)
+    self.vertexCache    = array('f', [0] * 8 * 4096 * 3)
+    self.colorCache     = array('f', [0] * 8 * 4096 * 4)
 
     engine.resource.load(self,  "noteMesh", lambda: Mesh(engine.resource.fileName("note.dae")))
     engine.resource.load(self,  "keyMesh",  lambda: Mesh(engine.resource.fileName("key.dae")))
@@ -372,26 +373,40 @@ class Guitar:
       a1    = 0.0
       zStep = step * proj
 
+      def setColor(index, r, g, b, a):
+        j = index * 4
+        colors[j] = r
+        colors[j + 1] = g
+        colors[j + 2] = b
+        colors[j + 3] = a
+
+      def setPosition(index, x, y, z):
+        j = index * 3
+        vertices[j] = x
+        vertices[j + 1] = y
+        vertices[j + 2] = z
+
       while t > time and t - step > pos and i < len(vertices) / 8:
         z  = (t - pos) * proj
         a2 = waveForm(t - step)
 
-        colors[i    ]   = \
-        colors[i + 1]   = (c[0], c[1], c[2], .5)
-        colors[i + 2]   = \
-        colors[i + 3]   = (1, 1, 1, .75)
-        colors[i + 4]   = \
-        colors[i + 5]   = \
-        colors[i + 6]   = \
-        colors[i + 7]   = (c[0], c[1], c[2], .5)
-        vertices[i    ] = (x - a1, 0, z)
-        vertices[i + 1] = (x - a2, 0, z - zStep)
-        vertices[i + 2] = (x, 0, z)
-        vertices[i + 3] = (x, 0, z - zStep)
-        vertices[i + 4] = (x + a1, 0, z)
-        vertices[i + 5] = (x + a2, 0, z - zStep)
-        vertices[i + 6] = (x + a2, 0, z - zStep)
-        vertices[i + 7] = (x - a2, 0, z - zStep)
+        setColor(i, c[0], c[1], c[2], .5)
+        setColor(i + 1, c[0], c[1], c[2], .5)
+        setColor(i + 2, 1, 1, 1, .75)
+        setColor(i + 3, 1, 1, 1, .75)
+        setColor(i + 4, c[0], c[1], c[2], .5)
+        setColor(i + 5, c[0], c[1], c[2], .5)
+        setColor(i + 6, c[0], c[1], c[2], .5)
+        setColor(i + 7, c[0], c[1], c[2], .5)
+
+        setPosition(i, x - a1, 0, z)
+        setPosition(i + 1, x - a2, 0, z - zStep)
+        setPosition(i + 2, x, 0, z)
+        setPosition(i + 3, x, 0, z - zStep)
+        setPosition(i + 4, x + a1, 0, z)
+        setPosition(i + 5, x + a2, 0, z - zStep)
+        setPosition(i + 6, x + a2, 0, z - zStep)
+        setPosition(i + 7, x - a2, 0, z - zStep)
 
         i    += 8
         t    -= step

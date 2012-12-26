@@ -1,7 +1,11 @@
 Raspberry Pi notes
 ==================
 
-- python-imaging needed
-- glUniformMatrix* parameter order was wrong in pogles
-- Main framebuffer alpha needs to be properly written because the display
+- python-imaging is needed.
+- glUniformMatrix* parameter order was wrong in pogles.
+- Main framebuffer alpha needs to be properly written because the display.
   hardware composites it on top of the framebuffer.
+- MVP = projection * modelview.
+- Should get rid of redundant matrix transposes.
+- Trying out python-ogg and python-pyvorbis to avoid having to decode the
+  entire song to RAM.

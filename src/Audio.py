@@ -34,11 +34,10 @@ if hasattr(sys, "frozen"):
 # Pyglet-based audio is still experimental at the moment
 #import pyglet
 
-# OGG support disabled due to incompatibility with Python 2.5
-#try:
-#  import ogg.vorbis
-#except ImportError:
-#  Log.warn("PyOGG not found. OGG files will be fully decoded prior to playing; expect absurd memory usage.")
+try:
+  import ogg.vorbis
+except ImportError:
+  Log.warn("PyOGG not found. OGG files will be fully decoded prior to playing; expect absurd memory usage.")
 
 if "pyglet" in sys.modules:
   class AudioPyglet(Task):

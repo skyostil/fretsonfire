@@ -8,7 +8,8 @@ import transformations
 
 GL_CLAMP = GL_CLAMP_TO_EDGE
 GL_MODULATE = 0
-GL_COLOR_MATERIAL = 0
+GL_COLOR_MATERIAL = 0xb57
+GL_NORMALIZE = 0xba1
 
 def todo(what):
   print "TODO:", what
@@ -35,24 +36,35 @@ def glGenTextures(count):
 
 _colorEnabled = False
 _textureEnabled = False
+_lightingEnabled = False
 
 def glEnable(param):
   global _colorEnabled
   global _textureEnabled
+  global _lightingEnabled
   if param == GL_TEXTURE_2D:
     _textureEnabled = True
   elif param == GL_COLOR_MATERIAL:
     _colorEnabled = True
+  elif param == GL_LIGHTING:
+    _lightingEnabled = True
+  elif param >= GL_LIGHT0 and param < GL_LIGHT0 + 8:
+    pass
   else:
     pogles.gles2.glEnable(param)
 
 def glDisable(param):
   global _colorEnabled
   global _textureEnabled
+  global _lightingEnabled
   if param == GL_TEXTURE_2D:
     _textureEnabled = False
   elif param == GL_COLOR_MATERIAL:
     _colorEnabled = False
+  elif param == GL_LIGHTING:
+    _lightingEnabled = False
+  elif param >= GL_LIGHT0 and param < GL_LIGHT0 + 8:
+    pass
   else:
     pogles.gles2.glDisable(param)
 
@@ -61,6 +73,11 @@ GL_NICEST = 0
 
 def glHint(hint, value):
   pass
+
+def glDeleteTextures(names):
+  if not type(names) == list:
+    names = [names]
+  pogles.gles2.glDeleteTextures(names)
 
 GL_MODELVIEW = 0x1700
 GL_PROJECTION = 0x1701
@@ -120,34 +137,41 @@ def glRotate(angle, x, y, z):
   m = transformations.rotation_matrix(numpy.radians(angle), (x, y, z))
   _activeStack[0] = _activeStack[0].dot(m)
 
-_maxVertices = 16
+glRotatef = glRotate
+
+_maxVertices = 64
 _vertexIndex = 0
 _primitive = None
 _color = array('f', [1, 1, 1, 1] * _maxVertices)
 _texCoord = array('f', [0, 0] * _maxVertices)
 _position = array('f', [0, 0, 0, 1] * _maxVertices)
+_normal = array('f', [0, 0, 0] * _maxVertices)
 
 _vertSource = """
 attribute vec4 a_position;
 attribute vec4 a_color;
 attribute vec2 a_texCoord;
+attribute vec3 a_normal;
 
 uniform mat4 u_modelviewProjectionMatrix;
 
 varying vec4 v_color;
 varying vec2 v_texCoord;
+varying vec3 v_normal;
 
 void main()
 {
     gl_Position = u_modelviewProjectionMatrix * a_position;
     v_color = a_color;
     v_texCoord = a_texCoord;
+    v_normal = a_normal;
 }
 """
 
 _fragSource = """
 varying vec4 v_color;
 varying vec2 v_texCoord;
+varying vec3 v_normal;
 
 uniform sampler2D u_texture;
 uniform bool u_textureEnabled;
@@ -183,6 +207,7 @@ def _createProgram(vertSource, fragSource):
   glBindAttribLocation(program, 0, "a_position")
   glBindAttribLocation(program, 1, "a_color")
   glBindAttribLocation(program, 2, "a_texCoord")
+  glBindAttribLocation(program, 3, "a_normal")
   glLinkProgram(program)
   glDeleteShader(vertShader)
   glDeleteShader(fragShader)
@@ -191,14 +216,6 @@ def _createProgram(vertSource, fragSource):
   if not linked:
     raise Exception("Error linking program:\n%s" % glGetProgramInfoLog(program))
   return program
-
-def glColor4f(r, g, b, a):
-  i = _vertexIndex * 4
-  _color[i] = r
-  _color[i + 1] = g
-  _color[i + 2] = b
-  _color[i + 3] = a
-  glVertexAttrib4f(1, r, g, b, a)
 
 def glBegin(primitive):
   global _vertexIndex
@@ -256,11 +273,25 @@ def glEnd():
   if _textureEnabled:
     glVertexAttribPointer(2, 2, GL_FLOAT, False, 0, _texCoord.buffer_info()[0])
     glEnableVertexAttribArray(2)
+  glVertexAttribPointer(3, 3, GL_FLOAT, False, 0, _normal.buffer_info()[0])
+  glEnableVertexAttribArray(3)
 
   pogles.gles2.glDrawArrays(_primitive, 0, _vertexIndex)
   glDisableVertexAttribArray(0)
   glDisableVertexAttribArray(1)
   glDisableVertexAttribArray(2)
+  glDisableVertexAttribArray(3)
+
+def glColor4f(r, g, b, a):
+  i = _vertexIndex * 4
+  _color[i] = r
+  _color[i + 1] = g
+  _color[i + 2] = b
+  _color[i + 3] = a
+  glVertexAttrib4f(1, r, g, b, a)
+
+def glColor3f(r, g, b):
+  glColor4f(r, g, b, 1)
 
 def glTexCoord2f(x, y):
   i = _vertexIndex * 2
@@ -268,12 +299,19 @@ def glTexCoord2f(x, y):
   _texCoord[i + 1] = y
   glVertexAttrib2f(2, x, y)
 
-def glVertex2f(x, y):
+def glNormal3f(x, y, z):
+  i = _vertexIndex * 3
+  _normal[i] = x
+  _normal[i + 1] = y
+  _normal[i + 2] = z
+  glVertexAttrib3f(3, x, y, z)
+
+def glVertex3f(x, y, z):
   global _vertexIndex
   i = _vertexIndex * 4
   _position[i] = x
   _position[i + 1] = y
-  _position[i + 2] = 0
+  _position[i + 2] = z
   _position[i + 3] = 1
   _vertexIndex += 1
   i = _vertexIndex * 2
@@ -286,19 +324,32 @@ def glVertex2f(x, y):
   _color[i + 1] = _color[j + 1]
   _color[i + 2] = _color[j + 2]
   _color[i + 3] = _color[j + 3]
+  i = _vertexIndex * 3
+  j = (_vertexIndex - 1) * 3
+  _normal[i] = _normal[j]
+  _normal[i + 1] = _normal[j + 1]
+  _normal[i + 2] = _normal[j + 2]
 
-GL_VERTEX_ARRAY = 1 << 0
-GL_TEXTURE_COORD_ARRAY = 1 << 1
+def glVertex2f(x, y):
+  glVertex3f(x, y, 0)
+
+GL_VERTEX_ARRAY = 1
+GL_COLOR_ARRAY = 2
+GL_TEXTURE_COORD_ARRAY = 3
 
 def glEnableClientState(state):
   if state == GL_VERTEX_ARRAY:
     glEnableVertexAttribArray(0)
+  elif state == GL_COLOR_ARRAY:
+    glEnableVertexAttribArray(1)
   elif state == GL_TEXTURE_COORD_ARRAY:
     glEnableVertexAttribArray(2)
 
 def glDisableClientState(state):
   if state == GL_VERTEX_ARRAY:
     glDisableVertexAttribArray(0)
+  elif state == GL_COLOR_ARRAY:
+    glDisableVertexAttribArray(1)
   elif state == GL_TEXTURE_COORD_ARRAY:
     glDisableVertexAttribArray(2)
 
@@ -326,11 +377,17 @@ GL_QUADS = 0
 
 _vertexPointer = None
 _texCoordPointer = None
+_colorPointer = None
 
 def glVertexPointer(size, type, stride, data):
   global _vertexPointer
   _vertexPointer = data
   glVertexAttribPointer(0, size, type, False, stride, data.buffer_info()[0])
+
+def glColorPointer(size, type, stride, data):
+  global _colorPointer
+  _colorPointer = data
+  glVertexAttribPointer(1, size, type, False, stride, data.buffer_info()[0])
 
 def glTexCoordPointer(size, type, stride, data):
   global _texCoordPointer
@@ -340,20 +397,43 @@ def glTexCoordPointer(size, type, stride, data):
 def glDrawArrays(mode, start, count):
   _useDefaultProgram()
   _applyUniforms()
-  import random
-  #for i in range(count):
-    #_vertexPointer[i * 2] /= random.random()
-    #_vertexPointer[i * 2 + 1] = random.random()
-    #_vertexPointer[i * 2] *= 1.1
-    #_vertexPointer[i * 2 + 1] *= 1.1
-  #glVertexAttribPointer(0, 2, GL_FLOAT, False, 0, _vertexPointer.buffer_info()[0])
-  #glVertexAttribPointer(2, 2, GL_FLOAT, False, 0, _texCoordPointer.buffer_info()[0])
-  #print "DRAW ARRAYS", mode, start, count
-  #print _textureEnabled
-  #print _vertexPointer
-  #glViewport(0, 0, 320, 240)
   if not _colorEnabled:
     glVertexAttrib4f(1, 1, 1, 1, 1)
-  #glVertexAttrib4f(1, 0, 1, 0, 1)
-  #print _texCoordPointer
   pogles.gles2.glDrawArrays(mode, start, count)
+
+GL_LIGHTING = 0x0b50
+GL_LIGHT0 = 0x4000
+GL_SMOOTH = 0x1d01
+GL_POSITION = 0x1203
+GL_AMBIENT = 0x1200
+GL_DIFFUSE = 0x1201
+GL_FRONT_AND_BACK = 0x0408
+GL_SHININESS = 0x1601
+GL_SPECULAR = 0x1202
+
+def glShadeModel(model):
+  pass
+
+def glLightfv(light, param, value):
+  pass
+
+def glMaterialf(face, param, value):
+  pass
+
+def glMaterialfv(face, param, value):
+  pass
+
+GL_COMPILE = 0x1300
+
+def glGenLists(n):
+  assert n == 1
+  return 1
+
+def glNewList(name, mode):
+  pass
+
+def glEndList():
+  pass
+
+def glCallList(name):
+  pass
