@@ -21,7 +21,7 @@
 #####################################################################
 
 import pygame
-import numpy
+from array import array
 from OpenGL.GL import *
 import sys
 
@@ -103,8 +103,8 @@ class Font:
       currentTexture = None
       #x, y           = pos[0], pos[1]
       x, y           = 0.0, 0.0
-      vertices       = numpy.empty((6 * len(text), 2), numpy.float32)
-      texCoords      = numpy.empty((6 * len(text), 2), numpy.float32)
+      vertices       = array('f', [0] * 6 * len(text) * 2)
+      texCoords      = array('f', [0] * 6 * len(text) * 2)
       vertexCount    = 0
       cacheEntry     = []
 
@@ -119,27 +119,28 @@ class Font:
 
         # If the texture changed, flush the geometry
         if currentTexture != g:
-          cacheEntry.append((currentTexture, vertexCount, numpy.array(vertices[:vertexCount]), numpy.array(texCoords[:vertexCount])))
+          cacheEntry.append((currentTexture, vertexCount, array('f', vertices[:vertexCount]), array('f', texCoords[:vertexCount])))
           currentTexture = g
           vertexCount = 0
 
-        vertices[vertexCount + 0]  = (x,     y)
-        vertices[vertexCount + 1]  = (x + w, y)
-        vertices[vertexCount + 2]  = (x + w, y + h)
-        vertices[vertexCount + 3]  = (x,     y)
-        vertices[vertexCount + 4]  = (x + w, y + h)
-        vertices[vertexCount + 5]  = (x,     y + h)
-        texCoords[vertexCount + 0] = (tx1, ty2)
-        texCoords[vertexCount + 1] = (tx2, ty2)
-        texCoords[vertexCount + 2] = (tx2, ty1)
-        texCoords[vertexCount + 3] = (tx1, ty2)
-        texCoords[vertexCount + 4] = (tx2, ty1)
-        texCoords[vertexCount + 5] = (tx1, ty1)
+        i = vertexCount * 2
+        vertices[i +  0]  = x;     vertices[i +  1] = y
+        vertices[i +  2]  = x + w; vertices[i +  3] = y
+        vertices[i +  4]  = x + w; vertices[i +  5] = y + h
+        vertices[i +  6]  = x;     vertices[i +  7] = y
+        vertices[i +  8]  = x + w; vertices[i +  9] = y + h
+        vertices[i + 10]  = x;     vertices[i + 11] = y + h
+        texCoords[i +  0] = tx1;   texCoords[i +  1] = ty2
+        texCoords[i +  2] = tx2;   texCoords[i +  3] = ty2
+        texCoords[i +  4] = tx2;   texCoords[i +  5] = ty1
+        texCoords[i +  6] = tx1;   texCoords[i +  7] = ty2
+        texCoords[i +  8] = tx2;   texCoords[i +  9] = ty1
+        texCoords[i + 10] = tx1;   texCoords[i + 11] = ty1
         vertexCount += 6
 
         x += w * direction[0]
         y += w * direction[1]
-      cacheEntry.append((currentTexture, vertexCount, vertices[:vertexCount], texCoords[:vertexCount]))
+      cacheEntry.append((currentTexture, vertexCount, vertices[:vertexCount * 2], texCoords[:vertexCount * 2]))
 
       # Don't store very short strings
       if len(text) > 5:
