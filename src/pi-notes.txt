@@ -2,3 +2,6 @@ Raspberry Pi notes
 ==================
 
 - python-imaging needed
+- glUniformMatrix* parameter order was wrong in pogles
+- Main framebuffer alpha needs to be properly written because the display
+  hardware composites it on top of the framebuffer.

@@ -105,10 +105,10 @@ class Display(object):
     _pygame_display.set_mode((1, 1), 0)
 
   def flip(self):
-    import pogles
-    pogles.gles2.glClearColor(0.2, 0.4, 0.6, 1.0)
-    pogles.gles2.glClear(pogles.gles2.GL_COLOR_BUFFER_BIT)
     eglSwapBuffers(self.display, self.surface)
+    #import pogles
+    #pogles.gles2.glClearColor(0.2, 0.4, 0.6, 1.0)
+    #pogles.gles2.glClear(pogles.gles2.GL_COLOR_BUFFER_BIT)
 
   def list_modes(self):
     return [(self.width, self.height)]

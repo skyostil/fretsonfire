@@ -56,5 +56,5 @@ class GOpenGLBoard:
   def Clear(self, r, g, b, a):
     glDepthMask(1)
     glEnable(GL_COLOR_MATERIAL)
-    glClearColor(r, g, b, a)
+    glClearColor(r, g, b, 1.0)
     glClear(GL_COLOR_BUFFER_BIT | GL_STENCIL_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
