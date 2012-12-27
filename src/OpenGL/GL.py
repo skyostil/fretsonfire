@@ -42,6 +42,9 @@ def glEnable(param):
   global _colorEnabled
   global _textureEnabled
   global _lightingEnabled
+  if _currentList:
+    _currentList.commands.append(lambda: glEnable(param))
+    return
   if param == GL_TEXTURE_2D:
     _textureEnabled = True
   elif param == GL_COLOR_MATERIAL:
@@ -57,6 +60,9 @@ def glDisable(param):
   global _colorEnabled
   global _textureEnabled
   global _lightingEnabled
+  if _currentList:
+    _currentList.commands.append(lambda: glDisable(param))
+    return
   if param == GL_TEXTURE_2D:
     _textureEnabled = False
   elif param == GL_COLOR_MATERIAL:
@@ -98,6 +104,9 @@ def glMatrixMode(mode):
     _activeStack = _projectionStack
 
 def glLoadIdentity():
+  if _currentList:
+    _currentList.commands.append(lambda: glLoadIdentity())
+    return
   _activeStack[0] = transformations.identity_matrix()
 
 def glOrtho(left, right, bottom, top, zNear, zFar):
@@ -112,9 +121,15 @@ def glOrtho(left, right, bottom, top, zNear, zFar):
   _activeStack[0] = _activeStack[0].dot(m)
 
 def glPushMatrix():
+  if _currentList:
+    _currentList.commands.append(lambda: glPushMatrix())
+    return
   _activeStack.insert(0, _activeStack[0])
 
 def glPopMatrix():
+  if _currentList:
+    _currentList.commands.append(lambda: glPopMatrix())
+    return
   _activeStack.pop(0)
 
 def glMultMatrixf(matrix):
@@ -122,6 +137,9 @@ def glMultMatrixf(matrix):
   _activeStack[0] = _activeStack[0].dot(m)
 
 def glScalef(x, y, z):
+  if _currentList:
+    _currentList.commands.append(lambda: glScalef(x, y, z))
+    return
   m = numpy.array([
       [x, 0, 0, 0],
       [0, y, 0, 0],
@@ -130,18 +148,25 @@ def glScalef(x, y, z):
   _activeStack[0] = _activeStack[0].dot(m)
 
 def glTranslatef(x, y, z):
+  if _currentList:
+    _currentList.commands.append(lambda: glTranslatef(x, y, z))
+    return
   m = transformations.translation_matrix((x, y, z))
   _activeStack[0] = _activeStack[0].dot(m)
 
 def glRotate(angle, x, y, z):
+  if _currentList:
+    _currentList.commands.append(lambda: glRotate(angle, x, y, z))
+    return
   m = transformations.rotation_matrix(numpy.radians(angle), (x, y, z))
   _activeStack[0] = _activeStack[0].dot(m)
 
 glRotatef = glRotate
 
-_maxVertices = 64
+_maxVertices = 16
 _vertexIndex = 0
 _primitive = None
+_perVertexAttributes = 0
 _color = array('f', [1, 1, 1, 1] * _maxVertices)
 _texCoord = array('f', [0, 0] * _maxVertices)
 _position = array('f', [0, 0, 0, 1] * _maxVertices)
@@ -219,7 +244,9 @@ def _createProgram(vertSource, fragSource):
 
 def glBegin(primitive):
   global _primitive
+  global _perVertexAttributes
   _primitive = primitive
+  _perVertexAttributes = 0
 
 _program = None
 _u_modelviewProjectionMatrix = None
@@ -252,6 +279,19 @@ def _applyUniforms():
 def glEnd():
   global _vertexIndex
 
+  if _currentList:
+    _currentList.position.extend(_position[:_vertexIndex * 4])
+    if _perVertexAttributes & 1 << 1:
+      _currentList.color.extend(_color[:_vertexIndex * 4])
+    if _perVertexAttributes & 1 << 2:
+      _currentList.texCoord.extend(_texCoord[:_vertexIndex * 2])
+    if _perVertexAttributes & 1 << 3:
+      _currentList.normal.extend(_normal[:_vertexIndex * 3])
+    if not _currentList.commands or _currentList.commands[-1] != _primitive:
+      _currentList.commands.append( _primitive)
+    _vertexIndex = 0
+    return
+
   _useDefaultProgram()
   _applyUniforms()
 
@@ -277,6 +317,8 @@ def glEnd():
   _vertexIndex = 0
 
 def glColor4f(r, g, b, a):
+  global _perVertexAttributes
+  _perVertexAttributes |= 1 << 1
   i = _vertexIndex * 4
   _color[i] = r
   _color[i + 1] = g
@@ -288,12 +330,16 @@ def glColor3f(r, g, b):
   glColor4f(r, g, b, 1)
 
 def glTexCoord2f(x, y):
+  global _perVertexAttributes
+  _perVertexAttributes |= 1 << 2
   i = _vertexIndex * 2
   _texCoord[i] = x
   _texCoord[i + 1] = y
   glVertexAttrib2f(2, x, y)
 
 def glNormal3f(x, y, z):
+  global _perVertexAttributes
+  _perVertexAttributes |= 1 << 3
   i = _vertexIndex * 3
   _normal[i] = x
   _normal[i + 1] = y
@@ -419,15 +465,68 @@ def glMaterialfv(face, param, value):
 
 GL_COMPILE = 0x1300
 
+class DisplayList(object):
+  def __init__(self):
+    self.commands = []
+    self.position = array("f")
+    self.color = array("f")
+    self.texCoord = array("f")
+    self.normal = array("f")
+
+  def call(self):
+    for command in self.commands:
+      if type(command) == int:
+        self.draw(command)
+      else:
+        command()
+
+  def draw(self, primitive):
+    _useDefaultProgram()
+    _applyUniforms()
+
+    # TODO: Use VBOs
+    glVertexAttribPointer(0, 4, GL_FLOAT, False, 0, self.position.buffer_info()[0])
+    glEnableVertexAttribArray(0)
+    if len(self.color):
+      glVertexAttribPointer(1, 4, GL_FLOAT, False, 0, self.color.buffer_info()[0])
+      glEnableVertexAttribArray(1)
+    else:
+      i = _vertexIndex * 4
+      glVertexAttrib4f(1, _color[i], _color[i + 1], _color[i + 2], _color[i + 3])
+    if len(self.texCoord):
+      glVertexAttribPointer(2, 2, GL_FLOAT, False, 0, self.texCoord.buffer_info()[0])
+      glEnableVertexAttribArray(2)
+    if len(self.normal):
+      glVertexAttribPointer(3, 3, GL_FLOAT, False, 0, self.normal.buffer_info()[0])
+      glEnableVertexAttribArray(3)
+
+    count = len(self.position) / 4
+    pogles.gles2.glDrawArrays(primitive, 0, count)
+
+    glDisableVertexAttribArray(0)
+    glDisableVertexAttribArray(1)
+    glDisableVertexAttribArray(2)
+    glDisableVertexAttribArray(3)
+
+_lists = []
+_currentList = None
+
 def glGenLists(n):
   assert n == 1
-  return 1
+  _lists.append(DisplayList())
+  return len(_lists) - 1
 
 def glNewList(name, mode):
-  pass
+  global _currentList
+  assert mode == GL_COMPILE
+  _currentList = _lists[name]
 
 def glEndList():
-  pass
+  global _currentList
+  _currentList = None
 
 def glCallList(name):
-  pass
+  if _currentList:
+    _currentList.commands.append(lambda: glCallList(name))
+    return
+  _lists[name].call()

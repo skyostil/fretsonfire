@@ -80,6 +80,7 @@ class MainMenu(BackgroundLayer):
 
     if self.songName:
       self.newSinglePlayerGame(self.songName)
+      #self.launchLayer(lambda: Editor(self.engine, "tutorial"))
     
   def hidden(self):
     self.engine.view.popLayer(self.menu)
