@@ -182,7 +182,7 @@ void main()
     if (u_textureEnabled)
         color = texture2D(u_texture, v_texCoord) * color;
     /*gl_FragColor += vec4(v_texCoord.x, v_texCoord.y, 0.2, 1.0);*/
-    /*color.a = 0.5;*/
+    /*color.a += 0.3;*/
     gl_FragColor = color;
 }
 """

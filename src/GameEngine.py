@@ -54,7 +54,7 @@ Config.define("game",   "uploadurl",    str,   "http://fretsonfire.sourceforge.n
 Config.define("game",   "leftymode",    bool,  False, text = _("Lefty mode"),           options = {False: _("No"), True: _("Yes")})
 Config.define("game",   "tapping",      bool,  True,  text = _("Tappable notes"),       options = {False: _("No"), True: _("Yes")})
 Config.define("game",   "compactlist",  bool,  False, text = _("Compact song list"),    options = {False: _("No"), True: _("Yes")})
-Config.define("game",   "autopreview",  bool,  True,  text = _("Song auto preview"),    options = {False: _("No"), True: _("Yes")})
+Config.define("game",   "autopreview",  bool,  False,  text = _("Song auto preview"),    options = {False: _("No"), True: _("Yes")})
 Config.define("game",   "artistsort",   bool,  False, text = _("Sort by artist"),       options = {False: _("No"), True: _("Yes")})
 Config.define("video",  "fullscreen",   bool,  False, text = _("Fullscreen Mode"),      options = {False: _("No"), True: _("Yes")})
 Config.define("video",  "multisamples", int,   4,     text = _("Antialiasing Quality"), options = {0: _("None"), 2: _("2x"), 4: _("4x"), 6: _("6x"), 8: _("8x")})

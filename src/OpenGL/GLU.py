@@ -13,10 +13,10 @@ def gluBuild2DMipmaps(target, internalFormat, width, height, format, type, data)
 
 def gluPerspective(fovy, aspect, zNear, zFar):
   range = math.tan(numpy.radians(fovy / 2.0)) * zNear
-  left = -range * aspect;
-  right = range * aspect;
-  bottom = -range;
-  top = range;
+  left = -range * aspect
+  right = range * aspect
+  bottom = -range
+  top = range
 
   m = numpy.zeros((4, 4))
   m[0, 0] = (2.0 * zNear) / (right - left)
@@ -24,7 +24,6 @@ def gluPerspective(fovy, aspect, zNear, zFar):
   m[2, 2] = -(zFar + zNear) / float(zFar - zNear)
   m[2, 3] = -1
   m[3, 2] = -(2.0 * zFar * zNear) / (zFar - zNear)
-  m = numpy.transpose(m)
   glMultMatrixf(m)
 
 def _normalize(v):
@@ -47,12 +46,10 @@ def gluLookAt(eyeX, eyeY, eyeZ, centerX, centerY, centerZ, upX, upY, upZ):
   m[0, 1] = u[0]
   m[1, 1] = u[1]
   m[2, 1] = u[2]
-  m[0, 2] =-f[0]
-  m[1, 2] =-f[1]
-  m[2, 2] =-f[2]
-  m[3, 0] =-numpy.dot(s, eye)
-  m[3, 1] =-numpy.dot(u, eye)
+  m[0, 2] = -f[0]
+  m[1, 2] = -f[1]
+  m[2, 2] = -f[2]
+  m[3, 0] = -numpy.dot(s, eye)
+  m[3, 1] = -numpy.dot(u, eye)
   m[3, 2] = numpy.dot(f, eye)
-
-  m = numpy.transpose(m)
   glMultMatrixf(m)
