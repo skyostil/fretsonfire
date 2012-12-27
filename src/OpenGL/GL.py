@@ -218,9 +218,7 @@ def _createProgram(vertSource, fragSource):
   return program
 
 def glBegin(primitive):
-  global _vertexIndex
   global _primitive
-  _vertexIndex = 0
   _primitive = primitive
 
 _program = None
@@ -252,17 +250,11 @@ def _applyUniforms():
   glUniform1i(_u_textureEnabled, 1 if _textureEnabled else 0)
 
 def glEnd():
+  global _vertexIndex
+
   _useDefaultProgram()
   _applyUniforms()
 
-  #import random
-  #for i in range(_vertexIndex):
-  #  _position[i * 4] = random.random()
-  #  _position[i * 4 + 1] = random.random()
-
-  #print mvpMatrix
-  #print _primitive
-  #print _position[0:_vertexIndex * 4]
   glVertexAttribPointer(0, 4, GL_FLOAT, False, 0, _position.buffer_info()[0])
   glEnableVertexAttribArray(0)
   if _colorEnabled:
@@ -281,6 +273,8 @@ def glEnd():
   glDisableVertexAttribArray(1)
   glDisableVertexAttribArray(2)
   glDisableVertexAttribArray(3)
+
+  _vertexIndex = 0
 
 def glColor4f(r, g, b, a):
   i = _vertexIndex * 4

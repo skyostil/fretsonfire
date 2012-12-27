@@ -24,6 +24,7 @@ import pygame
 from OpenGL.GL import *
 from OpenGL.GLU import *
 import math
+import time
 
 from View import Layer
 from Input import KeyListener
@@ -216,6 +217,8 @@ class Credits(Layer, KeyListener):
     self.time   += ticks / 50.0
     if self.song:
       self.offset -= ticks / 5000.0
+    else:
+      time.sleep(0.2)
 
     if self.offset < -6.1:
       self.quit()

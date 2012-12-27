@@ -119,7 +119,7 @@ class Font:
 
         # If the texture changed, flush the geometry
         if currentTexture != g:
-          cacheEntry.append((currentTexture, vertexCount, array('f', vertices[:vertexCount]), array('f', texCoords[:vertexCount])))
+          cacheEntry.append((currentTexture, vertexCount, array('f', vertices[:vertexCount * 2]), array('f', texCoords[:vertexCount * 2])))
           currentTexture = g
           vertexCount = 0
 
