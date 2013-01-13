@@ -4,6 +4,7 @@ from array import array
 import pogles
 import pygame
 import numpy
+from math import sin, cos
 import transformations
 
 GL_CLAMP = GL_CLAMP_TO_EDGE
@@ -23,11 +24,16 @@ def glGetIntegerv(param):
 glGetInteger = glGetIntegerv
 
 GL_CURRENT_COLOR = 1
+_currentColor = [0.0, 0.0, 0.0, 0.0]
 
 def glGetFloatv(param):
   if param == GL_CURRENT_COLOR:
     i = _vertexIndex * 4
-    return [_color[i], _color[i + 1], _color[i + 2], _color[i + 3]]
+    _currentColor[0] = _color[i]
+    _currentColor[1] = _color[i + 1]
+    _currentColor[2] = _color[i + 2]
+    _currentColor[3] = _color[i + 3]
+    return _currentColor
   return pogles.gles2.glGetFloatv(param)
 
 def glGenTextures(count):
@@ -147,18 +153,52 @@ def glScalef(x, y, z):
       [0, 0, 0, 1]])
   _activeStack[0] = _activeStack[0].dot(m)
 
+_tmpTranslation = numpy.identity(4)
+
 def glTranslatef(x, y, z):
   if _currentList:
     _currentList.commands.append(lambda: glTranslatef(x, y, z))
     return
-  m = transformations.translation_matrix((x, y, z))
-  _activeStack[0] = _activeStack[0].dot(m)
+  #m = transformations.translation_matrix((x, y, z))
+  _tmpTranslation[0, 3] = x
+  _tmpTranslation[1, 3] = y
+  _tmpTranslation[2, 3] = z
+  _activeStack[0] = _activeStack[0].dot(_tmpTranslation)
+
+glTranslate = glTranslatef
 
 def glRotate(angle, x, y, z):
   if _currentList:
     _currentList.commands.append(lambda: glRotate(angle, x, y, z))
     return
-  m = transformations.rotation_matrix(numpy.radians(angle), (x, y, z))
+  #m = transformations.rotation_matrix(numpy.radians(angle), (x, y, z))
+  #_activeStack[0] = _activeStack[0].dot(m)
+  #return
+
+  angle = numpy.radians(angle)
+  s = sin(angle)
+  c = cos(angle)
+  c1 = 1 - c
+  m = numpy.identity(4)
+  m[0, 0] = x * x * c1 + c
+  m[0, 1] = x * y * c1 - z * s
+  m[0, 2] = x * z * c1 + y * s
+  m[0, 3] = 0.0
+
+  m[1, 0] = y * x * c1 + z * s
+  m[1, 1] = y * y * c1 + c
+  m[1, 2] = y * z * c1 - x * s
+  m[1, 3] = 0.0
+
+  m[2, 0] = x * z * c1 - y * s
+  m[2, 1] = y * z * c1 + x * s
+  m[2, 2] = z * z * c1 + c
+  m[2, 3] = 0.0
+
+  m[3, 0] = 0.0
+  m[3, 1] = 0.0
+  m[3, 2] = 0.0
+  m[3, 3] = 1.0
   _activeStack[0] = _activeStack[0].dot(m)
 
 glRotatef = glRotate
@@ -335,7 +375,7 @@ def glTexCoord2f(x, y):
   i = _vertexIndex * 2
   _texCoord[i] = x
   _texCoord[i + 1] = y
-  glVertexAttrib2f(2, x, y)
+  #glVertexAttrib2f(2, x, y)
 
 def glNormal3f(x, y, z):
   global _perVertexAttributes
@@ -344,7 +384,7 @@ def glNormal3f(x, y, z):
   _normal[i] = x
   _normal[i + 1] = y
   _normal[i + 2] = z
-  glVertexAttrib3f(3, x, y, z)
+  #glVertexAttrib3f(3, x, y, z)
 
 def glVertex3f(x, y, z):
   global _vertexIndex

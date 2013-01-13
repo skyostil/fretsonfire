@@ -99,7 +99,8 @@ class Font:
     if not text:
       return
 
-    if not (text, scale) in self.stringCache:
+    key = (text, scale)
+    if not key in self.stringCache:
       currentTexture = None
       #x, y           = pos[0], pos[1]
       x, y           = 0.0, 0.0
@@ -143,13 +144,13 @@ class Font:
       cacheEntry.append((currentTexture, vertexCount, vertices[:vertexCount * 2], texCoords[:vertexCount * 2]))
 
       # Don't store very short strings
-      if len(text) > 5:
+      if len(text) > 3:
         # Limit the cache size
         if len(self.stringCache) > self.stringCacheLimit:
           del self.stringCache[self.stringCache.keys()[0]]
-        self.stringCache[(text, scale)] = cacheEntry
+        self.stringCache[key] = cacheEntry
     else:
-      cacheEntry = self.stringCache[(text, scale)]
+      cacheEntry = self.stringCache[key]
 
     glPushMatrix()
     glTranslatef(pos[0], pos[1], 0)

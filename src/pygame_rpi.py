@@ -3,6 +3,7 @@ import pygame as _pygame
 import time as _time
 from pogles.egl import *
 from pogles.platform import ppCreateNativeWindow
+from pogles import gles2
 
 _pygame_display = _pygame.display
 
@@ -82,7 +83,7 @@ class Display(object):
     pass
 
   def set_mode(self, resolution, flags):
-    self.nativeWindow = ppCreateNativeWindow()
+    self.nativeWindow = ppCreateNativeWindow(640, 360)
     self.display = eglGetDisplay()
     eglInitialize(self.display)
 
@@ -102,6 +103,7 @@ class Display(object):
     self.width = eglQuerySurface(self.display, self.surface, EGL_WIDTH)
     self.height = eglQuerySurface(self.display, self.surface, EGL_HEIGHT)
 
+    gles2.enableErrorCheck(False)
     _pygame_display.set_mode((1, 1), 0)
 
   def flip(self):

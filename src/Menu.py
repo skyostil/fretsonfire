@@ -180,7 +180,8 @@ class Menu(Layer, KeyListener):
       for i, choice in enumerate(self.choices[self.viewOffset:self.viewOffset + self.viewSize]):
         text = choice.getText(i + self.viewOffset == self.currentIndex)
         glPushMatrix()
-        glRotate(v * 45, 0, 0, 1)
+        if v > 0.01:
+            glRotate(v * 45, 0, 0, 1)
 
         # Draw arrows if scrolling is needed to see all items
         if i == 0 and self.viewOffset > 0:

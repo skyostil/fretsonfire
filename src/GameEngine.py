@@ -343,6 +343,7 @@ class GameEngine(Engine):
 
   def main(self):
     """Main state loop."""
+    print self.timer.fpsEstimate
 
     # Tune the scheduler priority so that transitions are as smooth as possible
     if self.view.isTransitionInProgress():
