@@ -24,13 +24,21 @@ from __future__ import division
 
 import Log
 import Config
-import Image
 import pygame
 import StringIO
-import PngImagePlugin
 from OpenGL.GL import *
 from OpenGL.GLU import *
 from Queue import Queue, Empty
+
+try:
+  from PIL import Image
+except ImportError:
+  import Image
+
+try:
+  from PIL import PngImagePlugin
+except ImportError:
+  import PngImagePlugin
 
 Config.define("opengl", "supportfbo", bool, False)
 
