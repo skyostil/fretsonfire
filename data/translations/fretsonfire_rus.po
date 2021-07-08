@@ -119,7 +119,7 @@ msgstr "<OK>"
 
 #: Dialogs.py:331
 msgid "Browsing Collection..."
-msgstr "Просмотр коллцекции..."
+msgstr "Просмотр коллекции..."
 
 #: Dialogs.py:550
 msgid "Loading Preview..."
@@ -221,7 +221,7 @@ msgstr "Стрелки - Движение курсора,"
 
 #: Editor.py:94
 msgid "Space - Play/pause song, "
-msgstr "Пробле - Играть/пауза"
+msgstr "Пробел - Играть/пауза"
 
 #: Editor.py:95
 msgid "Enter - Make note (hold and move for long notes), "
@@ -245,7 +245,7 @@ msgstr "Введите название группы"
 
 #: Editor.py:113
 msgid "Enter A/V delay in milliseconds"
-msgstr "Введите A/V задержку в милискундах."
+msgstr "Введите A/V задержку в милисекундах."
 
 #: Editor.py:119
 #: Editor.py:128
@@ -262,7 +262,7 @@ msgstr "Отсуткивайте ритм песни пробелом. Нажм�
 
 #: Editor.py:141
 msgid "Enter cassette color in HTML (#RRGGBB) format."
-msgstr "Укажите цвте кассеты в формате HTML (#RRGGBB)."
+msgstr "Укажите цвет кассеты в формате HTML (#RRGGBB)."
 
 #: Editor.py:147
 msgid "That isn't a color."
@@ -270,7 +270,7 @@ msgstr "Это не цвет."
 
 #: Editor.py:150
 msgid "Choose a 256x128 PNG format label image."
-msgstr "Выберете наклейку в формате 256x128 PNG."
+msgstr "Выберите наклейку в формате 256x128 PNG."
 
 #: Editor.py:167
 msgid "Loading song..."
@@ -294,7 +294,7 @@ msgstr "Такая песня уже существует."
 
 #: Editor.py:388
 msgid "Choose the Instrument Track (OGG format)."
-msgstr "Выберете  трэк с главным инструментов (в формате OGG)"
+msgstr "Выберете трэк с главным инструментом (в формате OGG)"
 
 #: Editor.py:394
 msgid "Choose the Background Track (OGG format) or press Escape to skip."
@@ -587,7 +587,7 @@ msgstr "Присоединиться к мультиплеерной игре."
 
 #: MainMenu.py:141
 msgid "Apply New Settings"
-msgstr "Применть новые настройки"
+msgstr "Применить новые настройки"
 
 #: MainMenu.py:150
 msgid "Test Keys"
@@ -603,11 +603,11 @@ msgstr "Настройки"
 
 #: MainMenu.py:190
 msgid "Key Settings"
-msgstr "Настрйоки управления"
+msgstr "Настройки управления"
 
 #: MainMenu.py:191
 msgid "Video Settings"
-msgstr "Настрйоки видео"
+msgstr "Настройки видео"
 
 #: MainMenu.py:192
 msgid "Audio Settings"
@@ -623,7 +623,7 @@ msgstr "Импорировать новую песню"
 
 #: MainMenu.py:199
 msgid "Import Guitar Hero(tm) Songs"
-msgstr "Ипмортировать песни из Guitar Hero(TM)"
+msgstr "Импортировать песни из Guitar Hero(TM)"
 
 #: MainMenu.py:203
 msgid "Play Game"
